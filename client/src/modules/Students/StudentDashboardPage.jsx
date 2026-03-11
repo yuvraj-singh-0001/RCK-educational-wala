@@ -6,7 +6,7 @@ function StudentDashboardPage() {
       <div className="mx-auto w-full max-w-5xl page-panel">
         <h1 className="page-title">Student Dashboard</h1>
         <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-          Ye area students ke liye hai. Yahan se batch progress, subject roadmap aur practice plan dikhaya ja sakta hai.
+          This area is for students. From here, you can track batch progress, subject roadmaps, and practice plans.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link className="btn-primary" to="/student/courses">

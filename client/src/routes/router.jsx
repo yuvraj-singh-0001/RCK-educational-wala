@@ -1,8 +1,13 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import StudentDashboardPage from '../modules/Students/StudentDashboardPage'
 import StudentCoursesPage from '../modules/Students/StudentCoursesPage'
+import AboutPage from '../pages/AboutPage'
+import AdmissionPage from '../pages/AdmissionPage'
+import ContactPage from '../pages/ContactPage'
+import CoursesPage from '../pages/CoursesPage'
 import HomePage from '../pages/HomePage'
 import PublicLayout from '../pages/PublicLayout'
+import ResultsPage from '../pages/ResultsPage'
 import ProtectedRouter from '../protected/protectedRouter'
 
 function AppRouter() {
@@ -11,8 +16,11 @@ function AppRouter() {
 			<Routes>
 				<Route element={<PublicLayout />}>
 					<Route path="/" element={<HomePage />} />
-					<Route path="/courses" element={<Navigate to="/#courses" replace />} />
-					<Route path="/contact" element={<Navigate to="/#contact" replace />} />
+					<Route path="/courses" element={<CoursesPage />} />
+					<Route path="/about" element={<AboutPage />} />
+					<Route path="/results" element={<ResultsPage />} />
+					<Route path="/contact" element={<ContactPage />} />
+					<Route path="/admission" element={<AdmissionPage />} />
 				</Route>
 
 				<Route path="/student" element={<ProtectedRouter />}>
