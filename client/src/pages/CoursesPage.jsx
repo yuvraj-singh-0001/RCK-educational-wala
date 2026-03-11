@@ -71,12 +71,12 @@ function CoursesPage() {
   }, [activeTab])
 
   return (
-    <section className="page-wrap">
+    <section className="page-wrap courses-page">
       <div className="mx-auto w-full max-w-6xl">
         <h1 className="page-title">Our Courses</h1>
         <p className="page-subtitle">Complete course listing with category-wise filters.</p>
 
-        <div className="mt-5 flex flex-wrap gap-2">
+        <div className="courses-tabs mt-5 flex flex-wrap gap-2">
           {tabs.map((tab) => (
             <button
               className={`filter-tab ${activeTab === tab ? 'filter-tab-active' : ''}`}
@@ -89,16 +89,16 @@ function CoursesPage() {
           ))}
         </div>
 
-        <div className="mt-6 grid gap-5 md:grid-cols-2">
+        <div className="course-grid mt-6 grid gap-5 md:grid-cols-2">
           {filteredCourses.map((course) => (
             <article className="course-card" key={course.name}>
               <img alt={course.name} className="card-image" src={course.image} />
               <div className="mt-3 flex items-center justify-between gap-3">
-                <h2 className="text-xl font-bold text-slate-900">{course.name}</h2>
+                <h2 className="course-name text-xl font-bold text-slate-900">{course.name}</h2>
                 <span className="focus-icon">{course.icon}</span>
               </div>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">{course.description}</p>
-              <div className="mt-3 grid gap-1 text-sm text-slate-700">
+              <p className="course-description mt-2 text-sm leading-relaxed text-slate-600">{course.description}</p>
+              <div className="course-meta mt-3 grid gap-1 text-sm text-slate-700">
                 <p>
                   <strong>Duration:</strong> {course.duration}
                 </p>
@@ -109,7 +109,7 @@ function CoursesPage() {
                   <strong>Fee:</strong> {course.fee}
                 </p>
               </div>
-              <button className="btn-primary mt-4" type="button">
+              <button className="btn-primary courses-enquire-btn mt-4" type="button">
                 Enquire Now
               </button>
             </article>
