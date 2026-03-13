@@ -10,7 +10,7 @@ const carouselImages = [
   { src: '/bakery-demo/images/Fruite-cake.png' },
   { src: '/bakery-demo/images/luxury-cake.png' },
   { src: '/bakery-demo/images/strawberry-cake.png' },
-  { src: '/bakery-demo/images/wedding%20cakes.png' },
+  { src: '/bakery-demo/images/wedding cakes-1.png' },
 ]
 
 function HeroCarousel() {
