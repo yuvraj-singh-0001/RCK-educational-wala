@@ -1,23 +1,19 @@
 import { useMemo } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import {
-  getStorefrontFilter,
-  menuSortOptions,
-  productCatalog,
-  storefrontCategories,
-  flavours,
-  cakeTypes
+  productCatalog
 } from '../data/storefrontData'
 
+const fallbackCakeImage = '/bakery-demo/images/Classic-Menu-cake.png'
+
 function MenuPage() {
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams] = useSearchParams()
 
   const activeCategory = searchParams.get('category') || ''
   const activeOccasion = searchParams.get('occasion') || ''
   const activeDelivery = searchParams.get('delivery') || ''
   const activeFlavour = searchParams.get('flavour') || ''
   const activeType = searchParams.get('type') || ''
-  const activeSort = searchParams.get('sort') || 'popular'
   const viewMode = searchParams.get('view') || ''
 
   const filteredProducts = useMemo(() => {
@@ -32,27 +28,49 @@ function MenuPage() {
     })
 
     return [...items].sort((firstItem, secondItem) => {
-      if (activeSort === 'price-low') return firstItem.price - secondItem.price
-      if (activeSort === 'price-high') return secondItem.price - firstItem.price
-      if (activeSort === 'rating') return secondItem.rating - firstItem.rating
       return secondItem.rating * 100 + secondItem.price - (firstItem.rating * 100 + firstItem.price)
     })
-  }, [activeCategory, activeDelivery, activeOccasion, activeFlavour, activeType, activeSort])
+  }, [activeCategory, activeDelivery, activeOccasion, activeFlavour, activeType])
 
-  const updateSearchParams = (key, value) => {
-    const nextParams = new URLSearchParams(searchParams)
+  const classicProducts = useMemo(() => {
+    const items = productCatalog.filter((item) => item.category === 'Cakes' || item.category === 'Gourmet Cakes')
 
-    if (value) {
-      nextParams.set(key, value)
-    } else {
-      nextParams.delete(key)
+    const sortedItems = [...items].sort((firstItem, secondItem) => {
+      return secondItem.rating * 100 + secondItem.price - (firstItem.rating * 100 + firstItem.price)
+    })
+
+    const seenImageUrls = new Set()
+
+    return sortedItems.filter((item) => {
+      const imageKey = item.imageUrl || item.id
+      if (seenImageUrls.has(imageKey)) {
+        return false
+      }
+
+      seenImageUrls.add(imageKey)
+      return true
+    })
+  }, [])
+
+  const getDiscountPercent = (item) => {
+    if (typeof item.discountPercent === 'number') {
+      return item.discountPercent
     }
 
-    setSearchParams(nextParams)
+    if (!item.originalPrice || item.originalPrice <= item.price) {
+      return 0
+    }
+
+    return Math.round(((item.originalPrice - item.price) / item.originalPrice) * 100)
   }
 
-  const clearFilters = () => {
-    setSearchParams({ sort: 'popular' })
+  const handleImageError = (event) => {
+    if (event.currentTarget.dataset.fallbackApplied === 'true') {
+      return
+    }
+
+    event.currentTarget.dataset.fallbackApplied = 'true'
+    event.currentTarget.src = fallbackCakeImage
   }
 
   const isClassicGalleryView =
@@ -65,41 +83,65 @@ function MenuPage() {
 
   if (isClassicGalleryView) {
     return (
-      <section className="bakery-section !mt-1.5 rounded-xl md:rounded-2xl">
-        <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+      <section className="bakery-section !mt-1.5 overflow-hidden rounded-2xl bg-white/80 p-4 motion-safe:animate-[bakery-fade-up_380ms_ease_both] sm:p-5 lg:p-6">
+        <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-[#e02b2b]">Classic Collection</p>
             <h2 className="mt-1 text-2xl font-semibold tracking-tight text-[#222222] sm:text-3xl">Classic Cakes</h2>
+            <p className="mt-1 text-sm text-[#6b6b6b]">Signature classic cakes with premium finish and dependable same-day delivery.</p>
+            <p className="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#8b7e74]">{classicProducts.length} Cakes Available</p>
           </div>
-          <Link
-            to="/menu"
-            className="inline-flex items-center rounded-full border border-[#e02b2b]/25 bg-[#fde8e8] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#c62828] no-underline transition hover:-translate-y-0.5 hover:border-[#e02b2b]/45"
-          >
-            View Full Menu
-          </Link>
         </div>
 
-        <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-          {filteredProducts.map((item, index) => (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {classicProducts.map((item, index) => (
             <Link key={item.id} to="/menu" className="group no-underline">
               <article
-                className="overflow-hidden rounded-lg border border-black/10 bg-white shadow-[0_4px_14px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(0,0,0,0.1)] motion-safe:animate-[bakery-fade-up_420ms_ease_both]"
+                className="overflow-hidden rounded-2xl border border-[#ece4dc] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)] motion-safe:animate-[bakery-fade-up_420ms_ease_both]"
                 style={{ animationDelay: `${Math.min(index * 32, 260)}ms` }}
               >
-                <div className="aspect-square overflow-hidden bg-[#f6f0eb]">
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#f6f0eb]">
                   <img
-                    src={item.imageUrl}
+                    src={item.imageUrl || fallbackCakeImage}
                     alt={item.name}
                     className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                    onError={handleImageError}
                     loading={index < 6 ? 'eager' : 'lazy'}
                     decoding="async"
                     fetchPriority={index < 2 ? 'high' : 'auto'}
-                    sizes="(min-width: 1280px) 16vw, (min-width: 1024px) 24vw, (min-width: 640px) 32vw, 48vw"
+                    sizes="(min-width: 1280px) 24vw, (min-width: 1024px) 32vw, (min-width: 640px) 48vw, 96vw"
                   />
+                  {item.badge ? (
+                    <span className="absolute left-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.04em] text-[#9f2138] shadow-sm">
+                      {item.badge}
+                    </span>
+                  ) : null}
+                  <span className="absolute right-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.05em] text-[#5b4b40]">
+                    ♡ Wishlist
+                  </span>
                 </div>
-                <div className="space-y-0.5 px-2.5 py-2">
-                  <h3 className="line-clamp-1 text-[0.74rem] font-semibold text-[#222222]">{item.name}</h3>
-                  <p className="text-[0.72rem] font-bold text-[#c62828]">₹ {item.price}</p>
+                <div className="space-y-2 px-3.5 py-3.5 sm:px-4">
+                  <h3 className="line-clamp-2 min-h-[2.6rem] text-[0.95rem] font-semibold leading-5 text-[#222222]">{item.name}</h3>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <p className="m-0 text-[0.96rem] font-extrabold text-[#c62828]">₹ {item.price}</p>
+                    {item.originalPrice ? <s className="text-[#8b7e74]">₹ {item.originalPrice}</s> : null}
+                    {getDiscountPercent(item) > 0 ? (
+                      <span className="inline-flex items-center rounded-full bg-[#ffe8ec] px-2 py-0.5 text-[0.72rem] font-extrabold text-[#cf244a]">
+                        {getDiscountPercent(item)}% OFF
+                      </span>
+                    ) : null}
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center rounded-full bg-[#eef8ef] px-2 py-0.5 text-[0.74rem] font-extrabold text-[#1f7a41]">
+                      {item.rating} ★
+                    </span>
+                    {item.reviews ? (
+                      <span className="text-[0.78rem] font-semibold text-[#6f6a65]">({item.reviews} Reviews)</span>
+                    ) : null}
+                  </div>
+                  <p className="m-0 text-sm text-[#6b6b6b]">
+                    Earliest Delivery: <strong className="text-[#2b2b2b]">{item.delivery}</strong>
+                  </p>
                 </div>
               </article>
             </Link>
@@ -110,168 +152,81 @@ function MenuPage() {
   }
 
   return (
-    <section className="bakery-section bakery-catalog-layout !mt-1.5 rounded-xl md:rounded-2xl">
-      <aside className="bakery-filter-panel">
-        <div className="bakery-filter-head">
-          <p className="bakery-eyebrow">Filters</p>
-          <div className="bakery-filter-head-flex">
-            <h2>Filter</h2>
-            <button type="button" className="bakery-filter-reset-link" onClick={clearFilters}>
-              Clear All
-            </button>
-          </div>
+    <section className="bakery-section !mt-1.5 rounded-xl md:rounded-2xl">
+      <div className="rounded-2xl bg-white/80 p-4 sm:p-5 lg:p-6">
+        <div className="mb-4 text-sm font-medium text-[#6f6257]">
+          {activeCategory === 'Gourmet Cakes' ? 'Home / Gourmet Cakes' : 'Home / Cakes Delivery Online'}
         </div>
 
-        <div className="bakery-filter-group">
-          <h3>Category</h3>
-          <div className="bakery-filter-checkbox-list">
-            {storefrontCategories.map((item) => {
-              const filterItem = getStorefrontFilter(item)
-              if (filterItem.key !== 'category') return null
-              const isChecked = activeCategory === filterItem.value
-
-              return (
-                <label key={item.slug} className="bakery-checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={isChecked}
-                    onChange={() => updateSearchParams('category', isChecked ? '' : filterItem.value)}
-                  />
-                  <span>{item.label}</span>
-                </label>
-              )
-            })}
-          </div>
-        </div>
-
-        <div className="bakery-filter-group">
-          <h3>Flavour</h3>
-          <div className="bakery-filter-checkbox-list">
-            {flavours.map((item) => (
-              <label key={item} className="bakery-checkbox-label">
-                <input
-                  type="checkbox"
-                  checked={activeFlavour === item}
-                  onChange={() => updateSearchParams('flavour', activeFlavour === item ? '' : item)}
-                />
-                <span>{item}</span>
-              </label>
-            ))}
-          </div>
-        </div>
-
-        <div className="bakery-filter-group">
-          <h3>Cake Type</h3>
-          <div className="bakery-filter-checkbox-list">
-            {cakeTypes.map((item) => (
-              <label key={item} className="bakery-checkbox-label">
-                <input
-                  type="checkbox"
-                  checked={activeType === item}
-                  onChange={() => updateSearchParams('type', activeType === item ? '' : item)}
-                />
-                <span>{item}</span>
-              </label>
-            ))}
-          </div>
-        </div>
-
-        <div className="bakery-filter-group">
-          <h3>Occasion</h3>
-          <div className="bakery-filter-checkbox-list">
-            {['Birthday', 'Anniversary', 'Valentine\'s Day', 'Kids Birthday'].map((item) => (
-              <label key={item} className="bakery-checkbox-label">
-                <input
-                  type="checkbox"
-                  checked={activeOccasion === item}
-                  onChange={() => updateSearchParams('occasion', activeOccasion === item ? '' : item)}
-                />
-                <span>{item}</span>
-              </label>
-            ))}
-          </div>
-        </div>
-
-        <div className="bakery-filter-group">
-          <h3>Delivery Speed</h3>
-          <div className="bakery-filter-checkbox-list">
-            {['Same Day', 'Next Day', 'Midnight', 'Fixed Time'].map((item) => (
-              <label key={item} className="bakery-checkbox-label">
-                <input
-                  type="checkbox"
-                  checked={activeDelivery === item}
-                  onChange={() => updateSearchParams('delivery', activeDelivery === item ? '' : item)}
-                />
-                <span>{item}</span>
-              </label>
-            ))}
-          </div>
-        </div>
-
-      </aside>
-
-      <div className="bakery-catalog-content">
-        <div className="bakery-breadcrumbs">Home / Cakes Delivery Online</div>
-
-        <div className="bakery-catalog-topbar">
-          <div className="bakery-catalog-heading-block">
-            <h2>Order Cakes Online</h2>
-            <div className="bakery-catalog-meta-row">
+        <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h2 className="m-0 text-2xl font-semibold tracking-tight text-[#1f1f1f] sm:text-3xl">
+              {activeCategory === 'Gourmet Cakes' ? 'Gourmet Cakes Collection' : 'Order Cakes Online'}
+            </h2>
+            <div className="mt-2 flex flex-wrap items-center gap-2 text-sm font-medium text-[#6b6b6b] sm:text-[0.95rem]">
               <span>{filteredProducts.length} Products</span>
-              <span>|</span>
+              <span>•</span>
               <span>Overall Rating: 4.8</span>
-              <span>|</span>
+              <span>•</span>
               <span>3,000+ Reviews</span>
             </div>
           </div>
-
-          <label className="bakery-sort-box">
-            <span>Sort by</span>
-            <select value={activeSort} onChange={(event) => updateSearchParams('sort', event.target.value)}>
-              {menuSortOptions.map((item) => (
-                <option key={item.value} value={item.value}>
-                  {item.label}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-
-        <div className="bakery-active-filters">
-          {activeCategory && <span className="bakery-active-pill">Category: {activeCategory} <button onClick={() => updateSearchParams('category', '')}>×</button></span>}
-          {activeFlavour && <span className="bakery-active-pill">Flavour: {activeFlavour} <button onClick={() => updateSearchParams('flavour', '')}>×</button></span>}
-          {activeType && <span className="bakery-active-pill">Type: {activeType} <button onClick={() => updateSearchParams('type', '')}>×</button></span>}
-          {activeOccasion && <span className="bakery-active-pill">Occasion: {activeOccasion} <button onClick={() => updateSearchParams('occasion', '')}>×</button></span>}
-          {activeDelivery && <span className="bakery-active-pill">Delivery: {activeDelivery} <button onClick={() => updateSearchParams('delivery', '')}>×</button></span>}
         </div>
 
         {filteredProducts.length === 0 ? (
-          <div className="bakery-no-results">
-            <h3>No products found</h3>
-            <p>Try clearing some filters to see more results.</p>
-            <button onClick={clearFilters} className="bakery-btn-primary">Clear Filters</button>
+          <div className="grid place-items-center rounded-2xl border border-[#ebdfd3] bg-[#fffaf5] px-4 py-10 text-center">
+            <h3 className="m-0 text-xl font-semibold text-[#2b2b2b]">No products found</h3>
+            <p className="mt-2 text-sm text-[#6b6b6b]">Please try another category from the menu bar.</p>
+            <Link
+              to="/menu"
+              className="mt-4 inline-flex items-center rounded-full border border-[#e02b2b]/25 bg-[#fde8e8] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#c62828] no-underline transition hover:-translate-y-0.5 hover:border-[#e02b2b]/45"
+            >
+              View Full Menu
+            </Link>
           </div>
         ) : (
-          <div className="bakery-product-grid">
-            {filteredProducts.map((item) => (
-              <article key={item.id} className="bakery-product-card">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {filteredProducts.map((item, index) => (
+              <article
+                key={item.id}
+                className="overflow-hidden rounded-2xl border border-[#ece4dc] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)] motion-safe:animate-[bakery-fade-up_420ms_ease_both]"
+                style={{ animationDelay: `${Math.min(index * 28, 220)}ms` }}
+              >
                 <div
-                  className={`bakery-product-image ${item.imageClass}`}
+                  className={`relative flex min-h-64 items-start justify-between gap-2 bg-cover bg-center p-3 ${item.imageClass}`}
                   style={{ backgroundImage: `url(${item.imageUrl})` }}
                 >
-                  {item.badge && <span className="bakery-product-badge">{item.badge}</span>}
+                  {item.badge && (
+                    <span className="inline-flex rounded-full bg-white/95 px-2.5 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.04em] text-[#9f2138] shadow-sm">
+                      {item.badge}
+                    </span>
+                  )}
+                  <span className="inline-flex rounded-full bg-white/95 px-2.5 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.05em] text-[#5b4b40]">
+                    ♡ Wishlist
+                  </span>
                 </div>
-                <div className="bakery-product-body">
-                  <div className="bakery-product-meta">
-                    <span className="bakery-rating-pill">★ {item.rating}</span>
-                    {item.reviews && <span className="bakery-reviews-text">({item.reviews} reviews)</span>}
-                  </div>
-                  <h3>{item.name}</h3>
-                  <div className="bakery-price-row">
+                <div className="grid gap-2 p-4">
+                  <h3 className="m-0 line-clamp-1 text-[1rem] font-semibold text-[#232323]">{item.name}</h3>
+                  <div className="flex flex-wrap items-center gap-2">
                     <strong>₹ {item.price}</strong>
                     {item.originalPrice && <s>₹ {item.originalPrice}</s>}
+                    {getDiscountPercent(item) > 0 && (
+                      <span className="inline-flex items-center rounded-full bg-[#ffe8ec] px-2 py-0.5 text-[0.72rem] font-extrabold text-[#cf244a]">
+                        {getDiscountPercent(item)}% OFF
+                      </span>
+                    )}
                   </div>
-                  <p className="bakery-delivery-estimate">Earliest Delivery: <strong>{item.delivery}</strong></p>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center rounded-full bg-[#eef8ef] px-2 py-0.5 text-[0.74rem] font-extrabold text-[#1f7a41]">
+                      {item.rating} ★
+                    </span>
+                    {item.reviews && (
+                      <span className="text-[0.78rem] font-semibold text-[#6f6a65]">({item.reviews} Reviews)</span>
+                    )}
+                  </div>
+                  <p className="m-0 text-sm text-[#6b6b6b]">
+                    Earliest Delivery: <strong className="text-[#2b2b2b]">{item.delivery}</strong>
+                  </p>
                 </div>
               </article>
             ))}

@@ -27,8 +27,8 @@ const menuShowcaseItems = [
   {
     id: 'gourmet-cakes',
     label: 'Gourmet Cakes',
-    to: '/menu?category=Cakes',
-    imageUrl: '/bakery-demo/images/Gourmet%20Cakes.png',
+    to: '/menu?category=Gourmet%20Cakes',
+    imageUrl: '/bakery-demo/images/Gourmet%20Cakes1.jpg',
   },
   {
     id: 'designer-cakes',
