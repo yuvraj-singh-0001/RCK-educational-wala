@@ -29,7 +29,6 @@ body {
   font-family: 'Manrope', sans-serif;
   color: var(--bakery-ink);
   background: #fdfdfd;
-  overflow-x: hidden;
 }
 
 a,

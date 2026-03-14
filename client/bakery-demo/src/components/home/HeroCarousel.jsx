@@ -72,7 +72,7 @@ function HeroCarousel() {
 
   return (
     <section
-      className="relative left-1/2 mt-0 mb-1 aspect-[1460/590] max-h-[620px] h-[clamp(190px,54vw,310px)] w-screen -translate-x-1/2 overflow-hidden rounded-b-[10px] bg-[#f3dfe6] shadow-[0_10px_24px_rgba(0,0,0,0.1)] md:h-auto md:rounded-b-[14px]"
+      className="relative mt-0 mb-1 aspect-[1460/590] max-h-[620px] h-[clamp(190px,54vw,310px)] w-full overflow-hidden rounded-[10px] bg-[#f3dfe6] shadow-[0_10px_24px_rgba(0,0,0,0.1)] md:h-auto md:rounded-[14px]"
       aria-label="Featured bakery highlights"
     >
       <div className="relative h-full w-full overflow-hidden">

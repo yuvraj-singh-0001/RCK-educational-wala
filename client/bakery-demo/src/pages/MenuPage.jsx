@@ -18,6 +18,7 @@ function MenuPage() {
   const activeFlavour = searchParams.get('flavour') || ''
   const activeType = searchParams.get('type') || ''
   const activeSort = searchParams.get('sort') || 'popular'
+  const viewMode = searchParams.get('view') || ''
 
   const filteredProducts = useMemo(() => {
     const items = productCatalog.filter((item) => {
@@ -52,6 +53,60 @@ function MenuPage() {
 
   const clearFilters = () => {
     setSearchParams({ sort: 'popular' })
+  }
+
+  const isClassicGalleryView =
+    viewMode === 'classic' &&
+    activeCategory === 'Cakes' &&
+    !activeOccasion &&
+    !activeDelivery &&
+    !activeFlavour &&
+    !activeType
+
+  if (isClassicGalleryView) {
+    return (
+      <section className="bakery-section !mt-1.5 rounded-xl md:rounded-2xl">
+        <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-[#e02b2b]">Classic Collection</p>
+            <h2 className="mt-1 text-2xl font-semibold tracking-tight text-[#222222] sm:text-3xl">Classic Cakes</h2>
+          </div>
+          <Link
+            to="/menu"
+            className="inline-flex items-center rounded-full border border-[#e02b2b]/25 bg-[#fde8e8] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#c62828] no-underline transition hover:-translate-y-0.5 hover:border-[#e02b2b]/45"
+          >
+            View Full Menu
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+          {filteredProducts.map((item, index) => (
+            <Link key={item.id} to="/menu" className="group no-underline">
+              <article
+                className="overflow-hidden rounded-lg border border-black/10 bg-white shadow-[0_4px_14px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(0,0,0,0.1)] motion-safe:animate-[bakery-fade-up_420ms_ease_both]"
+                style={{ animationDelay: `${Math.min(index * 32, 260)}ms` }}
+              >
+                <div className="aspect-square overflow-hidden bg-[#f6f0eb]">
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                    loading={index < 6 ? 'eager' : 'lazy'}
+                    decoding="async"
+                    fetchPriority={index < 2 ? 'high' : 'auto'}
+                    sizes="(min-width: 1280px) 16vw, (min-width: 1024px) 24vw, (min-width: 640px) 32vw, 48vw"
+                  />
+                </div>
+                <div className="space-y-0.5 px-2.5 py-2">
+                  <h3 className="line-clamp-1 text-[0.74rem] font-semibold text-[#222222]">{item.name}</h3>
+                  <p className="text-[0.72rem] font-bold text-[#c62828]">₹ {item.price}</p>
+                </div>
+              </article>
+            </Link>
+          ))}
+        </div>
+      </section>
+    )
   }
 
   return (
