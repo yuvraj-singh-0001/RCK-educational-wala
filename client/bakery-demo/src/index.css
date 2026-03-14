@@ -713,6 +713,10 @@ button {
 .bakery-product-image {
   min-height: 16rem;
   padding: 0.85rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.65rem;
 }
 
 .bakery-product-badge {
@@ -726,6 +730,19 @@ button {
   font-size: 0.72rem;
   font-weight: 800;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bakery-wishlist-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.34rem 0.58rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #5b4b40;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .bakery-product-body {
@@ -758,6 +775,48 @@ button {
 .bakery-price-row s {
   color: #9b8a7e;
   font-size: 0.84rem;
+}
+
+.bakery-price-row-rich {
+  justify-content: flex-start;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.bakery-product-meta-rich {
+  justify-content: flex-start;
+  gap: 0.48rem;
+}
+
+.bakery-discount-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.16rem 0.5rem;
+  background: #ffe8ec;
+  color: #cf244a;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.bakery-rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  border-radius: 999px;
+  padding: 0.18rem 0.5rem;
+  background: #eef8ef;
+  color: #1f7a41;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.bakery-reviews-text {
+  font-size: 0.76rem;
+  color: #6f6a65;
+  font-weight: 700;
 }
 
 .bakery-card-btn {

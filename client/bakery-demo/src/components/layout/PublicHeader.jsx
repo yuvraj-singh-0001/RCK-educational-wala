@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 const desktopCategories = [
   { label: 'Cakes', to: '/menu?category=Cakes' },
+  { label: 'Gourmet Cakes', to: '/menu?category=Gourmet%20Cakes' },
   { label: 'Theme Cakes', to: '/menu?type=Theme%20Cakes' },
   { label: 'By Relationship', to: '/menu?occasion=Relationship' },
   { label: 'Desserts', to: '/menu?category=Desserts' },
@@ -29,19 +30,7 @@ const quickActions = [
 ]
 
 function PublicHeader() {
-  const [showDesktopCategories, setShowDesktopCategories] = useState(true)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowDesktopCategories(window.scrollY <= 2)
-    }
-
-    handleScroll()
-    window.addEventListener('scroll', handleScroll, { passive: true })
-
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   useEffect(() => {
     if (!isMobileMenuOpen) {
@@ -148,9 +137,7 @@ function PublicHeader() {
         <div
           className={[
             'overflow-hidden bg-white text-[#121212] transition-all duration-300 ease-out',
-            showDesktopCategories
-              ? 'max-h-20 border-b border-[#e9e9e9] opacity-100'
-              : 'pointer-events-none invisible max-h-0 border-transparent opacity-0',
+            'max-h-20 border-b border-[#e9e9e9] opacity-100',
           ].join(' ')}
         >
           <div className="mx-auto hidden max-w-[1900px] items-center justify-between gap-4 overflow-x-auto whitespace-nowrap px-4 py-2.5 sm:px-6 lg:flex lg:px-10 xl:gap-5">
