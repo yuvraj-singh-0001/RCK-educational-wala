@@ -55,7 +55,7 @@ function MenuPage() {
   }
 
   return (
-    <section className="bakery-section bakery-catalog-layout">
+    <section className="bakery-section bakery-catalog-layout !mt-1.5 rounded-xl md:rounded-2xl">
       <aside className="bakery-filter-panel">
         <div className="bakery-filter-head">
           <p className="bakery-eyebrow">Filters</p>

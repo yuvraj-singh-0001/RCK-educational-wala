@@ -29,6 +29,7 @@ body {
   font-family: 'Manrope', sans-serif;
   color: var(--bakery-ink);
   background: #fdfdfd;
+  overflow-x: hidden;
 }
 
 a,
@@ -977,20 +978,6 @@ button {
   color: rgba(255, 248, 238, 0.86);
 }
 
-.floating-order-btn {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  z-index: 40;
-  padding: 0.82rem 1.1rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--bakery-warm), #b96d34);
-  color: #fff9f2;
-  text-decoration: none;
-  font-weight: 800;
-  box-shadow: 0 14px 28px rgba(90, 52, 18, 0.2);
-}
-
 .bakery-footer {
   margin: 1rem auto 1.5rem;
   padding: 1rem 1.1rem;
@@ -1250,10 +1237,6 @@ button {
     border-radius: 1.1rem;
   }
 
-  .floating-order-btn {
-    right: 0.75rem;
-    bottom: 0.75rem;
-  }
 }
 
 .bakery-header {
@@ -1436,12 +1419,6 @@ button {
 .bakery-home-category-7 { background: linear-gradient(145deg, #d2cfbf, #a7975d, #f8f1e7); }
 .bakery-home-category-8 { background: linear-gradient(145deg, #dce8e1, #87a28f, #f7f2ea); }
 
-.bakery-home-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.85rem;
-}
-
 .bakery-home-product-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1585,7 +1562,6 @@ button {
 }
 
 @media (max-width: 760px) {
-  .bakery-home-highlights,
   .bakery-home-category-grid,
   .bakery-home-product-strip,
   .bakery-catalog-category-strip,
@@ -1601,6 +1577,12 @@ button {
 
   .bakery-filter-panel {
     background: rgba(255, 252, 247, 0.88);
+  }
+}
+
+@media (max-width: 520px) {
+  .bakery-menu-showcase-grid {
+    grid-template-columns: 1fr;
   }
 }
 

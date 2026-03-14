@@ -9,7 +9,10 @@ function PublicLayout() {
       <main className="bakery-main">
         <Outlet />
       </main>
-      <Link className="floating-order-btn" to="/custom-cake">
+      <Link
+        className="fixed bottom-4 right-4 z-40 rounded-full bg-gradient-to-br from-[#ff5252] to-[#b96d34] px-5 py-3 text-sm font-extrabold text-[#fff9f2] no-underline shadow-[0_14px_28px_rgba(90,52,18,0.2)] transition hover:-translate-y-0.5"
+        to="/custom-cake"
+      >
         Order Now
       </Link>
       <PublicFooter />
