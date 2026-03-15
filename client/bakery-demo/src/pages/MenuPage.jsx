@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import {
   productCatalog
@@ -73,6 +73,8 @@ function MenuPage() {
     event.currentTarget.src = fallbackCakeImage
   }
 
+  const getRevealClass = (index) => (index % 2 === 0 ? 'bakery-reveal-left' : 'bakery-reveal-right')
+
   const isClassicGalleryView =
     viewMode === 'classic' &&
     activeCategory === 'Cakes' &&
@@ -80,6 +82,30 @@ function MenuPage() {
     !activeDelivery &&
     !activeFlavour &&
     !activeType
+
+    
+  useEffect(() => {
+    const revealElements = document.querySelectorAll('[data-bakery-reveal]')
+    if (!revealElements.length) {
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -6% 0px' }
+    )
+
+    revealElements.forEach((element) => observer.observe(element))
+
+    return () => observer.disconnect()
+  }, [viewMode, activeCategory, activeOccasion, activeDelivery, activeFlavour, activeType])
 
   if (isClassicGalleryView) {
     return (
@@ -97,8 +123,9 @@ function MenuPage() {
           {classicProducts.map((item, index) => (
             <Link key={item.id} to="/menu" className="group no-underline">
               <article
-                className="overflow-hidden rounded-2xl border border-[#ece4dc] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)] motion-safe:animate-[bakery-fade-up_420ms_ease_both]"
-                style={{ animationDelay: `${Math.min(index * 32, 260)}ms` }}
+                data-bakery-reveal
+                className={`bakery-reveal ${getRevealClass(index)} overflow-hidden rounded-2xl border border-[#ece4dc] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)]`}
+                style={{ transitionDelay: `${Math.min(index * 28, 240)}ms` }}
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#f6f0eb]">
                   <img
@@ -123,10 +150,10 @@ function MenuPage() {
                 <div className="space-y-2 px-3.5 py-3.5 sm:px-4">
                   <h3 className="line-clamp-2 min-h-[2.6rem] text-[0.95rem] font-semibold leading-5 text-[#222222]">{item.name}</h3>
                   <div className="flex flex-wrap items-center gap-2">
-                    <p className="m-0 text-[0.96rem] font-extrabold text-[#c62828]">₹ {item.price}</p>
-                    {item.originalPrice ? <s className="text-[#8b7e74]">₹ {item.originalPrice}</s> : null}
+                    <p className="bakery-live-price m-0 text-[0.96rem] font-extrabold text-[#c62828]">₹ {item.price}</p>
+                    {item.originalPrice ? <s className="bakery-old-price text-[#8b7e74]">₹ {item.originalPrice}</s> : null}
                     {getDiscountPercent(item) > 0 ? (
-                      <span className="inline-flex items-center rounded-full bg-[#ffe8ec] px-2 py-0.5 text-[0.72rem] font-extrabold text-[#cf244a]">
+                      <span className="bakery-offer-pill-live inline-flex items-center rounded-full bg-[#ffe8ec] px-2 py-0.5 text-[0.72rem] font-extrabold text-[#cf244a]">
                         {getDiscountPercent(item)}% OFF
                       </span>
                     ) : null}
@@ -189,29 +216,37 @@ function MenuPage() {
             {filteredProducts.map((item, index) => (
               <article
                 key={item.id}
-                className="overflow-hidden rounded-2xl border border-[#ece4dc] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)] motion-safe:animate-[bakery-fade-up_420ms_ease_both]"
-                style={{ animationDelay: `${Math.min(index * 28, 220)}ms` }}
+                data-bakery-reveal
+                className={`bakery-reveal ${getRevealClass(index)} overflow-hidden rounded-2xl border border-[#ece4dc] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)]`}
+                style={{ transitionDelay: `${Math.min(index * 24, 200)}ms` }}
               >
-                <div
-                  className={`relative flex min-h-64 items-start justify-between gap-2 bg-cover bg-center p-3 ${item.imageClass}`}
-                  style={{ backgroundImage: `url(${item.imageUrl})` }}
-                >
+                <div className={`relative min-h-64 overflow-hidden ${item.imageClass}`}>
+                  <img
+                    src={item.imageUrl || fallbackCakeImage}
+                    alt={item.name}
+                    className="h-full min-h-64 w-full object-cover"
+                    onError={handleImageError}
+                    loading={index < 8 ? 'eager' : 'lazy'}
+                    decoding="async"
+                    fetchPriority={index < 4 ? 'high' : 'auto'}
+                    sizes="(min-width: 1280px) 24vw, (min-width: 1024px) 32vw, (min-width: 640px) 48vw, 96vw"
+                  />
                   {item.badge && (
-                    <span className="inline-flex rounded-full bg-white/95 px-2.5 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.04em] text-[#9f2138] shadow-sm">
+                    <span className="absolute left-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.04em] text-[#9f2138] shadow-sm">
                       {item.badge}
                     </span>
                   )}
-                  <span className="inline-flex rounded-full bg-white/95 px-2.5 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.05em] text-[#5b4b40]">
+                  <span className="absolute right-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.05em] text-[#5b4b40]">
                     ♡ Wishlist
                   </span>
                 </div>
                 <div className="grid gap-2 p-4">
                   <h3 className="m-0 line-clamp-1 text-[1rem] font-semibold text-[#232323]">{item.name}</h3>
                   <div className="flex flex-wrap items-center gap-2">
-                    <strong>₹ {item.price}</strong>
-                    {item.originalPrice && <s>₹ {item.originalPrice}</s>}
+                    <strong className="bakery-live-price">₹ {item.price}</strong>
+                    {item.originalPrice && <s className="bakery-old-price">₹ {item.originalPrice}</s>}
                     {getDiscountPercent(item) > 0 && (
-                      <span className="inline-flex items-center rounded-full bg-[#ffe8ec] px-2 py-0.5 text-[0.72rem] font-extrabold text-[#cf244a]">
+                      <span className="bakery-offer-pill-live inline-flex items-center rounded-full bg-[#ffe8ec] px-2 py-0.5 text-[0.72rem] font-extrabold text-[#cf244a]">
                         {getDiscountPercent(item)}% OFF
                       </span>
                     )}

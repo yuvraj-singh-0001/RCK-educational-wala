@@ -69,6 +69,197 @@ button {
   }
 }
 
+.bakery-reveal {
+  opacity: 0;
+  transform: translateY(22px) scale(0.985);
+  transition: opacity 540ms cubic-bezier(0.2, 0.75, 0.2, 1), transform 540ms cubic-bezier(0.2, 0.75, 0.2, 1);
+  will-change: opacity, transform;
+  content-visibility: auto;
+  contain-intrinsic-size: 420px;
+}
+
+.bakery-reveal-left {
+  transform: translate3d(-26px, 18px, 0) scale(0.985);
+}
+
+.bakery-reveal-right {
+  transform: translate3d(26px, 18px, 0) scale(0.985);
+}
+
+.bakery-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.bakery-image-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, #efe6de 8%, #f7f1ec 18%, #efe6de 33%);
+  background-size: 220% 100%;
+  animation: bakery-image-shimmer 1.2s linear infinite;
+}
+
+.bakery-live-price {
+  transition: color 260ms ease, transform 260ms ease;
+  animation: bakery-price-pop 420ms ease;
+}
+
+.bakery-old-price {
+  opacity: 0.85;
+  text-decoration-thickness: 1.4px;
+  animation: bakery-old-price-settle 420ms ease;
+}
+
+.bakery-offer-pill-live {
+  animation: bakery-offer-pulse 520ms ease 1;
+}
+
+.offer-ticket-glow {
+  animation: bakery-ticket-breathe 3.2s ease-in-out infinite;
+}
+
+.offer-ticket-shine {
+  animation: bakery-ticket-shine 2.8s ease-in-out infinite;
+}
+
+.offer-cta-pop {
+  animation: bakery-offer-cta-pulse 2.2s ease-in-out infinite;
+}
+
+.offer-card-float {
+  animation: bakery-offer-card-float 3.6s ease-in-out infinite;
+}
+
+.offer-card-float:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.offer-card-float:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes bakery-price-pop {
+  0% {
+    transform: translateY(2px) scale(0.96);
+    opacity: 0.72;
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bakery-old-price-settle {
+  0% {
+    transform: translateX(8px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 0.85;
+  }
+}
+
+@keyframes bakery-offer-pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(207, 36, 74, 0.18);
+  }
+
+  100% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 5px rgba(207, 36, 74, 0);
+  }
+}
+
+@keyframes bakery-ticket-breathe {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(193, 28, 47, 0.09);
+  }
+
+  50% {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(193, 28, 47, 0.16);
+  }
+}
+
+@keyframes bakery-ticket-shine {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.75;
+  }
+
+  60% {
+    transform: translateX(320%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(320%);
+    opacity: 0;
+  }
+}
+
+@keyframes bakery-offer-cta-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(225, 29, 47, 0.16);
+  }
+
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 6px rgba(225, 29, 47, 0);
+  }
+}
+
+@keyframes bakery-offer-card-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes bakery-image-shimmer {
+  to {
+    background-position-x: -220%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bakery-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .bakery-image-skeleton {
+    animation: none;
+  }
+
+  .bakery-live-price,
+  .bakery-old-price,
+  .bakery-offer-pill-live,
+  .offer-ticket-glow,
+  .offer-ticket-shine,
+  .offer-cta-pop,
+  .offer-card-float {
+    animation: none;
+  }
+}
+
 .bakery-page-wrap {
   min-height: 100vh;
   background: var(--bakery-bg);
