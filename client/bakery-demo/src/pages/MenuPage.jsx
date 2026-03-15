@@ -14,7 +14,6 @@ function MenuPage() {
   const activeDelivery = searchParams.get('delivery') || ''
   const activeFlavour = searchParams.get('flavour') || ''
   const activeType = searchParams.get('type') || ''
-  const viewMode = searchParams.get('view') || ''
 
   const filteredProducts = useMemo(() => {
     const items = productCatalog.filter((item) => {
@@ -22,27 +21,28 @@ function MenuPage() {
       const matchesOccasion = !activeOccasion || item.occasion === activeOccasion
       const matchesDelivery = !activeDelivery || item.delivery === activeDelivery
       const matchesFlavour = !activeFlavour || item.flavour === activeFlavour
-      const matchesType = !activeType || item.type === activeType
+      const matchesType =
+        !activeType ||
+        ((activeType === 'Designer Cakes' || activeType === 'Photo Cakes')
+          ? item.type === activeType && item.category === 'Cakes'
+          : item.type === activeType)
 
       return matchesCategory && matchesOccasion && matchesDelivery && matchesFlavour && matchesType
     })
-
-    return [...items].sort((firstItem, secondItem) => {
-      return secondItem.rating * 100 + secondItem.price - (firstItem.rating * 100 + firstItem.price)
-    })
-  }, [activeCategory, activeDelivery, activeOccasion, activeFlavour, activeType])
-
-  const classicProducts = useMemo(() => {
-    const items = productCatalog.filter((item) => item.category === 'Cakes' || item.category === 'Gourmet Cakes')
 
     const sortedItems = [...items].sort((firstItem, secondItem) => {
       return secondItem.rating * 100 + secondItem.price - (firstItem.rating * 100 + firstItem.price)
     })
 
+    if (activeType !== 'Designer Cakes') {
+      return sortedItems
+    }
+
     const seenImageUrls = new Set()
 
     return sortedItems.filter((item) => {
       const imageKey = item.imageUrl || item.id
+
       if (seenImageUrls.has(imageKey)) {
         return false
       }
@@ -50,7 +50,49 @@ function MenuPage() {
       seenImageUrls.add(imageKey)
       return true
     })
-  }, [])
+  }, [activeCategory, activeDelivery, activeOccasion, activeFlavour, activeType])
+
+  const pageContext = useMemo(() => {
+    if (activeType) {
+      return {
+        breadcrumb: `Home / ${activeType}`,
+        heading: activeType,
+      }
+    }
+
+    if (activeCategory) {
+      return {
+        breadcrumb: `Home / ${activeCategory}`,
+        heading: activeCategory,
+      }
+    }
+
+    if (activeOccasion) {
+      return {
+        breadcrumb: `Home / ${activeOccasion} Cakes`,
+        heading: `${activeOccasion} Cakes`,
+      }
+    }
+
+    if (activeDelivery) {
+      return {
+        breadcrumb: `Home / ${activeDelivery} Delivery Cakes`,
+        heading: `${activeDelivery} Delivery Cakes`,
+      }
+    }
+
+    if (activeFlavour) {
+      return {
+        breadcrumb: `Home / ${activeFlavour} Cakes`,
+        heading: `${activeFlavour} Cakes`,
+      }
+    }
+
+    return {
+      breadcrumb: 'Home / All Cakes Collection',
+      heading: 'All Cakes Collection',
+    }
+  }, [activeCategory, activeDelivery, activeFlavour, activeOccasion, activeType])
 
   const getDiscountPercent = (item) => {
     if (typeof item.discountPercent === 'number') {
@@ -75,15 +117,8 @@ function MenuPage() {
 
   const getRevealClass = (index) => (index % 2 === 0 ? 'bakery-reveal-left' : 'bakery-reveal-right')
 
-  const isClassicGalleryView =
-    viewMode === 'classic' &&
-    activeCategory === 'Cakes' &&
-    !activeOccasion &&
-    !activeDelivery &&
-    !activeFlavour &&
-    !activeType
+  const isImageCakePage = activeType === 'Photo Cakes' || activeType === 'Designer Cakes'
 
-    
   useEffect(() => {
     const revealElements = document.querySelectorAll('[data-bakery-reveal]')
     if (!revealElements.length) {
@@ -105,90 +140,19 @@ function MenuPage() {
     revealElements.forEach((element) => observer.observe(element))
 
     return () => observer.disconnect()
-  }, [viewMode, activeCategory, activeOccasion, activeDelivery, activeFlavour, activeType])
-
-  if (isClassicGalleryView) {
-    return (
-      <section className="bakery-section !mt-1.5 overflow-hidden rounded-2xl bg-white/80 p-4 motion-safe:animate-[bakery-fade-up_380ms_ease_both] sm:p-5 lg:p-6">
-        <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-[#e02b2b]">Classic Collection</p>
-            <h2 className="mt-1 text-2xl font-semibold tracking-tight text-[#222222] sm:text-3xl">Classic Cakes</h2>
-            <p className="mt-1 text-sm text-[#6b6b6b]">Signature classic cakes with premium finish and dependable same-day delivery.</p>
-            <p className="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#8b7e74]">{classicProducts.length} Cakes Available</p>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {classicProducts.map((item, index) => (
-            <Link key={item.id} to="/menu" className="group no-underline">
-              <article
-                data-bakery-reveal
-                className={`bakery-reveal ${getRevealClass(index)} overflow-hidden rounded-2xl border border-[#ece4dc] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)]`}
-                style={{ transitionDelay: `${Math.min(index * 28, 240)}ms` }}
-              >
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#f6f0eb]">
-                  <img
-                    src={item.imageUrl || fallbackCakeImage}
-                    alt={item.name}
-                    className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
-                    onError={handleImageError}
-                    loading={index < 6 ? 'eager' : 'lazy'}
-                    decoding="async"
-                    fetchPriority={index < 2 ? 'high' : 'auto'}
-                    sizes="(min-width: 1280px) 24vw, (min-width: 1024px) 32vw, (min-width: 640px) 48vw, 96vw"
-                  />
-                  {item.badge ? (
-                    <span className="absolute left-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.04em] text-[#9f2138] shadow-sm">
-                      {item.badge}
-                    </span>
-                  ) : null}
-                  <span className="absolute right-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.05em] text-[#5b4b40]">
-                    ♡ Wishlist
-                  </span>
-                </div>
-                <div className="space-y-2 px-3.5 py-3.5 sm:px-4">
-                  <h3 className="line-clamp-2 min-h-[2.6rem] text-[0.95rem] font-semibold leading-5 text-[#222222]">{item.name}</h3>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <p className="bakery-live-price m-0 text-[0.96rem] font-extrabold text-[#c62828]">₹ {item.price}</p>
-                    {item.originalPrice ? <s className="bakery-old-price text-[#8b7e74]">₹ {item.originalPrice}</s> : null}
-                    {getDiscountPercent(item) > 0 ? (
-                      <span className="bakery-offer-pill-live inline-flex items-center rounded-full bg-[#ffe8ec] px-2 py-0.5 text-[0.72rem] font-extrabold text-[#cf244a]">
-                        {getDiscountPercent(item)}% OFF
-                      </span>
-                    ) : null}
-                  </div>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center rounded-full bg-[#eef8ef] px-2 py-0.5 text-[0.74rem] font-extrabold text-[#1f7a41]">
-                      {item.rating} ★
-                    </span>
-                    {item.reviews ? (
-                      <span className="text-[0.78rem] font-semibold text-[#6f6a65]">({item.reviews} Reviews)</span>
-                    ) : null}
-                  </div>
-                  <p className="m-0 text-sm text-[#6b6b6b]">
-                    Earliest Delivery: <strong className="text-[#2b2b2b]">{item.delivery}</strong>
-                  </p>
-                </div>
-              </article>
-            </Link>
-          ))}
-        </div>
-      </section>
-    )
-  }
+  }, [activeCategory, activeOccasion, activeDelivery, activeFlavour, activeType])
 
   return (
     <section className="bakery-section !mt-1.5 rounded-xl md:rounded-2xl">
       <div className="rounded-2xl bg-white/80 p-4 sm:p-5 lg:p-6">
         <div className="mb-4 text-sm font-medium text-[#6f6257]">
-          {activeCategory === 'Gourmet Cakes' ? 'Home / Gourmet Cakes' : 'Home / Cakes Delivery Online'}
+          {pageContext.breadcrumb}
         </div>
 
         <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
           <div>
             <h2 className="m-0 text-2xl font-semibold tracking-tight text-[#1f1f1f] sm:text-3xl">
-              {activeCategory === 'Gourmet Cakes' ? 'Gourmet Cakes Collection' : 'Order Cakes Online'}
+              {pageContext.heading}
             </h2>
             <div className="mt-2 flex flex-wrap items-center gap-2 text-sm font-medium text-[#6b6b6b] sm:text-[0.95rem]">
               <span>{filteredProducts.length} Products</span>
@@ -217,14 +181,14 @@ function MenuPage() {
               <article
                 key={item.id}
                 data-bakery-reveal
-                className={`bakery-reveal ${getRevealClass(index)} overflow-hidden rounded-2xl border border-[#ece4dc] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)]`}
+                className={`bakery-reveal ${getRevealClass(index)} flex h-full flex-col overflow-hidden rounded-2xl border border-[#ece4dc] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)]`}
                 style={{ transitionDelay: `${Math.min(index * 24, 200)}ms` }}
               >
-                <div className={`relative min-h-64 overflow-hidden ${item.imageClass}`}>
+                <div className={`relative aspect-[4/3] overflow-hidden bg-[#f6f0eb] ${item.imageClass || ''}`}>
                   <img
                     src={item.imageUrl || fallbackCakeImage}
                     alt={item.name}
-                    className="h-full min-h-64 w-full object-cover"
+                    className={`h-full w-full ${isImageCakePage ? 'object-contain p-2' : 'object-cover'}`}
                     onError={handleImageError}
                     loading={index < 8 ? 'eager' : 'lazy'}
                     decoding="async"
@@ -240,7 +204,7 @@ function MenuPage() {
                     ♡ Wishlist
                   </span>
                 </div>
-                <div className="grid gap-2 p-4">
+                <div className="grid flex-1 gap-2 p-4">
                   <h3 className="m-0 line-clamp-1 text-[1rem] font-semibold text-[#232323]">{item.name}</h3>
                   <div className="flex flex-wrap items-center gap-2">
                     <strong className="bakery-live-price">₹ {item.price}</strong>
@@ -273,3 +237,4 @@ function MenuPage() {
 }
 
 export default MenuPage
+

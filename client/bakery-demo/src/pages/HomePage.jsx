@@ -9,7 +9,7 @@ const menuShowcaseItems = [
   {
     id: 'classic-cakes',
     label: 'Classic Cakes',
-    to: '/menu?category=Cakes&view=classic',
+    to: '/menu?category=Cakes',
     imageUrl: '/bakery-demo/images/Classic-Menu-cake.png',
   },
   {
