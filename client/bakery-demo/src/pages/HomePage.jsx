@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import HeroCarousel from '../components/home/HeroCarousel'
 import {
@@ -65,14 +66,91 @@ const specialOffers = [
   },
 ]
 
+const fallbackImage = '/bakery-demo/images/Classic-Menu-cake.png'
+
+const isCakeBasePriceItem = (item) => item.category === 'Cakes' || item.category === 'Gourmet Cakes'
+
+const getBaseCakePrice = (item) => {
+  const rawPrice = Number(item.price || 0)
+
+  if (!isCakeBasePriceItem(item)) {
+    return rawPrice
+  }
+
+  return 200 + (Math.abs(Math.round(rawPrice)) % 151)
+}
+
+const getHomeDisplayPrice = (item) => {
+  if (!isCakeBasePriceItem(item)) {
+    return Number(item.price || 0)
+  }
+
+  return Math.round((getBaseCakePrice(item) * 1) / 0.5)
+}
+
+const getDisplayOriginalPrice = (item) => {
+  const basePrice = getBaseCakePrice(item)
+  const rawOriginal = Number(item.originalPrice || 0)
+
+  if (!isCakeBasePriceItem(item)) {
+    return rawOriginal
+  }
+
+  if (!rawOriginal || rawOriginal <= basePrice + 30) {
+    return Math.round((basePrice + 70) * (1 / 0.5))
+  }
+
+  return Math.round(Math.min(420, Math.max(basePrice + 40, rawOriginal)) * (1 / 0.5))
+}
+
+function ImageWithSkeleton({
+  src,
+  alt,
+  className = '',
+  imgClassName = '',
+  loading = 'lazy',
+  fetchPriority = 'auto',
+  sizes,
+  children,
+}) {
+  const [loaded, setLoaded] = useState(false)
+  const [currentSrc, setCurrentSrc] = useState(src)
+
+  const handleError = () => {
+    if (currentSrc === fallbackImage) {
+      return
+    }
+    setLoaded(false)
+    setCurrentSrc(fallbackImage)
+  }
+
+  return (
+    <div className={`relative overflow-hidden ${className}`}>
+      {!loaded && <span className="bakery-image-skeleton" />}
+      <img
+        src={currentSrc}
+        alt={alt}
+        className={`h-full w-full ${imgClassName} ${loaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
+        loading={loading}
+        decoding="async"
+        fetchPriority={fetchPriority}
+        sizes={sizes}
+        onLoad={() => setLoaded(true)}
+        onError={handleError}
+      />
+      {children}
+    </div>
+  )
+}
+
 function HomePage() {
   const featuredProducts = productCatalog.slice(0, 8) // Increased to 8 to show a nice 2-row grid
 
   return (
     <>
-      <HeroCarousel />
+      <HeroCarousel className="bakery-reveal" data-bakery-reveal />
 
-      <section className="bakery-section !mt-1.5 overflow-hidden rounded-xl bg-gradient-to-b from-[#f8dfe7] to-[#f9e8ee] px-4 pb-7 pt-6 sm:px-6 md:rounded-2xl lg:px-8">
+      <section className="bakery-section bakery-reveal !mt-1.5 overflow-hidden rounded-xl bg-gradient-to-b from-[#f8dfe7] to-[#f9e8ee] px-4 pb-7 pt-6 sm:px-6 md:rounded-2xl lg:px-8" data-bakery-reveal>
         <div className="mb-5 grid justify-items-center gap-2 text-center">
           <p className="m-0 text-[clamp(2rem,4vw,3rem)] font-extrabold leading-none text-[#e11d2f]">Menu</p>
           <h2 className="m-0 text-[clamp(1.5rem,2.6vw,2.5rem)] font-medium tracking-[-0.03em] text-[#435266]">
@@ -81,18 +159,23 @@ function HomePage() {
         </div>
 
         <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-          {menuShowcaseItems.map((item) => (
+          {menuShowcaseItems.map((item, index) => (
             <Link
               key={item.id}
               to={item.to}
-              className="group shrink-0 basis-[calc(50%-0.375rem)] snap-start text-inherit no-underline md:basis-[calc(25%-0.5625rem)] xl:basis-[calc(16.666%-0.625rem)]"
+              className="bakery-reveal group shrink-0 basis-[calc(50%-0.375rem)] snap-start text-inherit no-underline md:basis-[calc(25%-0.5625rem)] xl:basis-[calc(16.666%-0.625rem)]"
+              data-bakery-reveal
+              style={{ '--bakery-reveal-delay': `${Math.min(index * 60, 240)}ms` }}
             >
               <div className="w-full rounded-xl bg-white/30 p-1 shadow-[0_10px_24px_rgba(114,65,79,0.08)]">
-                <div
-                  className="aspect-square rounded-lg bg-cover bg-center transition duration-300 group-hover:-translate-y-0.5 group-hover:shadow-[0_12px_20px_rgba(114,65,79,0.12)]"
-                  style={{
-                    backgroundImage: `url('${item.imageUrl}')`,
-                  }}
+                <ImageWithSkeleton
+                  src={item.imageUrl}
+                  alt={item.label}
+                  className="aspect-square rounded-lg bg-[#f6e9e5] transition duration-300 group-hover:-translate-y-0.5 group-hover:shadow-[0_12px_20px_rgba(114,65,79,0.12)]"
+                  imgClassName="object-cover"
+                  loading={index < 2 ? 'eager' : 'lazy'}
+                  fetchPriority={index < 2 ? 'high' : 'auto'}
+                  sizes="(min-width: 1280px) 12vw, (min-width: 768px) 20vw, 42vw"
                 />
               </div>
               <span className="mt-2 block text-center text-[0.8rem] font-extrabold uppercase tracking-[0.03em] text-[#18233a] md:text-[0.82rem] xl:text-[0.9rem]">
@@ -103,7 +186,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="bakery-section overflow-hidden rounded-[1.8rem] bg-white/70 px-4 py-8 sm:px-6 lg:px-8">
+      <section className="bakery-section bakery-reveal overflow-hidden rounded-[1.8rem] bg-white/70 px-4 py-8 sm:px-6 lg:px-8" data-bakery-reveal>
         {/* Section header — centred like reference image */}
         <div className="mb-7 text-center">
           <div className="flex items-center justify-center gap-2">
@@ -115,23 +198,30 @@ function HomePage() {
 
         {/* Horizontal scroll strip */}
         <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-3 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-          {featuredProducts.map((item) => (
+          {featuredProducts.map((item, index) => (
             <Link
               to="/menu"
               key={item.id}
-              className="shrink-0 snap-start basis-[44%] no-underline sm:basis-[30%] md:basis-[22%] lg:basis-[18%]"
+              className="bakery-reveal shrink-0 snap-start basis-[44%] no-underline sm:basis-[30%] md:basis-[22%] lg:basis-[18%]"
+              data-bakery-reveal
+              style={{ '--bakery-reveal-delay': `${Math.min(index * 70, 280)}ms` }}
             >
               <article className="overflow-hidden rounded-xl border border-black/[0.07] bg-white shadow-[0_2px_12px_rgba(0,0,0,0.07)]">
                 {/* Image */}
-                <div
-                  className="relative aspect-square overflow-hidden bg-cover bg-center"
-                  style={{ backgroundImage: `url(${item.imageUrl})` }}
+                <ImageWithSkeleton
+                  src={item.imageUrl}
+                  alt={item.name}
+                  className="aspect-square bg-[#f5efe9]"
+                  imgClassName="object-cover"
+                  loading={index < 3 ? "eager" : "lazy"}
+                  fetchPriority={index < 2 ? "high" : "auto"}
+                  sizes="(min-width: 1280px) 18vw, (min-width: 768px) 26vw, 60vw"
                 >
                   {/* Veg indicator — green square with inner circle */}
                   <span className="absolute left-2 top-2 flex h-[18px] w-[18px] items-center justify-center rounded-[3px] border-[2px] border-[#388e3c] bg-white shadow-sm">
                     <span className="h-[9px] w-[9px] rounded-full bg-[#388e3c]" />
                   </span>
-                </div>
+                </ImageWithSkeleton>
 
                 {/* Card body */}
                 <div className="px-2.5 pb-3 pt-2">
@@ -139,9 +229,9 @@ function HomePage() {
 
                   <div className="mt-2 flex items-center justify-between">
                     <div className="flex items-baseline gap-1.5">
-                      <span className="text-[0.9rem] font-extrabold text-[#1a1a1a]">₹{item.price}</span>
-                      {item.originalPrice && (
-                        <s className="text-[0.72rem] text-[#999]">₹{item.originalPrice}</s>
+                      <span className="text-[0.9rem] font-extrabold text-[#1a1a1a]">₹{getHomeDisplayPrice(item)}</span>
+                      {getDisplayOriginalPrice(item) > getHomeDisplayPrice(item) && (
+                        <s className="text-[0.72rem] text-[#999]">₹{getDisplayOriginalPrice(item)}</s>
                       )}
                     </div>
                     <span className="cursor-pointer text-base leading-none text-[#c8c8c8] transition-colors hover:text-[#e02b2b]">♡</span>
@@ -170,7 +260,7 @@ function HomePage() {
       </section>
 
       {/* ── Our Promise ── */}
-      <section className="bakery-section relative overflow-hidden rounded-[1.8rem] bg-[#fdf0f2] px-6 py-12 sm:px-10 lg:px-16">
+      <section className="bakery-section bakery-reveal relative overflow-hidden rounded-[1.8rem] bg-[#fdf0f2] px-6 py-12 sm:px-10 lg:px-16" data-bakery-reveal>
         {/* decorative large circle */}
         <span className="pointer-events-none absolute -right-24 top-1/2 h-[340px] w-[340px] -translate-y-1/2 rounded-full bg-[#f5d5dc] opacity-60 sm:h-[420px] sm:w-[420px]" />
 
@@ -244,7 +334,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="bakery-section overflow-hidden rounded-[1.6rem] border border-[#f0d7de] bg-[#fff6f8] p-4 sm:p-5">
+      <section className="bakery-section bakery-reveal overflow-hidden rounded-[1.6rem] border border-[#f0d7de] bg-[#fff6f8] p-4 sm:p-5" data-bakery-reveal>
         <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
           <div>
             <p className="m-0 text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-[#d62839]">Special Offers</p>
@@ -296,7 +386,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="bakery-section rounded-[1.8rem] bg-gradient-to-r from-[#fff6f8] to-[#fffdf9] p-4 sm:p-6 lg:p-7">
+      <section className="bakery-section bakery-reveal rounded-[1.8rem] bg-gradient-to-r from-[#fff6f8] to-[#fffdf9] p-4 sm:p-6 lg:p-7" data-bakery-reveal>
         <div className="mb-5">
           <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-[#e02b2b]">Milestones</p>
           <h2 className="mt-1 text-2xl font-semibold tracking-tight text-[#222222] sm:text-3xl">Delivering Smiles Across India</h2>

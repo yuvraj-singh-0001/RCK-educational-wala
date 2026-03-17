@@ -3,6 +3,7 @@ import StudentDashboardPage from '../modules/Students/StudentDashboardPage'
 import StudentCoursesPage from '../modules/Students/StudentCoursesPage'
 import AboutPage from '../pages/AboutPage'
 import ContactPage from '../pages/ContactPage'
+import CartPage from '../pages/CartPage'
 import CustomCakePage from '../pages/CustomCakePage'
 import GalleryPage from '../pages/GalleryPage'
 import HomePage from '../pages/HomePage'
@@ -17,6 +18,7 @@ function AppRouter() {
         <Route element={<PublicLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/menu" element={<MenuPage />} />
+          <Route path="/cart" element={<CartPage />} />
           <Route path="/custom-cake" element={<CustomCakePage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/about" element={<AboutPage />} />

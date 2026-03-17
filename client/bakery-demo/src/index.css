@@ -73,8 +73,8 @@ button {
   opacity: 0;
   transform: translateY(22px) scale(0.985);
   transition: opacity 540ms cubic-bezier(0.2, 0.75, 0.2, 1), transform 540ms cubic-bezier(0.2, 0.75, 0.2, 1);
+  transition-delay: var(--bakery-reveal-delay, 0ms);
   will-change: opacity, transform;
-  content-visibility: auto;
   contain-intrinsic-size: 420px;
 }
 
@@ -615,6 +615,16 @@ button {
   backdrop-filter: blur(12px);
   box-shadow: var(--bakery-shadow);
   animation: bakery-fade-up 480ms ease both;
+}
+
+.bakery-section.bakery-reveal {
+  animation: none;
+}
+
+@media (max-width: 900px) {
+  .bakery-section {
+    backdrop-filter: none;
+  }
 }
 
 .bakery-eyebrow {
