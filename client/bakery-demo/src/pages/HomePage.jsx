@@ -6,6 +6,8 @@ import {
   productCatalog
 } from '../data/storefrontData'
 
+const preloadMenuPage = () => import('./MenuPage')
+
 const menuShowcaseItems = [
   {
     id: 'classic-cakes',
@@ -163,6 +165,9 @@ function HomePage() {
             <Link
               key={item.id}
               to={item.to}
+              onMouseEnter={preloadMenuPage}
+              onFocus={preloadMenuPage}
+              onTouchStart={preloadMenuPage}
               className="bakery-reveal group shrink-0 basis-[calc(50%-0.375rem)] snap-start text-inherit no-underline md:basis-[calc(25%-0.5625rem)] xl:basis-[calc(16.666%-0.625rem)]"
               data-bakery-reveal
               style={{ '--bakery-reveal-delay': `${Math.min(index * 60, 240)}ms` }}
@@ -202,6 +207,9 @@ function HomePage() {
             <Link
               to="/menu"
               key={item.id}
+              onMouseEnter={preloadMenuPage}
+              onFocus={preloadMenuPage}
+              onTouchStart={preloadMenuPage}
               className="bakery-reveal shrink-0 snap-start basis-[44%] no-underline sm:basis-[30%] md:basis-[22%] lg:basis-[18%]"
               data-bakery-reveal
               style={{ '--bakery-reveal-delay': `${Math.min(index * 70, 280)}ms` }}
@@ -252,6 +260,9 @@ function HomePage() {
         <div className="mt-5 text-center">
           <Link
             to="/menu?sort=popular"
+            onMouseEnter={preloadMenuPage}
+            onFocus={preloadMenuPage}
+            onTouchStart={preloadMenuPage}
             className="inline-block border-b-2 border-[#c62828] pb-0.5 text-sm font-bold uppercase tracking-widest text-[#c62828] no-underline transition-colors hover:text-[#9b1b1b]"
           >
             VIEW ALL
