@@ -1,25 +1,16 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { productCatalog } from "../data/storefrontData";
+import {
+  productCatalog,
+  isCakeBasePriceItem as isWeightSelectableProduct,
+  getBaseCakePrice,
+  getDisplayPriceByWeight
+} from "../data/storefrontData";
 
 const cartStorageKey = "bakery-cart";
 const deliveryLocationStorageKey = "bakery-delivery-location";
 const fallbackCakeImage = "/bakery-demo/images/Classic-Menu-cake.png";
 const weightOptions = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
-
-function isWeightSelectableProduct(item) {
-  return item.category === "Cakes" || item.category === "Gourmet Cakes";
-}
-
-function getBaseCakePrice(item) {
-  const rawPrice = Number(item.price || 0);
-
-  if (!isWeightSelectableProduct(item)) {
-    return rawPrice;
-  }
-
-  return 200 + (Math.abs(Math.round(rawPrice)) % 151);
-}
 
 function getFallbackSourcePath(item) {
   if (item.type) {

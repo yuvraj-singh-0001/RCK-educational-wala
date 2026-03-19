@@ -1,12 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import HeroCarousel from '../components/home/HeroCarousel'
+import WeightFilter from '../components/layout/WeightFilter'
 import {
   highlightStats,
-  productCatalog
+  productCatalog,
+  getGlobalWeight,
+  weightUpdatedEvent,
+  isCakeBasePriceItem,
+  getDisplayPriceByWeight,
+  getDisplayOriginalPrice
 } from '../data/storefrontData'
 
 const preloadMenuPage = () => import('./MenuPage')
+
 
 const menuShowcaseItems = [
   {
@@ -70,40 +77,6 @@ const specialOffers = [
 
 const fallbackImage = '/bakery-demo/images/Classic-Menu-cake.png'
 
-const isCakeBasePriceItem = (item) => item.category === 'Cakes' || item.category === 'Gourmet Cakes'
-
-const getBaseCakePrice = (item) => {
-  const rawPrice = Number(item.price || 0)
-
-  if (!isCakeBasePriceItem(item)) {
-    return rawPrice
-  }
-
-  return 200 + (Math.abs(Math.round(rawPrice)) % 151)
-}
-
-const getHomeDisplayPrice = (item) => {
-  if (!isCakeBasePriceItem(item)) {
-    return Number(item.price || 0)
-  }
-
-  return Math.round((getBaseCakePrice(item) * 1) / 0.5)
-}
-
-const getDisplayOriginalPrice = (item) => {
-  const basePrice = getBaseCakePrice(item)
-  const rawOriginal = Number(item.originalPrice || 0)
-
-  if (!isCakeBasePriceItem(item)) {
-    return rawOriginal
-  }
-
-  if (!rawOriginal || rawOriginal <= basePrice + 30) {
-    return Math.round((basePrice + 70) * (1 / 0.5))
-  }
-
-  return Math.round(Math.min(420, Math.max(basePrice + 40, rawOriginal)) * (1 / 0.5))
-}
 
 function ImageWithSkeleton({
   src,
@@ -145,8 +118,20 @@ function ImageWithSkeleton({
   )
 }
 
+
+
 function HomePage() {
-  const featuredProducts = productCatalog.slice(0, 8) // Increased to 8 to show a nice 2-row grid
+  const [currentWeight, setCurrentWeight] = useState(getGlobalWeight());
+  const featuredProducts = productCatalog.slice(0, 8)
+
+  useEffect(() => {
+    const handleSync = (e) => setCurrentWeight(Number(e.detail || 1));
+    window.addEventListener(weightUpdatedEvent, handleSync);
+    window.addEventListener("storage", () => setCurrentWeight(getGlobalWeight()));
+    return () => {
+      window.removeEventListener(weightUpdatedEvent, handleSync);
+    };
+  }, []);
 
   return (
     <>
@@ -193,13 +178,17 @@ function HomePage() {
 
       <section className="bakery-section bakery-reveal overflow-hidden rounded-[1.8rem] bg-white/70 px-4 py-8 sm:px-6 lg:px-8" data-bakery-reveal>
         {/* Section header — centred like reference image */}
-        <div className="mb-7 text-center">
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-[1.6rem] leading-none text-[#f5a623]">✦</span>
-            <h2 className="text-[clamp(1.5rem,3vw,2.1rem)] font-extrabold text-[#c62828]">Our Bestsellers</h2>
+        <div className="mb-7 flex flex-col items-center justify-between gap-4 md:flex-row">
+          <div className="text-center md:text-left">
+            <div className="flex items-center justify-center gap-2 md:justify-start">
+              <span className="text-[1.6rem] leading-none text-[#f5a623]">✦</span>
+              <h2 className="text-[clamp(1.5rem,3vw,2.1rem)] font-extrabold text-[#c62828]">Our Bestsellers</h2>
+            </div>
+            <p className="mt-1.5 text-sm text-[#666666]">Most loved products from our kitchen</p>
           </div>
-          <p className="mt-1.5 text-sm text-[#666666]">Most loved products from our kitchen</p>
+          <WeightFilter className="!justify-center md:!justify-end" />
         </div>
+
 
         {/* Horizontal scroll strip */}
         <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-3 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
@@ -237,20 +226,26 @@ function HomePage() {
 
                   <div className="mt-2 flex items-center justify-between">
                     <div className="flex items-baseline gap-1.5">
-                      <span className="text-[0.9rem] font-extrabold text-[#1a1a1a]">₹{getHomeDisplayPrice(item)}</span>
-                      {getDisplayOriginalPrice(item) > getHomeDisplayPrice(item) && (
-                        <s className="text-[0.72rem] text-[#999]">₹{getDisplayOriginalPrice(item)}</s>
+                      <span className="text-[0.9rem] font-extrabold text-[#1a1a1a]">₹{getDisplayPriceByWeight(item, currentWeight)}</span>
+                      {getDisplayOriginalPrice(item, currentWeight) > getDisplayPriceByWeight(item, currentWeight) && (
+                        <s className="text-[0.72rem] text-[#999]">₹{getDisplayOriginalPrice(item, currentWeight)}</s>
                       )}
                     </div>
                     <span className="cursor-pointer text-base leading-none text-[#c8c8c8] transition-colors hover:text-[#e02b2b]">♡</span>
                   </div>
 
-                  <div className="mt-1.5 flex items-center gap-1 text-[0.72rem] text-[#666]">
-                    <span className="text-[#f5a623] text-[0.78rem]">★</span>
-                    <span className="font-semibold text-[#333]">{item.rating}</span>
-                    <span>({item.reviews >= 1000 ? (item.reviews / 1000).toFixed(1) + 'K' : item.reviews} Reviews)</span>
+                  <div className="mt-1 flex items-center justify-between">
+                    <div className="flex items-center gap-1 text-[0.72rem] text-[#666]">
+                      <span className="text-[#f5a623] text-[0.78rem]">★</span>
+                      <span className="font-semibold text-[#333]">{item.rating}</span>
+                      <span>({item.reviews >= 1000 ? (item.reviews / 1000).toFixed(1) + 'K' : item.reviews} Reviews)</span>
+                    </div>
+                    {isCakeBasePriceItem(item) && (
+                      <span className="text-[0.68rem] font-bold text-[#b44b4b] bg-[#fff0f0] px-1.5 py-0.5 rounded-full">{currentWeight} Kg</span>
+                    )}
                   </div>
                 </div>
+
               </article>
             </Link>
           ))}

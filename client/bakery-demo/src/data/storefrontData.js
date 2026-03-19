@@ -1118,3 +1118,69 @@ export function getStorefrontHref(item) {
   const { key, value } = getStorefrontFilter(item)
   return `/menu?${key}=${encodeURIComponent(value)}`
 }
+
+// --- Dynamic Price & Global Weight Utilities ---
+
+export const weightFilterOptions = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
+export const globalWeightStorageKey = "bakery-selected-weight";
+export const weightUpdatedEvent = "bakery-weight-updated";
+
+/** Checks if the item belongs to a category where price is weight-dependent */
+export const isCakeBasePriceItem = (item) =>
+  item.category === "Cakes" || item.category === "Gourmet Cakes";
+
+/** Returns the base price for 0.5 Kg of the item */
+export const getBaseCakePrice = (item) => {
+  const rawPrice = Number(item.price || 0);
+
+  if (!isCakeBasePriceItem(item)) {
+    return rawPrice;
+  }
+
+  // Consistent hashing logic for base price simulation
+  return 200 + (Math.abs(Math.round(rawPrice)) % 151);
+};
+
+/** Returns the display price for a specific weight (supports partial weights) */
+export const getDisplayPriceByWeight = (item, weightKg) => {
+  if (!isCakeBasePriceItem(item)) {
+    return Number(item.price || 0);
+  }
+
+  const basePrice = getBaseCakePrice(item);
+  const factor = Number(weightKg || 1) / 0.5;
+  return Math.round(basePrice * factor);
+};
+
+/** Returns the original (strikethrough) price for a specific weight */
+export const getDisplayOriginalPrice = (item, weightKg) => {
+  const basePrice = getBaseCakePrice(item);
+  const rawOriginal = Number(item.originalPrice || 0);
+  const factor = Number(weightKg || 1) / 0.5;
+
+  if (!isCakeBasePriceItem(item)) {
+    return rawOriginal;
+  }
+
+  if (!rawOriginal || rawOriginal <= basePrice + 30) {
+    return Math.round((basePrice + 70) * factor);
+  }
+
+  return Math.round(Math.min(420, Math.max(basePrice + 40, rawOriginal)) * factor);
+};
+
+/** Helper to get current global weight from storage */
+export const getGlobalWeight = () => {
+  try {
+    const val = localStorage.getItem(globalWeightStorageKey);
+    return val ? Number(val) : 1;
+  } catch {
+    return 1;
+  }
+};
+
+/** Helper to update global weight and notify listeners */
+export const setGlobalWeight = (weight) => {
+  localStorage.setItem(globalWeightStorageKey, String(weight));
+  window.dispatchEvent(new CustomEvent(weightUpdatedEvent, { detail: weight }));
+};

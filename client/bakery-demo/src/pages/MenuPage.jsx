@@ -1,54 +1,35 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import { productCatalog } from "../data/storefrontData";
+import {
+  productCatalog,
+  weightFilterOptions,
+  getGlobalWeight,
+  weightUpdatedEvent,
+  isCakeBasePriceItem,
+  getBaseCakePrice,
+  getDisplayPriceByWeight,
+  getDisplayOriginalPrice
+} from "../data/storefrontData";
+import WeightFilter from "../components/layout/WeightFilter";
 
 const fallbackCakeImage = "/bakery-demo/images/Classic-Menu-cake.png";
 const cartStorageKey = "bakery-cart";
-const weightFilterOptions = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
-
-const isCakeBasePriceItem = (item) =>
-  item.category === "Cakes" || item.category === "Gourmet Cakes";
-
-const getBaseCakePrice = (item) => {
-  const rawPrice = Number(item.price || 0);
-
-  if (!isCakeBasePriceItem(item)) {
-    return rawPrice;
-  }
-
-  return 200 + (Math.abs(Math.round(rawPrice)) % 151);
-};
-
-const getDisplayPriceByWeight = (item, weightKg) => {
-  if (!isCakeBasePriceItem(item)) {
-    return Number(item.price || 0);
-  }
-
-  return Math.round((getBaseCakePrice(item) * Number(weightKg || 1)) / 0.5);
-};
-
-const getDisplayOriginalPrice = (item, weightKg) => {
-  const basePrice = getBaseCakePrice(item);
-  const rawOriginal = Number(item.originalPrice || 0);
-  const multiplier = Number(weightKg || 1) / 0.5;
-
-  if (!isCakeBasePriceItem(item)) {
-    return rawOriginal;
-  }
-
-  if (!rawOriginal || rawOriginal <= basePrice + 30) {
-    return Math.round((basePrice + 70) * multiplier);
-  }
-
-  return Math.round(Math.min(420, Math.max(basePrice + 40, rawOriginal)) * multiplier);
-};
 
 function MenuPage() {
   const [searchParams] = useSearchParams();
   const location = useLocation();
   const navigate = useNavigate();
   const [cartItems, setCartItems] = useState({});
-  const [selectedWeight, setSelectedWeight] = useState(1);
+  const [selectedWeight, setSelectedWeight] = useState(getGlobalWeight());
+
+  useEffect(() => {
+    const handleSync = (e) => setSelectedWeight(Number(e.detail || 1));
+    window.addEventListener(weightUpdatedEvent, handleSync);
+    window.addEventListener("storage", () => setSelectedWeight(getGlobalWeight()));
+    return () => {
+      window.removeEventListener(weightUpdatedEvent, handleSync);
+    };
+  }, []);
 
   useEffect(() => {
     try {
@@ -310,26 +291,7 @@ function MenuPage() {
             <h2 className="m-0 text-2xl font-semibold tracking-tight text-[#1f1f1f] sm:text-3xl">
               {pageContext.heading}
             </h2>
-            <div className="ml-auto flex flex-wrap items-center justify-end gap-2">
-              <span className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-[#6d5f55]">
-                Weight Filter
-              </span>
-              {weightFilterOptions.map((weight) => (
-                <button
-                  key={weight}
-                  type="button"
-                  onClick={() => setSelectedWeight(weight)}
-                  className={[
-                    "inline-flex items-center rounded-full border px-3 py-1 text-[0.72rem] font-bold transition",
-                    selectedWeight === weight
-                      ? "border-[#ff0015] bg-[#ffebed] text-[#c5162f]"
-                      : "border-[#e2d7ce] bg-white text-[#4b413a] hover:border-[#d0c2b7]",
-                  ].join(" ")}
-                >
-                  {weight} Kg
-                </button>
-              ))}
-            </div>
+            <WeightFilter />
           </div>
           <div className="mt-2 flex flex-wrap items-center gap-2 text-sm font-medium text-[#6b6b6b] sm:text-[0.95rem]">
             <span>{filteredProducts.length} Products</span>
