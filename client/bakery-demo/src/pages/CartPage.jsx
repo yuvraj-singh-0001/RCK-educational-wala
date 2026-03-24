@@ -211,15 +211,15 @@ function CartPage() {
   const clearCart = () => syncCart({});
 
   return (
-    <section className="bakery-section !mt-1.5 rounded-xl md:rounded-2xl">
+    <section className="bakery-section !mt-1.5 rounded-xl md:rounded-2xl" data-reveal="up">
       <div className="rounded-[1.9rem] bg-[#f6f3ef] p-4 sm:p-5 lg:p-6">
         <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
           <div>
             <div className="text-sm font-medium text-[#6f6257]">Home / Cart</div>
-            <h2 className="m-0 mt-1 text-2xl font-semibold tracking-tight text-[#1f1f1f] sm:text-[2rem]">
+            <h2 className="m-0 mt-1 text-2xl font-semibold tracking-tight text-[#1f1f1f] sm:text-[2rem]" data-reveal="up" style={{'--reveal-delay': '0ms'}}>
               Your Cart
             </h2>
-            <p className="mt-1 text-sm font-medium text-[#6b6b6b]">
+            <p className="mt-1 text-sm font-medium text-[#6b6b6b]" data-reveal="up" style={{'--reveal-delay': '40ms'}}>
               {totalItems} item{totalItems === 1 ? "" : "s"} in your order
             </p>
           </div>
@@ -253,6 +253,8 @@ function CartPage() {
                 <article
                   key={item.id}
                   className="grid gap-3 border-b border-[#ebe1d9] p-4 last:border-b-0 sm:grid-cols-[132px_1fr] sm:gap-4 sm:p-5"
+                  data-reveal="up"
+                  style={{ '--reveal-delay': `${cartProducts.indexOf(item) * 60}ms` }}
                 >
                   <Link
                     to={item.sourcePath}
@@ -262,6 +264,7 @@ function CartPage() {
                       src={item.imageUrl || fallbackCakeImage}
                       alt={item.name}
                       className="h-[132px] w-full object-cover sm:w-[132px]"
+                      loading="eager"
                       onError={(event) => {
                         event.currentTarget.src = fallbackCakeImage;
                       }}

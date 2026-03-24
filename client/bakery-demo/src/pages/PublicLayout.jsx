@@ -19,44 +19,30 @@ function PublicLayout() {
   }, [location.pathname, location.search, location.hash])
 
   useEffect(() => {
-    const revealTargets = document.querySelectorAll('[data-bakery-reveal]')
-    if (!revealTargets.length) {
-      return undefined
+    const revealTargets = document.querySelectorAll('[data-reveal]')
+    if (revealTargets.length > 0) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible')
+              observer.unobserve(entry.target)
+            }
+          })
+        },
+        { threshold: 0.16, rootMargin: '0px 0px -8% 0px' }
+      )
+
+      revealTargets.forEach((item) => {
+        item.classList.add('reveal')
+        observer.observe(item)
+      })
+
+      return () => observer.disconnect()
     }
 
-    if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') {
-      revealTargets.forEach((item) => item.classList.add('is-visible'))
-      return undefined
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible')
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.06, rootMargin: '160px 0px 160px 0px' }
-    )
-
-    revealTargets.forEach((item) => {
-      if (!item.classList.contains('bakery-reveal')) {
-        item.classList.add('bakery-reveal')
-      }
-      observer.observe(item)
-    })
-
-    const fallbackRevealTimer = window.setTimeout(() => {
-      revealTargets.forEach((item) => item.classList.add('is-visible'))
-    }, 1200)
-
-    return () => {
-      window.clearTimeout(fallbackRevealTimer)
-      observer.disconnect()
-    }
-  }, [location.pathname, location.search])
+    return undefined
+  }, [location.pathname])
 
   return (
     <div className="bakery-page-wrap">

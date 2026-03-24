@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import HeroCarousel from '../components/home/HeroCarousel'
-import WeightFilter from '../components/layout/WeightFilter'
 import {
   highlightStats,
   productCatalog,
@@ -107,8 +106,6 @@ function ImageWithSkeleton({
         alt={alt}
         className={`h-full w-full ${imgClassName} ${loaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
         loading={loading}
-        decoding="async"
-        fetchPriority={fetchPriority}
         sizes={sizes}
         onLoad={() => setLoaded(true)}
         onError={handleError}
@@ -135,12 +132,12 @@ function HomePage() {
 
   return (
     <>
-      <HeroCarousel className="bakery-reveal" data-bakery-reveal />
+      <HeroCarousel data-reveal="up" />
 
-      <section className="bakery-section bakery-reveal !mt-1.5 overflow-hidden rounded-xl bg-gradient-to-b from-[#f8dfe7] to-[#f9e8ee] px-4 pb-7 pt-6 sm:px-6 md:rounded-2xl lg:px-8" data-bakery-reveal>
+      <section className="bakery-section !mt-1.5 overflow-hidden rounded-xl bg-gradient-to-b from-[#f8dfe7] to-[#f9e8ee] px-4 pb-7 pt-6 sm:px-6 md:rounded-2xl lg:px-8" data-reveal="up">
         <div className="mb-5 grid justify-items-center gap-2 text-center">
-          <p className="m-0 text-[clamp(2rem,4vw,3rem)] font-extrabold leading-none text-[#e11d2f]">Menu</p>
-          <h2 className="m-0 text-[clamp(1.5rem,2.6vw,2.5rem)] font-medium tracking-[-0.03em] text-[#435266]">
+          <p className="m-0 text-[clamp(2rem,4vw,3rem)] font-extrabold leading-none text-[#e11d2f]" data-reveal="up" style={{'--reveal-delay': '0ms'}}>Menu</p>
+          <h2 className="m-0 text-[clamp(1.5rem,2.6vw,2.5rem)] font-medium tracking-[-0.03em] text-[#435266]" data-reveal="up" style={{'--reveal-delay': '60ms'}}>
             What will you wish for?
           </h2>
         </div>
@@ -153,9 +150,9 @@ function HomePage() {
               onMouseEnter={preloadMenuPage}
               onFocus={preloadMenuPage}
               onTouchStart={preloadMenuPage}
-              className="bakery-reveal group shrink-0 basis-[calc(50%-0.375rem)] snap-start text-inherit no-underline md:basis-[calc(25%-0.5625rem)] xl:basis-[calc(16.666%-0.625rem)]"
-              data-bakery-reveal
-              style={{ '--bakery-reveal-delay': `${Math.min(index * 60, 240)}ms` }}
+              className="group shrink-0 basis-[calc(50%-0.375rem)] snap-start text-inherit no-underline md:basis-[calc(25%-0.5625rem)] xl:basis-[calc(16.666%-0.625rem)]"
+              data-reveal="up"
+              style={{ '--reveal-delay': `${Math.min(index * 60, 240)}ms` }}
             >
               <div className="w-full rounded-xl bg-white/30 p-1 shadow-[0_10px_24px_rgba(114,65,79,0.08)]">
                 <ImageWithSkeleton
@@ -176,17 +173,16 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="bakery-section bakery-reveal overflow-hidden rounded-[1.8rem] bg-white/70 px-4 py-8 sm:px-6 lg:px-8" data-bakery-reveal>
+      <section className="bakery-section overflow-hidden rounded-[1.8rem] bg-white/70 px-4 py-8 sm:px-6 lg:px-8" data-reveal="up">
         {/* Section header — centred like reference image */}
         <div className="mb-7 flex flex-col items-center justify-between gap-4 md:flex-row">
-          <div className="text-center md:text-left">
-            <div className="flex items-center justify-center gap-2 md:justify-start">
-              <span className="text-[1.6rem] leading-none text-[#f5a623]">✦</span>
-              <h2 className="text-[clamp(1.5rem,3vw,2.1rem)] font-extrabold text-[#c62828]">Our Bestsellers</h2>
-            </div>
-            <p className="mt-1.5 text-sm text-[#666666]">Most loved products from our kitchen</p>
+          <div className="mb-7 text-center">
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-[1.6rem] leading-none text-[#f5a623]" data-reveal="up" style={{'--reveal-delay': '0ms'}}>✦</span>
+            <h2 className="text-[clamp(1.5rem,3vw,2.1rem)] font-extrabold text-[#c62828]" data-reveal="up" style={{'--reveal-delay': '40ms'}}>Our Bestsellers</h2>
           </div>
-          <WeightFilter className="!justify-center md:!justify-end" />
+          <p className="mt-1.5 text-sm text-[#666666]" data-reveal="up" style={{'--reveal-delay': '80ms'}}>Most loved products from our kitchen</p>
+        </div>
         </div>
 
 
@@ -199,9 +195,9 @@ function HomePage() {
               onMouseEnter={preloadMenuPage}
               onFocus={preloadMenuPage}
               onTouchStart={preloadMenuPage}
-              className="bakery-reveal shrink-0 snap-start basis-[44%] no-underline sm:basis-[30%] md:basis-[22%] lg:basis-[18%]"
-              data-bakery-reveal
-              style={{ '--bakery-reveal-delay': `${Math.min(index * 70, 280)}ms` }}
+              className="shrink-0 snap-start basis-[44%] no-underline sm:basis-[30%] md:basis-[22%] lg:basis-[18%]"
+              data-reveal="up"
+              style={{ '--reveal-delay': `${Math.min(index * 70, 280)}ms` }}
             >
               <article className="overflow-hidden rounded-xl border border-black/[0.07] bg-white shadow-[0_2px_12px_rgba(0,0,0,0.07)]">
                 {/* Image */}
@@ -259,6 +255,8 @@ function HomePage() {
             onFocus={preloadMenuPage}
             onTouchStart={preloadMenuPage}
             className="inline-block border-b-2 border-[#c62828] pb-0.5 text-sm font-bold uppercase tracking-widest text-[#c62828] no-underline transition-colors hover:text-[#9b1b1b]"
+            data-reveal="up"
+            style={{'--reveal-delay': '120ms'}}
           >
             VIEW ALL
           </Link>
@@ -266,7 +264,7 @@ function HomePage() {
       </section>
 
       {/* ── Our Promise ── */}
-      <section className="bakery-section bakery-reveal relative overflow-hidden rounded-[1.8rem] bg-[#fdf0f2] px-6 py-12 sm:px-10 lg:px-16" data-bakery-reveal>
+      <section className="bakery-section relative overflow-hidden rounded-[1.8rem] bg-[#fdf0f2] px-6 py-12 sm:px-10 lg:px-16" data-reveal="up">
         {/* decorative large circle */}
         <span className="pointer-events-none absolute -right-24 top-1/2 h-[340px] w-[340px] -translate-y-1/2 rounded-full bg-[#f5d5dc] opacity-60 sm:h-[420px] sm:w-[420px]" />
 
@@ -340,7 +338,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="bakery-section bakery-reveal overflow-hidden rounded-[1.6rem] border border-[#f0d7de] bg-[#fff6f8] p-4 sm:p-5" data-bakery-reveal>
+      <section className="bakery-section overflow-hidden rounded-[1.6rem] border border-[#f0d7de] bg-[#fff6f8] p-4 sm:p-5" data-reveal="up">
         <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
           <div>
             <p className="m-0 text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-[#d62839]">Special Offers</p>
@@ -392,7 +390,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="bakery-section bakery-reveal rounded-[1.8rem] bg-gradient-to-r from-[#fff6f8] to-[#fffdf9] p-4 sm:p-6 lg:p-7" data-bakery-reveal>
+      <section className="bakery-section rounded-[1.8rem] bg-gradient-to-r from-[#fff6f8] to-[#fffdf9] p-4 sm:p-6 lg:p-7" data-reveal="up">
         <div className="mb-5">
           <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-[#e02b2b]">Milestones</p>
           <h2 className="mt-1 text-2xl font-semibold tracking-tight text-[#222222] sm:text-3xl">Delivering Smiles Across India</h2>

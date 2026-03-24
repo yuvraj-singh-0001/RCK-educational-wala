@@ -322,7 +322,7 @@ function PublicHeader() {
                   fontFamily: "'Brush Script MT', 'Segoe Script', cursive",
                 }}
               >
-                bakingo
+                yourbrands
               </span>
             </Link>
 

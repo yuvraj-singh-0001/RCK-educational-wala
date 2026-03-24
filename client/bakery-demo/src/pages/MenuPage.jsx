@@ -50,6 +50,13 @@ function MenuPage() {
   const activeSearch = searchParams.get("q") || "";
 
   const filteredProducts = useMemo(() => {
+    const hasAnyFilter = activeCategory || activeOccasion || activeDelivery || 
+                        activeFlavour || activeType || activeSearch;
+    
+    if (!hasAnyFilter) {
+      return productCatalog; 
+    }
+
     const items = productCatalog.filter((item) => {
       const isAnniversaryCollectionPage = activeOccasion === "Anniversary";
 
@@ -213,9 +220,7 @@ function MenuPage() {
     event.currentTarget.src = fallbackCakeImage;
   };
 
-  const getRevealClass = (index) =>
-    index % 2 === 0 ? "bakery-reveal-left" : "bakery-reveal-right";
-
+  
   const getCartEntry = (itemId) => {
     const entry = cartItems[itemId];
 
@@ -288,12 +293,12 @@ function MenuPage() {
       <div className="rounded-2xl bg-white/80 p-4 sm:p-5 lg:p-6">
         <div className="mb-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <h2 className="m-0 text-2xl font-semibold tracking-tight text-[#1f1f1f] sm:text-3xl">
+            <h2 className="m-0 text-2xl font-semibold tracking-tight text-[#1f1f1f] sm:text-3xl simple-reveal" style={{animationDelay: '0ms'}}>
               {pageContext.heading}
             </h2>
             <WeightFilter />
           </div>
-          <div className="mt-2 flex flex-wrap items-center gap-2 text-sm font-medium text-[#6b6b6b] sm:text-[0.95rem]">
+          <div className="mt-2 flex flex-wrap items-center gap-2 text-sm font-medium text-[#6b6b6b] sm:text-[0.95rem] simple-reveal" style={{animationDelay: '100ms'}}>
             <span>{filteredProducts.length} Products</span>
             <span>•</span>
             <span>Overall Rating: 4.8</span>
@@ -323,9 +328,8 @@ function MenuPage() {
               <article
                 key={item.id}
                 id={`product-${item.id}`}
-                data-bakery-reveal
-                className={`bakery-reveal ${getRevealClass(index)} flex h-full flex-col overflow-hidden rounded-2xl border border-[#ece4dc] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)]`}
-                style={{ transitionDelay: `${Math.min(index * 24, 200)}ms` }}
+                className={`simple-reveal flex h-full flex-col overflow-hidden rounded-2xl border border-[#ece4dc] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)]`}
+                style={{ animationDelay: `${Math.min(index * 80, 400)}ms` }}
               >
                 <div
                   className={`relative aspect-[4/3] overflow-hidden bg-[#f6f0eb] ${item.imageClass || ""}`}
@@ -335,9 +339,7 @@ function MenuPage() {
                     alt={item.name}
                     className={`h-full w-full ${isImageCakePage ? "object-contain p-2" : "object-cover"}`}
                     onError={handleImageError}
-                    loading={index < 8 ? "eager" : "lazy"}
-                    decoding="async"
-                    fetchPriority={index < 4 ? "high" : "auto"}
+                    loading={index < 4 ? "eager" : "lazy"}
                     sizes="(min-width: 1280px) 24vw, (min-width: 1024px) 32vw, (min-width: 640px) 48vw, 96vw"
                   />
                   {item.badge && (

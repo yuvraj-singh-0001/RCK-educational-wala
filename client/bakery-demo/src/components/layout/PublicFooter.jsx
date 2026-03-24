@@ -10,7 +10,7 @@ function PublicFooter() {
       <div className="border-y border-black/10 bg-[#fff9f7]">
         <div className="mx-auto flex w-[min(1220px,94%)] items-center justify-between gap-3 py-3.5">
           <p className="m-0 text-center text-[clamp(0.82rem,1vw,1.1rem)] font-semibold tracking-tight text-[#181818]">
-            Bakingo - Your Trusted FSSAI Certified Online Bakery for Every Celebration
+            YourBrands - Your Trusted FSSAI Certified Online Bakery for Every Celebration
           </p>
           <button
             type="button"
@@ -60,7 +60,7 @@ function PublicFooter() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-[1.1fr_1fr_1fr_1fr]">
             <div>
               <p className="m-0 text-[clamp(2rem,3.2vw,2.9rem)] font-extrabold italic leading-none tracking-tight text-[#f20d24]">
-                bakingo
+                yourbrands
               </p>
               <p className="mt-3 text-[clamp(0.85rem,0.95vw,1rem)] text-[#f20d24]">© 2026</p>
               <div className="mt-3 flex items-center gap-3 text-[clamp(1rem,1.2vw,1.25rem)] font-bold text-[#f20d24]">
