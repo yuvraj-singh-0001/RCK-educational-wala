@@ -71,12 +71,12 @@ function CoursesPage() {
   }, [activeTab])
 
   return (
-    <section className="page-wrap courses-page">
+    <section className="page-wrap courses-page page-transition-enter">
       <div className="mx-auto w-full max-w-6xl">
-        <h1 className="page-title">Our Courses</h1>
-        <p className="page-subtitle">Complete course listing with category-wise filters.</p>
+        <h1 className="page-title simple-reveal" style={{ animationDelay: '0ms' }}>Our Courses</h1>
+        <p className="page-subtitle simple-reveal" style={{ animationDelay: '100ms' }}>Complete course listing with category-wise filters.</p>
 
-        <div className="courses-tabs mt-5 flex flex-wrap gap-2">
+        <div className="courses-tabs mt-5 flex flex-wrap gap-2 simple-reveal" style={{ animationDelay: '200ms' }}>
           {tabs.map((tab) => (
             <button
               className={`filter-tab ${activeTab === tab ? 'filter-tab-active' : ''}`}
@@ -90,8 +90,12 @@ function CoursesPage() {
         </div>
 
         <div className="course-grid mt-6 grid gap-5 md:grid-cols-2">
-          {filteredCourses.map((course) => (
-            <article className="course-card" key={course.name}>
+          {filteredCourses.map((course, index) => (
+            <article 
+              className="course-card simple-reveal" 
+              key={course.name}
+              style={{ animationDelay: `${Math.min(index * 100, 400)}ms` }}
+            >
               <img alt={course.name} className="card-image" src={course.image} />
               <div className="mt-3 flex items-center justify-between gap-3">
                 <h2 className="course-name text-xl font-bold text-slate-900">{course.name}</h2>
