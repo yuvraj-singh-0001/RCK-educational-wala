@@ -1,9 +1,27 @@
 import { Link } from 'react-router-dom'
 
 function PublicFooter() {
-  const knowUsLinks = ['Our Story', 'Contact Us', 'Locate Us', 'Blog', 'Media', 'Careers']
-  const helpLinks = ['FAQ', 'Cancellation And Refund', 'Privacy Policy', 'Terms And Conditions', 'Customer Grievance', 'Sitemap']
-  const moreInfoLinks = ['Corporate Cakes', 'Coupons & Offers', 'Download App']
+  const knowUsLinks = [
+    { label: 'Our Story', path: '/info/our-story' },
+    { label: 'Contact Us', path: '/info/contact-us' },
+    { label: 'Locate Us', path: '/info/locate-us' },
+    { label: 'Blog', path: '/info/blog' },
+    { label: 'Media', path: '/info/media' },
+    { label: 'Careers', path: '/info/careers' }
+  ]
+  const helpLinks = [
+    { label: 'FAQ', path: '/info/faq' },
+    { label: 'Cancellation And Refund', path: '/info/cancellation-and-refund' },
+    { label: 'Privacy Policy', path: '/info/privacy-policy' },
+    { label: 'Terms And Conditions', path: '/info/terms-and-conditions' },
+    { label: 'Customer Grievance', path: '/info/customer-grievance' },
+    { label: 'Sitemap', path: '/info/sitemap' }
+  ]
+  const moreInfoLinks = [
+    { label: 'Corporate Cakes', path: '/info/corporate-cakes' },
+    { label: 'Coupons & Offers', path: '/info/coupons-and-offers' },
+    { label: 'Download App', path: '/info/download-app' }
+  ]
 
   return (
     <footer className="mt-6 overflow-hidden bg-[#fff9f7]">
@@ -75,9 +93,9 @@ function PublicFooter() {
             <div>
               <h4 className="m-0 text-[clamp(1rem,1.2vw,1.25rem)] font-extrabold uppercase leading-none text-[#f20d24]">Know Us</h4>
               <div className="mt-3 space-y-1.5">
-                {knowUsLinks.map((label) => (
-                  <Link key={label} to="/about" className="block text-[clamp(0.88rem,0.95vw,1rem)] text-[#f20d24] no-underline hover:opacity-80">
-                    {label}
+                {knowUsLinks.map((link) => (
+                  <Link key={link.path} to={link.path} className="block text-[clamp(0.88rem,0.95vw,1rem)] text-[#f20d24] no-underline hover:opacity-80">
+                    {link.label}
                   </Link>
                 ))}
               </div>
@@ -86,9 +104,9 @@ function PublicFooter() {
             <div>
               <h4 className="m-0 text-[clamp(1rem,1.2vw,1.25rem)] font-extrabold uppercase leading-none text-[#f20d24]">Need Help</h4>
               <div className="mt-3 space-y-1.5">
-                {helpLinks.map((label) => (
-                  <Link key={label} to="/contact" className="block text-[clamp(0.88rem,0.95vw,1rem)] text-[#f20d24] no-underline hover:opacity-80">
-                    {label}
+                {helpLinks.map((link) => (
+                  <Link key={link.path} to={link.path} className="block text-[clamp(0.88rem,0.95vw,1rem)] text-[#f20d24] no-underline hover:opacity-80">
+                    {link.label}
                   </Link>
                 ))}
               </div>
@@ -97,9 +115,9 @@ function PublicFooter() {
             <div>
               <h4 className="m-0 text-[clamp(1rem,1.2vw,1.25rem)] font-extrabold uppercase leading-none text-[#f20d24]">More Info</h4>
               <div className="mt-3 space-y-1.5">
-                {moreInfoLinks.map((label) => (
-                  <Link key={label} to="/menu" className="block text-[clamp(0.88rem,0.95vw,1rem)] text-[#f20d24] no-underline hover:opacity-80">
-                    {label}
+                {moreInfoLinks.map((link) => (
+                  <Link key={link.path} to={link.path} className="block text-[clamp(0.88rem,0.95vw,1rem)] text-[#f20d24] no-underline hover:opacity-80">
+                    {link.label}
                   </Link>
                 ))}
               </div>

@@ -408,6 +408,52 @@ function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* SEO Section - Hidden but accessible for search engines */}
+      <section className="sr-only" aria-label="SEO Content">
+        <h1>Sidemint - Professional Website Developer by Yuvraj Singh</h1>
+        <h2>Demo Website - E-commerce, Bakery, School Websites</h2>
+        <p>
+          Looking for professional website development? View our demo website created by Yuvraj Singh (Sidemint). 
+          Expert in e-commerce websites, bakery websites, school websites, and custom web development solutions. 
+          Affordable rates, fast delivery, and professional quality websites for your business.
+        </p>
+        <p>
+          Demo website of Yuvraj Singh showcasing web development skills. Specializing in e-commerce platforms, 
+          online bakery shops, educational websites, and custom business websites. Contact for professional 
+          website development services at competitive prices.
+        </p>
+        <p>
+          Sidemint by Yuvraj Singh - Your trusted partner for website development. View our demo website 
+          and get your dream website built. Expert in React, Node.js, e-commerce solutions, and responsive web design.
+        </p>
+        <div>
+          <h3>Services Offered:</h3>
+          <ul>
+            <li>E-commerce Website Development</li>
+            <li>Bakery Website Demo</li>
+            <li>School Website Development</li>
+            <li>Custom Business Websites</li>
+            <li>Online Shop Development</li>
+            <li>Responsive Web Design</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact Information:</h3>
+          <p>Name: Yuvraj Singh (Sidemint)</p>
+          <p>Phone: +91 86013 00910</p>
+          <p>Email: singhyuvraj8420@gmail.com</p>
+          <p>Instagram: @sidemint.in</p>
+        </div>
+        <div>
+          <h3>Search Keywords:</h3>
+          <p>
+            demo website, Yuvraj Singh, Sidemint, website developer, e-commerce website, bakery website, 
+            school website, professional web development, affordable website, custom website, online business 
+            website, website demo, React developer, web development India, website for business
+          </p>
+        </div>
+      </section>
     </>
   )
 }

@@ -63,11 +63,8 @@ const testimonials = [
 
 function HomePage() {
   return (
-    <main className="home-stack">
-      <section id="hero" className="section-anchor hero-wrap">
-        <div className="ambient-shape ambient-shape-one" />
-        <div className="ambient-shape ambient-shape-two" />
-
+    <div className="page-transition-enter">
+      <section className="hero-section relative overflow-hidden bg-gradient-to-b from-emerald-50 to-white pb-8 pt-6 md:pb-12 md:pt-8">
         <div className="hero-shell mx-auto grid w-full max-w-6xl gap-6 p-6 md:grid-cols-[1.08fr_0.92fr] md:p-10" data-reveal="up">
           <div className="hero-copy" data-reveal="left">
             <p className="eyebrow">RCK Educational Wala</p>
@@ -203,7 +200,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

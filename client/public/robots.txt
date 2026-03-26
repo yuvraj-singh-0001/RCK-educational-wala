@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sidemint.in/sitemap.xml
+
+# Allow search engines to crawl all important pages
+Allow: /menu
+Allow: /contact
+Allow: /about
+Allow: /info/
+Allow: /gallery
+Allow: /custom-cake
+
+# Block admin or private pages (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl delay (optional)
+Crawl-delay: 1
