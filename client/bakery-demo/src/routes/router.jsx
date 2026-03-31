@@ -16,10 +16,12 @@ import OrderConfirmationPage from '../pages/OrderConfirmationPage'
 import TrackOrderPage from '../pages/TrackOrderPage'
 import PublicLayout from '../pages/PublicLayout'
 import ProtectedRouter from '../protected/protectedRouter'
+import RouteSeo from '../seo/RouteSeo'
 
 function AppRouter() {
   return (
     <BrowserRouter basename="/bakery-demo">
+      <RouteSeo />
       <Suspense
         fallback={
           <div className="bakery-page-wrap">

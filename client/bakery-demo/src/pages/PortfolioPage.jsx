@@ -3,12 +3,12 @@ import PortfolioShowcase from '../components/PortfolioShowcase'
 
 function PortfolioPage() {
   useEffect(() => {
-    document.title = 'Portfolio - Demo Websites by Yuvraj Singh | Sidemint'
+    document.title = 'Portfolio - Demo Websites by Yuvraj Singh | SiteMint'
     
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.content = 'Explore complete demo websites by Yuvraj Singh including bakery e-commerce, educational platforms, job portals, and shopping websites. Professional web development portfolio.'
+      metaDescription.content = 'Explore complete demo websites by Yuvraj Singh including bakery e-commerce, educational platforms, job portals and shopping websites. Professional and affordable web development portfolio.'
     }
   }, [])
 

@@ -1,75 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sidemint.in/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://sitemint.in/</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://sidemint.in/portfolio</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://sitemint.in/bakery-demo</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://sidemint.in/menu</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://sitemint.in/bakery-demo/menu</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sitemint.in/bakery-demo/custom-cake</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sitemint.in/bakery-demo/gallery</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sidemint.in/cart</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://sitemint.in/bakery-demo/about</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://sitemint.in/bakery-demo/contact</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sitemint.in/bakery-demo/portfolio</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sitemint.in/bakery-demo/track-order</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sitemint.in/bakery-demo/info/our-story</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sidemint.in/contact</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://sidemint.in/about</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://sitemint.in/bakery-demo/info/contact-us</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sidemint.in/info/our-story</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://sitemint.in/bakery-demo/info/blog</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://sidemint.in/info/contact-us</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://sitemint.in/education-demo</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sidemint.in/info/blog</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://sitemint.in/education-demo/courses</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://sidemint.in/gallery</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://sitemint.in/education-demo/about</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://sidemint.in/custom-cake</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://sitemint.in/education-demo/results</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sidemint.in/track-order</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://sitemint.in/education-demo/contact</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sitemint.in/education-demo/admission</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://sitemint.in/ecommerce-demo</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://sitemint.in/recruitment-demo</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
   </url>
 </urlset>
