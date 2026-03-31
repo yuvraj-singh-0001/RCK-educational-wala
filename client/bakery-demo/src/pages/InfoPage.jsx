@@ -413,7 +413,7 @@ const pageContent = {
         ],
         contact: '+91 86013 00910',
         email: 'singhyuvraj8420@gmail.com',
-        instagram: 'https://www.instagram.com/sidemint.in/'
+        instagram: 'https://www.instagram.com/sitemint.in/'
       }
     ]
   }
@@ -678,7 +678,7 @@ function InfoPage() {
                 <span>✉️</span> {content.content[0].email}
               </a>
               <a href={content.content[0].instagram} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 text-red-600 hover:text-red-700 font-medium text-sm sm:text-base">
-                <span>📷</span> Instagram: @sidemint.in
+                <span>📷</span> Instagram: @sitemint.in
               </a>
             </div>
           </div>

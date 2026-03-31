@@ -9,10 +9,12 @@ import HomePage from '../pages/HomePage'
 import PublicLayout from '../pages/PublicLayout'
 import ResultsPage from '../pages/ResultsPage'
 import ProtectedRouter from '../protected/protectedRouter'
+import RouteSeo from '../seo/RouteSeo'
 
 function AppRouter() {
 	return (
 		<BrowserRouter basename="/education-demo">
+			<RouteSeo />
 			<Routes>
 				<Route element={<PublicLayout />}>
 					<Route path="/" element={<HomePage />} />

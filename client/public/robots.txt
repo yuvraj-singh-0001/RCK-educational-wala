@@ -1,20 +1,11 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://sidemint.in/sitemap.xml
+# Keep transactional/internal routes out of index
+Disallow: /bakery-demo/cart
+Disallow: /bakery-demo/checkout
+Disallow: /bakery-demo/order-confirmation
+Disallow: /bakery-demo/staff
+Disallow: /education-demo/student
 
-# Allow search engines to crawl all important pages
-Allow: /menu
-Allow: /contact
-Allow: /about
-Allow: /info/
-Allow: /gallery
-Allow: /custom-cake
-
-# Block admin or private pages (if any in future)
-# Disallow: /admin/
-# Disallow: /private/
-
-# Crawl delay (optional)
-Crawl-delay: 1
+Sitemap: https://sitemint.in/sitemap.xml

@@ -411,10 +411,10 @@ function HomePage() {
 
       {/* SEO Section - Hidden but accessible for search engines */}
       <section className="sr-only" aria-label="SEO Content">
-        <h1>Sidemint - Professional Website Developer by Yuvraj Singh</h1>
+        <h1>SiteMint - Professional Website Developer by Yuvraj Singh</h1>
         <h2>Demo Website - E-commerce, Bakery, School Websites</h2>
         <p>
-          Looking for professional website development? View our demo website created by Yuvraj Singh (Sidemint). 
+          Looking for professional website development? View our demo website created by Yuvraj Singh (SiteMint). 
           Expert in e-commerce websites, bakery websites, school websites, and custom web development solutions. 
           Affordable rates, fast delivery, and professional quality websites for your business.
         </p>
@@ -424,8 +424,8 @@ function HomePage() {
           website development services at competitive prices.
         </p>
         <p>
-          Sidemint by Yuvraj Singh - Your trusted partner for website development. View our demo website 
-          and get your dream website built. Expert in React, Node.js, e-commerce solutions, and responsive web design.
+          SiteMint by Yuvraj Singh - Your trusted partner for website and app development. View our demo website 
+          and get your dream website built in low budget with modern responsive design.
         </p>
         <div>
           <h3>Services Offered:</h3>
@@ -440,17 +440,17 @@ function HomePage() {
         </div>
         <div>
           <h3>Contact Information:</h3>
-          <p>Name: Yuvraj Singh (Sidemint)</p>
+          <p>Name: Yuvraj Singh (SiteMint)</p>
           <p>Phone: +91 86013 00910</p>
           <p>Email: singhyuvraj8420@gmail.com</p>
-          <p>Instagram: @sidemint.in</p>
+          <p>Instagram: @sitemint.in</p>
         </div>
         <div>
           <h3>Search Keywords:</h3>
           <p>
-            demo website, Yuvraj Singh, Sidemint, website developer, e-commerce website, bakery website, 
+            demo website, Yuvraj Singh, SiteMint, website developer, e-commerce website, bakery website, 
             school website, professional web development, affordable website, custom website, online business 
-            website, website demo, React developer, web development India, website for business
+            website, website demo, React developer, web development India, website for business, kam budget website
           </p>
         </div>
       </section>

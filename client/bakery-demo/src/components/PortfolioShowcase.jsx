@@ -173,7 +173,7 @@ const PortfolioShowcase = () => {
                       {project.title}
                     </h3>
                     <div className="text-green-700 text-sm mb-2">
-                      🌐 sidemint.in{project.demoUrl}
+                      🌐 sitemint.in{project.demoUrl}
                     </div>
                   </div>
 

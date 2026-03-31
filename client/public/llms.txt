@@ -1,0 +1,41 @@
+# SiteMint
+
+SiteMint is a web and app development service focused on affordable, high-quality digital products for small and mid-size businesses in India.
+
+## Owner
+- Name: Yuvraj Singh
+- Role: Full Stack Developer
+- Contact Phone: +91 86013 00910
+- Contact Email: singhyuvraj8420@gmail.com
+- Website: https://sitemint.in
+
+## Services
+- Business website development
+- Bakery and restaurant ordering websites
+- Education portals (courses, admission, results)
+- E-commerce website development
+- Custom web applications and admin dashboards
+
+## Value Proposition
+- Budget-friendly website plans
+- Mobile-first UI and modern design
+- Fast delivery (typically 7-21 days)
+- Post-launch support
+
+## Ideal User Queries
+- "affordable website developer in India"
+- "kam budget me achhi website banwani hai"
+- "bakery website with online ordering"
+- "school website with admission form"
+- "website and app development at low cost"
+
+## Important URLs
+- Home: https://sitemint.in/
+- Bakery demo: https://sitemint.in/bakery-demo
+- Education demo: https://sitemint.in/education-demo
+- Contact page: https://sitemint.in/bakery-demo/contact
+- Sitemap: https://sitemint.in/sitemap.xml
+
+## Notes
+- SiteMint provides practical, business-focused solutions for local businesses, startups and institutes.
+- For project discussion and pricing, contact via WhatsApp or phone.

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, useRef } from 'react'
 import BakeryDemoApp from '../bakery-demo/src/App'
 import EducationDemoApp from '../education-demo/src/App'
+import { setBasicSeo } from './seo/meta'
 
 // ─── Fonts — loaded once, no global impact ────────────────────────
 if (!document.getElementById('sm-fonts')) {
@@ -727,6 +728,41 @@ export default function App() {
     return ()=>window.removeEventListener('popstate',s)
   },[])
   const opt=useMemo(()=>getOption(path),[path])
+
+  useEffect(() => {
+    if (opt && (opt.key === 'bakery' || opt.key === 'education')) {
+      return
+    }
+
+    const normalizedPath = normPath(path)
+    const isHome = normalizedPath === '/'
+    const isEcommerceDemo = normalizedPath === '/ecommerce-demo'
+    const isRecruitmentDemo = normalizedPath === '/recruitment-demo'
+
+    let title = 'SiteMint | Affordable Website & App Development in India'
+    let description =
+      'SiteMint builds affordable websites and apps for bakery, education, ecommerce and local businesses. Fast delivery, modern design and reliable support.'
+
+    if (isEcommerceDemo) {
+      title = 'E-Commerce Website Demo Coming Soon | SiteMint'
+      description =
+        'E-commerce website demo is coming soon. Contact SiteMint to build your online store with catalog, cart, payments and order tracking.'
+    } else if (isRecruitmentDemo) {
+      title = 'Recruitment Portal Demo Coming Soon | SiteMint'
+      description =
+        'Recruitment portal demo is coming soon. SiteMint builds custom hiring websites and dashboards at affordable pricing.'
+    }
+
+    setBasicSeo({
+      title,
+      description,
+      keywords:
+        'website developer india, affordable website development, app development services, bakery website, school website, ecommerce website, low budget website, SiteMint, Yuvraj Singh',
+      url: normalizedPath,
+      robots: 'index, follow',
+    })
+  }, [opt, path])
+
   if(!opt)                    return <DemoLanding onSelect={s=>go(`/${s}`)}/>
   if(opt.key==='education')   return <EducationDemoApp/>
   if(opt.key==='bakery')      return <BakeryDemoApp/>
