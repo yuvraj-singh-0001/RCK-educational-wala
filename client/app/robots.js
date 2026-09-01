@@ -5,6 +5,11 @@ export default function robots() {
         userAgent: '*',
         allow: '/',
         disallow: [
+          '/demos/bakery/cart',
+          '/demos/bakery/checkout',
+          '/demos/bakery/order-confirmation',
+          '/demos/bakery/staff',
+          '/demos/education/student',
           '/bakery-demo/cart',
           '/bakery-demo/checkout',
           '/bakery-demo/order-confirmation',
