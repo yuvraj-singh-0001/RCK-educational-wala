@@ -122,21 +122,42 @@ export default function RootLayout({ children }) {
             'name': 'Starter Business Website',
             'price': '3999',
             'priceCurrency': 'INR',
-            'description': '5 Pages responsive business website with free domain, hosting, SSL and WhatsApp lead button.'
+            'description': '5 Pages responsive business website with WhatsApp direct chat, contact form email notifications, and basic SEO.'
           },
           {
             '@type': 'Offer',
-            'name': 'Bakery / Restaurant Online Ordering Website',
+            'name': 'Business Website & Management',
             'price': '7999',
             'priceCurrency': 'INR',
-            'description': 'Complete digital menu, custom order form, delivery fee calculator and direct WhatsApp order dispatch.'
+            'description': '10 Dynamic pages, Razorpay UPI payment gateway, user dashboard, admin portal, and 6 months free maintenance.'
           },
           {
             '@type': 'Offer',
-            'name': 'Education / Coaching Management Portal',
-            'price': '9999',
+            'name': 'Professional Business System',
+            'price': '15999',
             'priceCurrency': 'INR',
-            'description': 'Student admission, course materials, online test results and notice board portal.'
+            'description': 'Unlimited pages, 1 Year Free Domain + 1 Year Cloud Hosting included, full user management, multi-entity admin, and 1 Year Maintenance.'
+          },
+          {
+            '@type': 'Offer',
+            'name': 'Mobile App Development (Android & iOS)',
+            'price': '12999',
+            'priceCurrency': 'INR',
+            'description': 'Production-ready Android APK and iOS Flutter app with push notifications and cloud database API backend.'
+          },
+          {
+            '@type': 'Offer',
+            'name': 'Professional Video Editing & Viral Reels',
+            'price': '499',
+            'priceCurrency': 'INR',
+            'description': 'Instagram Reels, YouTube Shorts, dynamic animated subtitles, sound FX, and commercial business video ads.'
+          },
+          {
+            '@type': 'Offer',
+            'name': 'Social Media Management & Digital Growth',
+            'price': '4999',
+            'priceCurrency': 'INR',
+            'description': 'Complete management across 7-8 platforms, 30 daily high-res posts & carousels, and Meta Ads setup.'
           }
         ]
       },

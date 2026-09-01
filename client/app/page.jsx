@@ -23,14 +23,35 @@ import {
 
 export const metadata = {
   title: 'SiteMint — Professional Web, App, Video Editing & Social Media Studio in India',
-  description: 'We build fast, scalable, modern websites, e-commerce stores, education portals, mobile apps, video editing, and social media management for growing businesses. Transparent pricing with 7-day fast delivery.',
+  description: 'We build fast, scalable, modern business websites (Starting ₹3,999), Android & iOS mobile apps (Starting ₹12,999), viral video edits (Starting ₹499), and complete social media management in India. 7-day fast delivery, free domain & hosting, and 100% code ownership.',
+  keywords: [
+    'low budget website development india',
+    'website developer starting 3999',
+    'mobile app development starting 12999',
+    'instagram reels video editing services',
+    'social media marketing management agency india',
+    'ecommerce website development with razorpay upi',
+    'school coaching institute portal developer',
+    'bakery restaurant online ordering website',
+    'cheap and best website design company in india',
+    'custom web application software development',
+    'freelance website developer near me',
+    'SiteMint'
+  ],
   alternates: {
     canonical: 'https://sitemint.in',
   },
   openGraph: {
-    title: 'Build Your Digital Presence with SiteMint | Web, App & Media Studio',
-    description: 'Web development, mobile apps, video editing, and social media marketing for Indian businesses.',
+    title: 'SiteMint | Professional Web, App, Video Editing & Social Media Studio in India',
+    description: 'Custom websites starting ₹3,999, mobile apps starting ₹12,999, and video editing for ambitious businesses in India. 7-day fast delivery with free domain & hosting.',
     url: 'https://sitemint.in',
+    siteName: 'SiteMint',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SiteMint — Modern Web, App & Creative Media Studio',
+    description: 'Affordable business websites, mobile apps, video editing and social media management in India.',
   },
 };
 
