@@ -1,0 +1,269 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #ffffff;
+  --bg-surface: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fcfdfe;
+  --bg-elevated: #f1f5f9;
+  --border-color: #e2e8f0;
+  --border-glow: #8b5cf6;
+  --primary-violet: #7c3aed;
+  --primary-light: #a78bfa;
+  --accent-teal: #0d9488;
+  --accent-cyan: #0284c7;
+  --accent-emerald: #16a34a;
+  --accent-amber: #d97706;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip !important;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip !important;
+  overflow-x: hidden !important;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  letter-spacing: -0.01em;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+pre, code {
+  max-width: 100%;
+  overflow-x: auto;
+  word-break: break-word;
+}
+
+/* Modern typography */
+.font-syne {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Glassmorphism & High-Contrast Cards */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  border-radius: 20px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124, 58, 237, 0.45);
+  box-shadow: 0 16px 36px -4px rgba(124, 58, 237, 0.12), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Micro-Interaction & Hover Utilities */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.hover-glow {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-glow:hover {
+  transform: translateY(-3px);
+  border-color: #8b5cf6;
+  box-shadow: 0 12px 30px -4px rgba(139, 92, 246, 0.18);
+}
+
+/* Gradient Text */
+.gradient-text-hero {
+  background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 40%, #0d9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-purple {
+  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 50%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Keyframe Animations */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(0.96);
+  }
+}
+
+.animate-float {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 5s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s ease-in-out infinite;
+}
+
+/* Button Shimmer / Sheen Effect */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: translateX(-100%) rotate(35deg);
+  transition: transform 0.75s ease-in-out;
+}
+
+.btn-shine:hover::after {
+  transform: translateX(100%) rotate(35deg);
+}
+
+/* Custom Button Styles with Smooth Lift */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+  color: #ffffff;
+  padding: 13px 26px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 4px 20px -2px rgba(124, 58, 237, 0.38);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2.5px) scale(1.01);
+  box-shadow: 0 10px 28px 0 rgba(124, 58, 237, 0.48);
+  background: linear-gradient(135deg, #6d28d9 0%, #4f46e5 100%);
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #16a34a 0%, #059669 100%);
+  color: #ffffff;
+  padding: 13px 26px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 4px 20px -2px rgba(22, 163, 74, 0.38);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2.5px) scale(1.01);
+  box-shadow: 0 10px 28px 0 rgba(22, 163, 74, 0.48);
+  background: linear-gradient(135deg, #15803d 0%, #047857 100%);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #1e293b;
+  padding: 13px 24px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #8b5cf6;
+  transform: translateY(-2.5px);
+  box-shadow: 0 6px 18px -2px rgba(139, 92, 246, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

@@ -1,2 +1,12 @@
 node_modules/
+.next/
+client/.next/
+server/node_modules/
+client/node_modules/
 .env
+.env*.local
+dist/
+build/
+.turbo/
+.vercel/
+*.log
