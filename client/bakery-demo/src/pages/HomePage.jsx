@@ -134,10 +134,10 @@ function HomePage() {
     <>
       <HeroCarousel data-reveal="up" />
 
-      <section className="bakery-section !mt-1.5 overflow-hidden rounded-xl bg-gradient-to-b from-[#f8dfe7] to-[#f9e8ee] px-4 pb-7 pt-6 sm:px-6 md:rounded-2xl lg:px-8" data-reveal="up">
+      <section className="bakery-section !mt-0 w-full overflow-hidden rounded-none bg-gradient-to-b from-[#f8dfe7] to-[#f9e8ee] px-3 sm:px-5 lg:px-8 pb-7 pt-6" data-reveal="up">
         <div className="mb-5 grid justify-items-center gap-2 text-center">
-          <p className="m-0 text-[clamp(2rem,4vw,3rem)] font-extrabold leading-none text-[#e11d2f]" data-reveal="up" style={{'--reveal-delay': '0ms'}}>Menu</p>
-          <h2 className="m-0 text-[clamp(1.5rem,2.6vw,2.5rem)] font-medium tracking-[-0.03em] text-[#435266]" data-reveal="up" style={{'--reveal-delay': '60ms'}}>
+          <p className="m-0 text-[clamp(2rem,4vw,3rem)] font-extrabold leading-none text-[#e11d2f]" data-reveal="up" style={{ '--reveal-delay': '0ms' }}>Menu</p>
+          <h2 className="m-0 text-[clamp(1.5rem,2.6vw,2.5rem)] font-medium tracking-[-0.03em] text-[#435266]" data-reveal="up" style={{ '--reveal-delay': '60ms' }}>
             What will you wish for?
           </h2>
         </div>
@@ -173,16 +173,16 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="bakery-section overflow-hidden rounded-[1.8rem] bg-white/70 px-4 py-8 sm:px-6 lg:px-8" data-reveal="up">
+      <section className="bakery-section !mt-2 w-full overflow-hidden rounded-none bg-white/70 px-3 sm:px-5 lg:px-8 py-8" data-reveal="up">
         {/* Section header — centred like reference image */}
         <div className="mb-7 flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="mb-7 text-center">
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-[1.6rem] leading-none text-[#f5a623]" data-reveal="up" style={{'--reveal-delay': '0ms'}}>✦</span>
-            <h2 className="text-[clamp(1.5rem,3vw,2.1rem)] font-extrabold text-[#c62828]" data-reveal="up" style={{'--reveal-delay': '40ms'}}>Our Bestsellers</h2>
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-[1.6rem] leading-none text-[#f5a623]" data-reveal="up" style={{ '--reveal-delay': '0ms' }}>✦</span>
+              <h2 className="text-[clamp(1.5rem,3vw,2.1rem)] font-extrabold text-[#c62828]" data-reveal="up" style={{ '--reveal-delay': '40ms' }}>Our Bestsellers</h2>
+            </div>
+            <p className="mt-1.5 text-sm text-[#666666]" data-reveal="up" style={{ '--reveal-delay': '80ms' }}>Most loved products from our kitchen</p>
           </div>
-          <p className="mt-1.5 text-sm text-[#666666]" data-reveal="up" style={{'--reveal-delay': '80ms'}}>Most loved products from our kitchen</p>
-        </div>
         </div>
 
 
@@ -256,7 +256,7 @@ function HomePage() {
             onTouchStart={preloadMenuPage}
             className="inline-block border-b-2 border-[#c62828] pb-0.5 text-sm font-bold uppercase tracking-widest text-[#c62828] no-underline transition-colors hover:text-[#9b1b1b]"
             data-reveal="up"
-            style={{'--reveal-delay': '120ms'}}
+            style={{ '--reveal-delay': '120ms' }}
           >
             VIEW ALL
           </Link>
@@ -278,13 +278,13 @@ function HomePage() {
             {/* ON-TIME DELIVERY */}
             <div className="flex flex-col items-center text-center">
               <svg viewBox="0 0 64 40" className="mb-3 h-16 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="8" width="38" height="24" rx="3" fill="#e88a9a"/>
-                <rect x="40" y="16" width="20" height="16" rx="2" fill="#d96c7e"/>
-                <polygon points="40,16 60,16 54,8 46,8" fill="#c45870"/>
-                <circle cx="12" cy="34" r="5" fill="#c45870" stroke="#fff" strokeWidth="1.5"/>
-                <circle cx="48" cy="34" r="5" fill="#c45870" stroke="#fff" strokeWidth="1.5"/>
-                <circle cx="12" cy="34" r="2" fill="#fff"/>
-                <circle cx="48" cy="34" r="2" fill="#fff"/>
+                <rect x="2" y="8" width="38" height="24" rx="3" fill="#e88a9a" />
+                <rect x="40" y="16" width="20" height="16" rx="2" fill="#d96c7e" />
+                <polygon points="40,16 60,16 54,8 46,8" fill="#c45870" />
+                <circle cx="12" cy="34" r="5" fill="#c45870" stroke="#fff" strokeWidth="1.5" />
+                <circle cx="48" cy="34" r="5" fill="#c45870" stroke="#fff" strokeWidth="1.5" />
+                <circle cx="12" cy="34" r="2" fill="#fff" />
+                <circle cx="48" cy="34" r="2" fill="#fff" />
               </svg>
               <p className="text-[0.78rem] font-extrabold uppercase tracking-wide text-[#1a1a1a]">On-Time Delivery</p>
               <p className="mt-1 text-[0.72rem] leading-relaxed text-[#666]">Because no one likes late surprises.</p>
@@ -293,15 +293,15 @@ function HomePage() {
             {/* 500+ DESIGNS */}
             <div className="flex flex-col items-center text-center">
               <svg viewBox="0 0 56 48" className="mb-3 h-16 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="6" y="26" width="44" height="18" rx="3" fill="#e88a9a"/>
-                <rect x="12" y="18" width="32" height="10" rx="2" fill="#d96c7e"/>
-                <rect x="18" y="12" width="20" height="8" rx="2" fill="#e88a9a"/>
-                <rect x="25" y="2" width="4" height="12" rx="2" fill="#c45870"/>
-                <rect x="16" y="2" width="4" height="10" rx="2" fill="#c45870"/>
-                <rect x="34" y="2" width="4" height="10" rx="2" fill="#c45870"/>
-                <circle cx="27" cy="2" r="2" fill="#e88a9a"/>
-                <circle cx="18" cy="2" r="2" fill="#e88a9a"/>
-                <circle cx="36" cy="2" r="2" fill="#e88a9a"/>
+                <rect x="6" y="26" width="44" height="18" rx="3" fill="#e88a9a" />
+                <rect x="12" y="18" width="32" height="10" rx="2" fill="#d96c7e" />
+                <rect x="18" y="12" width="20" height="8" rx="2" fill="#e88a9a" />
+                <rect x="25" y="2" width="4" height="12" rx="2" fill="#c45870" />
+                <rect x="16" y="2" width="4" height="10" rx="2" fill="#c45870" />
+                <rect x="34" y="2" width="4" height="10" rx="2" fill="#c45870" />
+                <circle cx="27" cy="2" r="2" fill="#e88a9a" />
+                <circle cx="18" cy="2" r="2" fill="#e88a9a" />
+                <circle cx="36" cy="2" r="2" fill="#e88a9a" />
               </svg>
               <p className="text-[0.78rem] font-extrabold uppercase tracking-wide text-[#1a1a1a]">500+ Designs</p>
               <p className="mt-1 text-[0.72rem] leading-relaxed text-[#666]">Wishes come in all shapes and sizes.</p>
@@ -310,12 +310,12 @@ function HomePage() {
             {/* 2 CR+ ORDERS */}
             <div className="flex flex-col items-center text-center">
               <svg viewBox="0 0 52 52" className="mb-3 h-16 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="6" y="22" width="40" height="26" rx="3" fill="#e88a9a"/>
-                <rect x="4" y="16" width="44" height="8" rx="2" fill="#d96c7e"/>
-                <rect x="23" y="4" width="6" height="20" rx="3" fill="#c45870"/>
-                <path d="M26 4 C16 4 10 10 10 16 L26 16 Z" fill="#d96c7e"/>
-                <path d="M26 4 C36 4 42 10 42 16 L26 16 Z" fill="#e88a9a"/>
-                <rect x="22" y="16" width="8" height="32" fill="#c45870" opacity="0.4"/>
+                <rect x="6" y="22" width="40" height="26" rx="3" fill="#e88a9a" />
+                <rect x="4" y="16" width="44" height="8" rx="2" fill="#d96c7e" />
+                <rect x="23" y="4" width="6" height="20" rx="3" fill="#c45870" />
+                <path d="M26 4 C16 4 10 10 10 16 L26 16 Z" fill="#d96c7e" />
+                <path d="M26 4 C36 4 42 10 42 16 L26 16 Z" fill="#e88a9a" />
+                <rect x="22" y="16" width="8" height="32" fill="#c45870" opacity="0.4" />
               </svg>
               <p className="text-[0.78rem] font-extrabold uppercase tracking-wide text-[#1a1a1a]">2 Cr+ Orders</p>
               <p className="mt-1 text-[0.72rem] leading-relaxed text-[#666]">You can close your eyes and trust us.</p>
@@ -324,12 +324,12 @@ function HomePage() {
             {/* BAKED FRESH */}
             <div className="flex flex-col items-center text-center">
               <svg viewBox="0 0 56 44" className="mb-3 h-16 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 24 L4 38 Q4 42 8 42 L36 42 Q40 42 40 38 L40 24 Z" fill="#e88a9a"/>
-                <path d="M4 24 L40 24 L34 12 Q32 8 28 8 L16 8 Q12 8 10 12 Z" fill="#d96c7e"/>
-                <rect x="16" y="4" width="4" height="10" rx="2" fill="#c45870"/>
-                <circle cx="18" cy="4" r="2" fill="#f5a8b8"/>
-                <path d="M40 28 Q48 24 52 30 Q52 38 48 42 L40 42 Z" fill="#d96c7e"/>
-                <path d="M8 30 Q14 26 20 30 Q26 34 32 30" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+                <path d="M4 24 L4 38 Q4 42 8 42 L36 42 Q40 42 40 38 L40 24 Z" fill="#e88a9a" />
+                <path d="M4 24 L40 24 L34 12 Q32 8 28 8 L16 8 Q12 8 10 12 Z" fill="#d96c7e" />
+                <rect x="16" y="4" width="4" height="10" rx="2" fill="#c45870" />
+                <circle cx="18" cy="4" r="2" fill="#f5a8b8" />
+                <path d="M40 28 Q48 24 52 30 Q52 38 48 42 L40 42 Z" fill="#d96c7e" />
+                <path d="M8 30 Q14 26 20 30 Q26 34 32 30" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" fill="none" />
               </svg>
               <p className="text-[0.78rem] font-extrabold uppercase tracking-wide text-[#1a1a1a]">Baked Fresh</p>
               <p className="mt-1 text-[0.72rem] leading-relaxed text-[#666]">Spreading smiles, one slice at a time.</p>
@@ -414,17 +414,17 @@ function HomePage() {
         <h1>SiteMint - Professional Website Developer by Yuvraj Singh</h1>
         <h2>Demo Website - E-commerce, Bakery, School Websites</h2>
         <p>
-          Looking for professional website development? View our demo website created by Yuvraj Singh (SiteMint). 
-          Expert in e-commerce websites, bakery websites, school websites, and custom web development solutions. 
+          Looking for professional website development? View our demo website created by Yuvraj Singh (SiteMint).
+          Expert in e-commerce websites, bakery websites, school websites, and custom web development solutions.
           Affordable rates, fast delivery, and professional quality websites for your business.
         </p>
         <p>
-          Demo website of Yuvraj Singh showcasing web development skills. Specializing in e-commerce platforms, 
-          online bakery shops, educational websites, and custom business websites. Contact for professional 
+          Demo website of Yuvraj Singh showcasing web development skills. Specializing in e-commerce platforms,
+          online bakery shops, educational websites, and custom business websites. Contact for professional
           website development services at competitive prices.
         </p>
         <p>
-          SiteMint by Yuvraj Singh - Your trusted partner for website and app development. View our demo website 
+          SiteMint by Yuvraj Singh - Your trusted partner for website and app development. View our demo website
           and get your dream website built in low budget with modern responsive design.
         </p>
         <div>
@@ -448,8 +448,8 @@ function HomePage() {
         <div>
           <h3>Search Keywords:</h3>
           <p>
-            demo website, Yuvraj Singh, SiteMint, website developer, e-commerce website, bakery website, 
-            school website, professional web development, affordable website, custom website, online business 
+            demo website, Yuvraj Singh, SiteMint, website developer, e-commerce website, bakery website,
+            school website, professional web development, affordable website, custom website, online business
             website, website demo, React developer, web development India, website for business, kam budget website
           </p>
         </div>

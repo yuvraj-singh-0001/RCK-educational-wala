@@ -55,6 +55,16 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
+  // Check if current route is a standalone demo (MUST be after all hooks)
+  const isDemoRoute = pathname?.startsWith('/demos/bakery') || 
+                      pathname?.startsWith('/demos/education') || 
+                      pathname?.startsWith('/bakery-demo') || 
+                      pathname?.startsWith('/education-demo') ||
+                      pathname?.startsWith('/ecommerce-demo') ||
+                      pathname?.startsWith('/recruitment-demo');
+
+  if (isDemoRoute) return null;
+
   const coreServicesList = [
     {
       name: 'Web & Software Development',

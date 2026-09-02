@@ -245,15 +245,16 @@ function PublicHeader() {
       <header className="sticky top-0 z-50 w-full bg-white shadow-[0_7px_18px_rgba(0,0,0,0.08)]">
 
         {/* ─────────────────────────────────────────────
-            DESKTOP HEADER (xl and above) — UNCHANGED
+            DESKTOP & LAPTOP HEADER (lg and above: 1024px+)
         ───────────────────────────────────────────── */}
-        <div className="hidden xl:block">
+        <div className="hidden lg:block">
           <div className="bg-[#ff0015] text-white">
-            <div className="mx-auto flex w-full max-w-[1900px] flex-col gap-2.5 px-4 py-2 sm:px-6 lg:px-10 xl:flex-row xl:items-center xl:gap-3 xl:py-[8px]">
-              <div className="flex items-center justify-between gap-2.5 xl:min-w-[250px] xl:justify-start">
+            <div className="mx-auto flex w-full max-w-full items-center justify-between gap-3 px-2 py-2 sm:px-4 lg:px-6">
+              {/* Logo */}
+              <div className="flex items-center shrink-0">
                 <Link to="/" className="shrink-0 text-white no-underline">
                   <span
-                    className="block text-[1.8rem] font-black leading-none tracking-[-0.06em] sm:text-[2.25rem]"
+                    className="block text-[1.8rem] font-black leading-none tracking-[-0.06em] xl:text-[2.25rem]"
                     style={{ fontFamily: "'Brush Script MT', 'Segoe Script', cursive" }}
                   >
                     yourbrands
@@ -264,7 +265,7 @@ function PublicHeader() {
               {/* Desktop Location */}
               <div
                 ref={locationPanelRef}
-                className="relative flex items-center gap-1.5 text-[0.8rem] font-semibold sm:text-[0.9rem] xl:min-w-[220px] xl:flex-1 xl:justify-start"
+                className="relative flex items-center gap-1 text-[0.78rem] font-semibold xl:text-[0.88rem] shrink-0"
               >
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/12">
                   <PinIcon />
@@ -272,13 +273,13 @@ function PublicHeader() {
                 <button
                   type="button"
                   onClick={() => { setLocationMessage(""); setIsLocationOpen((c) => !c); }}
-                  className="inline-flex max-w-[240px] items-center gap-1 rounded-2xl px-2 py-1 text-left text-white transition hover:bg-white/10"
+                  className="inline-flex max-w-[180px] xl:max-w-[240px] items-center gap-1 rounded-2xl px-2 py-1 text-left text-white transition hover:bg-white/10"
                   aria-expanded={isLocationOpen}
                   aria-label="Select delivery location"
                 >
-                  <span className="max-w-[200px] truncate">
-                    <span className="block text-[0.64rem] font-bold uppercase tracking-[0.08em] text-white/75">Delivering To</span>
-                    <span className="block truncate text-[0.8rem] font-semibold text-white sm:text-[0.9rem]">{deliveryLocation.label}</span>
+                  <span className="max-w-[140px] xl:max-w-[200px] truncate">
+                    <span className="block text-[0.6rem] font-bold uppercase tracking-[0.08em] text-white/75">Delivering To</span>
+                    <span className="block truncate text-[0.75rem] font-semibold text-white xl:text-[0.86rem]">{deliveryLocation.label}</span>
                   </span>
                   <ChevronDownIcon />
                 </button>
@@ -286,8 +287,8 @@ function PublicHeader() {
               </div>
 
               {/* Desktop Search */}
-              <div ref={searchPanelRef} className="relative w-full xl:mx-auto xl:max-w-[540px] xl:flex-[1.3]">
-                <label htmlFor="bakery-search-input" className="flex min-h-10 w-full items-center gap-2 rounded-2xl bg-white px-3.5 text-[#191919] shadow-[0_8px_22px_rgba(0,0,0,0.12)]">
+              <div ref={searchPanelRef} className="relative w-full max-w-[360px] xl:max-w-[520px] flex-1 mx-2">
+                <label htmlFor="bakery-search-input" className="flex min-h-9 xl:min-h-10 w-full items-center gap-2 rounded-2xl bg-white px-3.5 text-[#191919] shadow-[0_8px_22px_rgba(0,0,0,0.12)]">
                   <button type="button" onClick={handleSearchSubmit} className="inline-flex items-center justify-center rounded-full p-0.5 text-[#111111]" aria-label="Search products">
                     <SearchIcon />
                   </button>
@@ -299,7 +300,7 @@ function PublicHeader() {
                     onChange={(e) => { setSearchText(e.target.value); setIsSearchOpen(true); }}
                     onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleSearchSubmit(); } }}
                     placeholder="Search For Cakes, Occasion, Flavour And More..."
-                    className="w-full border-none bg-transparent text-[0.8rem] font-medium text-[#141414] outline-none placeholder:text-[#333333] sm:text-[0.88rem]"
+                    className="w-full border-none bg-transparent text-[0.78rem] font-medium text-[#141414] outline-none placeholder:text-[#333333] xl:text-[0.88rem]"
                   />
                 </label>
                 {isSearchOpen && (
@@ -312,19 +313,19 @@ function PublicHeader() {
               </div>
 
               {/* Desktop Quick Actions */}
-              <nav className="flex items-start justify-end gap-1.5 xl:flex-1 xl:gap-2" aria-label="Quick actions">
+              <nav className="flex items-center justify-end gap-1 xl:gap-2.5 shrink-0" aria-label="Quick actions">
                 {quickActions.map((item) => {
                   const Icon = item.icon;
                   const isCart = item.label === "Cart";
                   return (
-                    <NavLink key={item.label} to={item.to} className="group flex min-w-[64px] flex-col items-center gap-0.5 text-center text-white no-underline">
-                      <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-white/18 bg-white/8 transition duration-200 group-hover:-translate-y-0.5 group-hover:bg-white/14">
+                    <NavLink key={item.label} to={item.to} className="group flex min-w-[56px] xl:min-w-[64px] flex-col items-center gap-0.5 text-center text-white no-underline">
+                      <span className="relative flex h-7 w-7 xl:h-8 xl:w-8 items-center justify-center rounded-full border border-white/18 bg-white/8 transition duration-200 group-hover:-translate-y-0.5 group-hover:bg-white/14">
                         <Icon />
                         {isCart && cartCount > 0 && (
                           <span className="absolute -right-1 -top-1 inline-flex min-w-4 items-center justify-center rounded-full bg-[#fff1f3] px-1 text-[0.62rem] font-extrabold leading-4 text-[#db123d]">{cartCount}</span>
                         )}
                       </span>
-                      <span className="text-[0.64rem] font-semibold leading-tight xl:text-[0.75rem]">{item.label}</span>
+                      <span className="text-[0.62rem] font-semibold leading-tight xl:text-[0.75rem]">{item.label}</span>
                     </NavLink>
                   );
                 })}
@@ -334,12 +335,12 @@ function PublicHeader() {
 
           {/* Desktop Categories Nav */}
           <div className="overflow-hidden bg-white text-[#121212] border-b border-[#e9e9e9]">
-            <div className="mx-auto flex max-w-[1900px] items-center justify-between gap-4 overflow-x-auto whitespace-nowrap px-4 py-2.5 sm:px-6 lg:px-10 xl:gap-5">
+            <div className="mx-auto flex max-w-full items-center justify-between gap-3 xl:gap-5 overflow-x-auto whitespace-nowrap px-2 py-2.5 sm:px-4 lg:px-6 [scrollbar-width:none]">
               {desktopCategories.map((item) => (
                 <NavLink
                   key={item.label}
                   to={item.to}
-                  className="group inline-flex shrink-0 items-center gap-1 text-[0.84rem] font-semibold text-[#111111] no-underline transition hover:text-[#ff0015] xl:text-[0.92rem]"
+                  className="group inline-flex shrink-0 items-center gap-1 text-[0.82rem] font-semibold text-[#111111] no-underline transition hover:text-[#ff0015] xl:text-[0.92rem]"
                 >
                   <span>{item.label}</span>
                   {item.badge && (
@@ -352,9 +353,9 @@ function PublicHeader() {
         </div>
 
         {/* ─────────────────────────────────────────────
-            MOBILE HEADER (below xl) — BAKINGO STYLE
+            MOBILE & TABLET HEADER (below lg: < 1024px)
         ───────────────────────────────────────────── */}
-        <div className="xl:hidden">
+        <div className="lg:hidden">
           {/* Row 1: Hamburger | Logo | Search + Cart + User */}
           <div className="bg-[#ff0015] text-white">
             <div className="flex items-center justify-between px-3 py-2.5 sm:px-5">

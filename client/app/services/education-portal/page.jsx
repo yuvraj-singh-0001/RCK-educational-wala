@@ -13,6 +13,7 @@ import {
   Calculator,
   ArrowRight
 } from 'lucide-react';
+import RelatedServicesSection from '../../../components/RelatedServicesSection';
 import FaqSection from '../../../components/FaqSection';
 
 export const metadata = {
@@ -192,6 +193,7 @@ export default function EducationPortalPage() {
           </div>
         </div>
       </div>
+      <RelatedServicesSection currentService="education-portal" />
       <FaqSection />
     </div>
   );

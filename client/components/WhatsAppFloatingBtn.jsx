@@ -1,10 +1,22 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { MessageCircle, X } from 'lucide-react';
 
 export default function WhatsAppFloatingBtn() {
+  const pathname = usePathname();
   const [showTooltip, setShowTooltip] = useState(true);
+
+  // Check if current route is a standalone demo
+  const isDemoRoute = pathname?.startsWith('/demos/bakery') || 
+                      pathname?.startsWith('/demos/education') || 
+                      pathname?.startsWith('/bakery-demo') || 
+                      pathname?.startsWith('/education-demo') ||
+                      pathname?.startsWith('/ecommerce-demo') ||
+                      pathname?.startsWith('/recruitment-demo');
+
+  if (isDemoRoute) return null;
 
   return (
     <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2 pointer-events-auto">

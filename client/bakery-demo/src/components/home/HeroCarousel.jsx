@@ -115,7 +115,7 @@ function HeroCarousel({ className = "", ...props }) {
   return (
     <section
       className={[
-        "relative mt-0 mb-1 aspect-[1460/590] max-h-[620px] h-[clamp(190px,54vw,310px)] w-full overflow-hidden rounded-[10px] bg-[#f3dfe6] shadow-[0_10px_24px_rgba(0,0,0,0.1)] md:h-auto md:rounded-[14px]",
+        "relative mt-0 mb-2 aspect-[1460/590] w-full overflow-hidden rounded-none bg-[#f3dfe6] shadow-sm",
         className,
       ].join(" ")}
       aria-label="Featured bakery highlights"

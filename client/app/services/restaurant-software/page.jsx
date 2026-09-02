@@ -12,6 +12,7 @@ import {
   Calculator,
   ArrowRight
 } from 'lucide-react';
+import RelatedServicesSection from '../../../components/RelatedServicesSection';
 import FaqSection from '../../../components/FaqSection';
 
 export const metadata = {
@@ -191,6 +192,7 @@ export default function RestaurantSoftwarePage() {
           </div>
         </div>
       </div>
+      <RelatedServicesSection currentService="restaurant-software" />
       <FaqSection />
     </div>
   );

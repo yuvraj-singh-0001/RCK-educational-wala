@@ -13,6 +13,7 @@ import {
   Globe,
   Radio
 } from 'lucide-react';
+import RelatedServicesSection from '../../../components/RelatedServicesSection';
 import FaqSection from '../../../components/FaqSection';
 
 export const metadata = {
@@ -204,6 +205,7 @@ export default function SocialMediaManagementPage() {
           </div>
         </div>
       </div>
+      <RelatedServicesSection currentService="social-media-management" />
       <FaqSection />
     </div>
   );

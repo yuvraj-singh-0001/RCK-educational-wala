@@ -36,8 +36,8 @@ export default function Hero() {
 
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15] mb-4 sm:mb-6 font-sans">
-            Build Your Digital Presence <br className="hidden sm:inline" />
-            with <span className="gradient-text-hero">SiteMint</span>
+            Affordable Website & Mobile App <br className="hidden sm:inline" />
+            Development with <span className="gradient-text-hero">SiteMint</span>
           </h1>
 
           {/* Subheading */}

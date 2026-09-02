@@ -14,6 +14,7 @@ import {
   TrendingUp,
   Tv
 } from 'lucide-react';
+import RelatedServicesSection from '../../../components/RelatedServicesSection';
 import FaqSection from '../../../components/FaqSection';
 
 export const metadata = {
@@ -198,6 +199,7 @@ export default function VideoEditingServicePage() {
           </div>
         </div>
       </div>
+      <RelatedServicesSection currentService="video-editing" />
       <FaqSection />
     </div>
   );

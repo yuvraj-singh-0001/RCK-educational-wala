@@ -12,6 +12,7 @@ import {
   Bell,
   Calculator
 } from 'lucide-react';
+import RelatedServicesSection from '../../../components/RelatedServicesSection';
 import FaqSection from '../../../components/FaqSection';
 
 export const metadata = {
@@ -191,6 +192,7 @@ export default function MobileAppDevelopmentPage() {
           </div>
         </div>
       </div>
+      <RelatedServicesSection currentService="mobile-app-development" />
       <FaqSection />
     </div>
   );

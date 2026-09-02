@@ -8,9 +8,12 @@
   --bakery-border: rgba(0, 0, 0, 0.1);
   --bakery-ink: #222222;
   --bakery-muted: #666666;
-  --bakery-accent: #E02B2B;        /* YourBrands Red */
-  --bakery-accent-dark: #C62828;   /* Darker Red */
-  --bakery-accent-soft: #FDE8E8;   /* Soft Red Background */
+  --bakery-accent: #E02B2B;
+  /* YourBrands Red */
+  --bakery-accent-dark: #C62828;
+  /* Darker Red */
+  --bakery-accent-soft: #FDE8E8;
+  /* Soft Red Background */
   --bakery-warm: #FF5252;
   --bakery-warm-soft: #FFEBEE;
   --bakery-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
@@ -64,6 +67,7 @@ button {
     opacity: 0;
     transform: translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -131,10 +135,12 @@ button {
     opacity: 0;
     transform: translateY(10px) scale(0.8);
   }
+
   50% {
     opacity: 0.7;
     transform: translateY(-2px) scale(1.05);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -212,6 +218,7 @@ button {
 }
 
 @keyframes bakery-ticket-breathe {
+
   0%,
   100% {
     transform: translateY(0);
@@ -246,6 +253,7 @@ button {
 }
 
 @keyframes bakery-offer-cta-pulse {
+
   0%,
   100% {
     transform: scale(1);
@@ -259,6 +267,7 @@ button {
 }
 
 @keyframes bakery-offer-card-float {
+
   0%,
   100% {
     transform: translateY(0);
@@ -320,12 +329,17 @@ button {
 .bakery-top-strip,
 .bakery-header,
 .bakery-footer {
-  width: min(1220px, 94%);
-  margin-inline: auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
 }
 
 .bakery-main {
-  padding: 0 0 2.25rem;
+  padding-top: 0;
+  padding-bottom: 2.25rem;
 }
 
 .bakery-header-shell {
@@ -349,7 +363,8 @@ button {
 }
 
 .bakery-header-container {
-  width: min(1200px, 98%);
+  width: 100%;
+  max-width: 100%;
   margin-inline: auto;
   display: flex;
   align-items: center;
@@ -824,7 +839,7 @@ button {
   background: linear-gradient(180deg, transparent 28%, rgba(22, 15, 8, 0.32) 100%);
 }
 
-.bakery-hero-panel > div,
+.bakery-hero-panel>div,
 .bakery-custom-panel-copy,
 .gallery-card h3 {
   position: relative;
@@ -978,7 +993,7 @@ button {
   color: var(--bakery-accent-dark);
   font-size: 0.72rem;
   font-weight: 800;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .bakery-wishlist-chip {
@@ -1303,28 +1318,28 @@ button {
 
 .bakery-category-rail .bakery-category-link:nth-child(1),
 .bakery-utility-nav .bakery-utility-link:nth-child(1),
-.bakery-feature-grid > *:nth-child(1),
-.bakery-product-grid > *:nth-child(1) {
+.bakery-feature-grid>*:nth-child(1),
+.bakery-product-grid>*:nth-child(1) {
   animation-delay: 60ms;
 }
 
 .bakery-category-rail .bakery-category-link:nth-child(2),
 .bakery-utility-nav .bakery-utility-link:nth-child(2),
-.bakery-feature-grid > *:nth-child(2),
-.bakery-product-grid > *:nth-child(2) {
+.bakery-feature-grid>*:nth-child(2),
+.bakery-product-grid>*:nth-child(2) {
   animation-delay: 110ms;
 }
 
 .bakery-category-rail .bakery-category-link:nth-child(3),
 .bakery-utility-nav .bakery-utility-link:nth-child(3),
-.bakery-feature-grid > *:nth-child(3),
-.bakery-product-grid > *:nth-child(3) {
+.bakery-feature-grid>*:nth-child(3),
+.bakery-product-grid>*:nth-child(3) {
   animation-delay: 150ms;
 }
 
 .bakery-category-rail .bakery-category-link:nth-child(4),
 .bakery-utility-nav .bakery-utility-link:nth-child(4),
-.bakery-product-grid > *:nth-child(4) {
+.bakery-product-grid>*:nth-child(4) {
   animation-delay: 190ms;
 }
 
@@ -1444,6 +1459,7 @@ button {
 }
 
 @media (max-width: 1100px) {
+
   .bakery-hero-shell,
   .bakery-catalog-layout,
   .bakery-contact-layout,
@@ -1517,6 +1533,7 @@ button {
 }
 
 @media (max-width: 520px) {
+
   .bakery-main,
   .bakery-top-strip,
   .bakery-header,
@@ -1717,14 +1734,37 @@ button {
   background-position: center;
 }
 
-.bakery-home-category-1 { background: linear-gradient(145deg, #dcb8d9, #9970b0, #fff4e8); }
-.bakery-home-category-2 { background: linear-gradient(145deg, #fad7df, #ec9aac, #f9efe7); }
-.bakery-home-category-3 { background: linear-gradient(145deg, #d7e6c8, #8fb068, #f6f0e5); }
-.bakery-home-category-4 { background: linear-gradient(145deg, #ca9484, #4a2621, #f7efe5); }
-.bakery-home-category-5 { background: linear-gradient(145deg, #dfc86d, #b68627, #f7efe5); }
-.bakery-home-category-6 { background: linear-gradient(145deg, #edd7c3, #c89a6b, #f9f2eb); }
-.bakery-home-category-7 { background: linear-gradient(145deg, #d2cfbf, #a7975d, #f8f1e7); }
-.bakery-home-category-8 { background: linear-gradient(145deg, #dce8e1, #87a28f, #f7f2ea); }
+.bakery-home-category-1 {
+  background: linear-gradient(145deg, #dcb8d9, #9970b0, #fff4e8);
+}
+
+.bakery-home-category-2 {
+  background: linear-gradient(145deg, #fad7df, #ec9aac, #f9efe7);
+}
+
+.bakery-home-category-3 {
+  background: linear-gradient(145deg, #d7e6c8, #8fb068, #f6f0e5);
+}
+
+.bakery-home-category-4 {
+  background: linear-gradient(145deg, #ca9484, #4a2621, #f7efe5);
+}
+
+.bakery-home-category-5 {
+  background: linear-gradient(145deg, #dfc86d, #b68627, #f7efe5);
+}
+
+.bakery-home-category-6 {
+  background: linear-gradient(145deg, #edd7c3, #c89a6b, #f9f2eb);
+}
+
+.bakery-home-category-7 {
+  background: linear-gradient(145deg, #d2cfbf, #a7975d, #f8f1e7);
+}
+
+.bakery-home-category-8 {
+  background: linear-gradient(145deg, #dce8e1, #87a28f, #f7f2ea);
+}
 
 .bakery-home-product-strip {
   display: grid;
@@ -1794,14 +1834,37 @@ button {
   background: #c9ccd2;
 }
 
-.bakery-price-bars span:nth-child(1) { height: 72%; }
-.bakery-price-bars span:nth-child(2) { height: 82%; }
-.bakery-price-bars span:nth-child(3) { height: 88%; }
-.bakery-price-bars span:nth-child(4) { height: 76%; }
-.bakery-price-bars span:nth-child(5) { height: 67%; }
-.bakery-price-bars span:nth-child(6) { height: 56%; }
-.bakery-price-bars span:nth-child(7) { height: 48%; }
-.bakery-price-bars span:nth-child(8) { height: 61%; }
+.bakery-price-bars span:nth-child(1) {
+  height: 72%;
+}
+
+.bakery-price-bars span:nth-child(2) {
+  height: 82%;
+}
+
+.bakery-price-bars span:nth-child(3) {
+  height: 88%;
+}
+
+.bakery-price-bars span:nth-child(4) {
+  height: 76%;
+}
+
+.bakery-price-bars span:nth-child(5) {
+  height: 67%;
+}
+
+.bakery-price-bars span:nth-child(6) {
+  height: 56%;
+}
+
+.bakery-price-bars span:nth-child(7) {
+  height: 48%;
+}
+
+.bakery-price-bars span:nth-child(8) {
+  height: 61%;
+}
 
 .bakery-price-range {
   display: flex;
@@ -1851,6 +1914,7 @@ button {
 }
 
 @media (max-width: 1100px) {
+
   .bakery-home-hero,
   .bakery-header-primary {
     grid-template-columns: 1fr;
@@ -1869,6 +1933,7 @@ button {
 }
 
 @media (max-width: 760px) {
+
   .bakery-home-category-grid,
   .bakery-home-product-strip,
   .bakery-catalog-category-strip,
@@ -2012,6 +2077,7 @@ button {
 }
 
 @media (max-width: 760px) {
+
   .bakery-header-primary,
   .bakery-header-secondary {
     padding: 0.65rem 0.72rem;
@@ -2038,6 +2104,7 @@ button {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -2054,10 +2121,12 @@ button {
     background-color: #10b981;
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
   }
+
   70% {
     background-color: #34d399;
     box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
   }
+
   100% {
     background-color: #10b981;
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
@@ -2069,10 +2138,15 @@ button {
 }
 
 @keyframes delivery-blink {
-  0%, 50%, 100% {
+
+  0%,
+  50%,
+  100% {
     opacity: 1;
   }
-  25%, 75% {
+
+  25%,
+  75% {
     opacity: 0.3;
   }
 }
@@ -2086,6 +2160,7 @@ button {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -2095,6 +2170,7 @@ button {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(100%);
   }
@@ -2123,6 +2199,7 @@ button {
     transform: translateY(-100vh) rotate(0deg);
     opacity: 1;
   }
+
   100% {
     transform: translateY(100vh) rotate(720deg);
     opacity: 0;
@@ -2138,21 +2215,95 @@ button {
   z-index: 100;
 }
 
-.confetti:nth-child(1) { left: 10%; animation-delay: 0s; background: #ff6b6b; }
-.confetti:nth-child(2) { left: 20%; animation-delay: 0.1s; background: #4ecdc4; }
-.confetti:nth-child(3) { left: 30%; animation-delay: 0.2s; background: #45b7d1; }
-.confetti:nth-child(4) { left: 40%; animation-delay: 0.3s; background: #f9ca24; }
-.confetti:nth-child(5) { left: 50%; animation-delay: 0.4s; background: #ff6b6b; }
-.confetti:nth-child(6) { left: 60%; animation-delay: 0.5s; background: #4ecdc4; }
-.confetti:nth-child(7) { left: 70%; animation-delay: 0.6s; background: #45b7d1; }
-.confetti:nth-child(8) { left: 80%; animation-delay: 0.7s; background: #f9ca24; }
-.confetti:nth-child(9) { left: 90%; animation-delay: 0.8s; background: #ff6b6b; }
-.confetti:nth-child(10) { left: 5%; animation-delay: 0.9s; background: #4ecdc4; }
-.confetti:nth-child(11) { left: 15%; animation-delay: 1s; background: #45b7d1; }
-.confetti:nth-child(12) { left: 25%; animation-delay: 1.1s; background: #f9ca24; }
-.confetti:nth-child(13) { left: 35%; animation-delay: 1.2s; background: #ff6b6b; }
-.confetti:nth-child(14) { left: 45%; animation-delay: 1.3s; background: #4ecdc4; }
-.confetti:nth-child(15) { left: 55%; animation-delay: 1.4s; background: #45b7d1; }
+.confetti:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+  background: #ff6b6b;
+}
+
+.confetti:nth-child(2) {
+  left: 20%;
+  animation-delay: 0.1s;
+  background: #4ecdc4;
+}
+
+.confetti:nth-child(3) {
+  left: 30%;
+  animation-delay: 0.2s;
+  background: #45b7d1;
+}
+
+.confetti:nth-child(4) {
+  left: 40%;
+  animation-delay: 0.3s;
+  background: #f9ca24;
+}
+
+.confetti:nth-child(5) {
+  left: 50%;
+  animation-delay: 0.4s;
+  background: #ff6b6b;
+}
+
+.confetti:nth-child(6) {
+  left: 60%;
+  animation-delay: 0.5s;
+  background: #4ecdc4;
+}
+
+.confetti:nth-child(7) {
+  left: 70%;
+  animation-delay: 0.6s;
+  background: #45b7d1;
+}
+
+.confetti:nth-child(8) {
+  left: 80%;
+  animation-delay: 0.7s;
+  background: #f9ca24;
+}
+
+.confetti:nth-child(9) {
+  left: 90%;
+  animation-delay: 0.8s;
+  background: #ff6b6b;
+}
+
+.confetti:nth-child(10) {
+  left: 5%;
+  animation-delay: 0.9s;
+  background: #4ecdc4;
+}
+
+.confetti:nth-child(11) {
+  left: 15%;
+  animation-delay: 1s;
+  background: #45b7d1;
+}
+
+.confetti:nth-child(12) {
+  left: 25%;
+  animation-delay: 1.1s;
+  background: #f9ca24;
+}
+
+.confetti:nth-child(13) {
+  left: 35%;
+  animation-delay: 1.2s;
+  background: #ff6b6b;
+}
+
+.confetti:nth-child(14) {
+  left: 45%;
+  animation-delay: 1.3s;
+  background: #4ecdc4;
+}
+
+.confetti:nth-child(15) {
+  left: 55%;
+  animation-delay: 1.4s;
+  background: #45b7d1;
+}
 
 /* --- Added Extra Styles for Premium YourBrands Aesthetic --- */
 

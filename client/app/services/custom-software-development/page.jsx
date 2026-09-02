@@ -12,6 +12,7 @@ import {
   Lock,
   Layers
 } from 'lucide-react';
+import RelatedServicesSection from '../../../components/RelatedServicesSection';
 import FaqSection from '../../../components/FaqSection';
 
 export const metadata = {
@@ -190,6 +191,7 @@ export default function CustomSoftwareDevelopmentPage() {
           </div>
         </div>
       </div>
+      <RelatedServicesSection currentService="custom-software-development" />
       <FaqSection />
     </div>
   );

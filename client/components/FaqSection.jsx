@@ -8,12 +8,12 @@ export default function FaqSection() {
 
   const faqs = [
     {
-      q: 'What is the difference between Starter (₹3,999), Business (₹7,999), and Professional (₹15,999) plans?',
-      a: '• Starter Website (₹3,999): Best for small businesses & personal branding. Includes 5 custom pages, responsive UI, WhatsApp chat, contact form with instant email notifications, basic admin panel & basic SEO. (Domain/hosting separate).\n• Business Website (₹7,999): Best for growing businesses, e-commerce, coaching & restaurants. Adds up to 10 dynamic pages, product/course management, online ordering, user registration & dashboard, complete admin portal, Razorpay UPI gateway & 6 months maintenance.\n• Professional Business System (₹15,999): Complete all-in-one solution. Includes unlimited pages, 1 Year Free Domain + 1 Year Cloud Hosting Included, full user system, multi-entity admin dashboard, email automation, technical SEO & 1 Year Free Maintenance.',
+      q: 'What is the difference between Starter (₹3,999), Business (₹7,999), and Professional (₹17,999) plans?',
+      a: '• Starter Website (₹3,999): Best for small businesses & personal branding. Includes 5 custom pages, responsive UI, WhatsApp chat, 350 free daily Gmail lead notifications, basic admin panel & basic SEO. (Domain/hosting separate).\n• Business Website (₹7,999): Best for growing businesses, e-commerce, coaching & restaurants. Adds up to 10 dynamic pages, product/course management, online ordering, user registration & dashboard, complete admin portal, Razorpay UPI gateway & 6 months maintenance.\n• Professional Business System (₹17,999): Complete all-in-one solution. Includes unlimited pages, 1 Year Free Domain + 1 Year Cloud Hosting Included, full user system, multi-entity admin dashboard, email automation, technical SEO & 1 Year Free Maintenance.',
     },
     {
       q: 'Are Domain, SSL, and Cloud Hosting included in all packages?',
-      a: 'In our Professional Business System (₹15,999), 1 Year Domain (.IN/.COM) and 1 Year High-Speed Cloud Hosting with SSL are 100% Included for Free. For the Starter (₹3,999) and Business (₹7,999) plans, domain and hosting are purchased separately by the client directly in their name (or we can assist you in getting them for ~₹1,499–₹1,999/year).',
+      a: 'In our Professional Business System (₹17,999), 1 Year Domain (.IN/.COM) and 1 Year High-Speed Cloud Hosting with SSL are 100% Included for Free. For the Starter (₹3,999) and Business (₹7,999) plans, domain and hosting are purchased separately by the client directly in their name (or we can assist you in getting them for ~₹3,589/year).',
     },
     {
       q: 'What 4 core services does SiteMint provide?',

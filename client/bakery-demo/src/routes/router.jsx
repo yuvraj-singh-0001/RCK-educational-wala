@@ -18,9 +18,11 @@ import PublicLayout from '../pages/PublicLayout'
 import ProtectedRouter from '../protected/protectedRouter'
 import RouteSeo from '../seo/RouteSeo'
 
-function AppRouter() {
+function AppRouter({ basename }) {
+  const effectiveBasename = basename || (typeof window !== 'undefined' && window.location.pathname.startsWith('/bakery-demo') ? '/bakery-demo' : '/demos/bakery');
+
   return (
-    <BrowserRouter basename="/bakery-demo">
+    <BrowserRouter basename={effectiveBasename}>
       <RouteSeo />
       <Suspense
         fallback={

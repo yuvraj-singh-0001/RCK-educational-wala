@@ -134,7 +134,7 @@ export default function RootLayout({ children }) {
           {
             '@type': 'Offer',
             'name': 'Professional Business System',
-            'price': '15999',
+            'price': '17999',
             'priceCurrency': 'INR',
             'description': 'Unlimited pages, 1 Year Free Domain + 1 Year Cloud Hosting included, full user management, multi-entity admin, and 1 Year Maintenance.'
           },

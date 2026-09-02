@@ -326,7 +326,7 @@ function MenuPage() {
     activeType === "Photo Cakes" || activeType === "Designer Cakes";
 
   return (
-    <section className="bakery-section !mt-1.5 rounded-xl md:rounded-2xl">
+    <section className="bakery-section !mt-1 w-full px-2 sm:px-4 md:px-6">
       <div className="mb-4">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="m-0 text-2xl font-semibold tracking-tight text-[#1f1f1f] sm:text-3xl simple-reveal" style={{animationDelay: '0ms'}}>
@@ -364,13 +364,13 @@ function MenuPage() {
           </Link>
         </div>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
           {filteredProducts.map((item, index) => (
             <article
               key={item.id}
               id={`product-${item.id}`}
-              className={`simple-reveal flex h-full flex-col overflow-hidden rounded-2xl border border-[#ece4dc] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)]`}
-              style={{ animationDelay: `${Math.min(index * 80, 400)}ms` }}
+              className={`simple-reveal flex h-full flex-col overflow-hidden rounded-xl border border-[#ece4dc] bg-white shadow-[0_4px_16px_rgba(0,0,0,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.09)]`}
+              style={{ animationDelay: `${Math.min(index * 60, 300)}ms` }}
             >
               <div
                 className={`relative aspect-[4/3] overflow-hidden bg-[#f6f0eb] ${item.imageClass || ""}`}
@@ -378,56 +378,60 @@ function MenuPage() {
                 <img
                   src={item.imageUrl || fallbackCakeImage}
                   alt={item.name}
-                  className={`h-full w-full ${isImageCakePage ? "object-contain p-2" : "object-cover"}`}
+                  className={`h-full w-full ${isImageCakePage ? "object-contain p-2" : "object-cover transition duration-300 hover:scale-105"}`}
                   onError={handleImageError}
                   loading={index < 4 ? "eager" : "lazy"}
-                  sizes="(min-width: 1280px) 24vw, (min-width: 1024px) 32vw, (min-width: 640px) 48vw, 96vw"
+                  sizes="(min-width: 1536px) 18vw, (min-width: 1024px) 23vw, (min-width: 768px) 30vw, (min-width: 640px) 46vw, 95vw"
                 />
                 {item.badge && (
-                  <span className="absolute left-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.04em] text-[#9f2138] shadow-sm">
+                  <span className="absolute left-2.5 top-2.5 inline-flex rounded-full bg-white/95 px-2 py-0.5 text-[0.62rem] font-extrabold uppercase tracking-[0.04em] text-[#9f2138] shadow-sm">
                     {item.badge}
                   </span>
                 )}
               </div>
-              <div className="grid flex-1 gap-1.5 p-3">
-                <h3 className="m-0 line-clamp-1 text-[1rem] font-semibold text-[#232323]">
-                  {item.name}
-                </h3>
-                <div className="flex flex-wrap items-center gap-2">
-                  <strong className="bakery-live-price price-animate">
-                    ₹ {getAnimatedPrice(item)}
-                  </strong>
-                  {getAnimatedOriginalPrice(item) >
-                    getAnimatedPrice(item) && (
-                    <s className="bakery-old-price price-animate">₹ {getAnimatedOriginalPrice(item)}</s>
-                  )}
-                  {getDiscountPercent(item) > 0 && (
-                    <span className="bakery-offer-pill-live inline-flex items-center rounded-full bg-[#ffe8ec] px-2 py-0.5 text-[0.72rem] font-extrabold text-[#cf244a]">
-                      {getDiscountPercent(item)}% OFF
-                    </span>
-                  )}
+              <div className="flex flex-1 flex-col justify-between gap-1.5 p-3">
+                <div>
+                  <h3 className="m-0 line-clamp-1 text-[0.88rem] font-bold text-[#1f1f1f]">
+                    {item.name}
+                  </h3>
+                  <div className="mt-1 flex flex-wrap items-center gap-1.5">
+                    <strong className="bakery-live-price price-animate text-[0.95rem] font-extrabold text-[#111111]">
+                      ₹ {getAnimatedPrice(item)}
+                    </strong>
+                    {getAnimatedOriginalPrice(item) >
+                      getAnimatedPrice(item) && (
+                      <s className="bakery-old-price price-animate text-[0.75rem] text-[#888888]">₹ {getAnimatedOriginalPrice(item)}</s>
+                    )}
+                    {getDiscountPercent(item) > 0 && (
+                      <span className="bakery-offer-pill-live inline-flex items-center rounded-full bg-[#ffe8ec] px-1.5 py-0.2 text-[0.65rem] font-extrabold text-[#cf244a]">
+                        {getDiscountPercent(item)}% OFF
+                      </span>
+                    )}
+                  </div>
+                  <div className="mt-1 flex items-center gap-1 text-[0.72rem] text-[#666666]">
+                    <span className="text-[#f5a623]">★</span>
+                    <span className="font-semibold text-[#333]">{item.rating}</span>
+                    <span>•</span>
+                    <span>{item.reviews} reviews</span>
+                    {item.delivery && (
+                      <>
+                        <span>•</span>
+                        <span className="text-[#059669] font-medium">{item.delivery}</span>
+                      </>
+                    )}
+                  </div>
                 </div>
-                <div className="flex items-center gap-1 text-[0.75rem] text-[#6b6b6b]">
-                  <span>⭐ {item.rating}</span>
-                  <span>•</span>
-                  <span>{item.reviews} reviews</span>
-                  {item.delivery && (
-                    <>
-                      <span>•</span>
-                      <span>{item.delivery}</span>
-                    </>
-                  )}
-                </div>
-                <div className="mt-auto flex gap-2">
+
+                <div className="mt-2 flex items-center gap-1.5 pt-0.5">
                   <button
                     onClick={() => handleAddToCart(item)}
-                    className="flex-1 rounded-xl bg-[#f20d24] px-3 py-2.5 text-[0.8rem] font-extrabold uppercase text-white transition hover:bg-[#e00c20] active:scale-95"
+                    className="flex-1 inline-flex items-center justify-center rounded-md bg-[#e11d2f] py-1.5 px-1.5 text-[0.68rem] font-bold text-white whitespace-nowrap transition hover:bg-[#c61828] active:scale-95 shadow-sm"
                   >
                     Add to Cart
                   </button>
                   <button
                     onClick={() => handleOrderNow(item)}
-                    className="rounded-xl border-2 border-[#f20d24] bg-white px-3 py-2.5 text-[0.8rem] font-extrabold uppercase text-[#f20d24] transition hover:bg-[#f20d24] hover:text-white active:scale-95"
+                    className="flex-1 inline-flex items-center justify-center rounded-md border border-[#e11d2f] bg-white py-1.5 px-1.5 text-[0.68rem] font-bold text-[#e11d2f] whitespace-nowrap transition hover:bg-[#fff0f2] active:scale-95 shadow-sm"
                   >
                     Order Now
                   </button>
