@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { 
   Menu, 
@@ -109,26 +110,21 @@ export default function Navbar() {
       <header 
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200/90 shadow-sm shadow-slate-900/5 py-2.5 sm:py-3' 
-            : 'bg-white border-b border-slate-100 py-3 sm:py-3.5'
+            ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200/90 shadow-sm shadow-slate-900/5 h-14 sm:h-15' 
+            : 'bg-white border-b border-slate-100 h-14 sm:h-16'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
-          {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-2 group shrink-0 min-w-0">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-violet-600 via-indigo-600 to-teal-500 p-[1.5px] shadow-sm group-hover:scale-105 transition-transform shrink-0">
-              <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-violet-600 group-hover:rotate-12 transition-transform" />
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-base sm:text-lg lg:text-xl font-extrabold tracking-tight text-slate-900 flex items-center gap-1.5 leading-none">
-                SiteMint <span className="text-violet-600 text-[10px] px-1.5 py-0.5 rounded-full bg-violet-50 border border-violet-200 font-bold">IN</span>
-              </span>
-              <span className="text-[9px] sm:text-[10px] text-slate-400 tracking-wider uppercase font-semibold mt-0.5 hidden xs:block">
-                Web, App & Media Studio
-              </span>
-            </div>
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-full flex items-center justify-between gap-2">
+          {/* Brand Logo - Extra Large & Full Navbar Fit (Zero Top/Bottom Blank Gap) */}
+          <Link href="/" className="relative flex items-center shrink-0 group h-full">
+            <Image 
+              src="/sitemint_logo1.png" 
+              alt="SiteMint - Build. Grow. Succeed." 
+              width={280} 
+              height={80} 
+              className="h-16 sm:h-20 lg:h-24 w-auto max-w-none object-contain scale-[1.35] sm:scale-[1.45] origin-left transition-transform duration-200 group-hover:scale-[1.5]"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation (Flexible & Responsive) */}

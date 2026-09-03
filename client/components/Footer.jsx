@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { 
   Sparkles, 
@@ -78,20 +79,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 pb-12 border-b border-slate-800">
           {/* Brand Info (2 Columns) */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-2.5 group inline-block">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-violet-600 via-indigo-600 to-teal-500 p-[1.5px] shadow-sm">
-                <div className="w-full h-full bg-slate-900 rounded-[10px] flex items-center justify-center">
-                  <Sparkles className="w-4 h-4 text-violet-400" />
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-extrabold tracking-tight text-white flex items-center gap-1.5 leading-none">
-                  SiteMint <span className="text-violet-400 text-[10px] px-1.5 py-0.5 rounded-full bg-violet-950/60 border border-violet-800 font-bold">IN</span>
-                </span>
-                <span className="text-[9px] text-slate-400 tracking-wider uppercase font-semibold mt-0.5">
-                  Web, App & Media Studio
-                </span>
-              </div>
+            <Link href="/" className="relative inline-flex items-center group overflow-visible">
+              <Image 
+                src="/sitemint_logo1.png" 
+                alt="SiteMint - Build. Grow. Succeed." 
+                width={280} 
+                height={80} 
+                className="h-14 sm:h-16 md:h-18 w-auto max-w-none object-contain scale-[1.35] sm:scale-[1.45] origin-left rounded-lg transition-transform duration-200 group-hover:scale-[1.5]"
+              />
             </Link>
 
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
