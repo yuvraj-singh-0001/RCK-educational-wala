@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import { 
-  BookOpen, 
-  Sparkles, 
-  Clock, 
-  Calendar, 
-  ArrowRight, 
-  MessageCircle, 
-  Tag, 
-  Store, 
-  GraduationCap, 
+import {
+  BookOpen,
+  Sparkles,
+  Clock,
+  Calendar,
+  ArrowRight,
+  MessageCircle,
+  Tag,
+  Store,
+  GraduationCap,
   ShoppingBag,
   TrendingUp,
   Globe,
@@ -207,7 +207,7 @@ export default function BlogHubPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Creative Hub Header Banner */}
         <header className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">

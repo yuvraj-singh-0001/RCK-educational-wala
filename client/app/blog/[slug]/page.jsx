@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { 
-  Calendar, 
-  Clock, 
-  MessageCircle, 
-  CheckCircle2, 
-  Sparkles, 
-  ArrowRight, 
+import {
+  Calendar,
+  Clock,
+  MessageCircle,
+  CheckCircle2,
+  Sparkles,
+  ArrowRight,
   Zap,
   Globe,
   Store,
@@ -361,7 +361,7 @@ export default async function BlogPostPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
-      
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Semantic Breadcrumb Navigation */}
         <nav aria-label="breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-medium text-slate-500">
@@ -395,8 +395,8 @@ export default async function BlogPostPage({ params }) {
 
         {/* Article Body */}
         <article className="prose prose-slate max-w-none prose-headings:font-bold prose-headings:text-slate-900 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 mb-12">
-          <div 
-            dangerouslySetInnerHTML={{ __html: article.content }} 
+          <div
+            dangerouslySetInnerHTML={{ __html: article.content }}
             className="space-y-5 text-sm sm:text-base text-slate-700 leading-relaxed [&>h2]:text-xl sm:[&>h2]:text-2xl [&>h2]:font-extrabold [&>h2]:text-slate-900 [&>h2]:mt-8 [&>h2]:mb-3 [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-slate-800 [&>h3]:mt-6 [&>h3]:mb-2 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:space-y-2 [&>.callout-box]:p-5 sm:[&>.callout-box]:p-6 [&>.callout-box]:rounded-2xl [&>.callout-box]:bg-violet-50/90 [&>.callout-box]:border [&>.callout-box]:border-violet-200 [&>.callout-box]:text-violet-950 [&>.callout-box]:my-6 shadow-2xs"
           />
         </article>
