@@ -234,16 +234,16 @@ const PortfolioShowcase = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+918601300910"
+              href="tel:+918920683588"
               className="px-8 py-3 bg-white text-red-600 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
-              📞 Call Now: +91 86013 00910
+              📞 Call Now: +91 89206 83588
             </a>
             <a
-              href="mailto:singhyuvraj8420@gmail.com"
+              href="mailto:contactsitemint@gmail.com"
               className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-red-600 transition-colors"
             >
-              ✉️ Email: singhyuvraj8420@gmail.com
+              ✉️ Email: contactsitemint@gmail.com
             </a>
           </div>
         </div>

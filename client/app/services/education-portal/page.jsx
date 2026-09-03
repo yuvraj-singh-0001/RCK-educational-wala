@@ -93,7 +93,7 @@ export default function EducationPortalPage() {
               </Link>
 
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20get%20a%20School/Coaching%20Education%20Portal%20made."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20get%20a%20School/Coaching%20Education%20Portal%20made."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-sm"
@@ -157,7 +157,7 @@ export default function EducationPortalPage() {
               </div>
 
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Coaching%20Institute%20Portal%20Package."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Coaching%20Institute%20Portal%20Package."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp w-full justify-center text-xs sm:text-sm py-3"

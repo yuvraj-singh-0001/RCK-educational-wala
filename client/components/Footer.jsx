@@ -96,15 +96,15 @@ export default function Footer() {
             <div className="space-y-2 pt-2 text-slate-300">
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                <a href="tel:+918601300910" className="hover:text-white transition font-medium">+91 86013 00910</a>
+                <a href="tel:+918920683588" className="hover:text-white transition font-medium">+91 89206 83588</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-sky-400 shrink-0" />
-                <a href="mailto:singhyuvraj8420@gmail.com" className="hover:text-white transition truncate font-medium">singhyuvraj8420@gmail.com</a>
+                <a href="mailto:contactsitemint@gmail.com" className="hover:text-white transition truncate font-medium">contactsitemint@gmail.com</a>
               </div>
               <div className="flex items-center gap-2">
                 <MessageCircle className="w-3.5 h-3.5 text-green-400 shrink-0" />
-                <a href="https://wa.me/918601300910" target="_blank" rel="noopener noreferrer" className="hover:text-white transition font-medium">WhatsApp: +91 86013 00910 (9 AM - 10 PM)</a>
+                <a href="https://wa.me/918920683588" target="_blank" rel="noopener noreferrer" className="hover:text-white transition font-medium">WhatsApp: +91 89206 83588 (9 AM - 10 PM)</a>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5 text-rose-400 shrink-0" />

@@ -53,7 +53,7 @@ export default function FaqPage() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
-              href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20have%20a%20question%20regarding%20website%20development."
+              href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20have%20a%20question%20regarding%20website%20development."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-6 shadow-md"
@@ -62,11 +62,11 @@ export default function FaqPage() {
               <span>Ask Directly on WhatsApp</span>
             </a>
             <a
-              href="tel:+918601300910"
+              href="tel:+918920683588"
               className="btn-secondary text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 bg-white/10 text-white hover:bg-white/20 border-white/20"
             >
               <Phone className="w-4 h-4 text-emerald-400" />
-              <span>Call +91 86013 00910</span>
+              <span>Call +91 89206 83588</span>
             </a>
           </div>
         </div>

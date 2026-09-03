@@ -27,7 +27,7 @@ function ContactPage() {
                 
                 {/* Call Card */}
                 <a 
-                  href="tel:+918601300910" 
+                  href="tel:+918920683588" 
                   className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-4 border border-green-200 hover:from-green-100 hover:to-emerald-200 transition-all duration-300 block"
                 >
                   <div className="text-center">
@@ -35,14 +35,14 @@ function ContactPage() {
                       <span className="text-xl text-white">📱</span>
                     </div>
                     <h3 className="font-bold text-gray-900 mb-1 text-sm">Call Us</h3>
-                    <p className="text-green-600 font-semibold text-sm">+91 86013 00910</p>
+                    <p className="text-green-600 font-semibold text-sm">+91 89206 83588</p>
                     <p className="text-xs text-gray-600 mt-1">Mon-Sat: 9AM-9PM</p>
                   </div>
                 </a>
 
                 {/* Email Card */}
                 <a 
-                  href="mailto:singhyuvraj8420@gmail.com" 
+                  href="mailto:contactsitemint@gmail.com" 
                   className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-4 border border-blue-200 hover:from-blue-100 hover:to-indigo-200 transition-all duration-300 block"
                 >
                   <div className="text-center">
@@ -50,14 +50,14 @@ function ContactPage() {
                       <span className="text-xl text-white">✉️</span>
                     </div>
                     <h3 className="font-bold text-gray-900 mb-1 text-sm">Email Us</h3>
-                    <p className="text-blue-600 font-semibold text-xs break-all">singhyuvraj8420@gmail.com</p>
+                    <p className="text-blue-600 font-semibold text-xs break-all">contactsitemint@gmail.com</p>
                     <p className="text-xs text-gray-600 mt-1">24/7 Support</p>
                   </div>
                 </a>
 
                 {/* WhatsApp Card */}
                 <a 
-                  href="https://wa.me/918601300910" 
+                  href="https://wa.me/918920683588" 
                   target="_blank" 
                   rel="noreferrer"
                   className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-4 border border-green-200 hover:from-green-100 hover:to-emerald-200 transition-all duration-300 block sm:col-span-2 lg:col-span-1"
@@ -102,13 +102,13 @@ function ContactPage() {
               
               <div className="flex flex-col sm:flex-row gap-2">
                 <a 
-                  href="tel:+918601300910" 
+                  href="tel:+918920683588" 
                   className="flex-1 bg-white text-purple-600 font-bold py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors text-center text-sm"
                 >
                   📞 Call Now
                 </a>
                 <a 
-                  href="https://wa.me/918601300910" 
+                  href="https://wa.me/918920683588" 
                   target="_blank" 
                   rel="noreferrer"
                   className="flex-1 bg-white/20 backdrop-blur-sm text-white font-bold py-2 px-4 rounded-lg hover:bg-white/30 transition-colors text-center text-sm border border-white/30"
@@ -116,7 +116,7 @@ function ContactPage() {
                   💬 WhatsApp
                 </a>
                 <a 
-                  href="mailto:singhyuvraj8420@gmail.com" 
+                  href="mailto:contactsitemint@gmail.com" 
                   className="flex-1 bg-white/20 backdrop-blur-sm text-white font-bold py-2 px-4 rounded-lg hover:bg-white/30 transition-colors text-center text-sm border border-white/30"
                 >
                   ✉️ Email
@@ -198,14 +198,14 @@ function ContactPage() {
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a 
-                href="tel:+918601300910" 
+                href="tel:+918920683588" 
                 className="px-6 py-3 bg-red-600 text-white font-bold rounded-xl hover:bg-red-700 transition-all duration-300 flex items-center justify-center gap-2 text-sm"
               >
                 <span>📞</span>
-                Call +91 86013 00910
+                Call +91 89206 83588
               </a>
               <a 
-                href="mailto:singhyuvraj8420@gmail.com" 
+                href="mailto:contactsitemint@gmail.com" 
                 className="px-6 py-3 bg-white text-red-600 font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-2 border-2 border-red-600 text-sm"
               >
                 <span>✉️</span>

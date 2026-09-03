@@ -304,7 +304,7 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20am%20ready%20to%20start%20my%20website%20project.%20Please%20guide%20me."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20am%20ready%20to%20start%20my%20website%20project.%20Please%20guide%20me."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp btn-shine text-sm sm:text-base !py-3 sm:!py-3.5 !px-6 sm:!px-8 shadow-xl shadow-green-950/40 w-full sm:w-auto justify-center"
@@ -314,11 +314,11 @@ export default function HomePage() {
               </a>
 
               <a
-                href="tel:+918601300910"
+                href="tel:+918920683588"
                 className="btn-secondary text-sm sm:text-base !py-3 sm:!py-3.5 !px-5 sm:!px-7 flex items-center justify-center gap-2 w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/20"
               >
                 <Phone className="w-4 h-4 text-emerald-400" />
-                <span>Call +91 86013 00910</span>
+                <span>Call +91 89206 83588</span>
               </a>
             </div>
 

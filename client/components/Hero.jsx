@@ -48,7 +48,7 @@ export default function Hero() {
           {/* Action CTAs with Button Shine Effect */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-14">
             <a
-              href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20start%20a%20project%20for%20my%20business."
+              href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20start%20a%20project%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp btn-shine text-sm sm:text-base !py-3 sm:!py-3.5 !px-7 sm:!px-8 shadow-lg shadow-green-600/25 w-full sm:w-auto justify-center group"

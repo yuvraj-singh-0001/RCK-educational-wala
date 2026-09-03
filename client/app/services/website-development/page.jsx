@@ -304,7 +304,7 @@ export default function WebsiteDevelopmentPage() {
               {/* Action CTAs */}
               <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
                 <a
-                  href={`https://wa.me/918601300910?text=${encodeURIComponent(activePlan.whatsappMsg)}`}
+                  href={`https://wa.me/918920683588?text=${encodeURIComponent(activePlan.whatsappMsg)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-sm"
@@ -438,7 +438,7 @@ export default function WebsiteDevelopmentPage() {
 
                 {/* Action CTA Button */}
                 <a
-                  href={`https://wa.me/918601300910?text=${encodeURIComponent(activePlan.whatsappMsg)}`}
+                  href={`https://wa.me/918920683588?text=${encodeURIComponent(activePlan.whatsappMsg)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp w-full justify-center text-xs sm:text-sm py-3.5 shadow-md flex items-center gap-2 font-bold"
@@ -613,7 +613,7 @@ export default function WebsiteDevelopmentPage() {
 
               <div className="flex items-center gap-3 w-full sm:w-auto">
                 <a
-                  href={`https://wa.me/918601300910?text=${encodeURIComponent(activePlan.whatsappMsg)}`}
+                  href={`https://wa.me/918920683588?text=${encodeURIComponent(activePlan.whatsappMsg)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-6 flex-1 sm:flex-initial justify-center shadow-md"
@@ -842,7 +842,7 @@ export default function WebsiteDevelopmentPage() {
               </div>
               <div className="relative z-10 pt-3 border-t border-slate-100 flex items-center justify-between">
                 <a 
-                  href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20discuss%20my%20business%20requirements%20for%20website%20development." 
+                  href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20discuss%20my%20business%20requirements%20for%20website%20development." 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-xs font-bold text-pink-700 hover:text-pink-900 flex items-center gap-1 group-hover:translate-x-1 transition-transform"
@@ -932,7 +932,7 @@ export default function WebsiteDevelopmentPage() {
                   <span>100% Code Ownership & Zero Monthly Rental</span>
                 </span>
                 <a
-                  href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20am%20ready%20to%20start%20my%20website%20project."
+                  href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20am%20ready%20to%20start%20my%20website%20project."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp text-xs !py-2 !px-4 shadow-sm"
@@ -960,7 +960,7 @@ export default function WebsiteDevelopmentPage() {
             {/* 3 Contact Buttons */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20have%20an%20inquiry%20regarding%20website%20development%20plans."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20have%20an%20inquiry%20regarding%20website%20development%20plans."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp justify-center text-xs sm:text-sm !py-3 shadow-md"
@@ -970,15 +970,15 @@ export default function WebsiteDevelopmentPage() {
               </a>
 
               <a
-                href="tel:+918601300910"
+                href="tel:+918920683588"
                 className="btn-secondary justify-center text-xs sm:text-sm !py-3 bg-white/10 hover:bg-white/20 text-white border-white/20"
               >
                 <Phone className="w-4 h-4 text-emerald-400" />
-                <span>Call +91 86013 00910</span>
+                <span>Call +91 89206 83588</span>
               </a>
 
               <a
-                href="mailto:singhyuvraj8420@gmail.com"
+                href="mailto:contactsitemint@gmail.com"
                 className="btn-secondary justify-center text-xs sm:text-sm !py-3 bg-white/10 hover:bg-white/20 text-white border-white/20 truncate"
               >
                 <Mail className="w-4 h-4 text-sky-400" />
@@ -1101,7 +1101,7 @@ export default function WebsiteDevelopmentPage() {
                 Ready to upgrade your business website to modern Next.js technology?
               </span>
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20build%20a%20modern%20Next.js%20website%20for%20my%20business."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20build%20a%20modern%20Next.js%20website%20for%20my%20business."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp text-xs !py-2.5 !px-5 shadow-sm shrink-0"

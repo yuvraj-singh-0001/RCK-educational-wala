@@ -709,7 +709,7 @@ export default function CostCalculator() {
 
               {/* 1-Click WhatsApp Instant Estimate Dispatch Button */}
               <a
-                href={`https://wa.me/918601300910?text=${getWhatsAppMessage()}`}
+                href={`https://wa.me/918920683588?text=${getWhatsAppMessage()}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp w-full justify-center text-xs sm:text-sm py-3 shadow-lg shadow-green-600/25 flex items-center gap-2 font-bold mb-2.5"
@@ -721,9 +721,9 @@ export default function CostCalculator() {
               {/* Call Direct */}
               <div className="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-800">
                 <span>Direct Support:</span>
-                <a href="tel:+918601300910" className="text-emerald-400 hover:text-white font-bold flex items-center gap-1">
+                <a href="tel:+918920683588" className="text-emerald-400 hover:text-white font-bold flex items-center gap-1">
                   <PhoneCall className="w-3 h-3" />
-                  <span>+91 86013 00910</span>
+                  <span>+91 89206 83588</span>
                 </a>
               </div>
             </div>
@@ -745,7 +745,7 @@ export default function CostCalculator() {
           </div>
 
           <a
-            href={`https://wa.me/918601300910?text=${getWhatsAppMessage()}`}
+            href={`https://wa.me/918920683588?text=${getWhatsAppMessage()}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp text-xs !py-2.5 !px-4 shrink-0 font-bold shadow-md flex items-center gap-1.5"

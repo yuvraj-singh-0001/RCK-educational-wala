@@ -67,7 +67,7 @@ export default function PrivacyPolicyPage() {
               If you have any questions regarding this Privacy Policy, contact us directly at:
             </p>
             <p className="mt-1 font-semibold text-violet-700">
-              Email: singhyuvraj8420@gmail.com | WhatsApp: +91 86013 00910
+              Email: contactsitemint@gmail.com | WhatsApp: +91 89206 83588
             </p>
           </section>
         </div>

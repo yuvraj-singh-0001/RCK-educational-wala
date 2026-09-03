@@ -42,7 +42,7 @@ export default function WhatsAppFloatingBtn() {
 
       {/* Floating Action Button */}
       <a
-        href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20visited%20your%20website%20and%20want%20to%20know%20more%20about%20your%20website%20services."
+        href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20visited%20your%20website%20and%20want%20to%20know%20more%20about%20your%20website%20services."
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-tr from-green-600 to-emerald-500 text-white shadow-xl shadow-green-700/30 hover:scale-110 active:scale-95 transition-all duration-300 border-2 border-white"

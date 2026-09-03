@@ -86,7 +86,7 @@ export default function VideoEditingServicePage() {
 
             <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20get%20Video%20Editing%20services%20for%20my%20business."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20get%20Video%20Editing%20services%20for%20my%20business."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-sm"
@@ -158,7 +158,7 @@ export default function VideoEditingServicePage() {
               </div>
 
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20Video%20Editing%20services."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20Video%20Editing%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp w-full justify-center text-xs sm:text-sm py-3"

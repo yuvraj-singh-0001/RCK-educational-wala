@@ -441,8 +441,8 @@ function HomePage() {
         <div>
           <h3>Contact Information:</h3>
           <p>Name: Yuvraj Singh (SiteMint)</p>
-          <p>Phone: +91 86013 00910</p>
-          <p>Email: singhyuvraj8420@gmail.com</p>
+          <p>Phone: +91 89206 83588</p>
+          <p>Email: contactsitemint@gmail.com</p>
           <p>Instagram: @sitemint.in</p>
         </div>
         <div>

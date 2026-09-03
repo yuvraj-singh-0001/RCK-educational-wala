@@ -206,7 +206,7 @@ export default function ServicesHubPage() {
                   </Link>
 
                   <a
-                    href={`https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20${encodeURIComponent(srv.title)}.`}
+                    href={`https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20${encodeURIComponent(srv.title)}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-whatsapp text-xs !py-2.5 !px-4 flex items-center justify-center gap-1.5 w-full sm:w-auto"
@@ -230,7 +230,7 @@ export default function ServicesHubPage() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
-              href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20a%20custom%20bundle%20quote%20(Website%20+%20App%20+%20Social%20Media%20+%20Video%20Editing)."
+              href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20a%20custom%20bundle%20quote%20(Website%20+%20App%20+%20Social%20Media%20+%20Video%20Editing)."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-6 shadow-sm"

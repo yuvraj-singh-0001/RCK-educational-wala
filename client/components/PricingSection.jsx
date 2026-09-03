@@ -30,7 +30,7 @@ export default function PricingSection() {
       desc: 'Best for Small Businesses, Personal Brands & Local Businesses looking to launch online with high speed.',
       popular: false,
       ctaText: 'Get Started →',
-      ctaUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Starter%20Website%20Package%20(₹3,999).',
+      ctaUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Starter%20Website%20Package%20(₹3,999).',
       includedHeader: "What's Included:",
       features: [
         '5 Custom Designed Pages (Home, About, Services, Gallery, Contact)',
@@ -59,7 +59,7 @@ export default function PricingSection() {
       desc: 'Best for Growing Businesses, E-commerce, Restaurants, Coaching & Service Businesses.',
       popular: true,
       ctaText: 'Build My Business Website →',
-      ctaUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Business%20Website%20%26%20Management%20Package%20(₹7,999).',
+      ctaUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Business%20Website%20%26%20Management%20Package%20(₹7,999).',
       includedHeader: 'Everything in Starter, Plus:',
       features: [
         'Up to 10 Dynamic Pages / Custom Categories',
@@ -89,7 +89,7 @@ export default function PricingSection() {
       desc: 'Best for Established Businesses, Startups, Institutes, Restaurants & Enterprises requiring full management.',
       popular: false,
       ctaText: 'Get Professional Solution →',
-      ctaUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Professional%20Business%20System%20(₹17,999).',
+      ctaUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Professional%20Business%20System%20(₹17,999).',
       includedHeader: 'Everything in Business Plan, Plus:',
       freeDomainHosting: true,
       features: [
@@ -121,7 +121,7 @@ export default function PricingSection() {
       desc: 'Production-ready Android application with Firebase backend and Play Store build.',
       popular: false,
       ctaText: 'Build Android App →',
-      ctaUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20the%20Android%20Starter%20App%20(₹12,999).',
+      ctaUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20the%20Android%20Starter%20App%20(₹12,999).',
       includedHeader: "What's Included:",
       features: [
         'Android (.APK & .AAB) Play Store Ready Build',
@@ -144,7 +144,7 @@ export default function PricingSection() {
       desc: 'Complete Flutter cross-platform mobile app running smoothly on both Android and Apple iOS.',
       popular: true,
       ctaText: 'Build Cross-Platform App →',
-      ctaUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20the%20Cross-Platform%20Pro%20App%20(₹24,999).',
+      ctaUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20the%20Cross-Platform%20Pro%20App%20(₹24,999).',
       includedHeader: 'Everything in Android Plan, Plus:',
       features: [
         'Both Android (.AAB) & iOS (.IPA) Production Builds',
@@ -167,7 +167,7 @@ export default function PricingSection() {
       desc: 'Complex on-demand apps (E-Commerce, Delivery, EdTech, Real Estate, or SaaS).',
       popular: false,
       ctaText: 'Discuss Enterprise Scope →',
-      ctaUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20have%20an%20Enterprise%20Mobile%20App%20requirement.',
+      ctaUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20have%20an%20Enterprise%20Mobile%20App%20requirement.',
       includedHeader: 'Complete Custom Architecture:',
       features: [
         'Unlimited App Screens & Custom UI/UX Design',
@@ -193,7 +193,7 @@ export default function PricingSection() {
       desc: 'Ideal for testing our video editing quality for your Instagram page or YouTube channel.',
       popular: false,
       ctaText: 'Order Single Video →',
-      ctaUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20Starter%20Reel%20Editing%20(₹499).',
+      ctaUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20Starter%20Reel%20Editing%20(₹499).',
       includedHeader: "What's Included:",
       features: [
         '1 Short-Form Video (Up to 60 Seconds)',
@@ -215,7 +215,7 @@ export default function PricingSection() {
       desc: 'Consistent monthly video flow for coaches, creators, and brands to grow followers.',
       popular: true,
       ctaText: 'Book Creator Pack →',
-      ctaUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Creator%20Growth%20Pack%20(₹5,999).',
+      ctaUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Creator%20Growth%20Pack%20(₹5,999).',
       includedHeader: 'Everything in Starter, Plus:',
       features: [
         '15 High-Quality Reels / Shorts per Month',
@@ -237,7 +237,7 @@ export default function PricingSection() {
       desc: 'Complete video suite for businesses running Facebook/Instagram paid ads and YouTube.',
       popular: false,
       ctaText: 'Get Brand Video Suite →',
-      ctaUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20the%20Brand%20Video%20%26%20Ads%20Suite%20(₹11,999).',
+      ctaUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20the%20Brand%20Video%20%26%20Ads%20Suite%20(₹11,999).',
       includedHeader: 'Complete Video Suite:',
       features: [
         '30 High-Retention Reels / Shorts per Month',
@@ -263,7 +263,7 @@ export default function PricingSection() {
       desc: 'Essential social media presence for local shops and professionals.',
       popular: false,
       ctaText: 'Start Social Starter →',
-      ctaUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20the%20Basic%20Social%20Starter%20Plan%20(₹4,999).',
+      ctaUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20the%20Basic%20Social%20Starter%20Plan%20(₹4,999).',
       includedHeader: "What's Included:",
       features: [
         '15 Custom Designed Posts per Month',
@@ -284,7 +284,7 @@ export default function PricingSection() {
       desc: 'Full-scale social media growth across 7-8 platforms with daily posting & DM routing.',
       popular: true,
       ctaText: 'Get Business Growth Plan →',
-      ctaUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20the%20Business%20Growth%20Social%20Plan%20(₹8,999).',
+      ctaUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20the%20Business%20Growth%20Social%20Plan%20(₹8,999).',
       includedHeader: 'Everything in Starter, Plus:',
       features: [
         'Daily High-Res Posts & Carousels (30 Posts/Month)',
@@ -306,7 +306,7 @@ export default function PricingSection() {
       desc: 'Aggressive multi-channel marketing, influencer outreach strategy & paid ad scaling.',
       popular: false,
       ctaText: 'Scale Digital Growth →',
-      ctaUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20the%20Full%20Digital%20Growth%20Suite%20(₹14,999).',
+      ctaUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20the%20Full%20Digital%20Growth%20Suite%20(₹14,999).',
       includedHeader: 'Complete Scale Retainer:',
       features: [
         'Daily Posts + 10 Viral Video Reels per Month',
@@ -497,7 +497,7 @@ export default function PricingSection() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20a%20custom%20price%20quote%20for%20my%20business%20requirements."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20a%20custom%20price%20quote%20for%20my%20business%20requirements."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-sm"

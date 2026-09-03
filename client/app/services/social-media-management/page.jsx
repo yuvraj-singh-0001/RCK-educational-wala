@@ -97,7 +97,7 @@ export default function SocialMediaManagementPage() {
 
             <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20grow%20my%20business%20with%20Social%20Media%20Management."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20grow%20my%20business%20with%20Social%20Media%20Management."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-sm"
@@ -169,7 +169,7 @@ export default function SocialMediaManagementPage() {
               </div>
 
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20start%20Social%20Media%20Management%20for%20my%20brand."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20start%20Social%20Media%20Management%20for%20my%20brand."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp w-full justify-center text-xs sm:text-sm py-3"

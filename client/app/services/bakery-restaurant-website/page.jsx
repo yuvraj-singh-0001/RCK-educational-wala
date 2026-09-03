@@ -90,7 +90,7 @@ export default function BakeryServicePage() {
               </Link>
 
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20get%20a%20Bakery%20Website%20with%20online%20ordering%20made.%20Please%20share%20quotation."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20get%20a%20Bakery%20Website%20with%20online%20ordering%20made.%20Please%20share%20quotation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-sm"
@@ -154,7 +154,7 @@ export default function BakeryServicePage() {
               </div>
 
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Bakery%20Website%20Package%20for%20my%20shop."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Bakery%20Website%20Package%20for%20my%20shop."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp w-full justify-center text-xs sm:text-sm py-3"
@@ -204,7 +204,7 @@ export default function BakeryServicePage() {
               <span>Launch Live Bakery Demo</span>
             </Link>
             <a
-              href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20have%20questions%20regarding%20the%20Bakery%20Website."
+              href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20have%20questions%20regarding%20the%20Bakery%20Website."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-7 shadow-sm"

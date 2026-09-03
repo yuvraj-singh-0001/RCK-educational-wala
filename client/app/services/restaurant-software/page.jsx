@@ -92,7 +92,7 @@ export default function RestaurantSoftwarePage() {
               </Link>
 
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20Restaurant/Bakery%20Software%20for%20my%20business."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20Restaurant/Bakery%20Software%20for%20my%20business."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-sm"
@@ -156,7 +156,7 @@ export default function RestaurantSoftwarePage() {
               </div>
 
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Restaurant%20Software%20Package."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Restaurant%20Software%20Package."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp w-full justify-center text-xs sm:text-sm py-3"

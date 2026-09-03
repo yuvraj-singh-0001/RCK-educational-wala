@@ -84,7 +84,7 @@ export default function LowBudgetServicePage() {
 
             <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20get%20a%20professional%20website%20made%20in%20low%20budget%20(Starting%20%E2%82%B93,999).%20Please%20guide%20me."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20get%20a%20professional%20website%20made%20in%20low%20budget%20(Starting%20%E2%82%B93,999).%20Please%20guide%20me."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-sm"
@@ -156,7 +156,7 @@ export default function LowBudgetServicePage() {
               </div>
 
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Starter%20Website%20Package%20(₹3,999)."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Starter%20Website%20Package%20(₹3,999)."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp w-full justify-center text-xs sm:text-sm py-3"

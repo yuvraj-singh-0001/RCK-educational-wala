@@ -66,7 +66,7 @@ export default function ProjectsPage() {
       description: 'Modern shopping store with size/color variant selection, instant shopping cart, Razorpay UPI checkout, coupon discount engine, and automated SMS/WhatsApp order tracking.',
       deliverables: ['Product Variant Matrix', 'Razorpay / UPI Gateway', 'Coupon Discount Rules', 'Order Status Tracker'],
       techStack: ['Next.js 15', 'Razorpay API', 'PostgreSQL', 'Tailwind v4'],
-      demoUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20see%20the%20E-Commerce%20Store%20case%20study.',
+      demoUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20see%20the%20E-Commerce%20Store%20case%20study.',
       ctaText: 'Request Demo Video',
       color: 'border-emerald-200 bg-emerald-50/20',
       iconColor: 'text-emerald-700 bg-emerald-100',
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
       description: 'Corporate recruitment software with job posting feed, candidate resume CV parser, interview scheduling calendar, and role-based HR manager dashboard.',
       deliverables: ['Candidate Resume Parser', 'HR Interview Dashboard', 'Role-Based Permissions', 'Automated Email Alerts'],
       techStack: ['Node.js Backend', 'Next.js Frontend', 'Cloud Database', 'JWT Auth'],
-      demoUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20discuss%20the%20Recruitment/Custom%20Software%20project.',
+      demoUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20discuss%20the%20Recruitment/Custom%20Software%20project.',
       ctaText: 'Discuss Case Study',
       color: 'border-indigo-200 bg-indigo-50/20',
       iconColor: 'text-indigo-700 bg-indigo-100',
@@ -217,7 +217,7 @@ export default function ProjectsPage() {
                   )}
 
                   <a
-                    href={`https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20saw%20your%20project%20${encodeURIComponent(proj.title)}%20and%20want%20a%20similar%20system.`}
+                    href={`https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20saw%20your%20project%20${encodeURIComponent(proj.title)}%20and%20want%20a%20similar%20system.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 hover:bg-emerald-100 transition flex items-center justify-center min-w-[40px] min-h-[40px]"
@@ -241,7 +241,7 @@ export default function ProjectsPage() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
-              href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20discuss%20a%20new%20project%20for%20my%20business."
+              href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20discuss%20a%20new%20project%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-6 shadow-sm"

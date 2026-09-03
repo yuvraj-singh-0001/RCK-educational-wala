@@ -54,21 +54,21 @@ const pageContent = {
           {
             name: 'Main Kitchen - Connaught Place',
             address: '123 Bakery Lane, Delhi 110001',
-            phone: '+91 86013 00910',
+            phone: '+91 89206 83588',
             timing: '9AM-9PM (Mon-Sat)',
             specialties: ['Custom Cakes', 'Wedding Cakes', 'Corporate Orders']
           },
           {
             name: 'South Delhi Branch',
             address: '456 Saket District Centre, Delhi 110017',
-            phone: '+91 86013 00910',
+            phone: '+91 89206 83588',
             timing: '10AM-8PM (Mon-Sat)',
             specialties: ['Birthday Cakes', 'Pastries', 'Quick Delivery']
           },
           {
             name: 'Gurgaon Outlet',
             address: '789 Sector 29, Gurgaon 122001',
-            phone: '+91 86013 00910',
+            phone: '+91 89206 83588',
             timing: '11AM-9PM (All Days)',
             specialties: ['Party Orders', 'Cupcakes', 'Same Day Delivery']
           }
@@ -150,21 +150,21 @@ const pageContent = {
             department: 'Kitchen',
             experience: '5+ years',
             type: 'Full-time',
-            contact: '+91 86013 00910'
+            contact: '+91 89206 83588'
           },
           {
             title: 'Customer Service Executive',
             department: 'Operations',
             experience: '2+ years',
             type: 'Full-time',
-            contact: '+91 86013 00910'
+            contact: '+91 89206 83588'
           },
           {
             title: 'Cake Decorator',
             department: 'Kitchen',
             experience: '3+ years',
             type: 'Full-time',
-            contact: '+91 86013 00910'
+            contact: '+91 89206 83588'
           }
         ]
       }
@@ -292,8 +292,8 @@ const pageContent = {
           {
             heading: 'Grievance Officer',
             name: 'Customer Support',
-            email: 'singhyuvraj8420@gmail.com',
-            phone: '+91 86013 00910'
+            email: 'contactsitemint@gmail.com',
+            phone: '+91 89206 83588'
           },
           {
             heading: 'Response Time',
@@ -344,22 +344,22 @@ const pageContent = {
           {
             title: 'Company Logo Cakes',
             description: 'Custom cakes featuring your company logo and branding',
-            contact: '+91 86013 00910'
+            contact: '+91 89206 83588'
           },
           {
             title: 'Office Celebration Cakes',
             description: 'Perfect for birthdays, anniversaries, and team achievements',
-            contact: '+91 86013 00910'
+            contact: '+91 89206 83588'
           },
           {
             title: 'Product Launch Cakes',
             description: 'Themed cakes to celebrate new products and milestones',
-            contact: '+91 86013 00910'
+            contact: '+91 89206 83588'
           },
           {
             title: 'Bulk Orders',
             description: 'Special pricing for large corporate orders and regular clients',
-            contact: '+91 86013 00910'
+            contact: '+91 89206 83588'
           }
         ]
       }
@@ -377,21 +377,21 @@ const pageContent = {
             title: 'New User Special',
             description: 'Get 20% off on your first order',
             valid: 'Valid for new customers only',
-            contact: '+91 86013 00910'
+            contact: '+91 89206 83588'
           },
           {
             code: 'WEEKEND15',
             title: 'Weekend Treat',
             description: '15% off on all weekend orders',
             valid: 'Valid Sat-Sun only',
-            contact: '+91 86013 00910'
+            contact: '+91 89206 83588'
           },
           {
             code: 'BULK10',
             title: 'Bulk Order Discount',
             description: '10% off on orders above ₹3000',
             valid: 'No minimum quantity required',
-            contact: '+91 86013 00910'
+            contact: '+91 89206 83588'
           }
         ]
       }
@@ -411,8 +411,8 @@ const pageContent = {
           'Loyalty rewards program',
           'Push notifications for order updates'
         ],
-        contact: '+91 86013 00910',
-        email: 'singhyuvraj8420@gmail.com',
+        contact: '+91 89206 83588',
+        email: 'contactsitemint@gmail.com',
         instagram: 'https://www.instagram.com/sitemint.in/'
       }
     ]
@@ -727,8 +727,8 @@ function InfoPage() {
                       <span className="text-2xl text-white">📱</span>
                     </div>
                     <h3 className="font-bold text-gray-900 mb-3 text-lg">Call Me Directly</h3>
-                    <a href="tel:+918601300910" className="block">
-                      <p className="text-green-600 font-bold text-xl mb-2">+91 86013 00910</p>
+                    <a href="tel:+918920683588" className="block">
+                      <p className="text-green-600 font-bold text-xl mb-2">+91 89206 83588</p>
                       <p className="text-sm text-gray-600">Click to call instantly</p>
                     </a>
                   </div>
@@ -740,8 +740,8 @@ function InfoPage() {
                       <span className="text-2xl text-white">✉️</span>
                     </div>
                     <h3 className="font-bold text-gray-900 mb-3 text-lg">Email Me</h3>
-                    <a href="mailto:singhyuvraj8420@gmail.com" className="block">
-                      <p className="text-blue-600 font-bold text-lg mb-2 break-all">singhyuvraj8420@gmail.com</p>
+                    <a href="mailto:contactsitemint@gmail.com" className="block">
+                      <p className="text-blue-600 font-bold text-lg mb-2 break-all">contactsitemint@gmail.com</p>
                       <p className="text-sm text-gray-600">Click to send email</p>
                     </a>
                   </div>
@@ -792,10 +792,10 @@ function InfoPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Need More Information?</h2>
           <p className="text-gray-600 mb-6">I'm here to help bring your vision to life</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+918601300910" className="px-8 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-medium">
+            <a href="tel:+918920683588" className="px-8 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-medium">
               📞 Call Now
             </a>
-            <a href="mailto:singhyuvraj8420@gmail.com" className="px-8 py-3 bg-white text-red-600 border border-red-600 rounded-lg hover:bg-red-50 transition-colors font-medium">
+            <a href="mailto:contactsitemint@gmail.com" className="px-8 py-3 bg-white text-red-600 border border-red-600 rounded-lg hover:bg-red-50 transition-colors font-medium">
               ✉️ Send Email
             </a>
           </div>

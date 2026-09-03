@@ -228,7 +228,7 @@ export default async function BlogPostPage({ params }) {
             </p>
           </div>
           <a
-            href={`https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20read%20your%20article%20on%20${encodeURIComponent(article.title)}%20and%20want%20to%20discuss%20my%20project.`}
+            href={`https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20read%20your%20article%20on%20${encodeURIComponent(article.title)}%20and%20want%20to%20discuss%20my%20project.`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 shadow-sm whitespace-nowrap"

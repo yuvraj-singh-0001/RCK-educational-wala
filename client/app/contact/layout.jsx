@@ -14,7 +14,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Contact SiteMint | Free Web & App Consultation',
-    description: 'Get in touch with SiteMint. Free consultation, 15-minute response on WhatsApp (+91 86013 00910).',
+    description: 'Get in touch with SiteMint. Free consultation, 15-minute response on WhatsApp (+91 89206 83588).',
     url: 'https://sitemint.in/contact',
     siteName: 'SiteMint',
     type: 'website',

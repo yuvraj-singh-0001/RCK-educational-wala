@@ -5,8 +5,8 @@ SiteMint is a web and app development service focused on affordable, high-qualit
 ## Owner
 - Name: Yuvraj Singh
 - Role: Full Stack Developer
-- Contact Phone: +91 86013 00910
-- Contact Email: singhyuvraj8420@gmail.com
+- Contact Phone: +91 89206 83588
+- Contact Email: contactsitemint@gmail.com
 - Website: https://sitemint.in
 
 ## Services

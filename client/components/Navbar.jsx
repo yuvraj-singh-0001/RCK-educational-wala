@@ -273,7 +273,7 @@ export default function Navbar() {
             </Link>
 
             <a
-              href="https://wa.me/918601300910?text=Hi%20SiteMint%20Team!%20I%20want%20to%20build%20a%20website/app%20for%20my%20business.%20Please%20share%20details."
+              href="https://wa.me/918920683588?text=Hi%20SiteMint%20Team!%20I%20want%20to%20build%20a%20website/app%20for%20my%20business.%20Please%20share%20details."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp text-xs !py-2 !px-3.5 !rounded-xl shadow-sm"
@@ -286,7 +286,7 @@ export default function Navbar() {
           {/* Mobile Right Controls: Fast WhatsApp + Menu Trigger */}
           <div className="flex lg:hidden items-center gap-1.5 shrink-0">
             <a
-              href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20need%20a%20website/app."
+              href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20need%20a%20website/app."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp text-xs !py-1.5 !px-2.5 !rounded-lg flex items-center gap-1"
@@ -444,7 +444,7 @@ export default function Navbar() {
                 <Calculator className="w-4 h-4 text-violet-600" /> Get Instant Quote
               </Link>
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20need%20a%20website/app%20for%20my%20business."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20need%20a%20website/app%20for%20my%20business."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp justify-center w-full shadow-md text-xs py-2.5"

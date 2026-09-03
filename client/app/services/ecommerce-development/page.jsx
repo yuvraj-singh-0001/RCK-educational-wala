@@ -82,7 +82,7 @@ export default function EcommerceDevelopmentPage() {
 
             <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20build%20an%20E-Commerce%20Store%20for%20my%20products.%20Please%20share%20details."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20build%20an%20E-Commerce%20Store%20for%20my%20products.%20Please%20share%20details."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-sm"
@@ -153,7 +153,7 @@ export default function EcommerceDevelopmentPage() {
               </div>
 
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20E-Commerce%20Store%20Package."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20E-Commerce%20Store%20Package."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp w-full justify-center text-xs sm:text-sm py-3"

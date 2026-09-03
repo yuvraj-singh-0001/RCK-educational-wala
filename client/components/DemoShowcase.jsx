@@ -78,7 +78,7 @@ export default function DemoShowcase() {
         'High-Converting Product Sales Landing UI'
       ],
       price: '₹8,999',
-      demoUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20see%20the%20E-Commerce%20Store%20demo%20and%20pricing.',
+      demoUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20see%20the%20E-Commerce%20Store%20demo%20and%20pricing.',
       ctaText: 'Request Demo on WhatsApp',
       color: 'from-purple-100/70 to-pink-50/40',
       borderColor: 'hover:border-purple-400',
@@ -101,7 +101,7 @@ export default function DemoShowcase() {
         'Automated Email & WhatsApp Alerts'
       ],
       price: '₹12,999',
-      demoUrl: 'https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20need%20a%20Recruitment/Job%20Portal.%20Please%20share%20details.',
+      demoUrl: 'https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20need%20a%20Recruitment/Job%20Portal.%20Please%20share%20details.',
       ctaText: 'Request Demo on WhatsApp',
       color: 'from-emerald-100/70 to-teal-50/40',
       borderColor: 'hover:border-teal-400',
@@ -209,7 +209,7 @@ export default function DemoShowcase() {
                     )}
 
                     <a
-                      href={`https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20like%20your%20${encodeURIComponent(demo.title)}%20demo%20and%20want%20to%20get%20one%20made%20for%20my%20business.`}
+                      href={`https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20like%20your%20${encodeURIComponent(demo.title)}%20demo%20and%20want%20to%20get%20one%20made%20for%20my%20business.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 hover:bg-emerald-100 transition shrink-0 flex items-center justify-center min-w-[40px] min-h-[40px]"

@@ -390,10 +390,10 @@ function Hero() {
       {/* CTA row */}
       <div style={{ display:'flex',gap:11,justifyContent:'center',flexWrap:'wrap',marginBottom:48,
         animation:'sm-btnIn 0.7s cubic-bezier(.22,1,.36,1) both',animationDelay:'1.25s' }}>
-        <a href="https://wa.me/918601300910" target="_blank" rel="noreferrer" className="btn-p">
+        <a href="https://wa.me/918920683588" target="_blank" rel="noreferrer" className="btn-p">
           💬 WhatsApp — Start Your Project
         </a>
-        <a href="tel:+918601300910" className="btn-g">📞 Call Us</a>
+        <a href="tel:+918920683588" className="btn-g">📞 Call Us</a>
       </div>
 
       {/* Stats bar */}
@@ -495,7 +495,7 @@ function DemoLanding({ onSelect }) {
         <div style={{ fontFamily:'Syne',fontWeight:800,fontSize:16,color:'var(--text)',display:'flex',alignItems:'center',gap:5 }}>
           <span style={{ color:'var(--vlt2)' }}>◆</span> SiteMint
         </div>
-        <a href="https://wa.me/918601300910" target="_blank" rel="noreferrer" className="btn-p" style={{ padding:'7px 16px',fontSize:13 }}>
+        <a href="https://wa.me/918920683588" target="_blank" rel="noreferrer" className="btn-p" style={{ padding:'7px 16px',fontSize:13 }}>
           💬 WhatsApp
         </a>
       </nav>
@@ -519,7 +519,7 @@ function DemoLanding({ onSelect }) {
           {demoOptions.map((opt,i)=>(
             <div key={opt.key} className="reveal" style={{ transitionDelay:`${i*65}ms` }}>
               <button className="demo-btn"
-                onClick={()=>opt.status==='live'?onSelect(opt.slug):window.open('https://wa.me/918601300910','_blank')}>
+                onClick={()=>opt.status==='live'?onSelect(opt.slug):window.open('https://wa.me/918920683588','_blank')}>
                 <div style={{
                   width:48,height:48,borderRadius:12,
                   background:opt.status==='live'?'linear-gradient(135deg,rgba(124,58,237,0.25),rgba(45,212,191,0.14))':'rgba(255,255,255,0.04)',
@@ -668,9 +668,9 @@ function DemoLanding({ onSelect }) {
               Free consultation — we'll understand your needs, suggest the best solution and give you transparent pricing.
             </p>
             <div style={{ display:'flex',gap:10,justifyContent:'center',flexWrap:'wrap',marginBottom:16 }}>
-              <a href="https://wa.me/918601300910" target="_blank" rel="noreferrer" className="btn-p">💬 WhatsApp Us Now</a>
-              <a href="tel:+918601300910" className="btn-g">📞 +91 86013 00910</a>
-              <a href="mailto:singhyuvraj8420@gmail.com" className="btn-g">✉️ Email</a>
+              <a href="https://wa.me/918920683588" target="_blank" rel="noreferrer" className="btn-p">💬 WhatsApp Us Now</a>
+              <a href="tel:+918920683588" className="btn-g">📞 +91 89206 83588</a>
+              <a href="mailto:contactsitemint@gmail.com" className="btn-g">✉️ Email</a>
             </div>
             <p style={{ fontSize:12,color:'var(--muted)' }}>
               ✅ Free Consultation &nbsp;·&nbsp; ✅ No Advance Needed &nbsp;·&nbsp; ✅ Transparent Pricing
@@ -686,9 +686,9 @@ function DemoLanding({ onSelect }) {
         </div>
         <p style={{ fontSize:12,color:'var(--muted)',lineHeight:1.9 }}>
           Professional Web Development — India 🇮🇳<br/>
-          <a href="tel:+918601300910" style={{ color:'var(--vlt2)',textDecoration:'none' }}>+91 86013 00910</a>
+          <a href="tel:+918920683588" style={{ color:'var(--vlt2)',textDecoration:'none' }}>+91 89206 83588</a>
           {' · '}
-          <a href="mailto:singhyuvraj8420@gmail.com" style={{ color:'var(--vlt2)',textDecoration:'none' }}>singhyuvraj8420@gmail.com</a>
+          <a href="mailto:contactsitemint@gmail.com" style={{ color:'var(--vlt2)',textDecoration:'none' }}>contactsitemint@gmail.com</a>
         </p>
         <p style={{ fontSize:11,color:'var(--muted)',marginTop:8,opacity:0.4 }}>
           © {new Date().getFullYear()} SiteMint. All rights reserved.
@@ -710,8 +710,8 @@ function ComingSoon({ opt, back }) {
           <strong style={{ color:'#f0eeff' }}>{opt.label}</strong> demo is launching shortly.<br/>WhatsApp us to book your project now!
         </p>
         <div style={{ display:'flex',flexDirection:'column',gap:9 }}>
-          <a href="https://wa.me/918601300910" target="_blank" rel="noreferrer" style={{ ...base,background:'#7c3aed',color:'white' }}>💬 WhatsApp to Order</a>
-          <a href="tel:+918601300910" style={{ ...base,background:'transparent',color:'#9898b8',border:'1px solid rgba(255,255,255,0.07)' }}>📞 Call Us</a>
+          <a href="https://wa.me/918920683588" target="_blank" rel="noreferrer" style={{ ...base,background:'#7c3aed',color:'white' }}>💬 WhatsApp to Order</a>
+          <a href="tel:+918920683588" style={{ ...base,background:'transparent',color:'#9898b8',border:'1px solid rgba(255,255,255,0.07)' }}>📞 Call Us</a>
           <button onClick={back} style={{ ...base,background:'transparent',color:'#9898b8',border:'1px solid rgba(255,255,255,0.07)' }}>← Back</button>
         </div>
       </div>

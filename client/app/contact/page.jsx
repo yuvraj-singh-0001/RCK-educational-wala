@@ -40,7 +40,7 @@ export default function ContactPage() {
 📝 *Project Notes:* ${formData.message || 'None'}
 ---------------------------------------
 Please provide quotation and project timeline.`;
-    window.open(`https://wa.me/918601300910?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/918920683588?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (
@@ -65,7 +65,7 @@ Please provide quotation and project timeline.`;
           <div className="lg:col-span-5 space-y-4">
             {/* WhatsApp Card */}
             <a
-              href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20get%20a%20website/app%20made."
+              href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20get%20a%20website/app%20made."
               target="_blank"
               rel="noopener noreferrer"
               className="glass-card p-5 sm:p-6 border border-emerald-200 bg-emerald-50/30 hover:bg-emerald-50/70 transition flex items-center justify-between group block"
@@ -85,7 +85,7 @@ Please provide quotation and project timeline.`;
 
             {/* Direct Phone Call */}
             <a
-              href="tel:+918601300910"
+              href="tel:+918920683588"
               className="glass-card p-5 sm:p-6 border border-slate-200 hover:border-violet-300 transition flex items-center justify-between group block"
             >
               <div className="flex items-center gap-3.5">
@@ -94,7 +94,7 @@ Please provide quotation and project timeline.`;
                 </div>
                 <div>
                   <div className="text-[11px] text-violet-800 font-bold uppercase tracking-wider">Direct Call</div>
-                  <div className="text-base font-bold text-slate-900">+91 86013 00910</div>
+                  <div className="text-base font-bold text-slate-900">+91 89206 83588</div>
                   <div className="text-xs text-slate-500 font-medium">Mon - Sat: 9 AM - 9 PM IST</div>
                 </div>
               </div>
@@ -103,7 +103,7 @@ Please provide quotation and project timeline.`;
 
             {/* Email Support */}
             <a
-              href="mailto:singhyuvraj8420@gmail.com"
+              href="mailto:contactsitemint@gmail.com"
               className="glass-card p-5 sm:p-6 border border-slate-200 hover:border-sky-300 transition flex items-center justify-between group block"
             >
               <div className="flex items-center gap-3.5">
@@ -112,7 +112,7 @@ Please provide quotation and project timeline.`;
                 </div>
                 <div>
                   <div className="text-[11px] text-sky-800 font-bold uppercase tracking-wider">Official Email</div>
-                  <div className="text-sm sm:text-base font-bold text-slate-900 truncate max-w-[200px] sm:max-w-none">singhyuvraj8420@gmail.com</div>
+                  <div className="text-sm sm:text-base font-bold text-slate-900 truncate max-w-[200px] sm:max-w-none">contactsitemint@gmail.com</div>
                   <div className="text-xs text-slate-500 font-medium">Response within 2 hours</div>
                 </div>
               </div>

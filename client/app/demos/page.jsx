@@ -62,7 +62,7 @@ export default function DemosPage() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <a
-              href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20tested%20your%20live%20demos%20and%20want%20to%20order%20a%20similar%20website."
+              href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20tested%20your%20live%20demos%20and%20want%20to%20order%20a%20similar%20website."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-sm"

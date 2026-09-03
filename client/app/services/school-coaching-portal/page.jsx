@@ -89,7 +89,7 @@ export default function EducationServicePage() {
               </Link>
 
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20get%20a%20School/Coaching%20Institute%20Website%20made.%20Please%20share%20quotation."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20get%20a%20School/Coaching%20Institute%20Website%20made.%20Please%20share%20quotation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-sm"
@@ -153,7 +153,7 @@ export default function EducationServicePage() {
               </div>
 
               <a
-                href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Coaching%20Institute%20Portal%20Package."
+                href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20order%20the%20Coaching%20Institute%20Portal%20Package."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp w-full justify-center text-xs sm:text-sm py-3"
@@ -203,7 +203,7 @@ export default function EducationServicePage() {
               <span>Launch Live Education Demo</span>
             </Link>
             <a
-              href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20want%20to%20discuss%20features%20for%20my%20Coaching%20Institute."
+              href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20discuss%20features%20for%20my%20Coaching%20Institute."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-7 shadow-sm"

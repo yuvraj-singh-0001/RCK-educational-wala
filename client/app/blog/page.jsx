@@ -167,7 +167,7 @@ export default function BlogHubPage() {
             Get personalized advice on website features, domain selection, and WhatsApp lead setup directly from our development team.
           </p>
           <a
-            href="https://wa.me/918601300910?text=Hi%20SiteMint!%20I%20read%20your%20blog%20and%20want%20some%20advice%20for%20my%20website."
+            href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20read%20your%20blog%20and%20want%20some%20advice%20for%20my%20website."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-6 shadow-md"

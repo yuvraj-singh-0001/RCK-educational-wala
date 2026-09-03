@@ -35,20 +35,32 @@ export const metadata = {
   alternates: {
     canonical: 'https://sitemint.in',
   },
+  icons: {
+    icon: [
+      { url: '/Sitemint_logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/Sitemint_logo.png', sizes: '192x192', type: 'image/png' },
+      { url: '/Sitemint_logo.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/Sitemint_logo.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: ['/Sitemint_logo.png'],
+  },
   verification: {
     google: 'google94f75fa3b98a3566',
   },
   openGraph: {
     title: 'SiteMint | Fast & Affordable Website & App Development in India',
-    description: 'Transform your offline business into a 24/7 online growth engine. Get custom websites and apps with fast delivery, modern UI, and WhatsApp lead integration.',
+    description: 'Transform your offline business into a 24/7 online growth engine. Professional Next.js websites, native mobile apps, and media studio starting at ₹3,999.',
     url: 'https://sitemint.in',
     siteName: 'SiteMint',
     images: [
       {
-        url: '/bakery-demo/images/birthday-cake.png',
-        width: 1200,
-        height: 630,
-        alt: 'SiteMint Website and App Development Demos',
+        url: 'https://sitemint.in/Sitemint_logo.png',
+        width: 1024,
+        height: 1024,
+        type: 'image/png',
+        alt: 'SiteMint - Web, App & Media Studio',
       },
     ],
     locale: 'en_IN',
@@ -57,8 +69,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'SiteMint | Fast & Affordable Website & App Development in India',
-    description: 'Custom websites, online ordering systems, and educational portals for small businesses in India.',
-    images: ['/bakery-demo/images/birthday-cake.png'],
+    description: 'Custom Next.js websites, mobile apps, and business growth studio starting at ₹3,999 in India.',
+    images: ['https://sitemint.in/Sitemint_logo.png'],
   },
   robots: {
     index: true,
@@ -82,12 +94,12 @@ export default function RootLayout({ children }) {
         '@id': 'https://sitemint.in/#service',
         'name': 'SiteMint',
         'url': 'https://sitemint.in',
-        'logo': 'https://sitemint.in/vite.svg',
-        'image': 'https://sitemint.in/bakery-demo/images/birthday-cake.png',
+        'logo': 'https://sitemint.in/Sitemint_logo.png',
+        'image': 'https://sitemint.in/Sitemint_logo.png',
         'description': 'Affordable website and app development company in India specializing in bakery websites, school coaching portals, e-commerce stores, and custom software.',
         'priceRange': '₹₹ (Starting ₹3,999)',
-        'telephone': '+91 86013 00910',
-        'email': 'singhyuvraj8420@gmail.com',
+        'telephone': '+91 89206 83588',
+        'email': 'contactsitemint@gmail.com',
         'address': {
           '@type': 'PostalAddress',
           'addressCountry': 'IN',
@@ -114,7 +126,7 @@ export default function RootLayout({ children }) {
         },
         'sameAs': [
           'https://www.instagram.com/sitemint.in/',
-          'https://wa.me/918601300910'
+          'https://wa.me/918920683588'
         ],
         'offers': [
           {
