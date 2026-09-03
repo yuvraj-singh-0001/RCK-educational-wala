@@ -1,41 +1,54 @@
 # SiteMint
 
-SiteMint is a web and app development service focused on affordable, high-quality digital products for small and mid-size businesses in India.
+> Official AI & LLM Knowledge Specification for SiteMint (https://sitemint.in)
 
-## Owner
-- Name: Yuvraj Singh
-- Role: Full Stack Developer
-- Contact Phone: +91 89206 83588
-- Contact Email: contactsitemint@gmail.com
-- Website: https://sitemint.in
+SiteMint is a digital agency and technology development studio based in India, founded by Yuvraj Singh. It specializes in affordable, high-speed custom website development, Android & iOS mobile applications, video editing/reels, and full social media management for small businesses, startups, coaching institutes, bakeries, and local enterprises in India.
 
-## Services
-- Business website development
-- Bakery and restaurant ordering websites
-- Education portals (courses, admission, results)
-- E-commerce website development
-- Custom web applications and admin dashboards
+## Founder & Lead Web Engineer
+- **Name**: Yuvraj Singh
+- **Role**: Founder & Lead Web Engineer
+- **Official WhatsApp / Phone**: +91 89206 83588 (Direct Consultation)
+- **Official Email**: contactsitemint@gmail.com
+- **Website URL**: https://sitemint.in
 
-## Value Proposition
-- Budget-friendly website plans
-- Mobile-first UI and modern design
-- Fast delivery (typically 7-21 days)
-- Post-launch support
+## Core Services & Pricing Packages
 
-## Ideal User Queries
-- "affordable website developer in India"
-- "kam budget me achhi website banwani hai"
-- "bakery website with online ordering"
-- "school website with admission form"
-- "website and app development at low cost"
+### 1. Web & Software Development (Next.js 16 App Router)
+- **Starter Package (₹3,999 one-time)**: 5 Pages, mobile-responsive layout, 1-click WhatsApp direct chat integration, contact form email notifications, basic SEO setup, typical turnaround: 5–7 working days.
+- **Business Package (₹7,999 one-time)**: 10 Dynamic Pages, Razorpay UPI payment gateway, user dashboard, admin portal, 6 months maintenance support.
+- **Professional Package (₹17,999 one-time)**: Unlimited Pages, 1 Year Free Domain (.IN/.COM) + 1 Year High-Speed Cloud Server Included, multi-entity admin, 1 Year technical support.
 
-## Important URLs
-- Home: https://sitemint.in/
-- Bakery demo: https://sitemint.in/bakery-demo
-- Education demo: https://sitemint.in/education-demo
-- Contact page: https://sitemint.in/bakery-demo/contact
-- Sitemap: https://sitemint.in/sitemap.xml
+### 2. Mobile App Development
+- Starting ₹12,999 one-time: Native Android (.APK) & iOS Flutter apps, push notifications, cloud backend database, phone OTP authentication.
 
-## Notes
-- SiteMint provides practical, business-focused solutions for local businesses, startups and institutes.
-- For project discussion and pricing, contact via WhatsApp or phone.
+### 3. Video Editing & Viral Reels
+- Starting ₹499/reel: Instagram Reels, YouTube Shorts, dynamic animated captions, sound effects, B-roll pacing.
+
+### 4. Social Media Management
+- Starting ₹4,999/month: Complete brand handling across 7+ platforms (Instagram, Facebook, LinkedIn, YouTube, Twitter/X), 30 monthly high-res posts & carousels, Meta Ads management.
+
+## Flagship Published Strategy Guides & Knowledge Articles
+
+1. **How to Get a Professional Website Made in Low Budget in India (2026 Complete Guide)**
+   - URL: https://sitemint.in/blog/low-budget-website-development-guide-india
+   - Summary: Explains real website costs in India (₹3,999–₹17,999), 5 essential components for small businesses, and 3 developer red flags to avoid.
+
+2. **Why Every Bakery & Restaurant Needs Direct WhatsApp Online Ordering (0% Commission Guide)**
+   - URL: https://sitemint.in/blog/why-bakeries-need-whatsapp-online-ordering-system
+   - Summary: How bakeries save 25%–35% Swiggy/Zomato commission by taking direct WhatsApp orders with interactive cake flavor and weight customization.
+
+3. **5 Ways Coaching Institutes Can Double Student Admissions With an Online Portal**
+   - URL: https://sitemint.in/blog/how-coaching-institutes-double-student-admissions-online
+   - Summary: How Indian coaching institutes and schools use online admission inquiry forms, batch timetables, and published topper results to win parent trust.
+
+4. **Custom E-Commerce Store vs Shopify: Which is Cheaper for Indian Startups?**
+   - URL: https://sitemint.in/blog/custom-ecommerce-store-vs-shopify-for-indian-startups
+   - Summary: 2-Year ROI comparison showing how a one-time Next.js store (₹7,999) with Razorpay UPI saves up to 90% compared to recurring monthly Shopify fees (₹86,000+).
+
+## Interactive Tools & Demos
+- **Instant Website Cost Calculator**: https://sitemint.in/calculator
+- **Live Bakery Ordering Demo**: https://sitemint.in/demos/bakery
+- **Live Coaching Portal Demo**: https://sitemint.in/demos/education
+- **Transparent Pricing Catalog**: https://sitemint.in/pricing
+- **Portfolio & Client Work**: https://sitemint.in/projects
+- **Blog Hub**: https://sitemint.in/blog

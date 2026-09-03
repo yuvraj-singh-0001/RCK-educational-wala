@@ -1,126 +1,258 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { 
-  ArrowLeft, 
   Calendar, 
   Clock, 
-  Tag, 
   MessageCircle, 
   CheckCircle2, 
-  Share2, 
-  Sparkles,
-  Calculator,
-  ArrowRight
+  Sparkles, 
+  ArrowRight, 
+  Zap,
+  Globe,
+  Store,
+  GraduationCap,
+  ShoppingBag
 } from 'lucide-react';
 import FaqSection from '../../../components/FaqSection';
 
 const articles = {
   'low-budget-website-development-guide-india': {
-    title: 'How to Get a Professional Website Made in Low Budget in India (2025 Guide)',
-    category: 'Website Strategy',
-    date: 'January 15, 2025',
-    readTime: '4 min read',
-    author: 'SiteMint Tech Team',
-    metaDesc: 'Step by step guide to getting an agency-quality website in India starting from ₹3,999 with free domain, hosting, and WhatsApp lead buttons.',
+    title: 'How to Get a Professional Website Made in Low Budget in India (2026 Complete Guide)',
+    category: 'Website Development',
+    date: 'January 12, 2026',
+    dateIso: '2026-01-12',
+    readTime: '5 min read',
+    author: 'Yuvraj Singh',
+    metaDesc: 'A practical guide for small businesses in India on website development costs, essential features, and what to look for when choosing a developer.',
+    relatedSlugs: [
+      'custom-ecommerce-store-vs-shopify-for-indian-startups',
+      'why-bakeries-need-whatsapp-online-ordering-system',
+    ],
     content: `
-      <h2>The Real Cost of Building a Business Website in India</h2>
-      <p>If you are a small business owner, local tutor, doctor, or bakery shop in India, you have likely received quotes ranging from ₹25,000 to ₹80,000 from local IT agencies. The reality is that for 90% of small businesses, a clean, high-speed 5-page website with direct WhatsApp lead capture should not cost more than ₹3,999 to ₹7,999. Check our <a href="/pricing" class="text-violet-600 underline font-bold">transparent website pricing packages</a> to see exact inclusions.</p>
+      <h2>Understanding Website Development Costs in India</h2>
+      <p>For small businesses, service providers, tutors, consultants, and retail shops in India, quotes from traditional IT agencies often range from <strong>₹25,000 to ₹50,000+</strong>. For a standard 5-page business website, a clean, modern, and mobile-friendly setup can typically be developed within a much more accessible budget—starting from <strong>₹3,999 (Starter Plan)</strong> up to <strong>₹17,999 (Professional Plan)</strong> depending on custom requirements and server inclusions.</p>
+      
+      <p>Explore our transparent packages on our <a href="/pricing" class="text-violet-600 underline font-bold">Pricing page</a> to review package details.</p>
 
-      <h3>What Every Small Business Website Actually Needs:</h3>
+      <h2>Essential Features for a Business Website</h2>
+      <p>Rather than adding unnecessary animations or complex features that slow down the page, small business websites should focus on high-utility components:</p>
       <ul>
-        <li><strong>Mobile-First Lightweight Layout:</strong> Over 85% of traffic in India comes from mobile smartphones. Explore our <a href="/services/website-development" class="text-violet-600 underline font-semibold">custom website development services</a>.</li>
-        <li><strong>Free .IN or .COM Domain Name:</strong> Registered in your name for 100% brand ownership.</li>
-        <li><strong>High-Speed Cloud Hosting & SSL Security:</strong> Load times under 2 seconds.</li>
-        <li><strong>Direct WhatsApp Order & Inquiry Capture:</strong> One-tap chat button to convert visitors immediately.</li>
-        <li><strong>Google Search Console Indexing:</strong> So customers searching for your services in your city find you on Google Maps and search results.</li>
+        <li><strong>Mobile-First Responsive Layout:</strong> Most visitors in India browse on mobile devices. A properly optimized Next.js website delivers fast loading speeds when assets, server rendering, and code bundling are configured properly. Explore our <a href="/services/website-development" class="text-violet-600 underline font-semibold">custom website development services</a>.</li>
+        <li><strong>Brand Domain Registration:</strong> Registering a dedicated .IN or .COM domain ensures brand authenticity and long-term digital identity.</li>
+        <li><strong>Secure Cloud Hosting & SSL:</strong> Ensures encrypted communication (HTTPS) and reliable uptime for visitors.</li>
+        <li><strong>Direct WhatsApp Lead Capture:</strong> A 1-click WhatsApp button allows visitors to reach you instantly with pre-filled inquiries, facilitating quicker customer conversations.</li>
+        <li><strong>Google Search Console & Sitemap Indexing:</strong> Enables search engines to crawl and index your web pages accurately.</li>
       </ul>
 
-      <h3>3 Red Flags to Avoid When Hiring a Web Developer:</h3>
+      <h2>Cost Comparison: Traditional Agency vs SiteMint Packages</h2>
+      <div class="table-container my-6 overflow-x-auto">
+        <table class="w-full text-left border-collapse border border-slate-200 text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-slate-100 text-slate-900">
+              <th class="p-3 border border-slate-200 font-bold">Feature</th>
+              <th class="p-3 border border-slate-200 text-slate-700 font-bold">Traditional Agency</th>
+              <th class="p-3 border border-slate-200 text-violet-700 bg-violet-50/70 font-bold">SiteMint Starter (₹3,999)</th>
+              <th class="p-3 border border-slate-200 text-emerald-700 bg-emerald-50/70 font-bold">SiteMint Professional (₹17,999)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3 border border-slate-200 font-medium">Pricing Model</td>
+              <td class="p-3 border border-slate-200 text-slate-600">₹25,000+</td>
+              <td class="p-3 border border-slate-200 font-bold text-violet-700 bg-violet-50/40">₹3,999 (One-Time)</td>
+              <td class="p-3 border border-slate-200 font-bold text-emerald-700 bg-emerald-50/40">₹17,999 (One-Time)</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-slate-200 font-medium">Domain & Cloud Server</td>
+              <td class="p-3 border border-slate-200 text-slate-600">Additional Yearly Fee</td>
+              <td class="p-3 border border-slate-200 text-slate-600">Client-Provided / Add-on</td>
+              <td class="p-3 border border-slate-200 font-bold text-emerald-700 bg-emerald-50/40">1 Year Included</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-slate-200 font-medium">Typical Turnaround</td>
+              <td class="p-3 border border-slate-200 text-slate-600">30 to 45 Days</td>
+              <td class="p-3 border border-slate-200 text-slate-700">Typical: 5–7 working days*</td>
+              <td class="p-3 border border-slate-200 text-slate-700">Typical: 10–14 working days*</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-slate-200 font-medium">WhatsApp Integration</td>
+              <td class="p-3 border border-slate-200 text-slate-600">Custom Quote</td>
+              <td class="p-3 border border-slate-200 font-bold text-violet-700 bg-violet-50/40">Included</td>
+              <td class="p-3 border border-slate-200 font-bold text-emerald-700 bg-emerald-50/40">Included</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-500 italic">*Delivery timeline depends on requirements, content availability, and client approvals.</p>
+
+      <h2>Practical Tips When Hiring a Web Developer</h2>
       <ol>
-        <li><strong>Developers charging recurring monthly rental fees:</strong> You should always own your website source code completely.</li>
-        <li><strong>Slow WordPress templates with 40+ plugins:</strong> They take 6+ seconds to load on mobile networks, driving away 60% of visitors.</li>
-        <li><strong>No clear delivery timeline:</strong> A standard 5-page website should never take more than 7 to 10 days to go live.</li>
+        <li><strong>Ensure Source Code Access:</strong> Verify that you receive complete ownership and access to your code files without locked monthly subscription dependencies.</li>
+        <li><strong>Focus on Speed and Modern Stacks:</strong> Lightweight Next.js or clean HTML/CSS frameworks provide smooth mobile experiences without bloated plugins.</li>
+        <li><strong>Clarify Scope and Deliverables:</strong> Establish clear requirements for pages, contact forms, and revision processes prior to project kickoff.</li>
       </ol>
 
       <div class="callout-box">
-        <strong>Ready to calculate your budget?</strong> Use our <a href="/calculator" class="text-violet-700 underline font-bold">Instant Website Cost Calculator</a> or view our <a href="/services/low-budget-website-development" class="text-violet-700 underline font-bold">Low Budget Website Development Starting at ₹3,999</a>.
+        <strong>Planning your website project?</strong> Calculate an estimated budget using our <a href="/calculator" class="text-violet-700 underline font-bold">Instant Cost Calculator</a> or explore our <a href="/services/low-budget-website-development" class="text-violet-700 underline font-bold">Low Budget Website Development solutions</a>.
       </div>
     `,
   },
   'why-bakeries-need-whatsapp-online-ordering-system': {
-    title: 'Why Every Bakery & Restaurant Needs Direct WhatsApp Online Ordering (0% Commission)',
-    category: 'Bakery & Food',
-    date: 'January 18, 2025',
+    title: 'Why Every Bakery & Restaurant Needs Direct WhatsApp Online Ordering (0% Commission Guide)',
+    category: 'Restaurant & Food',
+    date: 'February 04, 2026',
+    dateIso: '2026-02-04',
     readTime: '5 min read',
-    author: 'SiteMint Food Tech Team',
-    metaDesc: 'Discover how bakeries and restaurants in India save 30% commission by taking direct WhatsApp cake and food orders.',
+    author: 'Yuvraj Singh',
+    metaDesc: 'How bakeries, cafes, and food businesses can use direct WhatsApp ordering and custom cake selectors to manage orders with zero commission fees.',
+    relatedSlugs: [
+      'low-budget-website-development-guide-india',
+      'custom-ecommerce-store-vs-shopify-for-indian-startups',
+    ],
     content: `
-      <h2>The Problem with Food Delivery Aggregators</h2>
-      <p>Food aggregators take between 25% to 35% commission on every order. For bakeries selling ₹600 cakes, you lose nearly ₹180 to ₹200 on every single delivery, severely squeezing your profit margins. Learn more about our <a href="/services/restaurant-software" class="text-violet-600 underline font-bold">Bakery & Restaurant Software Solutions</a>.</p>
+      <h2>The Economics of Direct Ordering vs Delivery Apps</h2>
+      <p>Third-party food delivery aggregators typically charge between <strong>20% to 30%+ commission</strong> on every order placed through their marketplace. For bakeries specializing in high-value customized cakes and catering orders, these recurring commissions can significantly reduce profit margins. Discover our specialized <a href="/services/restaurant-software" class="text-violet-600 underline font-bold">Restaurant Software</a> and <a href="/services/bakery-restaurant-website" class="text-violet-600 underline font-bold">Bakery Website Development</a> services.</p>
 
-      <h3>Why Direct WhatsApp Ordering Outperforms Food Apps for Bakeries:</h3>
+      <h2>Key Benefits of Direct WhatsApp Ordering for Bakeries</h2>
       <ul>
-        <li><strong>0% Commission:</strong> You keep 100% of your sales revenue.</li>
-        <li><strong>Custom Cake Customization Engine:</strong> Customers can pick cake flavor (Chocolate, Red Velvet, Pineapple), weight (0.5kg, 1kg, 2kg+), eggless option, and write personalized messages on the cake.</li>
-        <li><strong>Direct Customer Phone Numbers:</strong> Build your own customer contact list to send festive WhatsApp promotions on Diwali, New Year, and Valentine's Day.</li>
-        <li><strong>Delivery Distance Fees:</strong> Automatic delivery charges based on customer pincode or distance.</li>
+        <li><strong>Zero Commission on Direct Sales:</strong> Orders received directly via WhatsApp are processed with 0% platform commission, allowing businesses to retain their standard product pricing.</li>
+        <li><strong>Custom Cake Customization Selector:</strong> Customers can specify flavor options (Chocolate, Red Velvet, Pineapple, Black Forest), weight selections (0.5kg, 1kg, 2kg+), eggless preferences, and custom message text directly on the product card.</li>
+        <li><strong>Direct Customer Relationship:</strong> Taking orders directly builds an authentic customer contact list for seasonal greetings, special offers, and repeat orders.</li>
+        <li><strong>Flexible Delivery and Pickup Options:</strong> Enables local store pickup, distance-based delivery fee calculations, and direct UPI payments.</li>
       </ul>
 
+      <h2>Sample Order Economics Breakdown</h2>
+      <div class="table-container my-6 overflow-x-auto">
+        <table class="w-full text-left border-collapse border border-slate-200 text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-slate-100 text-slate-900">
+              <th class="p-3 border border-slate-200 font-bold">Order Channel</th>
+              <th class="p-3 border border-slate-200 font-bold">Order Value</th>
+              <th class="p-3 border border-slate-200 font-bold text-red-600">Platform Commission</th>
+              <th class="p-3 border border-slate-200 font-bold text-emerald-700 bg-emerald-50/70">Net Revenue to Bakery</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3 border border-slate-200 font-medium">Third-Party Marketplace</td>
+              <td class="p-3 border border-slate-200">₹800 (Custom Cake)</td>
+              <td class="p-3 border border-slate-200 text-red-600">25% (₹200)</td>
+              <td class="p-3 border border-slate-200 text-slate-700">₹600</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-slate-200 font-medium">Direct WhatsApp Ordering</td>
+              <td class="p-3 border border-slate-200">₹800 (Custom Cake)</td>
+              <td class="p-3 border border-slate-200 text-emerald-700 font-bold">0% (₹0)</td>
+              <td class="p-3 border border-slate-200 font-bold text-emerald-700 bg-emerald-50/40">₹800</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="callout-box">
-        <strong>Test our Live Demo:</strong> Explore our <a href="/demos/bakery" class="text-violet-700 underline font-bold">Live Interactive Bakery Website Demo</a> or view our <a href="/services/bakery-restaurant-website" class="text-violet-700 underline font-bold">Cake Shop Website Design Package</a>.
+        <strong>Experience the ordering flow:</strong> Test our <a href="/demos/bakery" class="text-violet-700 underline font-bold">Live Bakery Demo</a> to see how custom cake selections and direct WhatsApp order dispatch operate in practice.
       </div>
     `,
   },
   'how-coaching-institutes-double-student-admissions-online': {
     title: '5 Ways Coaching Institutes Can Double Student Admissions With an Online Portal',
-    category: 'Education Portal',
-    date: 'January 20, 2025',
+    category: 'Education Technology',
+    date: 'February 22, 2026',
+    dateIso: '2026-02-22',
     readTime: '4 min read',
-    author: 'SiteMint EdTech Team',
-    metaDesc: 'How coaching centers in India double student admissions with online inquiry forms, batch calendars, and published test scores.',
+    author: 'Yuvraj Singh',
+    metaDesc: 'How educational institutions and coaching centers in India use digital course brochures, online inquiry forms, and result boards to increase student enrollments.',
+    relatedSlugs: [
+      'low-budget-website-development-guide-india',
+      'custom-ecommerce-store-vs-shopify-for-indian-startups',
+    ],
     content: `
-      <h2>Winning Parent Trust in the Digital Era</h2>
-      <p>Parents researching tuition centers and coaching institutes in 2025 search Google before visiting your center. Having an outdated Facebook page is no longer enough. Check out our <a href="/services/education-portal" class="text-violet-600 underline font-bold">School & Coaching Institute Portal Development</a>.</p>
+      <h2>Building Credibility in Educational Services</h2>
+      <p>When parents and students research coaching centers, tuition institutes, and competitive exam programs, they frequently look for course curriculums, faculty credentials, and past performance records online before visiting the center in person. Learn more about our <a href="/services/education-portal" class="text-violet-600 underline font-bold">Education Portal Development</a> and <a href="/services/school-coaching-portal" class="text-violet-600 underline font-bold">School & Coaching Management Portals</a>.</p>
 
-      <h3>5 High-Converting Features Every Coaching Portal Needs:</h3>
+      <h2>5 Functional Features for an Institute Portal</h2>
       <ol>
-        <li><strong>Interactive Course & Batch Syllabus:</strong> Clear timings, target exams (JEE, NEET, Foundation), and syllabus breakdowns.</li>
-        <li><strong>Online Admission Inquiry Lead Form:</strong> Parents can request callbacks with student class and course interest in 10 seconds.</li>
-        <li><strong>Weekly Test Results & Rank Board:</strong> Publishing topper scores and rank lists establishes undeniable proof of your teaching results.</li>
-        <li><strong>Faculty Credentials Showcase:</strong> Highlight teacher qualifications, experience, and past success stories.</li>
-        <li><strong>Digital Notice Board:</strong> Announce new batch start dates and scholarship exams instantly.</li>
+        <li><strong>Detailed Course & Batch Information:</strong> Clear information on course coverage, exam targets (e.g., Board Exams, Foundation, Competitive Exams), batch schedules, and downloadable syllabus overviews.</li>
+        <li><strong>Online Admission Inquiry Form:</strong> Enables parents to submit inquiries with student details, class level, and contact numbers in seconds.</li>
+        <li><strong>Published Test Results & Performance Boards:</strong> Showcasing topper performances, weekly test scores, and student testimonials establishes verifiable educational credibility.</li>
+        <li><strong>Faculty Background Showcase:</strong> Outlines instructor qualifications, subject specializations, and teaching experience.</li>
+        <li><strong>Digital Notice Board:</strong> Provides real-time updates regarding new batch admissions, scholarship test schedules, and holiday announcements.</li>
       </ol>
 
       <div class="callout-box">
-        <strong>See It In Action:</strong> Test our <a href="/demos/education" class="text-violet-700 underline font-bold">Live Coaching Institute Portal Demo</a> and calculate your setup cost on our <a href="/calculator" class="text-violet-700 underline font-bold">Cost Calculator</a>.
+        <strong>Explore a live setup:</strong> Review our <a href="/demos/education" class="text-violet-700 underline font-bold">Live Education Portal Demo</a> and calculate project estimates using our <a href="/calculator" class="text-violet-700 underline font-bold">Website Cost Calculator</a>.
       </div>
     `,
   },
   'custom-ecommerce-store-vs-shopify-for-indian-startups': {
     title: 'Custom E-Commerce Store vs Shopify: Which is Cheaper for Indian Startups?',
     category: 'E-Commerce',
-    date: 'January 22, 2025',
+    date: 'March 08, 2026',
+    dateIso: '2026-03-08',
     readTime: '6 min read',
-    author: 'SiteMint Commerce Team',
-    metaDesc: 'Compare costs between monthly Shopify plans and custom Next.js e-commerce development with Razorpay UPI gateway for Indian startups.',
+    author: 'Yuvraj Singh',
+    metaDesc: 'A cost and functionality comparison between monthly hosted platforms like Shopify and one-time custom Next.js e-commerce development with Razorpay UPI integration.',
+    relatedSlugs: [
+      'low-budget-website-development-guide-india',
+      'why-bakeries-need-whatsapp-online-ordering-system',
+    ],
     content: `
-      <h2>The Real Math: Shopify vs One-Time Custom Store</h2>
-      <p>Shopify charges ₹1,999 to ₹7,499 every month, plus 2% extra transaction fee on every order, plus ₹1,500/month for essential apps. Over 2 years, you easily spend ₹60,000+ in rental fees alone. Explore our <a href="/services/ecommerce-development" class="text-violet-600 underline font-bold">Custom E-Commerce Development Services</a>.</p>
+      <h2>Evaluating Platform Models for E-Commerce</h2>
+      <p>When launching an online store in India, founders generally consider two main options: hosted subscription platforms (such as Shopify) or one-time custom web application development (such as Next.js with Razorpay UPI integration). Discover our <a href="/services/ecommerce-development" class="text-violet-600 underline font-bold">Custom E-Commerce Development</a> and <a href="/services/ecommerce-store" class="text-violet-600 underline font-bold">E-Commerce Store solutions</a>.</p>
 
-      <h3>Why Indian Startups Prefer One-Time Custom Next.js Stores:</h3>
+      <h2>Cost Structure Comparison Over Time</h2>
+      <div class="table-container my-6 overflow-x-auto">
+        <table class="w-full text-left border-collapse border border-slate-200 text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-slate-100 text-slate-900">
+              <th class="p-3 border border-slate-200 font-bold">Expense Category</th>
+              <th class="p-3 border border-slate-200 font-bold text-slate-700">Hosted SaaS Platform (e.g. Shopify)</th>
+              <th class="p-3 border border-slate-200 font-bold text-violet-700 bg-violet-50/70">Custom Next.js Store (SiteMint)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3 border border-slate-200 font-medium">Monthly Platform Subscription</td>
+              <td class="p-3 border border-slate-200 text-slate-600">Recurring monthly fee (e.g. ₹1,999+/month)</td>
+              <td class="p-3 border border-slate-200 font-bold text-violet-700 bg-violet-50/40">₹0 / Month Software Fee</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-slate-200 font-medium">Transaction Fees</td>
+              <td class="p-3 border border-slate-200 text-slate-600">Gateway MDR + Additional platform fee (up to 2%)</td>
+              <td class="p-3 border border-slate-200 font-bold text-violet-700 bg-violet-50/40">Standard Gateway MDR Only (0% on UPI)</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-slate-200 font-medium">Payment Gateway Support</td>
+              <td class="p-3 border border-slate-200 text-slate-600">Requires third-party app plugins</td>
+              <td class="p-3 border border-slate-200 font-bold text-violet-700 bg-violet-50/40">Direct Razorpay / Cashfree UPI Integration</td>
+            </tr>
+            <tr>
+              <td class="p-3 border border-slate-200 font-medium">Code Ownership</td>
+              <td class="p-3 border border-slate-200 text-slate-600">Hosted in proprietary ecosystem</td>
+              <td class="p-3 border border-slate-200 font-bold text-violet-700 bg-violet-50/40">100% Full Source Code Ownership</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>When to Choose Each Solution</h2>
       <ul>
-        <li><strong>Zero Monthly Software Subscriptions:</strong> One-time setup fee (Starting ₹8,999) with 100% code ownership.</li>
-        <li><strong>Direct Razorpay / UPI Integration:</strong> Zero additional platform commission, only standard bank MDR (0% on UPI).</li>
-        <li><strong>Blazing Fast 1-Second Load Speed:</strong> Next.js App Router pre-renders products for instant mobile browsing.</li>
-        <li><strong>Custom Coupon Discount Engine:</strong> Create customized promotional rules without paid plugins.</li>
+        <li><strong>Choose a Hosted SaaS Platform:</strong> If you prefer an out-of-the-box template store and do not mind recurring monthly subscription costs.</li>
+        <li><strong>Choose Custom Next.js Development:</strong> If you want complete ownership of your codebase, zero recurring platform software rental fees, tailored checkout workflows, and direct UPI integration for Indian customers.</li>
       </ul>
 
       <div class="callout-box">
-        <strong>Compare Packages:</strong> Check our <a href="/pricing" class="text-violet-700 underline font-bold">E-Commerce Pricing Plans</a> and calculate cost for your store with our <a href="/calculator" class="text-violet-700 underline font-bold">Instant Cost Calculator</a>.
+        <strong>Review packages:</strong> Compare options on our <a href="/pricing" class="text-violet-700 underline font-bold">Pricing page</a> and calculate your estimated development budget on our <a href="/calculator" class="text-violet-700 underline font-bold">Cost Calculator</a>.
       </div>
     `,
   },
 };
+
+export function generateStaticParams() {
+  return Object.keys(articles).map((slug) => ({
+    slug,
+  }));
+}
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -137,6 +269,24 @@ export async function generateMetadata({ params }) {
       title: article.title,
       description: article.metaDesc,
       url: `https://sitemint.in/blog/${slug}`,
+      siteName: 'SiteMint',
+      images: [
+        {
+          url: 'https://sitemint.in/Sitemint_logo.png',
+          width: 1024,
+          height: 1024,
+          type: 'image/png',
+          alt: article.title,
+        },
+      ],
+      locale: 'en_IN',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.metaDesc,
+      images: ['https://sitemint.in/Sitemint_logo.png'],
     },
   };
 }
@@ -149,52 +299,86 @@ export default async function BlogPostPage({ params }) {
     notFound();
   }
 
-  const structuredData = {
+  const breadcrumbData = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://sitemint.in/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://sitemint.in/blog',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: article.title,
+        item: `https://sitemint.in/blog/${slug}`,
+      },
+    ],
+  };
+
+  const articleData = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
     headline: article.title,
     description: article.metaDesc,
     author: {
-      '@type': 'Organization',
-      name: 'SiteMint',
-      url: 'https://sitemint.in',
+      '@type': 'Person',
+      name: 'Yuvraj Singh',
+      url: 'https://sitemint.in/about',
     },
     publisher: {
       '@type': 'Organization',
       name: 'SiteMint',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://sitemint.in/logo.png',
+        url: 'https://sitemint.in/Sitemint_logo.png',
       },
     },
-    datePublished: '2025-01-15',
+    datePublished: article.dateIso || '2026-01-12',
+    dateModified: article.dateIso || '2026-01-12',
     mainEntityOfPage: `https://sitemint.in/blog/${slug}`,
   };
 
+  const relatedArticles = (article.relatedSlugs || [])
+    .map((rSlug) => ({ slug: rSlug, ...articles[rSlug] }))
+    .filter((a) => a && a.title);
+
   return (
-    <div className="w-full pt-6 pb-12 sm:pt-10 sm:pb-20 bg-white">
+    <div className="w-full pt-6 pb-14 sm:pt-10 sm:pb-24 bg-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
+      />
+      
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Back Link */}
-        <div className="mb-6">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-violet-700 transition"
-          >
-            <ArrowLeft className="w-3.5 h-3.5" /> Back to All Articles
-          </Link>
-        </div>
+        {/* Semantic Breadcrumb Navigation */}
+        <nav aria-label="breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-medium text-slate-500">
+          <Link href="/" className="hover:text-violet-700 transition">Home</Link>
+          <span className="text-slate-300">/</span>
+          <Link href="/blog" className="hover:text-violet-700 transition">Blog</Link>
+          <span className="text-slate-300">/</span>
+          <span className="text-slate-900 font-semibold truncate max-w-xs sm:max-w-md">{article.title}</span>
+        </nav>
 
         {/* Article Header */}
         <header className="mb-8 pb-6 border-b border-slate-200">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-50 border border-violet-200 text-violet-800 text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-violet-50 border border-violet-200 text-violet-800 text-xs font-bold uppercase tracking-wider mb-4">
             {article.category}
           </div>
 
-          <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4 font-sans">
             {article.title}
           </h1>
 
@@ -213,43 +397,92 @@ export default async function BlogPostPage({ params }) {
         <article className="prose prose-slate max-w-none prose-headings:font-bold prose-headings:text-slate-900 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 mb-12">
           <div 
             dangerouslySetInnerHTML={{ __html: article.content }} 
-            className="space-y-5 text-sm sm:text-base text-slate-700 leading-relaxed [&>h2]:text-xl sm:[&>h2]:text-2xl [&>h2]:font-bold [&>h2]:text-slate-900 [&>h2]:mt-8 [&>h2]:mb-3 [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-slate-800 [&>h3]:mt-6 [&>h3]:mb-2 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:space-y-2 [&>.callout-box]:p-5 [&>.callout-box]:rounded-2xl [&>.callout-box]:bg-violet-50 [&>.callout-box]:border [&>.callout-box]:border-violet-200 [&>.callout-box]:text-violet-900 [&>.callout-box]:my-6"
+            className="space-y-5 text-sm sm:text-base text-slate-700 leading-relaxed [&>h2]:text-xl sm:[&>h2]:text-2xl [&>h2]:font-extrabold [&>h2]:text-slate-900 [&>h2]:mt-8 [&>h2]:mb-3 [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-slate-800 [&>h3]:mt-6 [&>h3]:mb-2 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:space-y-2 [&>.callout-box]:p-5 sm:[&>.callout-box]:p-6 [&>.callout-box]:rounded-2xl [&>.callout-box]:bg-violet-50/90 [&>.callout-box]:border [&>.callout-box]:border-violet-200 [&>.callout-box]:text-violet-950 [&>.callout-box]:my-6 shadow-2xs"
           />
         </article>
 
-        {/* In-Article WhatsApp CTA */}
+        {/* Author Bio Box */}
+        <div className="p-5 sm:p-6 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center gap-4 mb-10 text-center sm:text-left">
+          <div className="w-14 h-14 rounded-2xl bg-violet-600 text-white flex items-center justify-center text-xl font-black shrink-0 shadow-md">
+            YS
+          </div>
+          <div>
+            <div className="text-xs font-bold text-violet-700 uppercase tracking-wider">Author Profile</div>
+            <div className="text-base font-extrabold text-slate-900">Yuvraj Singh</div>
+            <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+              Yuvraj Singh is the Founder and Lead Web Engineer at SiteMint, working on websites, web applications, mobile applications, and digital systems for businesses across India.
+            </p>
+          </div>
+        </div>
+
+        {/* Contextual WhatsApp Consultation CTA */}
         <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-violet-50 via-slate-50 to-teal-50 border border-violet-200 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-5 my-10 shadow-sm">
           <div>
+            <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-700 uppercase tracking-wider mb-1">
+              <Zap className="w-3.5 h-3.5" /> Project Consultation
+            </div>
             <h3 className="text-lg font-bold text-slate-900 mb-1">
-              Ready to implement this for your business?
+              Need advice on implementing this for your business?
             </h3>
             <p className="text-xs text-slate-600 max-w-md">
-              Chat with our team to get a free project roadmap and live demo preview.
+              Speak with our development team for technical guidance and transparent project estimates.
             </p>
           </div>
           <a
-            href={`https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20read%20your%20article%20on%20${encodeURIComponent(article.title)}%20and%20want%20to%20discuss%20my%20project.`}
+            href={`https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20read%20your%20article%20on%20${encodeURIComponent(article.title)}%20and%20want%20to%20discuss%20my%20business%20requirements.`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-whatsapp text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 shadow-sm whitespace-nowrap"
+            className="btn-whatsapp text-xs sm:text-sm !py-3 !px-6 shadow-sm whitespace-nowrap"
           >
             <MessageCircle className="w-4 h-4" />
             <span>Chat on WhatsApp</span>
           </a>
         </div>
 
-        {/* Related Solutions & Internal Backlink Grid */}
-        <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200 mb-12">
+        {/* Related Articles Section */}
+        {relatedArticles.length > 0 && (
+          <div className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 mb-12 shadow-xs">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900 mb-4 flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-violet-600" />
+              Related Guides & Articles
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {relatedArticles.map((rel) => (
+                <Link
+                  key={rel.slug}
+                  href={`/blog/${rel.slug}`}
+                  className="p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-violet-400 transition-all flex flex-col justify-between group"
+                >
+                  <div>
+                    <span className="text-[10px] font-bold text-violet-700 bg-violet-100/70 px-2 py-0.5 rounded-md mb-2 inline-block">
+                      {rel.category}
+                    </span>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-violet-700 transition leading-snug">
+                      {rel.title}
+                    </h4>
+                  </div>
+                  <div className="mt-3 flex items-center gap-1 text-xs font-semibold text-violet-700 group-hover:translate-x-1 transition-transform">
+                    <span>Read Guide</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Internal Service Links Grid */}
+        <div className="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200 mb-12">
           <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-violet-600" />
             Explore SiteMint Services & Growth Tools:
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
             <Link href="/services/website-development" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-violet-400 font-semibold text-slate-800 hover:text-violet-700 transition">
-              🌐 Website Development (₹3,999)
+              🌐 Website Development
             </Link>
             <Link href="/services/mobile-app-development" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-violet-400 font-semibold text-slate-800 hover:text-violet-700 transition">
-              📱 Mobile App Development (₹12,999)
+              📱 Mobile App Development
             </Link>
             <Link href="/calculator" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-violet-400 font-semibold text-slate-800 hover:text-violet-700 transition">
               🧮 Instant Cost Calculator
@@ -258,10 +491,10 @@ export default async function BlogPostPage({ params }) {
               🏷️ Transparent Pricing Plans
             </Link>
             <Link href="/demos/bakery" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-violet-400 font-semibold text-slate-800 hover:text-violet-700 transition">
-              🍰 Live Bakery Website Demo
+              🍰 Live Bakery Demo
             </Link>
             <Link href="/demos/education" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-violet-400 font-semibold text-slate-800 hover:text-violet-700 transition">
-              🎓 Live Coaching Portal Demo
+              🎓 Live Education Portal Demo
             </Link>
           </div>
         </div>
