@@ -70,7 +70,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'SiteMint | Fast & Affordable Website & App Development in India',
     description: 'Custom Next.js websites, mobile apps, and business growth studio starting at ₹3,999 in India.',
-    images: ['https://sitemint.in/Sitemint_logo.png'],
+    images: ['https://sitemint.in/sitemint_logo1.png'],
   },
   robots: {
     index: true,
@@ -94,8 +94,8 @@ export default function RootLayout({ children }) {
         '@id': 'https://sitemint.in/#service',
         'name': 'SiteMint',
         'url': 'https://sitemint.in',
-        'logo': 'https://sitemint.in/Sitemint_logo.png',
-        'image': 'https://sitemint.in/Sitemint_logo.png',
+        'logo': 'https://sitemint.in/sitemint_logo1.png',
+        'image': 'https://sitemint.in/sitemint_logo1.png',
         'description': 'Affordable website and app development company in India specializing in bakery websites, school coaching portals, e-commerce stores, and custom software.',
         'priceRange': '₹₹ (Starting ₹3,999)',
         'telephone': '+91 89206 83588',
@@ -125,6 +125,8 @@ export default function RootLayout({ children }) {
           'closes': '21:00'
         },
         'sameAs': [
+          'https://www.linkedin.com/company/sitemint002sep02/',
+          'https://www.facebook.com/profile.php?id=61593961025592',
           'https://www.instagram.com/sitemint.in/',
           'https://wa.me/918920683588'
         ],

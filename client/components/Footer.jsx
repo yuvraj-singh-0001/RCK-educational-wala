@@ -19,10 +19,10 @@ import {
   Share2,
   Calculator,
   ArrowRight,
-  ShieldCheck,
-  Instagram,
+  ShieldCheck, 
   CheckCircle2
 } from 'lucide-react';
+import { InstagramIcon, LinkedInIcon, FacebookIcon } from './SocialIcons';
 
 export default function Footer() {
   const pathname = usePathname();
@@ -79,14 +79,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 pb-12 border-b border-slate-800">
           {/* Brand Info (2 Columns) */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="relative inline-flex items-center group overflow-visible">
-              <Image 
-                src="/sitemint_logo1.png" 
-                alt="SiteMint - Build. Grow. Succeed." 
-                width={280} 
-                height={80} 
-                className="h-14 sm:h-16 md:h-18 w-auto max-w-none object-contain scale-[1.35] sm:scale-[1.45] origin-left rounded-lg transition-transform duration-200 group-hover:scale-[1.5]"
-              />
+            <Link href="/" className="relative inline-flex items-center group">
+              <div className="px-3.5 py-2 rounded-2xl bg-white shadow-md shadow-black/20 border border-slate-200/80 hover:shadow-lg hover:border-violet-300 transition-all duration-300">
+                <Image 
+                  src="/sitemint_logo1.png" 
+                  alt="SiteMint - Build. Grow. Succeed." 
+                  width={200} 
+                  height={54} 
+                  className="h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                />
+              </div>
             </Link>
 
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
@@ -109,6 +111,59 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5 text-rose-400 shrink-0" />
                 <span>Pan-India Remote Delivery (Delhi NCR, Lucknow, Mumbai & Nationwide)</span>
+              </div>
+            </div>
+
+            {/* Official Social Media Channels (Vibrant Circular Icons) */}
+            <div className="pt-2">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-2.5 flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-violet-400" />
+                Connect With SiteMint
+              </div>
+              <div className="flex items-center gap-3">
+                {/* Instagram Circular Gradient Badge */}
+                <a
+                  href="https://www.instagram.com/sitemint.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow SiteMint on Instagram (@sitemint.in)"
+                  className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center shadow-md shadow-pink-500/20 hover:scale-115 hover:shadow-lg hover:shadow-pink-500/40 transition-all duration-300 ring-2 ring-white/10"
+                >
+                  <InstagramIcon className="w-4 h-4" />
+                </a>
+
+                {/* LinkedIn Circular Official Badge */}
+                <a
+                  href="https://www.linkedin.com/company/sitemint002sep02/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Connect with SiteMint on LinkedIn"
+                  className="w-9 h-9 rounded-full bg-[#0A66C2] text-white flex items-center justify-center shadow-md shadow-sky-600/20 hover:scale-115 hover:shadow-lg hover:shadow-sky-600/40 transition-all duration-300 ring-2 ring-white/10"
+                >
+                  <LinkedInIcon className="w-4 h-4" />
+                </a>
+
+                {/* Facebook Circular Official Badge */}
+                <a
+                  href="https://www.facebook.com/profile.php?id=61593961025592"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow SiteMint on Facebook"
+                  className="w-9 h-9 rounded-full bg-[#1877F2] text-white flex items-center justify-center shadow-md shadow-blue-600/20 hover:scale-115 hover:shadow-lg hover:shadow-blue-600/40 transition-all duration-300 ring-2 ring-white/10"
+                >
+                  <FacebookIcon className="w-4 h-4" />
+                </a>
+
+                {/* WhatsApp Circular Official Badge */}
+                <a
+                  href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20know%20more%20about%20your%20services."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chat with SiteMint on WhatsApp"
+                  className="w-9 h-9 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-md shadow-emerald-500/20 hover:scale-115 hover:shadow-lg hover:shadow-emerald-500/40 transition-all duration-300 ring-2 ring-white/10"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>

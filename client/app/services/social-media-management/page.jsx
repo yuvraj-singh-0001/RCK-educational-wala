@@ -40,6 +40,7 @@ import {
   Bookmark,
   BadgeCheck
 } from 'lucide-react';
+import { InstagramIcon, LinkedInIcon, FacebookIcon } from '../../../components/SocialIcons';
 import RelatedServicesSection from '../../../components/RelatedServicesSection';
 import FaqSection from '../../../components/FaqSection';
 
@@ -704,6 +705,40 @@ export default function SocialMediaManagementPage() {
                 <MessageCircle className="w-4 h-4" />
                 <span>Start 30-Day Social Media Growth</span>
               </a>
+
+              {/* Official Social Proof Links (Circular Logos) */}
+              <div className="pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                <span className="font-bold text-slate-800 text-[11px]">Follow Our Agency:</span>
+                <div className="flex items-center gap-2.5">
+                  <a
+                    href="https://www.instagram.com/sitemint.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Follow SiteMint on Instagram"
+                    className="w-7 h-7 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center shadow-xs hover:scale-115 transition-transform"
+                  >
+                    <InstagramIcon className="w-3.5 h-3.5" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/sitemint002sep02/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Connect with SiteMint on LinkedIn"
+                    className="w-7 h-7 rounded-full bg-[#0A66C2] text-white flex items-center justify-center shadow-xs hover:scale-115 transition-transform"
+                  >
+                    <LinkedInIcon className="w-3.5 h-3.5" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61593961025592"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Follow SiteMint on Facebook"
+                    className="w-7 h-7 rounded-full bg-[#1877F2] text-white flex items-center justify-center shadow-xs hover:scale-115 transition-transform"
+                  >
+                    <FacebookIcon className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
 
             </div>
           </div>

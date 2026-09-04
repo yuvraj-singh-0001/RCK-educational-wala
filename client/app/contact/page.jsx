@@ -14,6 +14,7 @@ import {
   Calculator,
   ArrowRight
 } from 'lucide-react';
+import { InstagramIcon, LinkedInIcon, FacebookIcon } from '../../components/SocialIcons';
 import FaqSection from '../../components/FaqSection';
 
 export default function ContactPage() {
@@ -121,7 +122,7 @@ Please provide quotation and project timeline.`;
 
             {/* Location Info */}
             <div className="glass-card p-5 border border-slate-200 bg-slate-50/50 flex items-start gap-3">
-              <div className="p-2 rounded-xl bg-pink-100 text-pink-700 mt-0.5">
+              <div className="p-2 rounded-xl bg-violet-100 text-violet-700 mt-0.5">
                 <MapPin className="w-4 h-4" />
               </div>
               <div>
@@ -129,6 +130,65 @@ Please provide quotation and project timeline.`;
                 <div className="text-xs text-slate-500 leading-relaxed mt-0.5">
                   Serving clients across India (Delhi NCR, Mumbai, Bangalore, Lucknow, Kanpur, Jaipur & Pan-India).
                 </div>
+              </div>
+            </div>
+
+            {/* Official Social Media Channels Card */}
+            <div className="glass-card p-5 border-2 border-violet-100 bg-gradient-to-br from-violet-50/50 via-white to-emerald-50/30 space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-900 flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-violet-600" />
+                  Official Social Channels
+                </div>
+                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                  Verified
+                </span>
+              </div>
+              <p className="text-[11px] text-slate-600">
+                Follow our latest client launches, UI case studies, and business growth insights:
+              </p>
+              <div className="grid grid-cols-3 gap-2.5 pt-1">
+                {/* Instagram Circle Card */}
+                <a
+                  href="https://www.instagram.com/sitemint.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-2xl bg-white border border-slate-200 hover:border-pink-300 hover:shadow-md text-center group transition flex flex-col items-center justify-center space-y-1.5"
+                >
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center shadow-md shadow-pink-500/25 group-hover:scale-110 transition-transform">
+                    <InstagramIcon className="w-5 h-5" />
+                  </div>
+                  <div className="text-[11px] font-bold text-slate-900 group-hover:text-pink-600 transition-colors">Instagram</div>
+                  <div className="text-[9px] text-slate-500 font-medium">@sitemint.in</div>
+                </a>
+
+                {/* LinkedIn Circle Card */}
+                <a
+                  href="https://www.linkedin.com/company/sitemint002sep02/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-2xl bg-white border border-slate-200 hover:border-sky-300 hover:shadow-md text-center group transition flex flex-col items-center justify-center space-y-1.5"
+                >
+                  <div className="w-10 h-10 rounded-full bg-[#0A66C2] text-white flex items-center justify-center shadow-md shadow-sky-600/25 group-hover:scale-110 transition-transform">
+                    <LinkedInIcon className="w-5 h-5" />
+                  </div>
+                  <div className="text-[11px] font-bold text-slate-900 group-hover:text-sky-600 transition-colors">LinkedIn</div>
+                  <div className="text-[9px] text-slate-500 font-medium">Company Page</div>
+                </a>
+
+                {/* Facebook Circle Card */}
+                <a
+                  href="https://www.facebook.com/profile.php?id=61593961025592"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md text-center group transition flex flex-col items-center justify-center space-y-1.5"
+                >
+                  <div className="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center shadow-md shadow-blue-600/25 group-hover:scale-110 transition-transform">
+                    <FacebookIcon className="w-5 h-5" />
+                  </div>
+                  <div className="text-[11px] font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Facebook</div>
+                  <div className="text-[9px] text-slate-500 font-medium">Official Profile</div>
+                </a>
               </div>
             </div>
           </div>

@@ -12,6 +12,7 @@ import {
   Target,
   ArrowRight
 } from 'lucide-react';
+import { InstagramIcon, LinkedInIcon, FacebookIcon } from '../../components/SocialIcons';
 import FaqSection from '../../components/FaqSection';
 
 export const metadata = {
@@ -209,6 +210,79 @@ export default function AboutPage() {
             })}
           </div>
         </div>
+
+        {/* Official Social Media Community Banner */}
+        <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-violet-50/80 via-white to-emerald-50/40 border-2 border-violet-200 shadow-md mb-16 sm:mb-20">
+          <div className="max-w-3xl mx-auto text-center space-y-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-100 text-violet-800 border border-violet-200 text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-violet-600" />
+              Follow Our Digital Journey
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-sans">
+              Connect with SiteMint on Official Social Platforms
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
+              Follow our daily product updates, client case studies, website tips, and tech insights across our verified channels.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4">
+              <a
+                href="https://www.instagram.com/sitemint.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-pink-300 hover:shadow-md transition flex items-center justify-between group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center shadow-md shadow-pink-500/25 group-hover:scale-110 transition-transform">
+                    <InstagramIcon className="w-5 h-5" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-xs font-bold text-slate-900 group-hover:text-pink-600 transition-colors">Instagram</div>
+                    <div className="text-[10px] text-slate-500">@sitemint.in</div>
+                  </div>
+                </div>
+                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-pink-600 group-hover:translate-x-1 transition-all" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/sitemint002sep02/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-sky-300 hover:shadow-md transition flex items-center justify-between group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#0A66C2] text-white flex items-center justify-center shadow-md shadow-sky-600/25 group-hover:scale-110 transition-transform">
+                    <LinkedInIcon className="w-5 h-5" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-xs font-bold text-slate-900 group-hover:text-sky-600 transition-colors">LinkedIn</div>
+                    <div className="text-[10px] text-slate-500">Company Page</div>
+                  </div>
+                </div>
+                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-sky-600 group-hover:translate-x-1 transition-all" />
+              </a>
+
+              <a
+                href="https://www.facebook.com/profile.php?id=61593961025592"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition flex items-center justify-between group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center shadow-md shadow-blue-600/25 group-hover:scale-110 transition-transform">
+                    <FacebookIcon className="w-5 h-5" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-xs font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Facebook</div>
+                    <div className="text-[10px] text-slate-500">Official Profile</div>
+                  </div>
+                </div>
+                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
       <FaqSection />
     </div>
