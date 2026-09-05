@@ -257,7 +257,7 @@ export default function AboutPage() {
         {/* Full-Height Right Photo */}
         <div className="absolute inset-y-0 right-0 w-full lg:w-[55%] h-full">
           <img
-            src="/about_hero_client_deal.jpg"
+            src="/aboutimage/about_hero_client_deal.jpg"
             alt="SiteMint Client Partnership & Workspace"
             className="w-full h-full object-cover object-center"
           />
@@ -353,7 +353,7 @@ export default function AboutPage() {
             <div className="lg:col-span-6 flex items-center justify-center">
               <AnimatedSection direction="left" delay={0}>
                 <img
-                  src="/we built.png"
+                  src="/aboutimage/we built.png"
                   alt="SiteMint Technology Architecture & Digital Solutions"
                   className="w-full max-w-xl lg:max-w-2xl h-auto object-contain pointer-events-none select-none transition-transform duration-300 hover:scale-105"
                 />
@@ -465,7 +465,7 @@ export default function AboutPage() {
             <div className="lg:col-span-6 flex items-center justify-center pt-2 sm:pt-0">
               <AnimatedSection direction="right" delay={150}>
                 <img
-                  src="/misson-of-about.png"
+                  src="/aboutimage/misson-of-about.png"
                   alt="SiteMint Mission & Story Illustration"
                   className="w-full max-w-xl sm:max-w-2xl lg:max-w-full h-auto object-contain pointer-events-none select-none scale-105 sm:scale-110 lg:scale-115 transform"
                 />
@@ -587,7 +587,7 @@ export default function AboutPage() {
 
                     <div className="sm:col-span-5 flex items-center justify-center p-2 overflow-visible">
                       <img
-                        src="/wedo-websitedevelomet.png"
+                        src="/aboutimage/wedo-websitedevelomet.png"
                         alt="Website & Software Development"
                         className="w-full h-auto max-h-60 sm:max-h-72 lg:max-h-80 object-contain pointer-events-none select-none transform scale-110 sm:scale-115 lg:scale-120 transition-transform duration-300 group-hover:scale-125 drop-shadow-sm"
                       />
@@ -655,7 +655,7 @@ export default function AboutPage() {
 
                     <div className="sm:col-span-5 flex items-center justify-center p-2 overflow-visible">
                       <img
-                        src="/wedo-appdeveloment.png"
+                        src="/aboutimage/wedo-appdeveloment.png"
                         alt="Mobile App Development"
                         className="w-full h-auto max-h-60 sm:max-h-72 lg:max-h-80 object-contain pointer-events-none select-none transform scale-110 sm:scale-115 lg:scale-120 transition-transform duration-300 group-hover:scale-125 drop-shadow-sm"
                       />
@@ -723,7 +723,7 @@ export default function AboutPage() {
 
                     <div className="sm:col-span-5 flex items-center justify-center p-2 overflow-visible">
                       <img
-                        src="/wedo-video edtting.png"
+                        src="/aboutimage/wedo-video edtting.png"
                         alt="Video Editing & Reels"
                         className="w-full h-auto max-h-60 sm:max-h-72 lg:max-h-80 object-contain pointer-events-none select-none transform scale-110 sm:scale-115 lg:scale-120 transition-transform duration-300 group-hover:scale-125 drop-shadow-sm"
                       />
@@ -791,7 +791,7 @@ export default function AboutPage() {
 
                     <div className="sm:col-span-5 flex items-center justify-center p-2 overflow-visible">
                       <img
-                        src="/wedo-socalmedia.png"
+                        src="/aboutimage/wedo-socalmedia.png"
                         alt="Social Media Management"
                         className="w-full h-auto max-h-60 sm:max-h-72 lg:max-h-80 object-contain pointer-events-none select-none transform scale-110 sm:scale-115 lg:scale-120 transition-transform duration-300 group-hover:scale-125 drop-shadow-sm"
                       />
@@ -830,7 +830,7 @@ export default function AboutPage() {
         <AnimatedSection delay={200} className="w-full mt-10 sm:mt-14">
           <div className="w-full flex items-center justify-center py-2 sm:py-4 overflow-hidden">
             <img
-              src="/OurWorkingProcess.png"
+              src="/aboutimage/OurWorkingProcess.png"
               alt="SiteMint 7-Step 3D Engineering Process Roadmap"
               className="w-full h-auto block pointer-events-none select-none drop-shadow-xs"
             />

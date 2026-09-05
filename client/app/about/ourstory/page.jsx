@@ -256,7 +256,7 @@ export default function OurStoryPage() {
           <div className="lg:col-span-6 flex flex-col items-center justify-center p-2 gap-6">
             <AnimatedSection delay={200}>
               <img
-                src="/we built.png"
+                src="/aboutimage/we built.png"
                 alt="SiteMint 4 Full-Service Digital Pillars Technology & Creative Graphic"
                 className="w-full max-w-lg lg:max-w-xl xl:max-w-2xl h-auto object-contain pointer-events-none select-none transition-transform duration-300 hover:scale-105"
               />
@@ -324,7 +324,7 @@ export default function OurStoryPage() {
             <AnimatedSection delay={150}>
               <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-md min-h-[280px] sm:min-h-[340px] group flex flex-col justify-end h-full">
                 <Image
-                  src="/about_story_mission.jpg"
+                  src="/aboutimage/about_story_mission.jpg"
                   alt="Next.js 15 & Flutter Engineering Architecture at SiteMint Studio"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"

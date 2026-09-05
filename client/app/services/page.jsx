@@ -48,7 +48,7 @@ export default function ServicesHubPage() {
       icon: Code2,
       iconBg: 'bg-blue-600',
       iconColor: 'text-blue-500',
-      image: '/wedo-websitedevelomet.png',
+      image: '/aboutimage/wedo-websitedevelomet.png',
       desc: 'We engineer fast, responsive, and SEO-optimized business websites, online stores, coaching admission portals, and custom cloud CRM systems.',
       bullets: [
         'Corporate & Small Business Websites (Home, About, Services, Contact)',
@@ -75,7 +75,7 @@ export default function ServicesHubPage() {
       icon: Smartphone,
       iconBg: 'bg-emerald-500',
       iconColor: 'text-emerald-500',
-      image: '/wedo-appdeveloment.png',
+      image: '/aboutimage/wedo-appdeveloment.png',
       desc: 'Production-ready Android (.APK) and iOS applications built with Flutter and React Native, featuring instant push notifications and cloud backend.',
       bullets: [
         'Android (.APK) Build & Google Play Store Publishing Ready',
@@ -102,7 +102,7 @@ export default function ServicesHubPage() {
       icon: Video,
       iconBg: 'bg-violet-600',
       iconColor: 'text-violet-500',
-      image: '/wedo-video edtting.png',
+      image: '/aboutimage/wedo-video edtting.png',
       desc: 'Turn casual social media viewers into paying customers with viral Instagram Reels, YouTube videos, and high-converting commercial video ads.',
       bullets: [
         'Instagram Reels & YouTube Shorts with Dynamic Subtitles & SFX',
@@ -129,7 +129,7 @@ export default function ServicesHubPage() {
       icon: Share2,
       iconBg: 'bg-teal-500',
       iconColor: 'text-teal-500',
-      image: '/wedo-socalmedia.png',
+      image: '/aboutimage/wedo-socalmedia.png',
       desc: 'Comprehensive multi-channel social media management, daily creative post designing, community engagement, and targeted Meta advertising.',
       bullets: [
         'Complete Management Across 7-8 Platforms (Instagram, FB, LinkedIn, X, GMB)',
