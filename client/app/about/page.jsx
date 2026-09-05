@@ -893,15 +893,26 @@ export default function AboutPage() {
             <div className="md:col-span-6 space-y-4">
               <AnimatedSection delay={150}>
                 <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-2xs space-y-3">
-                  <div className="text-xs font-bold text-[#3B82F6] uppercase tracking-wider flex items-center gap-2">
-                    <Award className="w-4 h-4" /> Focused Engineering Team
+                  <div className="text-xs font-extrabold text-violet-700 uppercase tracking-wider flex items-center gap-2">
+                    <Award className="w-4 h-4 text-violet-600" /> Dedicated 8-Member Team
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                    Built by a focused team of developers and creative professionals, depending on project requirements.
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
+                    Our team includes Project Managers, Full Stack Developers, UI Designers, Video Editors, and Social Media Strategists working seamlessly.
                   </p>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    We assign dedicated software engineers, mobile UI designers, and video editors based on your exact scope—ensuring zero bloated management overheads.
+                    We assign dedicated specialists based on your exact project scope—ensuring top quality and fast turnaround.
                   </p>
+
+                  <div className="pt-3">
+                    <Link
+                      href="/team"
+                      className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-600 hover:from-violet-500 hover:to-teal-500 text-white font-extrabold text-xs sm:text-sm inline-flex items-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+                    >
+                      <Users className="w-4 h-4 text-violet-200" />
+                      <span>Explore Our Complete 8-Member Team</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                 </div>
               </AnimatedSection>
             </div>
