@@ -19,7 +19,9 @@
   --text-muted: #64748b;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -46,12 +48,17 @@ body {
   letter-spacing: -0.01em;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-pre, code {
+pre,
+code {
   max-width: 100%;
   overflow-x: auto;
   word-break: break-word;
@@ -82,6 +89,7 @@ pre, code {
 .hover-lift {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .hover-lift:hover {
   transform: translateY(-4px);
 }
@@ -89,6 +97,7 @@ pre, code {
 .hover-glow {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .hover-glow:hover {
   transform: translateY(-3px);
   border-color: #8b5cf6;
@@ -112,28 +121,37 @@ pre, code {
 
 /* Keyframe Animations */
 @keyframes float-slow {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-8px);
   }
 }
 
 @keyframes float-reverse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(6px);
   }
 }
 
 @keyframes pulse-subtle {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.75;
     transform: scale(0.96);
@@ -165,12 +183,10 @@ pre, code {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(
-    60deg,
-    rgba(255, 255, 255, 0) 20%,
-    rgba(255, 255, 255, 0.25) 50%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: linear-gradient(60deg,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0.25) 50%,
+      rgba(255, 255, 255, 0) 80%);
   transform: translateX(-100%) rotate(35deg);
   transition: transform 0.75s ease-in-out;
 }
@@ -257,13 +273,16 @@ pre, code {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f5f9;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }

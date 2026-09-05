@@ -1,19 +1,19 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  Target, 
-  ArrowRight, 
-  ShieldCheck, 
-  CheckCircle2, 
-  Heart, 
-  Sparkles, 
-  MessageCircle, 
-  Code2, 
-  Users, 
-  Zap, 
-  Layers, 
-  Lock, 
-  Headphones, 
+import {
+  Target,
+  ArrowRight,
+  ShieldCheck,
+  CheckCircle2,
+  Heart,
+  Sparkles,
+  MessageCircle,
+  Code2,
+  Users,
+  Zap,
+  Layers,
+  Lock,
+  Headphones,
   Calculator,
   Award,
   Globe,
@@ -157,16 +157,20 @@ export default function OurStoryPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
-      {/* 1. HERO SECTION */}
-      <section className="w-full bg-[#0B1528] text-white py-14 sm:py-20 relative overflow-hidden border-b border-blue-900/40">
+
+      {/* 1. HERO SECTION (Eye-Soothing Home-Matched Soft Dark Gradient Layout) */}
+      <section className="w-full bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#0F172A] text-white py-14 sm:py-20 relative overflow-hidden border-b border-violet-900/30">
+        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
+          <div className="absolute -top-10 left-1/3 w-72 h-72 bg-violet-600/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-cyan-500/15 rounded-full blur-3xl" />
+        </div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center sm:text-left">
           <AnimatedSection delay={0}>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/30 text-[#3B82F6] text-xs font-extrabold uppercase tracking-wider mb-4">
-              <Sparkles className="w-3.5 h-3.5 text-[#3B82F6]" /> The SiteMint Origin Story
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-violet-500/10 border border-violet-400/30 text-violet-300 text-xs font-extrabold uppercase tracking-wider mb-4">
+              <Sparkles className="w-3.5 h-3.5 text-violet-400" /> The SiteMint Origin Story
             </div>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4 font-sans">
-              Why We Started <span className="text-[#3B82F6]">SiteMint</span>
+              Why We Started <span className="gradient-text-hero">SiteMint</span>
             </h1>
             <p className="text-slate-300 text-sm sm:text-lg max-w-3xl leading-relaxed font-normal mb-8">
               Empowering Indian businesses with Next.js 15 web development, native Flutter mobile apps, high-impact video editing & Instagram reels, and full-scale social media management with practical pricing and 100% code ownership.
@@ -184,9 +188,9 @@ export default function OurStoryPage() {
 
               <Link
                 href="/calculator"
-                className="px-6 py-3 rounded-xl bg-blue-950/90 border border-blue-700/60 hover:bg-blue-900 text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition"
+                className="px-6 py-3 rounded-xl bg-violet-950/90 border border-violet-700/60 hover:bg-violet-900 text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition"
               >
-                <Calculator className="w-4 h-4 text-blue-400" />
+                <Calculator className="w-4 h-4 text-violet-300" />
                 <span>Get Instant Price Estimate</span>
               </Link>
 
@@ -207,7 +211,7 @@ export default function OurStoryPage() {
 
         {/* SECTION A: OUR 4 FULL-SERVICE DIGITAL PILLARS */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
+
           <div className="lg:col-span-6 space-y-6">
             <div>
               <div className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#3B82F6] uppercase tracking-wider mb-2">
@@ -260,18 +264,18 @@ export default function OurStoryPage() {
                 alt="SiteMint 4 Full-Service Digital Pillars Technology & Creative Graphic"
                 className="w-full max-w-lg lg:max-w-xl xl:max-w-2xl h-auto object-contain pointer-events-none select-none transition-transform duration-300 hover:scale-105"
               />
-              
+
               <div className="flex flex-wrap items-center justify-center gap-3 w-full mt-6">
-                <Link 
-                  href="/services" 
+                <Link
+                  href="/services"
                   className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-extrabold flex items-center gap-2 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
                 >
                   <Layers className="w-4 h-4 text-blue-400" />
                   <span>View Full Services Breakdown</span>
                   <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
                 </Link>
-                <Link 
-                  href="/calculator" 
+                <Link
+                  href="/calculator"
                   className="px-5 py-2.5 rounded-xl bg-blue-50 border border-blue-200/90 text-[#3B82F6] hover:bg-blue-100 hover:border-blue-300 text-xs sm:text-sm font-extrabold flex items-center gap-2 shadow-2xs hover:shadow-sm transition-all duration-300 transform hover:-translate-y-0.5"
                 >
                   <Calculator className="w-4 h-4 text-[#3B82F6]" />
@@ -285,12 +289,12 @@ export default function OurStoryPage() {
 
         {/* SECTION B: FOUNDER STATEMENT & STORY MISSION IMAGE */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-          
+
           <div className="lg:col-span-6">
             <AnimatedSection delay={0}>
               <div className="p-7 sm:p-9 rounded-3xl bg-gradient-to-br from-white via-blue-50/30 to-white border border-blue-200/80 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 relative overflow-hidden flex flex-col justify-between group h-full">
                 <div className="h-1.5 absolute top-0 left-0 right-0 bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-600" />
-                
+
                 <div className="relative z-10">
                   <div className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#3B82F6] uppercase tracking-wider mb-4 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/60">
                     <Target className="w-4 h-4 text-[#3B82F6]" /> Founding Purpose & Mission

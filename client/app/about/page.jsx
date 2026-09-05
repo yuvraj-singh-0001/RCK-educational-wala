@@ -242,67 +242,65 @@ export default function AboutPage() {
   return (
     <div className="w-full max-w-full overflow-hidden bg-white text-slate-900 font-sans">
 
-      {/* 1. HERO SECTION (Compact Hirelogic Exact Wave Banner Layout) */}
-      <section className="relative w-full min-h-[300px] sm:min-h-[340px] lg:min-h-[380px] bg-[#0B1528] text-white overflow-hidden flex items-center">
+      {/* 1. HERO SECTION (Eye-Soothing Home-Matched Soft Dark Gradient Layout) */}
+      <section className="relative w-full min-h-[300px] sm:min-h-[340px] lg:min-h-[380px] bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#0F172A] text-white overflow-hidden flex items-center">
 
-        {/* Background Dot Matrix Pattern Decoration */}
-        <div className="absolute bottom-4 left-6 sm:left-12 lg:left-16 opacity-20 pointer-events-none hidden sm:block z-10">
-          <div className="grid grid-cols-8 gap-2">
-            {[...Array(24)].map((_, i) => (
-              <div key={i} className="w-1.5 h-1.5 rounded-full bg-blue-400" />
-            ))}
-          </div>
+        {/* Ambient Floating Color Glow Orbs */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
+          <div className="absolute -top-10 left-1/3 w-72 h-72 bg-violet-600/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-cyan-500/15 rounded-full blur-3xl" />
         </div>
 
         {/* Full-Height Right Photo */}
-        <div className="absolute inset-y-0 right-0 w-full lg:w-[55%] h-full">
+        <div className="absolute inset-y-0 right-0 w-full lg:w-[55%] h-full z-0">
           <img
             src="/aboutimage/about_hero_client_deal.jpg"
             alt="SiteMint Client Partnership & Workspace"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center opacity-90"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B1528]/40 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent pointer-events-none" />
         </div>
 
-        {/* SVG Curve Mask & Glowing Blue Stroke Line */}
+        {/* SVG Curve Mask & Glowing Violet-Cyan Stroke Line */}
         <svg
-          className="absolute inset-0 w-full h-full text-[#0B1528] pointer-events-none z-10 hidden lg:block"
+          className="absolute inset-0 w-full h-full text-[#0F172A] pointer-events-none z-10 hidden lg:block"
           preserveAspectRatio="none"
           viewBox="0 0 1000 500"
         >
           <path
             d="M 0,0 L 520,0 C 380,120 380,380 780,500 L 0,500 Z"
-            fill="#0B1528"
+            fill="#0F172A"
           />
           <path
             d="M 520,0 C 380,120 380,380 780,500"
             fill="none"
-            stroke="#3B82F6"
-            strokeWidth="6"
+            stroke="#8B5CF6"
+            strokeWidth="5"
             vectorEffect="non-scaling-stroke"
+            className="opacity-70"
           />
         </svg>
 
         {/* Mobile/Tablet Overlay */}
-        <div className="absolute inset-0 bg-[#0B1528]/85 lg:bg-transparent pointer-events-none z-10 lg:hidden" />
+        <div className="absolute inset-0 bg-[#0F172A]/90 lg:bg-transparent pointer-events-none z-10 lg:hidden" />
 
         {/* Left Content Area Container (Compact Padding & Spacing) */}
         <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-8 lg:py-10">
           <div className="max-w-xl lg:max-w-2xl space-y-4">
 
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/90 border border-blue-500/40 text-blue-400 text-xs font-bold uppercase tracking-wider w-fit shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-blue-400" /> Web Development & Creative Technology Studio
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-violet-500/10 border border-violet-400/30 text-violet-300 text-xs font-bold uppercase tracking-wider w-fit shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-violet-400" /> Web Development & Creative Technology Studio
             </div>
 
             <div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight font-sans">
                 About <br />
-                <span className="text-[#3B82F6]">SiteMint</span>
+                <span className="gradient-text-hero">SiteMint</span>
               </h1>
-              <div className="w-14 h-1 bg-[#3B82F6] rounded-full mt-3 mb-3" />
+              <div className="w-16 h-1 bg-gradient-to-r from-violet-500 via-indigo-500 to-teal-400 rounded-full mt-3 mb-3" />
             </div>
 
-            <p className="text-sm sm:text-lg font-bold text-slate-100 tracking-wide leading-snug">
+            <p className="text-sm sm:text-lg font-bold text-slate-200 tracking-wide leading-snug">
               Smarter Solutions. Stronger Operations. Sustainable Growth.
             </p>
 
@@ -310,11 +308,11 @@ export default function AboutPage() {
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
               <Link
                 href="/projects"
-                className="px-5 py-2.5 rounded-xl bg-[#3B82F6] hover:bg-blue-600 text-white text-xs sm:text-sm font-bold flex items-center gap-2 shadow-md transition-all transform hover:-translate-y-0.5"
+                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white text-xs sm:text-sm font-bold flex items-center gap-2 shadow-md shadow-violet-900/30 transition-all transform hover:-translate-y-0.5"
               >
-                <Briefcase className="w-4 h-4" />
+                <Briefcase className="w-4 h-4 text-violet-200" />
                 <span>View Our Projects</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-violet-200" />
               </Link>
 
               <a
@@ -330,13 +328,13 @@ export default function AboutPage() {
 
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-slate-400 font-semibold pt-2 border-t border-slate-800/80">
               <span className="flex items-center gap-1.5 text-slate-300">
-                <CheckCircle2 className="w-4 h-4 text-blue-400" /> Modern Tech Stack
+                <CheckCircle2 className="w-4 h-4 text-violet-400" /> Modern Tech Stack
               </span>
               <span className="flex items-center gap-1.5 text-slate-300">
-                <CheckCircle2 className="w-4 h-4 text-blue-400" /> Practical Indian Pricing
+                <CheckCircle2 className="w-4 h-4 text-violet-400" /> Practical Indian Pricing
               </span>
               <span className="flex items-center gap-1.5 text-slate-300">
-                <CheckCircle2 className="w-4 h-4 text-blue-400" /> 100% Code Ownership
+                <CheckCircle2 className="w-4 h-4 text-violet-400" /> 100% Code Ownership
               </span>
             </div>
 
@@ -364,21 +362,21 @@ export default function AboutPage() {
             <div className="lg:col-span-6 space-y-5">
               <AnimatedSection direction="right" delay={150}>
                 <div>
-                  <div className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#3B82F6] uppercase tracking-wider mb-2">
-                    <Globe className="w-4 h-4" /> Full-Service Creative Tech Studio
+                  <div className="inline-flex items-center gap-1.5 text-xs font-extrabold text-violet-800 uppercase tracking-wider mb-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 shadow-2xs">
+                    <Globe className="w-4 h-4 text-violet-600" /> Full-Service Creative Tech Studio
                   </div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
-                    We Build <span className="text-[#3B82F6]">Digital Solutions</span> That Help Businesses Grow
+                    We Build <span className="gradient-text-hero">Digital Solutions</span> That Help Businesses Grow
                   </h2>
-                  <div className="w-16 h-1 bg-[#3B82F6] rounded-full mt-3 mb-4" />
+                  <div className="w-16 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mt-3 mb-4" />
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                   SiteMint is a web development and creative technology studio helping businesses build professional websites, mobile applications, high-impact video editing & Instagram Reels, and full-scale social media management with practical pricing, modern technology, and reliable support.
                 </p>
 
-                <div className="p-4 sm:p-5 rounded-2xl bg-blue-50/80 border border-blue-100/90 text-blue-950">
-                  <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#3B82F6] block mb-1">
+                <div className="p-4 sm:p-5 rounded-2xl bg-violet-50/80 border border-violet-100/90 text-violet-950">
+                  <span className="text-[11px] uppercase tracking-wider font-extrabold text-violet-800 block mb-1">
                     Our Core Commitment
                   </span>
                   <p className="text-sm sm:text-base font-extrabold text-slate-900 leading-snug">
@@ -391,14 +389,14 @@ export default function AboutPage() {
                     href="/services"
                     className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold flex items-center gap-2 transition"
                   >
-                    <Layers className="w-4 h-4 text-blue-400" />
+                    <Layers className="w-4 h-4 text-violet-400" />
                     <span>Explore Capabilities</span>
                   </Link>
                   <Link
                     href="/calculator"
-                    className="px-4 py-2 rounded-xl bg-blue-50 border border-blue-200 text-[#3B82F6] hover:bg-blue-100 text-xs font-bold flex items-center gap-2 transition"
+                    className="px-4 py-2 rounded-xl bg-violet-50 border border-violet-200 text-violet-800 hover:bg-violet-100 text-xs font-bold flex items-center gap-2 transition"
                   >
-                    <Calculator className="w-4 h-4 text-[#3B82F6]" />
+                    <Calculator className="w-4 h-4 text-violet-600" />
                     <span>Calculate Instant Price</span>
                   </Link>
                 </div>
@@ -412,19 +410,19 @@ export default function AboutPage() {
       {/* 3. OUR STORY & MISSION (Clean Reference Screenshot Match Layout) */}
       <section id="story" className="py-14 sm:py-20 bg-white border-b border-slate-100 scroll-mt-16 text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           {/* Top Story & Creative Image Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
+
             {/* Left Column: Comprehensive Studio Story Text */}
             <div className="lg:col-span-6 space-y-4">
               <AnimatedSection direction="left" delay={0}>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#3B82F6] text-xs font-extrabold uppercase tracking-wider shadow-2xs">
-                  <Target className="w-4 h-4 text-[#3B82F6]" /> Our Origin & Journey
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider shadow-2xs">
+                  <Target className="w-4 h-4 text-violet-600" /> Our Origin & Journey
                 </div>
 
                 <h2 className="text-2xl sm:text-4xl font-black text-slate-900 leading-tight mt-3">
-                  Our Story & <span className="text-[#3B82F6]">Vision</span>
+                  Our Story & <span className="gradient-text-hero">Vision</span>
                 </h2>
 
                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium mt-3">
@@ -442,7 +440,7 @@ export default function AboutPage() {
                 <div className="pt-3 flex flex-wrap items-center gap-4">
                   <Link
                     href="/about/ourstory"
-                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold text-[#3B82F6] hover:text-blue-700 group"
+                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold text-violet-700 hover:text-violet-900 group"
                   >
                     <span>Read Complete Founding Story</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -474,10 +472,10 @@ export default function AboutPage() {
 
           </div>
 
-          {/* Bottom Blue Our Mission Banner Card (Exact Screenshot Match) */}
+          {/* Bottom Our Mission Banner Card (Eye-Soothing Soft Gradient) */}
           <AnimatedSection delay={100}>
-            <div className="relative w-full p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#3B82F6] via-blue-600 to-indigo-600 text-white shadow-xl overflow-hidden text-center space-y-4">
-              
+            <div className="relative w-full p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-violet-700 via-indigo-700 to-slate-900 text-white shadow-xl border border-violet-500/20 overflow-hidden text-center space-y-4">
+
               {/* Subtle Tech Pattern Background Overlay */}
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
 
@@ -486,7 +484,7 @@ export default function AboutPage() {
                   Our Mission
                 </h3>
 
-                <p className="text-xs sm:text-base text-blue-50 leading-relaxed font-medium max-w-2xl mx-auto">
+                <p className="text-xs sm:text-base text-violet-100 leading-relaxed font-medium max-w-2xl mx-auto">
                   To provide complete digital, software, video media, and branding solutions that empower businesses to grow, connect, and thrive all under one creative roof.
                 </p>
 
@@ -495,7 +493,7 @@ export default function AboutPage() {
                     href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20connect%20for%20a%20project."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-white text-white font-extrabold text-xs sm:text-sm hover:bg-white hover:text-[#3B82F6] transition-all transform hover:scale-105 shadow-md"
+                    className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-white text-white font-extrabold text-xs sm:text-sm hover:bg-white hover:text-violet-700 transition-all transform hover:scale-105 shadow-md"
                   >
                     <span>Reach Us</span>
                     <ArrowRight className="w-4 h-4" />
@@ -511,29 +509,29 @@ export default function AboutPage() {
       {/* 3. WHAT WE DO (4 Clear Service Cards matching Reference Screenshot) */}
       <section id="services" className="py-14 sm:py-20 bg-slate-50/70 border-b border-slate-200 scroll-mt-16 text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-[#3B82F6] text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
-              <Sparkles className="w-3.5 h-3.5 text-[#3B82F6]" /> — CORE CAPABILITIES —
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
+              <Sparkles className="w-3.5 h-3.5 text-violet-600" /> — CORE CAPABILITIES —
             </div>
             <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 mb-3">
-              What We <span className="text-[#3B82F6]">Do</span>
+              What We <span className="gradient-text-hero">Do</span>
             </h2>
             <p className="text-slate-600 text-xs sm:text-base font-medium max-w-2xl mx-auto leading-relaxed">
               End-to-end digital services engineered to build brand authority, capture leads, and grow revenue.
             </p>
-            <div className="w-14 h-1 bg-[#3B82F6] rounded-full mx-auto mt-4" />
+            <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-4" />
           </div>
 
           {/* 4 Cards Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-            
+
             {/* Card 01: Website & Software Development */}
             <AnimatedSection delay={0}>
               <div className="bg-white p-5 sm:p-6 rounded-3xl border border-blue-200/90 shadow-xs hover:shadow-lg hover:border-blue-400 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full">
                 <div className="w-8 h-8 absolute top-0 right-0 border-t-2 border-r-2 border-blue-400/50 rounded-tr-3xl pointer-events-none" />
-                
+
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-md font-bold shrink-0">
@@ -601,7 +599,7 @@ export default function AboutPage() {
             <AnimatedSection delay={130}>
               <div className="bg-white p-5 sm:p-6 rounded-3xl border border-emerald-200/90 shadow-xs hover:shadow-lg hover:border-emerald-400 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full">
                 <div className="w-8 h-8 absolute top-0 right-0 border-t-2 border-r-2 border-emerald-400/50 rounded-tr-3xl pointer-events-none" />
-                
+
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-2xl bg-emerald-500 text-white flex items-center justify-center shadow-md font-bold shrink-0">
@@ -669,7 +667,7 @@ export default function AboutPage() {
             <AnimatedSection delay={260}>
               <div className="bg-white p-5 sm:p-6 rounded-3xl border border-violet-200/90 shadow-xs hover:shadow-lg hover:border-violet-400 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full">
                 <div className="w-8 h-8 absolute top-0 right-0 border-t-2 border-r-2 border-violet-400/50 rounded-tr-3xl pointer-events-none" />
-                
+
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-2xl bg-violet-600 text-white flex items-center justify-center shadow-md font-bold shrink-0">
@@ -737,7 +735,7 @@ export default function AboutPage() {
             <AnimatedSection delay={390}>
               <div className="bg-white p-5 sm:p-6 rounded-3xl border border-teal-200/90 shadow-xs hover:shadow-lg hover:border-teal-400 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full">
                 <div className="w-8 h-8 absolute top-0 right-0 border-t-2 border-r-2 border-teal-400/50 rounded-tr-3xl pointer-events-none" />
-                
+
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-2xl bg-teal-500 text-white flex items-center justify-center shadow-md font-bold shrink-0">
@@ -808,18 +806,19 @@ export default function AboutPage() {
       {/* 4. OUR WORKING PROCESS (8 Cards Exact Reference Match) */}
       <section id="process" className="py-14 sm:py-20 bg-slate-50/50 border-b border-slate-100 scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Header Badge & Title */}
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#3B82F6] text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
-              <Clock className="w-3.5 h-3.5 text-[#3B82F6]" /> TRANSPARENT ENGINEERING SPRINT
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
+              <Clock className="w-3.5 h-3.5 text-violet-600" /> TRANSPARENT ENGINEERING SPRINT
             </div>
             <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 mb-3">
-              Our <span className="text-[#3B82F6]">Working Process</span>
+              Our <span className="gradient-text-hero">Working Process</span>
             </h2>
             <p className="text-slate-600 text-xs sm:text-base font-medium leading-relaxed max-w-2xl mx-auto">
               Demonstrating our clear step-by-step workflow builds complete trust and clarity before project launch.
             </p>
+            <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-4" />
           </div>
 
           {/* 8 Cards 2x4 Staggered Animated Grid */}
@@ -842,15 +841,16 @@ export default function AboutPage() {
       <section id="team" className="py-14 sm:py-20 bg-slate-50/70 border-b border-slate-200 scroll-mt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#3B82F6] text-xs font-bold uppercase tracking-wider mb-3 shadow-2xs">
-              <Users className="w-3.5 h-3.5 text-[#3B82F6]" /> People Behind SiteMint
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
+              <Users className="w-3.5 h-3.5 text-violet-600" /> People Behind SiteMint
             </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-2">
-              Meet the <span className="text-[#3B82F6]">Engineering Team</span>
+            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 mb-2">
+              Meet the <span className="gradient-text-hero">Engineering Team</span>
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm">
               Genuine engineers dedicated to building clean, scalable software for ambitious businesses.
             </p>
+            <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-3" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center max-w-4xl mx-auto">
@@ -913,15 +913,16 @@ export default function AboutPage() {
       <section className="py-14 sm:py-20 bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#3B82F6] text-xs font-bold uppercase tracking-wider mb-3 shadow-2xs">
-              <Cpu className="w-3.5 h-3.5 text-[#3B82F6]" /> Modern Tech Ecosystem
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
+              <Cpu className="w-3.5 h-3.5 text-violet-600" /> Modern Tech Ecosystem
             </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-2">
-              Technology We <span className="text-[#3B82F6]">Use</span>
+            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 mb-2">
+              Technology We <span className="gradient-text-hero">Use</span>
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm">
               We leverage modern, battle-tested technology stacks for high-performance, secure digital software.
             </p>
+            <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-3" />
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
@@ -943,15 +944,16 @@ export default function AboutPage() {
       <section className="py-14 sm:py-20 bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#3B82F6] text-xs font-bold uppercase tracking-wider mb-3 shadow-2xs">
-              <Briefcase className="w-3.5 h-3.5 text-[#3B82F6]" /> Featured Work Showcase
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
+              <Briefcase className="w-3.5 h-3.5 text-violet-600" /> Featured Work Showcase
             </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-2">
-              Recent <span className="text-[#3B82F6]">Projects Showcase</span>
+            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 mb-2">
+              Recent <span className="gradient-text-hero">Projects Showcase</span>
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm">
               Explore real digital platforms and working applications engineered by SiteMint Studio.
             </p>
+            <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-3" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1017,12 +1019,13 @@ export default function AboutPage() {
       <section className="py-14 sm:py-20 bg-slate-50/70 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3 shadow-2xs">
-              <Heart className="w-3.5 h-3.5 text-emerald-600" /> Long-Term Client Relationships
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
+              <Heart className="w-3.5 h-3.5 text-violet-600" /> Long-Term Client Relationships
             </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-2">
-              Client Trust & <span className="text-[#3B82F6]">Relationships</span>
+            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 mb-2">
+              Client Trust & <span className="gradient-text-hero">Relationships</span>
             </h2>
+            <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-3 mb-4" />
 
             <div className="p-4 rounded-2xl bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm font-medium max-w-2xl mx-auto leading-relaxed shadow-2xs">
               &ldquo;We are building long-term relationships through transparent communication, reliable delivery and practical digital solutions.&rdquo;
@@ -1176,18 +1179,18 @@ export default function AboutPage() {
                       href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20discuss%20a%20new%20project."
                       target="_blank"
                       rel="noopener noreferrer"
-                    className="btn-whatsapp w-full justify-center text-xs py-3 font-bold shadow-md"
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    <span>Direct WhatsApp Inquiry</span>
-                  </a>
+                      className="btn-whatsapp w-full justify-center text-xs py-3 font-bold shadow-md"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      <span>Direct WhatsApp Inquiry</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </AnimatedSection>
-      </div>
-    </section>
+          </AnimatedSection>
+        </div>
+      </section>
 
       {/* FAQs */}
       <FaqSection />
