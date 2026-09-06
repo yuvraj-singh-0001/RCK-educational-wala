@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 import {
   Users,
   Sparkles,
@@ -35,42 +35,54 @@ import {
   ClipboardCheck,
   Rocket,
   Trophy,
-  HeartHandshake
-} from 'lucide-react';
-import { InstagramIcon, LinkedInIcon, FacebookIcon } from '../../components/SocialIcons';
-import FaqSection from '../../components/FaqSection';
-import WorkingProcessGrid from '../../components/WorkingProcessGrid';
-import AnimatedSection from '../../components/AnimatedSection';
+  HeartHandshake,
+  Cloud,
+  BarChart2,
+} from "lucide-react";
+import {
+  InstagramIcon,
+  LinkedInIcon,
+  FacebookIcon,
+} from "../../components/SocialIcons";
+import FaqSection from "../../components/FaqSection";
+import WorkingProcessGrid from "../../components/WorkingProcessGrid";
+import AnimatedSection from "../../components/AnimatedSection";
 
 export const metadata = {
-  title: 'About SiteMint | Web Development & Creative Technology Studio in India',
-  description: 'SiteMint is a web development and creative technology studio helping businesses build professional websites, mobile applications, video editing & Reels, and social media management with practical pricing, modern technology and reliable support.',
+  title: "About SiteMint | Expert Web & App Development Studio India",
+  description:
+    "SiteMint is a leading web and app development studio. We build scalable digital solutions, cloud architectures, and provide social media management for ambitious businesses.",
   keywords: [
-    'about SiteMint studio',
-    'Yuvraj Singh SiteMint founder',
-    'web development studio india',
-    'mobile app development studio',
-    'video editing and instagram reels studio',
-    'social media management company india',
-    'transparent web development company india',
-    'Next.js and Flutter studio',
-    'affordable website developers india',
-    'SiteMint'
+    "about SiteMint studio",
+    "Yuvraj Singh SiteMint founder",
+    "web development studio india",
+    "mobile app development studio",
+    "full stack developer",
+    "cloud architecture management",
+    "app and web development",
+    "video editing and instagram reels studio",
+    "social media management company india",
+    "transparent web development company india",
+    "Next.js and Flutter studio",
+    "affordable website developers india",
+    "SiteMint",
   ],
   alternates: {
-    canonical: 'https://sitemint.in/about',
+    canonical: "https://sitemint.in/about",
   },
   openGraph: {
-    title: 'About SiteMint | Web Development & Creative Technology Studio',
-    description: 'We build digital solutions that help businesses grow with modern technology, practical pricing, and 100% code ownership.',
-    url: 'https://sitemint.in/about',
-    siteName: 'SiteMint',
-    type: 'website',
+    title: "About SiteMint | Web Development & Creative Technology Studio",
+    description:
+      "We build digital solutions that help businesses grow with modern technology, practical pricing, and 100% code ownership.",
+    url: "https://sitemint.in/about",
+    siteName: "SiteMint",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'About SiteMint | Web Development & Creative Technology Studio',
-    description: 'Practical pricing, modern technology, and reliable support for ambitious Indian businesses.',
+    card: "summary_large_image",
+    title: "About SiteMint | Web Development & Creative Technology Studio",
+    description:
+      "Practical pricing, modern technology, and reliable support for ambitious Indian businesses.",
   },
 };
 
@@ -78,173 +90,234 @@ export default function AboutPage() {
   // 3. What We Do Cards
   const coreServices = [
     {
-      title: 'Website & Software Development',
-      desc: 'High-speed Next.js 15 business sites, e-commerce stores, coaching portals, and custom web applications.',
-      useFor: 'Best for local shops, startups, coaching institutes & service businesses.',
+      title: "Website & Software Development",
+      desc: "High-speed Next.js 15 business sites, e-commerce stores, coaching portals, and custom web applications.",
+      useFor:
+        "Best for local shops, startups, coaching institutes & service businesses.",
       icon: Globe,
-      iconColor: 'text-violet-700 bg-violet-100',
-      link: '/services/website-development',
+      iconColor: "text-violet-700 bg-violet-100",
+      link: "/services/website-development",
     },
     {
-      title: 'Mobile App Development',
-      desc: 'Native-feel Flutter mobile apps for Android & iOS with phone OTP login, push alerts, and 0% UPI checkout.',
-      useFor: 'Best for retailers, food delivery, on-demand booking & edtech platforms.',
+      title: "Mobile App Development",
+      desc: "Native-feel Flutter mobile apps for Android & iOS with phone OTP login, push alerts, and 0% UPI checkout.",
+      useFor:
+        "Best for retailers, food delivery, on-demand booking & edtech platforms.",
       icon: Smartphone,
-      iconColor: 'text-pink-700 bg-pink-100',
-      link: '/services/mobile-app-development',
+      iconColor: "text-pink-700 bg-pink-100",
+      link: "/services/mobile-app-development",
     },
     {
-      title: 'Video Editing & Reels',
-      desc: 'Viral Instagram Reels, YouTube Shorts, commercial business video ads, and dynamic animated subtitles.',
-      useFor: 'Best for creators, coaches, local brands & e-commerce products.',
+      title: "Video Editing & Reels",
+      desc: "Viral Instagram Reels, YouTube Shorts, commercial business video ads, and dynamic animated subtitles.",
+      useFor: "Best for creators, coaches, local brands & e-commerce products.",
       icon: Video,
-      iconColor: 'text-rose-700 bg-rose-100',
-      link: '/services/video-editing',
+      iconColor: "text-rose-700 bg-rose-100",
+      link: "/services/video-editing",
     },
     {
-      title: 'Social Media Management',
-      desc: 'Multi-platform 7-8 channel management, daily graphic posts, SEO captions, DM inquiry routing & Meta Ads.',
-      useFor: 'Best for local businesses & service providers scaling brand reach.',
+      title: "Social Media Management",
+      desc: "Multi-platform 7-8 channel management, daily graphic posts, SEO captions, DM inquiry routing & Meta Ads.",
+      useFor:
+        "Best for local businesses & service providers scaling brand reach.",
       icon: Share2,
-      iconColor: 'text-emerald-700 bg-emerald-100',
-      link: '/services/social-media-management',
+      iconColor: "text-emerald-700 bg-emerald-100",
+      link: "/services/social-media-management",
     },
   ];
 
   // 4. Working Process (7 Steps + Guaranteed Result Card)
   const workingProcess = [
     {
-      step: '01',
-      stepBadge: 'bg-blue-100/90 text-blue-600',
-      title: 'Requirement',
-      desc: 'Understanding your business goals, web & mobile app scope, video edit styles, and social media branding over a clear call.',
+      step: "01",
+      stepBadge: "bg-blue-100/90 text-blue-600",
+      title: "Requirement",
+      desc: "Understanding your business goals, web & mobile app scope, video edit styles, and social media branding over a clear call.",
       icon: FileSearch,
-      iconBg: 'from-blue-500 to-sky-400',
-      arrowColor: 'bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white',
-      cardStyle: 'border border-sky-100 border-b-4 border-b-[#00A3E0] shadow-md shadow-sky-100/50 hover:shadow-xl hover:shadow-sky-200/70',
+      iconBg: "from-blue-500 to-sky-400",
+      arrowColor:
+        "bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white",
+      cardStyle:
+        "border border-sky-100 border-b-4 border-b-[#00A3E0] shadow-md shadow-sky-100/50 hover:shadow-xl hover:shadow-sky-200/70",
     },
     {
-      step: '02',
-      stepBadge: 'bg-violet-100/90 text-violet-600',
-      title: 'Planning',
-      desc: 'Finalizing required features, UI wireframes, video edit scripts, social media posting schedule, and itemized budget.',
+      step: "02",
+      stepBadge: "bg-violet-100/90 text-violet-600",
+      title: "Planning",
+      desc: "Finalizing required features, UI wireframes, video edit scripts, social media posting schedule, and itemized budget.",
       icon: CalendarRange,
-      iconBg: 'from-violet-500 to-purple-400',
-      arrowColor: 'bg-violet-50 text-violet-600 group-hover:bg-violet-600 group-hover:text-white',
-      cardStyle: 'border border-violet-100 border-b-4 border-b-violet-400 shadow-md shadow-violet-100/50 hover:shadow-xl hover:shadow-violet-200/70',
+      iconBg: "from-violet-500 to-purple-400",
+      arrowColor:
+        "bg-violet-50 text-violet-600 group-hover:bg-violet-600 group-hover:text-white",
+      cardStyle:
+        "border border-violet-100 border-b-4 border-b-violet-400 shadow-md shadow-violet-100/50 hover:shadow-xl hover:shadow-violet-200/70",
     },
     {
-      step: '03',
-      stepBadge: 'bg-emerald-100/90 text-emerald-600',
-      title: 'Design',
-      desc: 'Creating mobile-first web & app UI/UX, high-converting social media post graphics, carousels, and video thumbnails.',
+      step: "03",
+      stepBadge: "bg-emerald-100/90 text-emerald-600",
+      title: "Design",
+      desc: "Creating mobile-first web & app UI/UX, high-converting social media post graphics, carousels, and video thumbnails.",
       icon: Layout,
-      iconBg: 'from-emerald-500 to-teal-400',
-      arrowColor: 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white',
-      cardStyle: 'border border-emerald-100 border-b-4 border-b-emerald-400 shadow-md shadow-emerald-100/50 hover:shadow-xl hover:shadow-emerald-200/70',
+      iconBg: "from-emerald-500 to-teal-400",
+      arrowColor:
+        "bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white",
+      cardStyle:
+        "border border-emerald-100 border-b-4 border-b-emerald-400 shadow-md shadow-emerald-100/50 hover:shadow-xl hover:shadow-emerald-200/70",
     },
     {
-      step: '04',
-      stepBadge: 'bg-amber-100/90 text-amber-700',
-      title: 'Development & Media',
-      desc: 'Building clean Next.js & Flutter code, alongside editing 4K Instagram Reels, YouTube videos, and high-ROI ad media.',
+      step: "04",
+      stepBadge: "bg-amber-100/90 text-amber-700",
+      title: "Development & Media",
+      desc: "Building clean Next.js & Flutter code, alongside editing 4K Instagram Reels, YouTube videos, and high-ROI ad media.",
       icon: Code2,
-      iconBg: 'from-blue-600 to-indigo-500',
-      arrowColor: 'bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white',
-      cardStyle: 'border border-amber-100 border-b-4 border-b-amber-400 shadow-md shadow-amber-100/50 hover:shadow-xl hover:shadow-amber-200/70',
+      iconBg: "from-blue-600 to-indigo-500",
+      arrowColor:
+        "bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white",
+      cardStyle:
+        "border border-amber-100 border-b-4 border-b-amber-400 shadow-md shadow-amber-100/50 hover:shadow-xl hover:shadow-amber-200/70",
     },
     {
-      step: '05',
-      stepBadge: 'bg-rose-100/90 text-rose-600',
-      title: 'Testing & Review',
-      desc: 'Rigorous cross-device web/app testing, video sound & subtitle sync check, color grading, and caption proofreading.',
+      step: "05",
+      stepBadge: "bg-rose-100/90 text-rose-600",
+      title: "Testing & Review",
+      desc: "Rigorous cross-device web/app testing, video sound & subtitle sync check, color grading, and caption proofreading.",
       icon: ClipboardCheck,
-      iconBg: 'from-blue-500 to-cyan-400',
-      arrowColor: 'bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white',
-      cardStyle: 'border border-rose-100 border-b-4 border-b-rose-400 shadow-md shadow-rose-100/50 hover:shadow-xl hover:shadow-rose-200/70',
+      iconBg: "from-blue-500 to-cyan-400",
+      arrowColor:
+        "bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white",
+      cardStyle:
+        "border border-rose-100 border-b-4 border-b-rose-400 shadow-md shadow-rose-100/50 hover:shadow-xl hover:shadow-rose-200/70",
     },
     {
-      step: '06',
-      stepBadge: 'bg-sky-100/90 text-sky-600',
-      title: 'Launch & Publishing',
-      desc: 'Deploying web/apps live, publishing Play Store APKs, scheduling social media posts, and launching Meta ad campaigns.',
+      step: "06",
+      stepBadge: "bg-sky-100/90 text-sky-600",
+      title: "Launch & Publishing",
+      desc: "Deploying web/apps live, publishing Play Store APKs, scheduling social media posts, and launching Meta ad campaigns.",
       icon: Rocket,
-      iconBg: 'from-sky-500 to-blue-500',
-      arrowColor: 'bg-sky-50 text-sky-600 group-hover:bg-sky-600 group-hover:text-white',
-      cardStyle: 'border border-sky-100 border-b-4 border-b-[#00A3E0] shadow-md shadow-sky-100/50 hover:shadow-xl hover:shadow-sky-200/70',
+      iconBg: "from-sky-500 to-blue-500",
+      arrowColor:
+        "bg-sky-50 text-sky-600 group-hover:bg-sky-600 group-hover:text-white",
+      cardStyle:
+        "border border-sky-100 border-b-4 border-b-[#00A3E0] shadow-md shadow-sky-100/50 hover:shadow-xl hover:shadow-sky-200/70",
     },
     {
-      step: '07',
-      stepBadge: 'bg-indigo-100/90 text-indigo-600',
-      title: 'Support & Growth',
-      desc: 'Dedicated technical maintenance, ongoing video editing, daily social media management, and monthly growth reports.',
+      step: "07",
+      stepBadge: "bg-indigo-100/90 text-indigo-600",
+      title: "Support & Growth",
+      desc: "Dedicated technical maintenance, ongoing video editing, daily social media management, and monthly growth reports.",
       icon: Headphones,
-      iconBg: 'from-indigo-500 to-purple-500',
-      arrowColor: 'bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white',
-      cardStyle: 'border border-indigo-100 border-b-4 border-b-indigo-400 shadow-md shadow-indigo-100/50 hover:shadow-xl hover:shadow-indigo-200/70',
+      iconBg: "from-indigo-500 to-purple-500",
+      arrowColor:
+        "bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white",
+      cardStyle:
+        "border border-indigo-100 border-b-4 border-b-indigo-400 shadow-md shadow-indigo-100/50 hover:shadow-xl hover:shadow-indigo-200/70",
     },
   ];
 
   // 6. Technology We Use Stack
   const techStack = [
-    { name: 'React 19', category: 'Frontend', color: 'border-sky-200 bg-sky-50/50 text-sky-800' },
-    { name: 'Next.js 15', category: 'SSR & App Router', color: 'border-slate-300 bg-slate-100 text-slate-900' },
-    { name: 'Node.js', category: 'Backend Engine', color: 'border-emerald-200 bg-emerald-50/50 text-emerald-800' },
-    { name: 'Express.js', category: 'REST APIs', color: 'border-slate-300 bg-slate-50 text-slate-800' },
-    { name: 'MongoDB', category: 'Database', color: 'border-green-200 bg-green-50/50 text-green-800' },
-    { name: 'Flutter', category: 'Cross-Platform Mobile', color: 'border-indigo-200 bg-indigo-50/50 text-indigo-800' },
-    { name: 'AWS Cloud', category: 'Infrastructure', color: 'border-amber-200 bg-amber-50/50 text-amber-900' },
-    { name: 'Tailwind CSS', category: 'Styling Architecture', color: 'border-teal-200 bg-teal-50/50 text-teal-800' },
-    { name: 'Razorpay', category: 'UPI Payment Gateway', color: 'border-blue-200 bg-blue-50/50 text-blue-800' },
-    { name: 'GitHub', category: 'Version Control', color: 'border-purple-200 bg-purple-50/50 text-purple-900' },
-    { name: 'Firebase', category: 'Push & Auth', color: 'border-amber-200 bg-amber-50/50 text-amber-800' },
-    { name: 'PostgreSQL', category: 'Relational DB', color: 'border-cyan-200 bg-cyan-50/50 text-cyan-900' },
+    {
+      name: "React 19",
+      category: "Frontend",
+      color: "border-sky-200 bg-sky-50/50 text-sky-800",
+    },
+    {
+      name: "Next.js 15",
+      category: "SSR & App Router",
+      color: "border-slate-300 bg-slate-100 text-slate-900",
+    },
+    {
+      name: "Node.js",
+      category: "Backend Engine",
+      color: "border-emerald-200 bg-emerald-50/50 text-emerald-800",
+    },
+    {
+      name: "Express.js",
+      category: "REST APIs",
+      color: "border-slate-300 bg-slate-50 text-slate-800",
+    },
+    {
+      name: "MongoDB",
+      category: "Database",
+      color: "border-green-200 bg-green-50/50 text-green-800",
+    },
+    {
+      name: "Flutter",
+      category: "Cross-Platform Mobile",
+      color: "border-indigo-200 bg-indigo-50/50 text-indigo-800",
+    },
+    {
+      name: "AWS Cloud",
+      category: "Infrastructure",
+      color: "border-amber-200 bg-amber-50/50 text-amber-900",
+    },
+    {
+      name: "Tailwind CSS",
+      category: "Styling Architecture",
+      color: "border-teal-200 bg-teal-50/50 text-teal-800",
+    },
+    {
+      name: "Razorpay",
+      category: "UPI Payment Gateway",
+      color: "border-blue-200 bg-blue-50/50 text-blue-800",
+    },
+    {
+      name: "GitHub",
+      category: "Version Control",
+      color: "border-purple-200 bg-purple-50/50 text-purple-900",
+    },
+    {
+      name: "Firebase",
+      category: "Push & Auth",
+      color: "border-amber-200 bg-amber-50/50 text-amber-800",
+    },
+    {
+      name: "PostgreSQL",
+      category: "Relational DB",
+      color: "border-cyan-200 bg-cyan-50/50 text-cyan-900",
+    },
   ];
-
-
 
   // 8. Projects Work Showcase
   const showcasedProjects = [
     {
-      title: 'The True Topper',
-      category: 'EdTech & Online Exam Portal',
-      desc: 'Online education and examination platform featuring student management, mock exam system, UPI payments, and detailed admin analytics.',
-      tech: ['Next.js', 'React', 'Node.js', 'Razorpay', 'MongoDB'],
-      demoLink: '/services/education-portal',
-      badge: 'EDUCATION PLATFORM',
+      title: "The True Topper",
+      category: "EdTech & Online Exam Portal",
+      desc: "Online education and examination platform featuring student management, mock exam system, UPI payments, and detailed admin analytics.",
+      tech: ["Next.js", "React", "Node.js", "Razorpay", "MongoDB"],
+      demoLink: "/services/education-portal",
+      badge: "EDUCATION PLATFORM",
     },
     {
-      title: 'SiteMint Studio Portal',
-      category: 'Web Development & Agency Platform',
-      desc: 'Modern web development studio web application featuring real-time project cost calculators, interactive service showcases, and live demos.',
-      tech: ['Next.js 15', 'Tailwind CSS', 'React 19', 'Gmail API'],
-      demoLink: '/projects',
-      badge: 'AGENCY STUDIO',
+      title: "SiteMint Studio Portal",
+      category: "Web Development & Agency Platform",
+      desc: "Modern web development studio web application featuring real-time project cost calculators, interactive service showcases, and live demos.",
+      tech: ["Next.js 15", "Tailwind CSS", "React 19", "Gmail API"],
+      demoLink: "/projects",
+      badge: "AGENCY STUDIO",
     },
     {
-      title: 'Sweet Treats Bakery Hub',
-      category: 'Food & Digital Ordering Portal',
-      desc: 'Mobile-first online digital menu and ordering system with 0% commission direct WhatsApp order dispatch and instant UPI payment links.',
-      tech: ['Next.js', 'WhatsApp API', 'Tailwind CSS'],
-      demoLink: '/demos/bakery',
-      badge: '0% COMMISSION FOOD',
+      title: "Sweet Treats Bakery Hub",
+      category: "Food & Digital Ordering Portal",
+      desc: "Mobile-first online digital menu and ordering system with 0% commission direct WhatsApp order dispatch and instant UPI payment links.",
+      tech: ["Next.js", "WhatsApp API", "Tailwind CSS"],
+      demoLink: "/demos/bakery",
+      badge: "0% COMMISSION FOOD",
     },
     {
-      title: 'GrowthFit Coaching Portal',
-      category: 'Institute Portal & Fee Management',
-      desc: 'Student admissions, online course inquiry management, fee payment gateway integration, and parent noticeboard platform.',
-      tech: ['React', 'Node.js', 'Razorpay UPI', 'Express'],
-      demoLink: '/demos/education',
-      badge: 'COACHING SYSTEM',
+      title: "GrowthFit Coaching Portal",
+      category: "Institute Portal & Fee Management",
+      desc: "Student admissions, online course inquiry management, fee payment gateway integration, and parent noticeboard platform.",
+      tech: ["React", "Node.js", "Razorpay UPI", "Express"],
+      demoLink: "/demos/education",
+      badge: "COACHING SYSTEM",
     },
   ];
 
   return (
     <div className="w-full max-w-full overflow-hidden bg-white text-slate-900 font-sans">
-
       {/* 1. HERO SECTION (Eye-Soothing Home-Matched Soft Dark Gradient Layout) */}
       <section className="relative w-full min-h-[300px] sm:min-h-[340px] lg:min-h-[380px] bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#0F172A] text-white overflow-hidden flex items-center">
-
         {/* Ambient Floating Color Glow Orbs */}
         <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
           <div className="absolute -top-10 left-1/3 w-72 h-72 bg-violet-600/20 rounded-full blur-3xl" />
@@ -287,9 +360,9 @@ export default function AboutPage() {
         {/* Left Content Area Container (Compact Padding & Spacing) */}
         <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-8 lg:py-10">
           <div className="max-w-xl lg:max-w-2xl space-y-4">
-
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-violet-500/10 border border-violet-400/30 text-violet-300 text-xs font-bold uppercase tracking-wider w-fit shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-violet-400" /> Web Development & Creative Technology Studio
+              <Sparkles className="w-3.5 h-3.5 text-violet-400" /> Web
+              Development & Creative Technology Studio
             </div>
 
             <div>
@@ -328,16 +401,18 @@ export default function AboutPage() {
 
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-slate-400 font-semibold pt-2 border-t border-slate-800/80">
               <span className="flex items-center gap-1.5 text-slate-300">
-                <CheckCircle2 className="w-4 h-4 text-violet-400" /> Modern Tech Stack
+                <CheckCircle2 className="w-4 h-4 text-violet-400" /> Modern Tech
+                Stack
               </span>
               <span className="flex items-center gap-1.5 text-slate-300">
-                <CheckCircle2 className="w-4 h-4 text-violet-400" /> Practical Indian Pricing
+                <CheckCircle2 className="w-4 h-4 text-violet-400" /> Practical
+                Indian Pricing
               </span>
               <span className="flex items-center gap-1.5 text-slate-300">
-                <CheckCircle2 className="w-4 h-4 text-violet-400" /> 100% Code Ownership
+                <CheckCircle2 className="w-4 h-4 text-violet-400" /> 100% Code
+                Ownership
               </span>
             </div>
-
           </div>
         </div>
       </section>
@@ -346,7 +421,6 @@ export default function AboutPage() {
       <section className="py-12 sm:py-16 bg-white border-b border-slate-100 text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-
             {/* Left Side: Seamless Studio Graphic (No Border, Shadow, or Hover Box) */}
             <div className="lg:col-span-6 flex items-center justify-center">
               <AnimatedSection direction="left" delay={0}>
@@ -363,16 +437,25 @@ export default function AboutPage() {
               <AnimatedSection direction="right" delay={150}>
                 <div>
                   <div className="inline-flex items-center gap-1.5 text-xs font-extrabold text-violet-800 uppercase tracking-wider mb-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 shadow-2xs">
-                    <Globe className="w-4 h-4 text-violet-600" /> Full-Service Creative Tech Studio
+                    <Globe className="w-4 h-4 text-violet-600" /> Full-Service
+                    Creative Tech Studio
                   </div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
-                    We Build <span className="gradient-text-hero">Digital Solutions</span> That Help Businesses Grow
+                    We Build{" "}
+                    <span className="gradient-text-hero">
+                      Digital Solutions
+                    </span>{" "}
+                    That Help Businesses Grow
                   </h2>
                   <div className="w-16 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mt-3 mb-4" />
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                  SiteMint is a web development and creative technology studio helping businesses build professional websites, mobile applications, high-impact video editing & Instagram Reels, and full-scale social media management with practical pricing, modern technology, and reliable support.
+                  SiteMint is a web development and creative technology studio
+                  helping businesses build professional websites, mobile
+                  applications, high-impact video editing & Instagram Reels, and
+                  full-scale social media management with practical pricing,
+                  modern technology, and reliable support.
                 </p>
 
                 <div className="p-4 sm:p-5 rounded-2xl bg-violet-50/80 border border-violet-100/90 text-violet-950">
@@ -402,23 +485,24 @@ export default function AboutPage() {
                 </div>
               </AnimatedSection>
             </div>
-
           </div>
         </div>
       </section>
 
       {/* 3. OUR STORY & MISSION (Clean Reference Screenshot Match Layout) */}
-      <section id="story" className="py-14 sm:py-20 bg-white border-b border-slate-100 scroll-mt-16 text-slate-900">
+      <section
+        id="story"
+        className="py-14 sm:py-20 bg-white border-b border-slate-100 scroll-mt-16 text-slate-900"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-
           {/* Top Story & Creative Image Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-
             {/* Left Column: Comprehensive Studio Story Text */}
             <div className="lg:col-span-6 space-y-4">
               <AnimatedSection direction="left" delay={0}>
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider shadow-2xs">
-                  <Target className="w-4 h-4 text-violet-600" /> Our Origin & Journey
+                  <Target className="w-4 h-4 text-violet-600" /> Our Origin &
+                  Journey
                 </div>
 
                 <h2 className="text-2xl sm:text-4xl font-black text-slate-900 leading-tight mt-3">
@@ -426,15 +510,34 @@ export default function AboutPage() {
                 </h2>
 
                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium mt-3">
-                  Welcome to <strong className="text-slate-900 font-extrabold">SiteMint</strong>, where creativity meets engineering and innovation. Our journey has been driven by passion, precision, and purpose—evolving into a full-fledged digital and creative technology powerhouse.
+                  Welcome to{" "}
+                  <strong className="text-slate-900 font-extrabold">
+                    SiteMint
+                  </strong>
+                  , where creativity meets engineering and innovation. Our
+                  journey has been driven by passion, precision, and
+                  purpose—evolving into a full-fledged digital and creative
+                  technology powerhouse.
                 </p>
 
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2">
-                  From building robust <strong className="text-slate-800">websites and mobile applications</strong> to delivering high-converting <strong className="text-slate-800">video editing, Instagram reels, and social media management</strong>, our work reflects our dedication to detail and our commitment to real business results.
+                  From building robust{" "}
+                  <strong className="text-slate-800">
+                    websites and mobile applications
+                  </strong>{" "}
+                  to delivering high-converting{" "}
+                  <strong className="text-slate-800">
+                    video editing, Instagram reels, and social media management
+                  </strong>
+                  , our work reflects our dedication to detail and our
+                  commitment to real business results.
                 </p>
 
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2">
-                  At the heart of SiteMint lies a simple belief: every business has a story worth telling. Our team brings strategy, technology, and creative media together under one roof so you never have to manage multiple disjointed agencies.
+                  At the heart of SiteMint lies a simple belief: every business
+                  has a story worth telling. Our team brings strategy,
+                  technology, and creative media together under one roof so you
+                  never have to manage multiple disjointed agencies.
                 </p>
 
                 <div className="pt-3 flex flex-wrap items-center gap-4">
@@ -469,13 +572,11 @@ export default function AboutPage() {
                 />
               </AnimatedSection>
             </div>
-
           </div>
 
           {/* Bottom Our Mission Banner Card (Eye-Soothing Soft Gradient) */}
           <AnimatedSection delay={100}>
             <div className="relative w-full p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-violet-700 via-indigo-700 to-slate-900 text-white shadow-xl border border-violet-500/20 overflow-hidden text-center space-y-4">
-
               {/* Subtle Tech Pattern Background Overlay */}
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
 
@@ -485,7 +586,9 @@ export default function AboutPage() {
                 </h3>
 
                 <p className="text-xs sm:text-base text-violet-100 leading-relaxed font-medium max-w-2xl mx-auto">
-                  To provide complete digital, software, video media, and branding solutions that empower businesses to grow, connect, and thrive all under one creative roof.
+                  To provide complete digital, software, video media, and
+                  branding solutions that empower businesses to grow, connect,
+                  and thrive all under one creative roof.
                 </p>
 
                 <div className="pt-3">
@@ -500,33 +603,34 @@ export default function AboutPage() {
                   </a>
                 </div>
               </div>
-
             </div>
           </AnimatedSection>
-
         </div>
       </section>
       {/* 3. WHAT WE DO (4 Clear Service Cards matching Reference Screenshot) */}
-      <section id="services" className="py-14 sm:py-20 bg-slate-50/70 border-b border-slate-200 scroll-mt-16 text-slate-900">
+      <section
+        id="services"
+        className="py-14 sm:py-20 bg-slate-50/70 border-b border-slate-200 scroll-mt-16 text-slate-900"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
-              <Sparkles className="w-3.5 h-3.5 text-violet-600" /> — CORE CAPABILITIES —
+              <Sparkles className="w-3.5 h-3.5 text-violet-600" /> — CORE
+              CAPABILITIES —
             </div>
             <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 mb-3">
               What We <span className="gradient-text-hero">Do</span>
             </h2>
             <p className="text-slate-600 text-xs sm:text-base font-medium max-w-2xl mx-auto leading-relaxed">
-              End-to-end digital services engineered to build brand authority, capture leads, and grow revenue.
+              End-to-end digital services engineered to build brand authority,
+              capture leads, and grow revenue.
             </p>
             <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-4" />
           </div>
 
           {/* 4 Cards Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-
             {/* Card 01: Website & Software Development */}
             <AnimatedSection delay={0}>
               <div className="bg-white p-5 sm:p-6 rounded-3xl border border-blue-200/90 shadow-xs hover:shadow-lg hover:border-blue-400 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full">
@@ -538,7 +642,9 @@ export default function AboutPage() {
                       <Code2 className="w-5 h-5" />
                     </div>
                     <div className="flex items-center gap-2 text-xs font-extrabold text-slate-400 uppercase tracking-wider">
-                      <span className="text-blue-600 font-mono text-sm">01</span>
+                      <span className="text-blue-600 font-mono text-sm">
+                        01
+                      </span>
                       <span>——</span>
                       <span>WEB & SOFTWARE DEVELOPMENT</span>
                     </div>
@@ -550,7 +656,9 @@ export default function AboutPage() {
                         Website & Software Development
                       </h3>
                       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                        High-speed Next.js 15 business sites, e-commerce stores, coaching portals, and custom web applications built for performance and growth.
+                        High-speed Next.js 15 business sites, e-commerce stores,
+                        coaching portals, and custom web applications built for
+                        performance and growth.
                       </p>
 
                       <div className="grid grid-cols-2 gap-y-2 gap-x-1.5 text-xs text-slate-700 font-extrabold pt-1">
@@ -606,7 +714,9 @@ export default function AboutPage() {
                       <Smartphone className="w-5 h-5" />
                     </div>
                     <div className="flex items-center gap-2 text-xs font-extrabold text-slate-400 uppercase tracking-wider">
-                      <span className="text-emerald-500 font-mono text-sm">02</span>
+                      <span className="text-emerald-500 font-mono text-sm">
+                        02
+                      </span>
                       <span>——</span>
                       <span>MOBILE APP DEVELOPMENT</span>
                     </div>
@@ -618,7 +728,8 @@ export default function AboutPage() {
                         Mobile App Development
                       </h3>
                       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                        Native-feel Flutter mobile apps for Android & iOS with phone OTP login, push alerts, and 0% UPI checkout.
+                        Native-feel Flutter mobile apps for Android & iOS with
+                        phone OTP login, push alerts, and 0% UPI checkout.
                       </p>
 
                       <div className="grid grid-cols-2 gap-y-2 gap-x-1.5 text-xs text-slate-700 font-extrabold pt-1">
@@ -674,7 +785,9 @@ export default function AboutPage() {
                       <Video className="w-5 h-5" />
                     </div>
                     <div className="flex items-center gap-2 text-xs font-extrabold text-slate-400 uppercase tracking-wider">
-                      <span className="text-violet-600 font-mono text-sm">03</span>
+                      <span className="text-violet-600 font-mono text-sm">
+                        03
+                      </span>
                       <span>——</span>
                       <span>VIDEO EDITING & REELS</span>
                     </div>
@@ -686,7 +799,8 @@ export default function AboutPage() {
                         Video Editing & Reels
                       </h3>
                       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                        Viral Instagram Reels, YouTube Shorts, commercial business video ads, and dynamic animated subtitles.
+                        Viral Instagram Reels, YouTube Shorts, commercial
+                        business video ads, and dynamic animated subtitles.
                       </p>
 
                       <div className="grid grid-cols-2 gap-y-2 gap-x-1.5 text-xs text-slate-700 font-extrabold pt-1">
@@ -742,7 +856,9 @@ export default function AboutPage() {
                       <Share2 className="w-5 h-5" />
                     </div>
                     <div className="flex items-center gap-2 text-xs font-extrabold text-slate-400 uppercase tracking-wider">
-                      <span className="text-teal-500 font-mono text-sm">04</span>
+                      <span className="text-teal-500 font-mono text-sm">
+                        04
+                      </span>
                       <span>——</span>
                       <span>SOCIAL MEDIA MANAGEMENT</span>
                     </div>
@@ -754,7 +870,8 @@ export default function AboutPage() {
                         Social Media Management
                       </h3>
                       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                        Multi-platform 7-8 channel management, daily graphic posts, SEO captions, DM inquiry routing & Meta Ads.
+                        Multi-platform 7-8 channel management, daily graphic
+                        posts, SEO captions, DM inquiry routing & Meta Ads.
                       </p>
 
                       <div className="grid grid-cols-2 gap-y-2 gap-x-1.5 text-xs text-slate-700 font-extrabold pt-1">
@@ -798,25 +915,28 @@ export default function AboutPage() {
                 </div>
               </div>
             </AnimatedSection>
-
           </div>
         </div>
       </section>
 
       {/* 4. OUR WORKING PROCESS (8 Cards Exact Reference Match) */}
-      <section id="process" className="py-14 sm:py-20 bg-slate-50/50 border-b border-slate-100 scroll-mt-16">
+      <section
+        id="process"
+        className="py-14 sm:py-20 bg-slate-50/50 border-b border-slate-100 scroll-mt-16"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
           {/* Header Badge & Title */}
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
-              <Clock className="w-3.5 h-3.5 text-violet-600" /> TRANSPARENT ENGINEERING SPRINT
+              <Clock className="w-3.5 h-3.5 text-violet-600" /> TRANSPARENT
+              ENGINEERING SPRINT
             </div>
             <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 mb-3">
               Our <span className="gradient-text-hero">Working Process</span>
             </h2>
             <p className="text-slate-600 text-xs sm:text-base font-medium leading-relaxed max-w-2xl mx-auto">
-              Demonstrating our clear step-by-step workflow builds complete trust and clarity before project launch.
+              Demonstrating our clear step-by-step workflow builds complete
+              trust and clarity before project launch.
             </p>
             <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-4" />
           </div>
@@ -838,80 +958,177 @@ export default function AboutPage() {
       </section>
 
       {/* 5. MEET THE TEAM & FOUNDER */}
-      <section id="team" className="py-14 sm:py-20 bg-slate-50/70 border-b border-slate-200 scroll-mt-16">
+      <section
+        id="team"
+        className="py-14 sm:py-20 bg-slate-50/70 border-b border-slate-200 scroll-mt-16"
+      >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
-              <Users className="w-3.5 h-3.5 text-violet-600" /> People Behind SiteMint
+              <Users className="w-3.5 h-3.5 text-violet-600" /> People Behind
+              SiteMint
             </div>
             <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 mb-2">
-              Meet the <span className="gradient-text-hero">Engineering Team</span>
+              Meet the{" "}
+              <span className="gradient-text-hero">Engineering Team</span>
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm">
-              Genuine engineers dedicated to building clean, scalable software for ambitious businesses.
+              Genuine engineers dedicated to building clean, scalable software
+              for ambitious businesses.
             </p>
             <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-3" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center max-w-4xl mx-auto">
-            {/* Founder Profile Card */}
-            <div className="md:col-span-6">
-              <AnimatedSection delay={0}>
-                <div className="p-6 sm:p-8 rounded-3xl bg-white border-2 border-blue-200 shadow-lg relative overflow-hidden group">
-                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-sky-500 text-white font-extrabold text-2xl flex items-center justify-center shadow-md mb-4 group-hover:scale-105 transition-transform font-mono">
-                    YS
-                  </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch max-w-6xl mx-auto">
+            {/* Card 1: Founder Profile Card (Wide) */}
+            <div className="lg:col-span-7 h-full">
+              <AnimatedSection delay={0} className="h-full">
+                <div className="p-1 sm:p-2 rounded-[2rem] bg-gradient-to-br from-blue-50 to-indigo-50/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white h-full relative group">
+                  <div className="bg-white/80 backdrop-blur-sm rounded-[1.8rem] p-5 sm:p-6 h-full flex flex-col sm:flex-row gap-6 relative border border-blue-50 shadow-sm">
+                    {/* Floating Handwritten text */}
+                    <div className="absolute top-6 right-6 lg:right-10 rotate-[-6deg] text-indigo-500 hidden md:flex flex-col items-center">
+                      <span
+                        style={{ fontFamily: "cursive" }}
+                        className="text-[13px] font-semibold leading-tight"
+                      >
+                        Let's Build
+                      </span>
+                      <span
+                        style={{ fontFamily: "cursive" }}
+                        className="text-[13px] font-semibold leading-tight"
+                      >
+                        Together
+                      </span>
+                      <svg
+                        className="w-5 h-5 mt-1 text-indigo-400 rotate-[-15deg] opacity-70"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M5 9c1.5 1.5 3 3 5 3s3.5-1.5 5-3" />
+                        <path d="m11 16 4 4 4-4" />
+                      </svg>
+                    </div>
 
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 text-[#3B82F6] border border-blue-200 text-[10px] font-bold uppercase tracking-wider mb-2">
-                    Founder & Lead Web Engineer
-                  </div>
+                    {/* Left Column: Image Area */}
+                    <div className="w-full sm:w-[40%] xl:w-[45%] shrink-0 relative flex items-center justify-center overflow-hidden rounded-l-[1.8rem] sm:rounded-r-none rounded-r-[1.8rem]">
+                      {/* Image */}
+                      <img
+                        src="/team/yuvraj Singh tm.png"
+                        alt="Yuvraj Singh"
+                        className="w-full h-full object-cover object-top relative z-10"
+                      />
+                    </div>
 
-                  <h3 className="text-xl font-extrabold text-slate-900 mb-1">
-                    Yuvraj Singh
-                  </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                    Web development, cloud architecture, SSR deployment, and client project engineering.
-                  </p>
+                    {/* Right Column: Info Area */}
+                    <div className="w-full sm:w-[60%] xl:w-[55%] flex flex-col justify-center py-2 relative z-10">
+                      <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50/80 text-blue-600 text-[10px] font-black uppercase tracking-wider w-fit mb-3 border border-blue-100/50">
+                        Founder & Lead Web Engineer
+                      </div>
 
-                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-[11px] text-slate-500 font-medium">Lead Developer</span>
-                    <a
-                      href="https://www.linkedin.com/company/sitemint002sep02/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0A66C2] hover:underline"
-                    >
-                      <LinkedInIcon className="w-4 h-4" />
-                      <span>LinkedIn Profile</span>
-                    </a>
+                      <h3 className="text-2xl sm:text-[28px] font-black text-slate-900 mb-2 tracking-tight">
+                        Yuvraj Singh
+                      </h3>
+
+                      <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-6 font-medium pr-4">
+                        Web development, cloud architecture, SSR deployment, and
+                        client project engineering.
+                      </p>
+
+                      {/* Tags Grid */}
+                      <div className="grid grid-cols-1 xl:grid-cols-2 gap-2.5 mb-6">
+                        <div className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-50/80 border border-slate-100 text-[11px] font-bold text-slate-700 w-full shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
+                          <Code2 className="w-3.5 h-3.5 text-indigo-600 shrink-0" />{" "}
+                          <span>Web Development</span>
+                        </div>
+                        <div className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-50/80 border border-slate-100 text-[11px] font-bold text-slate-700 w-full shadow-sm hover:shadow-md hover:border-sky-100 transition-all">
+                          <Cloud className="w-3.5 h-3.5 text-sky-600 shrink-0" />{" "}
+                          <span>Cloud Architecture</span>
+                        </div>
+                        <div className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-50/80 border border-slate-100 text-[11px] font-bold text-slate-700 w-full shadow-sm hover:shadow-md hover:border-violet-100 transition-all">
+                          <Layers className="w-3.5 h-3.5 text-violet-600 shrink-0" />{" "}
+                          <span>SSR Deployment</span>
+                        </div>
+                        <div className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-50/80 border border-slate-100 text-[11px] font-bold text-slate-700 w-full shadow-sm hover:shadow-md hover:border-blue-100 transition-all">
+                          <Database className="w-3.5 h-3.5 text-blue-600 shrink-0" />{" "}
+                          <span>Client Project Eng.</span>
+                        </div>
+                      </div>
+
+                      <div className="mt-auto pt-4 border-t border-slate-100/80 flex items-center justify-between">
+                        <span className="text-[11px] font-bold text-slate-500">
+                          Lead Developer
+                        </span>
+                        <a
+                          href="https://www.linkedin.com/in/yuvraj-singh-0001/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-[11px] font-black text-[#0A66C2] hover:text-[#084e96] transition-colors group/link"
+                        >
+                          <LinkedInIcon className="w-4 h-4" />
+                          <span>LinkedIn Profile</span>
+                          <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>
             </div>
 
-            {/* Focused Team Philosophy */}
-            <div className="md:col-span-6 space-y-4">
-              <AnimatedSection delay={150}>
-                <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-2xs space-y-3">
-                  <div className="text-xs font-extrabold text-violet-700 uppercase tracking-wider flex items-center gap-2">
-                    <Award className="w-4 h-4 text-violet-600" /> Dedicated 8-Member Team
-                  </div>
-                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
-                    Our team includes Project Managers, Full Stack Developers, UI Designers, Video Editors, and Social Media Strategists working seamlessly.
-                  </p>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    We assign dedicated specialists based on your exact project scope—ensuring top quality and fast turnaround.
-                  </p>
+            {/* Card 2: Team Philosophy Card */}
+            <div className="lg:col-span-5 h-full">
+              <AnimatedSection delay={150} className="h-full">
+                <div className="p-1 sm:p-2 rounded-[2rem] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-50 h-full flex flex-col group">
+                  <div className="bg-[#FAFAFC] rounded-[1.8rem] p-6 lg:p-8 h-full flex flex-col justify-between border border-slate-100/50">
+                    <div>
+                      {/* Header: Badge & Circle */}
+                      <div className="flex items-start justify-between mb-8">
+                        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-100 text-indigo-700 text-[10px] font-black uppercase tracking-wider shadow-sm mt-1">
+                          <Award className="w-3.5 h-3.5 text-indigo-500" />{" "}
+                          DEDICATED 8-MEMBER TEAM
+                        </div>
 
-                  <div className="pt-3">
-                    <Link
-                      href="/team"
-                      className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-600 hover:from-violet-500 hover:to-teal-500 text-white font-extrabold text-xs sm:text-sm inline-flex items-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
-                    >
-                      <Users className="w-4 h-4 text-violet-200" />
-                      <span>Explore Our Complete 8-Member Team</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
+                        <div className="w-[90px] h-[90px] shrink-0 rounded-full bg-white shadow-md border border-indigo-50/50 flex flex-col items-center justify-center text-indigo-700 transform group-hover:scale-105 transition-transform duration-300 p-1">
+                          <Users className="w-5 h-5 mb-0.5 text-indigo-600" />
+                          <span className="text-2xl font-black leading-none text-indigo-800">
+                            8+
+                          </span>
+                          <span className="text-[8px] font-black uppercase mt-1 tracking-tight text-center leading-[1.1] text-indigo-600 px-1">
+                            Team Members
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="space-y-4 pr-2">
+                        <p className="text-[13px] text-slate-700 leading-relaxed font-semibold">
+                          Our team includes Project Managers, Full Stack
+                          Developers, UI Designers, Video Editors, and Social
+                          Media Strategists working seamlessly.
+                        </p>
+                        <p className="text-[13px] text-slate-500 leading-relaxed font-medium">
+                          We assign dedicated specialists based on your exact
+                          project scope—ensuring top quality and fast
+                          turnaround.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-10">
+                      <Link
+                        href="/team"
+                        className="w-full py-3.5 px-6 rounded-[14px] bg-gradient-to-r from-[#7B3FF2] via-[#2563EB] to-[#0D9488] hover:from-[#6D28D9] hover:via-[#1D4ED8] hover:to-[#0F766E] text-white font-extrabold text-[13px] flex items-center justify-between shadow-lg shadow-indigo-500/25 transition-all duration-300 transform group-hover:-translate-y-1"
+                      >
+                        <div className="flex items-center gap-2">
+                          <Users className="w-4 h-4" />
+                          <span>Explore Our Complete 8-Member Team</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -925,13 +1142,15 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
-              <Cpu className="w-3.5 h-3.5 text-violet-600" /> Modern Tech Ecosystem
+              <Cpu className="w-3.5 h-3.5 text-violet-600" /> Modern Tech
+              Ecosystem
             </div>
             <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 mb-2">
               Technology We <span className="gradient-text-hero">Use</span>
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm">
-              We leverage modern, battle-tested technology stacks for high-performance, secure digital software.
+              We leverage modern, battle-tested technology stacks for
+              high-performance, secure digital software.
             </p>
             <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-3" />
           </div>
@@ -943,7 +1162,9 @@ export default function AboutPage() {
                   className={`p-3.5 rounded-2xl border text-center font-bold text-xs transition hover:scale-105 cursor-default ${tech.color}`}
                 >
                   <div className="text-sm font-extrabold">{tech.name}</div>
-                  <div className="text-[9px] font-normal opacity-80 mt-0.5">{tech.category}</div>
+                  <div className="text-[9px] font-normal opacity-80 mt-0.5">
+                    {tech.category}
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
@@ -956,13 +1177,16 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
-              <Briefcase className="w-3.5 h-3.5 text-violet-600" /> Featured Work Showcase
+              <Briefcase className="w-3.5 h-3.5 text-violet-600" /> Featured
+              Work Showcase
             </div>
             <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 mb-2">
-              Recent <span className="gradient-text-hero">Projects Showcase</span>
+              Recent{" "}
+              <span className="gradient-text-hero">Projects Showcase</span>
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm">
-              Explore real digital platforms and working applications engineered by SiteMint Studio.
+              Explore real digital platforms and working applications engineered
+              by SiteMint Studio.
             </p>
             <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-3" />
           </div>
@@ -970,9 +1194,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {showcasedProjects.map((prj, idx) => (
               <AnimatedSection key={idx} delay={idx * 130}>
-                <div
-                  className="p-6 sm:p-8 rounded-3xl bg-slate-50/90 border border-slate-200 hover:border-blue-300 shadow-2xs hover:shadow-md transition flex flex-col justify-between group h-full"
-                >
+                <div className="p-6 sm:p-8 rounded-3xl bg-slate-50/90 border border-slate-200 hover:border-blue-300 shadow-2xs hover:shadow-md transition flex flex-col justify-between group h-full">
                   <div>
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-blue-100 text-[#3B82F6] border border-blue-200">
@@ -993,7 +1215,10 @@ export default function AboutPage() {
 
                     <div className="flex flex-wrap gap-1.5 mb-6">
                       {prj.tech.map((t, tIdx) => (
-                        <span key={tIdx} className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700">
+                        <span
+                          key={tIdx}
+                          className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700"
+                        >
                           {t}
                         </span>
                       ))}
@@ -1031,15 +1256,19 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
-              <Heart className="w-3.5 h-3.5 text-violet-600" /> Long-Term Client Relationships
+              <Heart className="w-3.5 h-3.5 text-violet-600" /> Long-Term Client
+              Relationships
             </div>
             <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 mb-2">
-              Client Trust & <span className="gradient-text-hero">Relationships</span>
+              Client Trust &{" "}
+              <span className="gradient-text-hero">Relationships</span>
             </h2>
             <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-3 mb-4" />
 
             <div className="p-4 rounded-2xl bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm font-medium max-w-2xl mx-auto leading-relaxed shadow-2xs">
-              &ldquo;We are building long-term relationships through transparent communication, reliable delivery and practical digital solutions.&rdquo;
+              &ldquo;We are building long-term relationships through transparent
+              communication, reliable delivery and practical digital
+              solutions.&rdquo;
             </div>
           </div>
 
@@ -1056,12 +1285,16 @@ export default function AboutPage() {
                     <Star className="w-4 h-4 fill-amber-400" />
                   </div>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    &ldquo;SiteMint built our bakery online ordering system in just 7 days. Customers can now directly send customized cake orders to our WhatsApp with zero aggregator cuts.&rdquo;
+                    &ldquo;SiteMint built our bakery online ordering system in
+                    just 7 days. Customers can now directly send customized cake
+                    orders to our WhatsApp with zero aggregator cuts.&rdquo;
                   </p>
                 </div>
                 <div className="pt-3 border-t border-slate-100 text-xs font-bold text-slate-900">
                   Bakery & Sweet Shop Owner
-                  <div className="text-[10px] text-slate-500 font-normal">Local Business Client</div>
+                  <div className="text-[10px] text-slate-500 font-normal">
+                    Local Business Client
+                  </div>
                 </div>
               </div>
             </AnimatedSection>
@@ -1077,12 +1310,16 @@ export default function AboutPage() {
                     <Star className="w-4 h-4 fill-amber-400" />
                   </div>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    &ldquo;Fast speed and complete code ownership. No monthly rental fees or agency hostages. Highly recommended for coaching institutes and startups.&rdquo;
+                    &ldquo;Fast speed and complete code ownership. No monthly
+                    rental fees or agency hostages. Highly recommended for
+                    coaching institutes and startups.&rdquo;
                   </p>
                 </div>
                 <div className="pt-3 border-t border-slate-100 text-xs font-bold text-slate-900">
                   Coaching Institute Director
-                  <div className="text-[10px] text-slate-500 font-normal">EdTech Portal Client</div>
+                  <div className="text-[10px] text-slate-500 font-normal">
+                    EdTech Portal Client
+                  </div>
                 </div>
               </div>
             </AnimatedSection>
@@ -1098,12 +1335,16 @@ export default function AboutPage() {
                     <Star className="w-4 h-4 fill-amber-400" />
                   </div>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    &ldquo;Clear itemized budget from day one. They set up Razorpay 0% UPI checkout and Google Search Console indexing cleanly.&rdquo;
+                    &ldquo;Clear itemized budget from day one. They set up
+                    Razorpay 0% UPI checkout and Google Search Console indexing
+                    cleanly.&rdquo;
                   </p>
                 </div>
                 <div className="pt-3 border-t border-slate-100 text-xs font-bold text-slate-900">
                   E-Commerce Retail Founder
-                  <div className="text-[10px] text-slate-500 font-normal">D2C Store Client</div>
+                  <div className="text-[10px] text-slate-500 font-normal">
+                    D2C Store Client
+                  </div>
                 </div>
               </div>
             </AnimatedSection>
@@ -1119,7 +1360,8 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7 space-y-4">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-emerald-300 text-xs font-bold uppercase tracking-wider">
-                    <ShieldCheck className="w-4 h-4" /> Official Business Information
+                    <ShieldCheck className="w-4 h-4" /> Official Business
+                    Information
                   </div>
 
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
@@ -1127,32 +1369,52 @@ export default function AboutPage() {
                   </h2>
 
                   <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                    SiteMint operates with complete legal and operational clarity. Connect with our official team across verified channels.
+                    SiteMint operates with complete legal and operational
+                    clarity. Connect with our official team across verified
+                    channels.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
                     <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
-                      <span className="text-slate-400 block text-[10px] uppercase font-bold">Service Area</span>
-                      <span className="text-white font-bold">Pan-India & Global Remote Digital Studio</span>
+                      <span className="text-slate-400 block text-[10px] uppercase font-bold">
+                        Service Area
+                      </span>
+                      <span className="text-white font-bold">
+                        Pan-India & Global Remote Digital Studio
+                      </span>
                     </div>
 
                     <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
-                      <span className="text-slate-400 block text-[10px] uppercase font-bold">Official Email</span>
-                      <a href="mailto:contactsitemint@gmail.com" className="text-emerald-300 font-bold hover:underline">
+                      <span className="text-slate-400 block text-[10px] uppercase font-bold">
+                        Official Email
+                      </span>
+                      <a
+                        href="mailto:contactsitemint@gmail.com"
+                        className="text-emerald-300 font-bold hover:underline"
+                      >
                         contactsitemint@gmail.com
                       </a>
                     </div>
 
                     <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
-                      <span className="text-slate-400 block text-[10px] uppercase font-bold">WhatsApp & Phone</span>
-                      <a href="tel:+918920683588" className="text-emerald-300 font-bold hover:underline">
+                      <span className="text-slate-400 block text-[10px] uppercase font-bold">
+                        WhatsApp & Phone
+                      </span>
+                      <a
+                        href="tel:+918920683588"
+                        className="text-emerald-300 font-bold hover:underline"
+                      >
                         +91 89206 83588
                       </a>
                     </div>
 
                     <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
-                      <span className="text-slate-400 block text-[10px] uppercase font-bold">Code Ownership</span>
-                      <span className="text-white font-bold">100% Legal Source Code Rights</span>
+                      <span className="text-slate-400 block text-[10px] uppercase font-bold">
+                        Code Ownership
+                      </span>
+                      <span className="text-white font-bold">
+                        100% Legal Source Code Rights
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1164,22 +1426,34 @@ export default function AboutPage() {
                   </div>
 
                   <div className="grid grid-cols-2 gap-2 text-xs font-semibold">
-                    <Link href="/pricing" className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition flex items-center justify-between text-white">
+                    <Link
+                      href="/pricing"
+                      className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition flex items-center justify-between text-white"
+                    >
                       <span>Pricing Plans</span>
                       <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
                     </Link>
 
-                    <Link href="/contact" className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition flex items-center justify-between text-white">
+                    <Link
+                      href="/contact"
+                      className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition flex items-center justify-between text-white"
+                    >
                       <span>Contact Us</span>
                       <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
                     </Link>
 
-                    <Link href="/terms-and-conditions" className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition flex items-center justify-between text-white">
+                    <Link
+                      href="/terms-and-conditions"
+                      className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition flex items-center justify-between text-white"
+                    >
                       <span>Terms & Conditions</span>
                       <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
                     </Link>
 
-                    <Link href="/privacy-policy" className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition flex items-center justify-between text-white">
+                    <Link
+                      href="/privacy-policy"
+                      className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition flex items-center justify-between text-white"
+                    >
                       <span>Privacy Policy</span>
                       <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
                     </Link>
