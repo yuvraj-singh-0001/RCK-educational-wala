@@ -286,3 +286,30 @@ code {
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* Infinite Tech Marquee Running Slider */
+@keyframes techMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tech-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: techMarquee 110s linear infinite;
+  will-change: transform;
+}
+
+@media (max-width: 640px) {
+  .tech-marquee-track {
+    animation-duration: 120s;
+  }
+}
+
+.tech-marquee-track:hover {
+  animation-play-state: paused;
+}

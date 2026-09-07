@@ -47,6 +47,7 @@ import {
 import FaqSection from "../../components/FaqSection";
 import WorkingProcessGrid from "../../components/WorkingProcessGrid";
 import AnimatedSection from "../../components/AnimatedSection";
+import TechnologiesSection from "../../components/TechnologiesSection";
 
 export const metadata = {
   title: "About SiteMint | Expert Web & App Development Studio India",
@@ -1095,39 +1096,10 @@ export default function AboutPage() {
       </section>
 
       {/* 6. TECHNOLOGY WE USE */}
-      <section className="py-14 sm:py-20 bg-white border-b border-slate-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
-              <Cpu className="w-3.5 h-3.5 text-violet-600" /> Modern Tech
-              Ecosystem
-            </div>
-            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 mb-2">
-              Technology We <span className="gradient-text-hero">Use</span>
-            </h2>
-            <p className="text-slate-600 text-xs sm:text-sm">
-              We leverage modern, battle-tested technology stacks for
-              high-performance, secure digital software.
-            </p>
-            <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-3" />
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-            {techStack.map((tech, idx) => (
-              <AnimatedSection key={idx} delay={idx * 40} direction="scale">
-                <div
-                  className={`p-3.5 rounded-2xl border text-center font-bold text-xs transition hover:scale-105 cursor-default ${tech.color}`}
-                >
-                  <div className="text-sm font-extrabold">{tech.name}</div>
-                  <div className="text-[9px] font-normal opacity-80 mt-0.5">
-                    {tech.category}
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TechnologiesSection
+        heading="Technology We Use"
+        subheading="We leverage modern, battle-tested technology stacks for high-performance, secure digital software."
+      />
 
       {/* 8. PROJECTS / WORK SHOWCASE (4 Real Projects) */}
       <section className="py-14 sm:py-20 bg-white border-b border-slate-100">
