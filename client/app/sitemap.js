@@ -36,6 +36,9 @@ export default function sitemap() {
     // 6. Authority, Knowledge Base & Company Pages
     { url: `${baseUrl}/blog`, lastModified: currentDate, changeFrequency: 'daily', priority: 0.90 },
     { url: `${baseUrl}/about`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/about/ourstory`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.80 },
+    { url: `${baseUrl}/team`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/technologies`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.90 },
     { url: `${baseUrl}/contact`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/faq`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/demos`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.85 },

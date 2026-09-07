@@ -23,6 +23,7 @@ import {
   Phone,
   ExternalLink,
   Layers,
+  MapPin,
   Check,
   Briefcase,
   Star,
@@ -43,11 +44,13 @@ import {
   InstagramIcon,
   LinkedInIcon,
   FacebookIcon,
+  WhatsAppIcon,
 } from "../../components/SocialIcons";
 import FaqSection from "../../components/FaqSection";
 import WorkingProcessGrid from "../../components/WorkingProcessGrid";
 import AnimatedSection from "../../components/AnimatedSection";
 import TechnologiesSection from "../../components/TechnologiesSection";
+import GetInTouchForm from "../../components/GetInTouchForm";
 
 export const metadata = {
   title: "About SiteMint | Expert Web & App Development Studio India",
@@ -85,6 +88,32 @@ export const metadata = {
     description:
       "Practical pricing, modern technology, and reliable support for ambitious Indian businesses.",
   },
+};
+
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About SiteMint Studio",
+  "description": "SiteMint is a leading web and app development studio in India providing high-converting Next.js websites, Flutter mobile apps, video editing, and social media management with 100% legal code ownership.",
+  "url": "https://sitemint.in/about",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "SiteMint",
+    "url": "https://sitemint.in",
+    "logo": "https://sitemint.in/Sitemint_logo.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Yuvraj Singh"
+    },
+    "knowsAbout": [
+      "Web Development",
+      "Mobile App Development",
+      "Video Editing & Reels",
+      "Social Media Management",
+      "Next.js 15",
+      "Flutter"
+    ]
+  }
 };
 
 export default function AboutPage() {
@@ -317,6 +346,10 @@ export default function AboutPage() {
 
   return (
     <div className="w-full max-w-full overflow-hidden bg-white text-slate-900 font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
       {/* 1. HERO SECTION (Eye-Soothing Home-Matched Soft Dark Gradient Layout) */}
       <section className="relative w-full min-h-[300px] sm:min-h-[340px] lg:min-h-[380px] bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#0F172A] text-white overflow-hidden flex items-center">
         {/* Ambient Floating Color Glow Orbs */}
@@ -684,10 +717,10 @@ export default function AboutPage() {
                       <div className="pt-2">
                         <Link
                           href="/services/website-development"
-                          className="px-5 py-2 rounded-full bg-[#0B1528] hover:bg-blue-900 text-white text-xs font-extrabold flex items-center gap-2 shadow-md transition-all duration-300 transform hover:scale-105 w-fit"
+                          className="px-5 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-extrabold flex items-center gap-2 shadow-md shadow-blue-500/20 transition-all duration-300 transform hover:scale-105 w-fit"
                         >
                           <span>Learn More</span>
-                          <ArrowRight className="w-4 h-4 text-blue-400" />
+                          <ArrowRight className="w-4 h-4 text-blue-100" />
                         </Link>
                       </div>
                     </div>
@@ -755,10 +788,10 @@ export default function AboutPage() {
                       <div className="pt-2">
                         <Link
                           href="/services/mobile-app-development"
-                          className="px-5 py-2 rounded-full bg-[#0B1528] hover:bg-blue-900 text-white text-xs font-extrabold flex items-center gap-2 shadow-md transition-all duration-300 transform hover:scale-105 w-fit"
+                          className="px-5 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold flex items-center gap-2 shadow-md shadow-emerald-500/20 transition-all duration-300 transform hover:scale-105 w-fit"
                         >
                           <span>Learn More</span>
-                          <ArrowRight className="w-4 h-4 text-emerald-400" />
+                          <ArrowRight className="w-4 h-4 text-emerald-100" />
                         </Link>
                       </div>
                     </div>
@@ -826,10 +859,10 @@ export default function AboutPage() {
                       <div className="pt-2">
                         <Link
                           href="/services/video-editing"
-                          className="px-5 py-2 rounded-full bg-[#0B1528] hover:bg-blue-900 text-white text-xs font-extrabold flex items-center gap-2 shadow-md transition-all duration-300 transform hover:scale-105 w-fit"
+                          className="px-5 py-2 rounded-full bg-violet-600 hover:bg-violet-700 text-white text-xs font-extrabold flex items-center gap-2 shadow-md shadow-violet-500/20 transition-all duration-300 transform hover:scale-105 w-fit"
                         >
                           <span>Learn More</span>
-                          <ArrowRight className="w-4 h-4 text-violet-400" />
+                          <ArrowRight className="w-4 h-4 text-violet-100" />
                         </Link>
                       </div>
                     </div>
@@ -897,10 +930,10 @@ export default function AboutPage() {
                       <div className="pt-2">
                         <Link
                           href="/services/social-media-management"
-                          className="px-5 py-2 rounded-full bg-[#0B1528] hover:bg-blue-900 text-white text-xs font-extrabold flex items-center gap-2 shadow-md transition-all duration-300 transform hover:scale-105 w-fit"
+                          className="px-5 py-2 rounded-full bg-teal-600 hover:bg-teal-700 text-white text-xs font-extrabold flex items-center gap-2 shadow-md shadow-teal-500/20 transition-all duration-300 transform hover:scale-105 w-fit"
                         >
                           <span>Learn More</span>
-                          <ArrowRight className="w-4 h-4 text-teal-400" />
+                          <ArrowRight className="w-4 h-4 text-teal-100" />
                         </Link>
                       </div>
                     </div>
@@ -1180,227 +1213,282 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 9. REAL TESTIMONIALS & TRUST RELATIONSHIPS */}
+      {/* 9. REAL TESTIMONIALS & TRUST RELATIONSHIPS (Styled like Dedicated Team Cards) */}
       <section className="py-14 sm:py-20 bg-slate-50/70 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
-              <Heart className="w-3.5 h-3.5 text-violet-600" /> Long-Term Client
-              Relationships
+              <Heart className="w-3.5 h-3.5 text-violet-600" /> Long-Term Client Relationships
             </div>
-            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 mb-2">
-              Client Trust &{" "}
-              <span className="gradient-text-hero">Relationships</span>
+            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 mb-3">
+              Client Trust & <span className="gradient-text-hero">Relationships</span>
             </h2>
-            <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-3 mb-4" />
+            <div className="w-16 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-2 mb-5" />
 
-            <div className="p-4 rounded-2xl bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm font-medium max-w-2xl mx-auto leading-relaxed shadow-2xs">
-              &ldquo;We are building long-term relationships through transparent
-              communication, reliable delivery and practical digital
-              solutions.&rdquo;
+            <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 text-slate-800 text-xs sm:text-sm font-semibold max-w-2xl mx-auto leading-relaxed shadow-2xs">
+              &ldquo;We are building long-term relationships through transparent communication, reliable delivery, and practical digital solutions.&rdquo;
             </div>
           </div>
 
-          {/* Genuine Client Feedback Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {/* 3 Client Testimonial Cards (Matching Dedicated Team Card Border Design) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Card 1: Bakery Order System */}
             <AnimatedSection delay={0}>
-              <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-2xs space-y-3 h-full flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-1 text-amber-400 mb-2">
-                    <Star className="w-4 h-4 fill-amber-400" />
-                    <Star className="w-4 h-4 fill-amber-400" />
-                    <Star className="w-4 h-4 fill-amber-400" />
-                    <Star className="w-4 h-4 fill-amber-400" />
-                    <Star className="w-4 h-4 fill-amber-400" />
+              <div className="bg-white p-6 sm:p-7 rounded-3xl border border-emerald-200/90 shadow-xs hover:shadow-lg hover:border-emerald-400 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full space-y-4">
+                <div className="w-8 h-8 absolute top-0 right-0 border-t-2 border-r-2 border-emerald-400/60 rounded-tr-3xl pointer-events-none" />
+
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-black uppercase tracking-wider shadow-2xs">
+                      Bakery Order System
+                    </span>
+                    <div className="flex items-center gap-0.5 text-amber-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 fill-amber-400 stroke-amber-400" />
+                      ))}
+                    </div>
                   </div>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    &ldquo;SiteMint built our bakery online ordering system in
-                    just 7 days. Customers can now directly send customized cake
-                    orders to our WhatsApp with zero aggregator cuts.&rdquo;
+
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-semibold">
+                    &ldquo;SiteMint built our bakery online ordering system in just 7 days. Customers can now directly send customized cake orders to our WhatsApp with zero aggregator cuts.&rdquo;
                   </p>
                 </div>
-                <div className="pt-3 border-t border-slate-100 text-xs font-bold text-slate-900">
-                  Bakery & Sweet Shop Owner
-                  <div className="text-[10px] text-slate-500 font-normal">
-                    Local Business Client
+
+                <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-2xl bg-emerald-100/80 border border-emerald-300 text-emerald-900 flex items-center justify-center font-black text-xs shrink-0 shadow-2xs">
+                    BS
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-black text-slate-900">Bakery & Sweet Shop Owner</h4>
+                    <span className="text-[10px] text-slate-500 font-semibold block">Local Business Client • Delhi NCR</span>
                   </div>
                 </div>
               </div>
             </AnimatedSection>
 
+            {/* Card 2: EdTech Portal */}
             <AnimatedSection delay={130}>
-              <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-2xs space-y-3 h-full flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-1 text-amber-400 mb-2">
-                    <Star className="w-4 h-4 fill-amber-400" />
-                    <Star className="w-4 h-4 fill-amber-400" />
-                    <Star className="w-4 h-4 fill-amber-400" />
-                    <Star className="w-4 h-4 fill-amber-400" />
-                    <Star className="w-4 h-4 fill-amber-400" />
+              <div className="bg-white p-6 sm:p-7 rounded-3xl border border-violet-200/90 shadow-xs hover:shadow-lg hover:border-violet-400 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full space-y-4">
+                <div className="w-8 h-8 absolute top-0 right-0 border-t-2 border-r-2 border-violet-400/60 rounded-tr-3xl pointer-events-none" />
+
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-violet-50 border border-violet-200 text-violet-800 text-[11px] font-black uppercase tracking-wider shadow-2xs">
+                      EdTech Portal
+                    </span>
+                    <div className="flex items-center gap-0.5 text-amber-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 fill-amber-400 stroke-amber-400" />
+                      ))}
+                    </div>
                   </div>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    &ldquo;Fast speed and complete code ownership. No monthly
-                    rental fees or agency hostages. Highly recommended for
-                    coaching institutes and startups.&rdquo;
+
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-semibold">
+                    &ldquo;Fast speed and complete code ownership. No monthly rental fees or agency hostages. Highly recommended for coaching institutes and startups.&rdquo;
                   </p>
                 </div>
-                <div className="pt-3 border-t border-slate-100 text-xs font-bold text-slate-900">
-                  Coaching Institute Director
-                  <div className="text-[10px] text-slate-500 font-normal">
-                    EdTech Portal Client
+
+                <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-2xl bg-violet-100/80 border border-violet-300 text-violet-900 flex items-center justify-center font-black text-xs shrink-0 shadow-2xs">
+                    CI
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-black text-slate-900">Coaching Institute Director</h4>
+                    <span className="text-[10px] text-slate-500 font-semibold block">EdTech Portal Client • Jaipur</span>
                   </div>
                 </div>
               </div>
             </AnimatedSection>
 
+            {/* Card 3: D2C E-Commerce */}
             <AnimatedSection delay={260}>
-              <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-2xs space-y-3 h-full flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-1 text-amber-400 mb-2">
-                    <Star className="w-4 h-4 fill-amber-400" />
-                    <Star className="w-4 h-4 fill-amber-400" />
-                    <Star className="w-4 h-4 fill-amber-400" />
-                    <Star className="w-4 h-4 fill-amber-400" />
-                    <Star className="w-4 h-4 fill-amber-400" />
+              <div className="bg-white p-6 sm:p-7 rounded-3xl border border-blue-200/90 shadow-xs hover:shadow-lg hover:border-blue-400 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full space-y-4">
+                <div className="w-8 h-8 absolute top-0 right-0 border-t-2 border-r-2 border-blue-400/60 rounded-tr-3xl pointer-events-none" />
+
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-[11px] font-black uppercase tracking-wider shadow-2xs">
+                      D2C E-Commerce
+                    </span>
+                    <div className="flex items-center gap-0.5 text-amber-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 fill-amber-400 stroke-amber-400" />
+                      ))}
+                    </div>
                   </div>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    &ldquo;Clear itemized budget from day one. They set up
-                    Razorpay 0% UPI checkout and Google Search Console indexing
-                    cleanly.&rdquo;
+
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-semibold">
+                    &ldquo;Clear itemized budget from day one. They set up Razorpay 0% UPI checkout and Google Search Console indexing cleanly.&rdquo;
                   </p>
                 </div>
-                <div className="pt-3 border-t border-slate-100 text-xs font-bold text-slate-900">
-                  E-Commerce Retail Founder
-                  <div className="text-[10px] text-slate-500 font-normal">
-                    D2C Store Client
+
+                <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-2xl bg-blue-100/80 border border-blue-300 text-blue-900 flex items-center justify-center font-black text-xs shrink-0 shadow-2xs">
+                    EC
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-black text-slate-900">E-Commerce Retail Founder</h4>
+                    <span className="text-[10px] text-slate-500 font-semibold block">D2C Store Client • Mumbai</span>
                   </div>
                 </div>
               </div>
             </AnimatedSection>
+
           </div>
         </div>
       </section>
 
-      {/* 10. TRUST & TRANSPARENCY SECTION (Official Business Credentials) */}
-      <section className="py-14 sm:py-20 bg-white">
+      {/* 10. TRUST & TRANSPARENCY SECTION (Official Credentials & Get In Touch Form) */}
+      <section className="py-14 sm:py-20 bg-slate-50/60 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection delay={100}>
-            <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white shadow-xl">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-7 space-y-4">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-emerald-300 text-xs font-bold uppercase tracking-wider">
-                    <ShieldCheck className="w-4 h-4" /> Official Business
-                    Information
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+              
+              {/* Left Column: Official Business Credentials & Links (Clean Light Theme - No Dark Card Box) */}
+              <div className="lg:col-span-6 flex flex-col justify-between space-y-6 py-2">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider shadow-2xs">
+                    <ShieldCheck className="w-4 h-4 text-violet-600" /> Official Business Information
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-                    Trust & Transparency Credentials
-                  </h2>
+                  <div>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+                      Trust & Transparency <span className="gradient-text-hero">Credentials</span>
+                    </h2>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2 font-normal">
+                      SiteMint operates with complete legal and operational clarity. Connect with our official team across verified channels.
+                    </p>
+                  </div>
 
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                    SiteMint operates with complete legal and operational
-                    clarity. Connect with our official team across verified
-                    channels.
-                  </p>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
-                    <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
-                      <span className="text-slate-400 block text-[10px] uppercase font-bold">
-                        Service Area
-                      </span>
-                      <span className="text-white font-bold">
-                        Pan-India & Global Remote Digital Studio
-                      </span>
+                  {/* 4 Info Grid Cards (Light Slate Cards with Crisp Borders) */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-1">
+                    <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-full bg-[#4F46E5] text-white flex items-center justify-center shrink-0 shadow-md shadow-indigo-500/20">
+                        <MapPin className="w-4.5 h-4.5" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">
+                          Service Area
+                        </span>
+                        <span className="text-slate-900 font-extrabold truncate block">
+                          Pan-India & Global Remote
+                        </span>
+                      </div>
                     </div>
 
-                    <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
-                      <span className="text-slate-400 block text-[10px] uppercase font-bold">
-                        Official Email
-                      </span>
-                      <a
-                        href="mailto:contactsitemint@gmail.com"
-                        className="text-emerald-300 font-bold hover:underline"
-                      >
-                        contactsitemint@gmail.com
-                      </a>
+                    <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-full bg-[#0284C7] text-white flex items-center justify-center shrink-0 shadow-md shadow-sky-500/20">
+                        <Mail className="w-4.5 h-4.5" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">
+                          Official Email
+                        </span>
+                        <a
+                          href="mailto:contactsitemint@gmail.com"
+                          className="text-violet-700 font-extrabold hover:underline block truncate"
+                        >
+                          contactsitemint@gmail.com
+                        </a>
+                      </div>
                     </div>
 
-                    <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
-                      <span className="text-slate-400 block text-[10px] uppercase font-bold">
-                        WhatsApp & Phone
-                      </span>
-                      <a
-                        href="tel:+918920683588"
-                        className="text-emerald-300 font-bold hover:underline"
-                      >
-                        +91 89206 83588
-                      </a>
+                    <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-full bg-[#25D366] text-white flex items-center justify-center shrink-0 shadow-md shadow-emerald-500/20">
+                        <WhatsAppIcon className="w-4.5 h-4.5" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">
+                          WhatsApp & Phone
+                        </span>
+                        <a
+                          href="tel:+918920683588"
+                          className="text-violet-700 font-extrabold hover:underline block truncate"
+                        >
+                          +91 89206 83588
+                        </a>
+                      </div>
                     </div>
 
-                    <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
-                      <span className="text-slate-400 block text-[10px] uppercase font-bold">
-                        Code Ownership
-                      </span>
-                      <span className="text-white font-bold">
-                        100% Legal Source Code Rights
-                      </span>
+                    <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-full bg-[#7C3AED] text-white flex items-center justify-center shrink-0 shadow-md shadow-violet-500/20">
+                        <ShieldCheck className="w-4.5 h-4.5" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">
+                          Code Ownership
+                        </span>
+                        <span className="text-slate-900 font-extrabold truncate block">
+                          100% Legal Source Code Rights
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Right Box: Quick Legal & Navigation Links */}
-                <div className="lg:col-span-5 p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 space-y-3">
-                  <div className="text-xs font-bold text-emerald-300 uppercase tracking-wider mb-2">
+                {/* Official Links & Policies Grid */}
+                <div className="space-y-3 pt-4 border-t border-slate-200/80">
+                  <div className="text-xs font-extrabold text-violet-800 uppercase tracking-wider">
                     Official Links & Policies
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2 text-xs font-semibold">
+                  <div className="grid grid-cols-2 gap-2.5 text-xs font-bold">
                     <Link
                       href="/pricing"
-                      className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition flex items-center justify-between text-white"
+                      className="p-3 rounded-xl bg-white border border-slate-200/90 hover:border-violet-300 hover:bg-violet-50/50 transition flex items-center justify-between text-slate-800 shadow-2xs group"
                     >
                       <span>Pricing Plans</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
+                      <ArrowRight className="w-3.5 h-3.5 text-violet-600 group-hover:translate-x-1 transition-transform" />
                     </Link>
 
                     <Link
                       href="/contact"
-                      className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition flex items-center justify-between text-white"
+                      className="p-3 rounded-xl bg-white border border-slate-200/90 hover:border-violet-300 hover:bg-violet-50/50 transition flex items-center justify-between text-slate-800 shadow-2xs group"
                     >
                       <span>Contact Us</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
+                      <ArrowRight className="w-3.5 h-3.5 text-violet-600 group-hover:translate-x-1 transition-transform" />
                     </Link>
 
                     <Link
                       href="/terms-and-conditions"
-                      className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition flex items-center justify-between text-white"
+                      className="p-3 rounded-xl bg-white border border-slate-200/90 hover:border-violet-300 hover:bg-violet-50/50 transition flex items-center justify-between text-slate-800 shadow-2xs group"
                     >
                       <span>Terms & Conditions</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
+                      <ArrowRight className="w-3.5 h-3.5 text-violet-600 group-hover:translate-x-1 transition-transform" />
                     </Link>
 
                     <Link
                       href="/privacy-policy"
-                      className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition flex items-center justify-between text-white"
+                      className="p-3 rounded-xl bg-white border border-slate-200/90 hover:border-violet-300 hover:bg-violet-50/50 transition flex items-center justify-between text-slate-800 shadow-2xs group"
                     >
                       <span>Privacy Policy</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
+                      <ArrowRight className="w-3.5 h-3.5 text-violet-600 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
 
-                  <div className="pt-3 border-t border-white/10 text-center">
+                  <div className="pt-2">
                     <a
                       href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20discuss%20a%20new%20project."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-whatsapp w-full justify-center text-xs py-3 font-bold shadow-md"
+                      className="btn-whatsapp w-full justify-center text-xs py-3.5 font-extrabold shadow-md rounded-2xl"
                     >
                       <MessageCircle className="w-4 h-4" />
                       <span>Direct WhatsApp Inquiry</span>
                     </a>
                   </div>
                 </div>
+
               </div>
+
+              {/* Right Column: Get In Touch Form Card (Matched Height Container) */}
+              <div className="lg:col-span-6 flex flex-col justify-center items-center h-full">
+                <GetInTouchForm />
+              </div>
+
             </div>
           </AnimatedSection>
         </div>

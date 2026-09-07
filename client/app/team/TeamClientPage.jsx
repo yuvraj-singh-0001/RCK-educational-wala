@@ -288,15 +288,15 @@ export default function TeamClientPage() {
         {/* 8 Card Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 pt-8">
           {teamMembers.map((member, idx) => (
-            <AnimatedSection key={member.id} delay={idx * 80}>
-              <div className="bg-white rounded-3xl border border-sky-100 border-b-4 border-b-sky-300 shadow-md hover:shadow-2xl hover:border-sky-300 transition-all duration-300 relative pt-16 pb-6 px-5 text-center group flex flex-col justify-between h-full">
+            <AnimatedSection key={member.id} delay={idx * 80} className="mt-12 sm:mt-14">
+              <div className="bg-white rounded-[2rem] border border-sky-100 border-b-4 border-b-[#00A3E0] shadow-md shadow-sky-100/50 hover:shadow-[0_12px_32px_rgba(56,189,248,0.35)] hover:border-sky-300 hover:-translate-y-1.5 transition-all duration-300 group relative pt-16 sm:pt-20 pb-8 px-6 text-center flex flex-col justify-between h-full">
 
                 {/* Circular Profile Avatar (Popping out from the top center) */}
-                <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-white shadow-md shadow-sky-200/60 bg-slate-100 overflow-hidden ring-4 ring-sky-100 group-hover:ring-violet-300 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute -top-14 sm:-top-16 left-1/2 -translate-x-1/2 w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-slate-100 overflow-hidden shadow-[0_0_25px_rgba(56,189,248,0.4)] flex items-center justify-center border-none ring-1 ring-sky-200">
                   <img
                     src={member.image}
                     alt={`${member.name} - ${member.role} at SiteMint Studio`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover"
                     onError={(e) => {
                       // Fallback if image has not been placed in public/team yet
                       e.currentTarget.style.display = 'none';
@@ -313,8 +313,8 @@ export default function TeamClientPage() {
                 </div>
 
                 {/* Card Content */}
-                <div className="pt-2 space-y-2">
-                  <h3 className="text-base sm:text-lg font-black text-slate-900 group-hover:text-violet-700 transition-colors leading-snug">
+                <div className="pt-2 space-y-1.5">
+                  <h3 className="text-base sm:text-lg font-black text-slate-900 leading-snug">
                     {member.name}
                   </h3>
                   <p className={`text-xs font-bold ${member.roleColor}`}>
