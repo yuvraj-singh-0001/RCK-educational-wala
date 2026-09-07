@@ -10,7 +10,12 @@ import {
   Globe,
   Code2,
   Heart,
-  ShieldCheck
+  ShieldCheck,
+  Cloud,
+  Layers,
+  Database,
+  Award,
+  CheckCircle2,
 } from 'lucide-react';
 import { LinkedInIcon } from '../../components/SocialIcons';
 import AnimatedSection from '../../components/AnimatedSection';
@@ -104,7 +109,7 @@ export default function TeamClientPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <AnimatedSection delay={0}>
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-500/10 border border-violet-400/30 text-violet-300 text-xs font-black uppercase tracking-wider mb-4">
-              <Users className="w-4 h-4 text-violet-400" /> People Behind SiteMint
+              <Users className="w-4 h-4 text-violet-400" /> People Behind SiteMint Studio
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4">
@@ -112,15 +117,24 @@ export default function TeamClientPage() {
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed font-normal mb-8">
-              With a passion for innovation, we collaborate seamlessly to deliver exceptional results. Get to know the faces behind our success and discover how our team can transform your ideas into reality.
+              Engineers, full-stack developers, UI designers, video editors, and social media strategists working together to build production-grade web applications and digital media for growing businesses.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/about"
-                className="px-5 py-2.5 rounded-xl bg-violet-950/90 border border-violet-700/60 hover:bg-violet-900 text-white text-xs sm:text-sm font-extrabold flex items-center gap-2 transition"
+                className="px-5 py-2.5 rounded-xl bg-violet-950/90 border border-violet-700/60 hover:bg-violet-900 text-white text-xs sm:text-sm font-extrabold flex items-center gap-2 transition shadow-sm"
               >
-                <span>Back to About Studio</span>
+                <span>About SiteMint Studio</span>
+                <ArrowRight className="w-4 h-4 text-violet-300" />
+              </Link>
+
+              <Link
+                href="/services"
+                className="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs sm:text-sm font-extrabold flex items-center gap-2 transition"
+              >
+                <Briefcase className="w-4 h-4 text-violet-300" />
+                <span>Explore Services</span>
               </Link>
 
               <a
@@ -137,40 +151,127 @@ export default function TeamClientPage() {
         </div>
       </section>
 
-      {/* 2. FOUNDER SPOTLIGHT CARD */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16">
-        <AnimatedSection delay={100}>
-          <div className="max-w-4xl mx-auto bg-white rounded-3xl border-2 border-violet-200 shadow-xl p-6 sm:p-8 relative overflow-hidden flex flex-col md:flex-row items-center gap-6 sm:gap-8">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-tr from-violet-600 via-indigo-600 to-sky-500 text-white font-extrabold text-3xl flex items-center justify-center shadow-lg font-mono shrink-0">
-              YS
+      {/* 2. FOUNDER & ENGINEERING LEADERSHIP SECTION (Exact Match with About Page Design & Code) */}
+      <section id="founder" className="py-14 sm:py-20 bg-slate-50/70 border-b border-slate-200 scroll-mt-16 text-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
+              <Users className="w-3.5 h-3.5 text-violet-600" /> Founder & Engineering Leadership
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 mb-2">
+              Meet Our <span className="gradient-text-hero">Founder</span>
+            </h2>
+            <p className="text-slate-600 text-xs sm:text-base font-medium max-w-2xl mx-auto leading-relaxed">
+              Leading Next.js 15 web architecture, mobile application engineering, cloud infrastructure, and core client project engineering at SiteMint Studio.
+            </p>
+            <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-4" />
+          </div>
+
+          {/* 2-Column Grid: Left Side = Large Unboxed Founder Photo + LinkedIn Link Below; Right Side = Details + Skills + Team Summary */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+
+            {/* Left Column: Large Unboxed Founder Photo + LinkedIn Link directly below */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center">
+              <AnimatedSection direction="left" delay={0} className="w-full flex flex-col items-center justify-center">
+                <div className="w-full max-w-md lg:max-w-xl mx-auto flex items-center justify-center overflow-visible">
+                  <img
+                    src="/team/Founder.png"
+                    alt="Yuvraj Singh - Founder & Lead Full-Stack Developer at SiteMint Studio"
+                    className="w-full h-auto max-h-[460px] sm:max-h-[580px] lg:max-h-[660px] object-contain pointer-events-none select-none transition-transform duration-300 hover:scale-105 drop-shadow-2xl"
+                  />
+                </div>
+
+                {/* Connect on LinkedIn button directly below the photo */}
+                <div className="pt-4 flex justify-center w-full">
+                  <a
+                    href="https://www.linkedin.com/in/yuvraj-singh-0001/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-50 text-[#0A66C2] border border-blue-200 hover:bg-[#0A66C2] hover:text-white font-black text-xs sm:text-sm transition-all shadow-sm group/link"
+                  >
+                    <LinkedInIcon className="w-4 h-4" />
+                    <span>Connect on LinkedIn</span>
+                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </AnimatedSection>
             </div>
 
-            <div className="space-y-2 text-center md:text-left flex-1">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-violet-50 text-violet-800 border border-violet-200 text-xs font-extrabold uppercase tracking-wider">
-                Founder & Lead Web Engineer
-              </div>
-              <h2 className="text-2xl font-black text-slate-900">Yuvraj Singh</h2>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                Leading Next.js 15 web architecture, mobile application development, cloud infrastructure, and core client project engineering at SiteMint Studio.
-              </p>
-              <div className="pt-2 flex items-center justify-center md:justify-start gap-4">
-                <a
-                  href="https://www.linkedin.com/company/sitemint002sep02/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0A66C2] hover:underline"
-                >
-                  <LinkedInIcon className="w-4 h-4" />
-                  <span>Connect on LinkedIn</span>
-                </a>
-              </div>
+            {/* Right Column: Founder Details + Skills + Team Summary Box */}
+            <div className="lg:col-span-7 space-y-6">
+              <AnimatedSection direction="right" delay={150} className="space-y-6">
+
+                {/* Founder Header & Bio */}
+                <div>
+                  <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-black uppercase tracking-wider border border-blue-200/60 mb-2 shadow-2xs">
+                    Founder & Lead Full-Stack Developer
+                  </div>
+                  <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+                    Yuvraj Singh
+                  </h3>
+                  <div className="w-16 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-500 rounded-full mt-2.5 mb-3" />
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                    Passionate full-stack developer overseeing web software development, mobile application engineering, and creative digital media at SiteMint Studio—delivering high-performance digital solutions with practical pricing and 100% code ownership.
+                  </p>
+                </div>
+
+                {/* 4 Skill Highlights Badges (2 per row even on mobile screens) */}
+                <div className="grid grid-cols-2 gap-2 sm:gap-2.5">
+                  <Link
+                    href="/services/website-development"
+                    className="flex items-center gap-1.5 sm:gap-2.5 p-2 sm:p-3 rounded-2xl bg-white border border-indigo-200/90 shadow-2xs hover:border-indigo-400 hover:shadow-xs transition-all group/skill"
+                  >
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
+                      <Code2 className="w-3.5 h-3.5" />
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight group-hover/skill:text-indigo-600 transition-colors">
+                      Web & Software Development
+                    </span>
+                  </Link>
+
+                  <div className="flex items-center gap-1.5 sm:gap-2.5 p-2 sm:p-3 rounded-2xl bg-white border border-sky-200/90 shadow-2xs hover:border-sky-400 hover:shadow-xs transition-all">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
+                      <Cloud className="w-3.5 h-3.5" />
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                      Cloud Architecture
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-1.5 sm:gap-2.5 p-2 sm:p-3 rounded-2xl bg-white border border-violet-200/90 shadow-2xs hover:border-violet-400 hover:shadow-xs transition-all">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-xl bg-violet-50 text-violet-600 flex items-center justify-center shrink-0">
+                      <Layers className="w-3.5 h-3.5" />
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                      SSR Deployment
+                    </span>
+                  </div>
+
+                  <Link
+                    href="/services"
+                    className="flex items-center gap-1.5 sm:gap-2.5 p-2 sm:p-3 rounded-2xl bg-white border border-blue-200/90 shadow-2xs hover:border-blue-400 hover:shadow-xs transition-all group/skill"
+                  >
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                      <Database className="w-3.5 h-3.5" />
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight group-hover/skill:text-blue-600 transition-colors">
+                      Client Project Engineering
+                    </span>
+                  </Link>
+                </div>
+
+              </AnimatedSection>
             </div>
+
           </div>
-        </AnimatedSection>
+
+        </div>
       </section>
 
-      {/* 3. TEAM MEMBERS GRID (Matching Screenshot Layout & Design) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* 3. TEAM MEMBERS GRID */}
+      <section id="team-members" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-16">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-violet-600" /> — CORE TEAM MEMBERS —
@@ -179,7 +280,7 @@ export default function TeamClientPage() {
             Our Dedicated <span className="gradient-text-hero">Specialists</span>
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed max-w-xl mx-auto">
-            Get to know the faces behind our success and discover how our team can transform your ideas into reality.
+            Get to know the faces behind our success and discover how our engineering team transforms your digital ideas into high-performance web applications.
           </p>
           <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-4" />
         </div>
@@ -194,7 +295,7 @@ export default function TeamClientPage() {
                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-white shadow-md shadow-sky-200/60 bg-slate-100 overflow-hidden ring-4 ring-sky-100 group-hover:ring-violet-300 transition-all duration-300 flex items-center justify-center">
                   <img
                     src={member.image}
-                    alt={`${member.name} - ${member.role}`}
+                    alt={`${member.name} - ${member.role} at SiteMint Studio`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     onError={(e) => {
                       // Fallback if image has not been placed in public/team yet
@@ -240,15 +341,15 @@ export default function TeamClientPage() {
         </div>
       </section>
 
-      {/* 4. FOOTER CTA */}
+      {/* 4. FOOTER CTA & INTERNAL BACKLINKS */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
         <AnimatedSection delay={100}>
-          <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-violet-700 via-indigo-700 to-slate-900 text-white shadow-xl text-center space-y-4">
+          <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-violet-700 via-indigo-700 to-slate-900 text-white shadow-xl text-center space-y-5">
             <h2 className="text-2xl sm:text-3xl font-black text-white">
               Want to Work with Our Engineering & Creative Team?
             </h2>
             <p className="text-xs sm:text-sm text-violet-100 max-w-xl mx-auto leading-relaxed">
-              Whether you need a web app, mobile app, 4K Instagram video editing, or social media management, our team is ready to scale your brand.
+              Whether you need a high-speed Next.js web app, Flutter mobile application, 4K Instagram video editing, or multi-channel social media management, our team is ready to scale your brand.
             </p>
             <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
               <a
@@ -260,6 +361,14 @@ export default function TeamClientPage() {
                 <MessageCircle className="w-4 h-4 text-emerald-600" />
                 <span>Start Direct Discussion</span>
               </a>
+
+              <Link
+                href="/contact"
+                className="px-6 py-3 rounded-xl bg-violet-900/80 hover:bg-violet-900 border border-violet-400/40 text-white font-bold text-xs sm:text-sm transition flex items-center gap-2"
+              >
+                <span>Contact Us</span>
+                <ArrowRight className="w-4 h-4 text-violet-300" />
+              </Link>
             </div>
           </div>
         </AnimatedSection>
@@ -268,3 +377,4 @@ export default function TeamClientPage() {
     </div>
   );
 }
+

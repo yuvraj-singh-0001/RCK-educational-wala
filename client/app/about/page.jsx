@@ -957,183 +957,140 @@ export default function AboutPage() {
         </AnimatedSection>
       </section>
 
-      {/* 5. MEET THE TEAM & FOUNDER */}
+      {/* 5. MEET THE TEAM & FOUNDER (Spacious Un-cramped Layout) */}
       <section
         id="team"
-        className="py-14 sm:py-20 bg-slate-50/70 border-b border-slate-200 scroll-mt-16"
+        className="py-14 sm:py-20 bg-slate-50/70 border-b border-slate-200 scroll-mt-16 text-slate-900"
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-3 shadow-2xs">
-              <Users className="w-3.5 h-3.5 text-violet-600" /> People Behind
-              SiteMint
+              <Users className="w-3.5 h-3.5 text-violet-600" /> People Behind SiteMint
             </div>
-            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 mb-2">
-              Meet the{" "}
-              <span className="gradient-text-hero">Engineering Team</span>
+            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 mb-2">
+              Meet the <span className="gradient-text-hero">Engineering Team</span>
             </h2>
-            <p className="text-slate-600 text-xs sm:text-sm">
-              Genuine engineers dedicated to building clean, scalable software
-              for ambitious businesses.
+            <p className="text-slate-600 text-xs sm:text-base font-medium max-w-2xl mx-auto leading-relaxed">
+              Genuine engineers and creative specialists dedicated to building clean, scalable software for ambitious businesses.
             </p>
-            <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-3" />
+            <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-4" />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch max-w-6xl mx-auto">
-            {/* Card 1: Founder Profile Card (Wide) */}
-            <div className="lg:col-span-7 h-full">
-              <AnimatedSection delay={0} className="h-full">
-                <div className="p-1 sm:p-2 rounded-[2rem] bg-gradient-to-br from-blue-50 to-indigo-50/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white h-full relative group">
-                  <div className="bg-white/80 backdrop-blur-sm rounded-[1.8rem] p-5 sm:p-6 h-full flex flex-col sm:flex-row gap-6 relative border border-blue-50 shadow-sm">
-                    {/* Floating Handwritten text */}
-                    <div className="absolute top-6 right-6 lg:right-10 rotate-[-6deg] text-indigo-500 hidden md:flex flex-col items-center">
-                      <span
-                        style={{ fontFamily: "cursive" }}
-                        className="text-[13px] font-semibold leading-tight"
-                      >
-                        Let's Build
-                      </span>
-                      <span
-                        style={{ fontFamily: "cursive" }}
-                        className="text-[13px] font-semibold leading-tight"
-                      >
-                        Together
-                      </span>
-                      <svg
-                        className="w-5 h-5 mt-1 text-indigo-400 rotate-[-15deg] opacity-70"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M5 9c1.5 1.5 3 3 5 3s3.5-1.5 5-3" />
-                        <path d="m11 16 4 4 4-4" />
-                      </svg>
-                    </div>
+          {/* 2-Column Grid: Left Side = Large Founder Photo + LinkedIn Link Below; Right Side = Details + Team Summary */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
 
-                    {/* Left Column: Image Area */}
-                    <div className="w-full sm:w-[40%] xl:w-[45%] shrink-0 relative flex items-center justify-center overflow-hidden rounded-l-[1.8rem] sm:rounded-r-none rounded-r-[1.8rem]">
-                      {/* Image */}
-                      <img
-                        src="/team/yuvraj Singh tm.png"
-                        alt="Yuvraj Singh"
-                        className="w-full h-full object-cover object-top relative z-10"
-                      />
-                    </div>
+            {/* Left Column: Large Unboxed Founder Photo + LinkedIn Link directly below */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center">
+              <AnimatedSection direction="left" delay={0} className="w-full flex flex-col items-center justify-center">
+                <div className="w-full max-w-md lg:max-w-xl mx-auto flex items-center justify-center overflow-visible">
+                  <img
+                    src="/team/Founder.png"
+                    alt="Yuvraj Singh - Founder & Lead Full-Stack Developer"
+                    className="w-full h-auto max-h-[460px] sm:max-h-[580px] lg:max-h-[660px] object-contain pointer-events-none select-none transition-transform duration-300 hover:scale-105 drop-shadow-2xl"
+                  />
+                </div>
 
-                    {/* Right Column: Info Area */}
-                    <div className="w-full sm:w-[60%] xl:w-[55%] flex flex-col justify-center py-2 relative z-10">
-                      <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50/80 text-blue-600 text-[10px] font-black uppercase tracking-wider w-fit mb-3 border border-blue-100/50">
-                        Founder & Lead Web Engineer
-                      </div>
-
-                      <h3 className="text-2xl sm:text-[28px] font-black text-slate-900 mb-2 tracking-tight">
-                        Yuvraj Singh
-                      </h3>
-
-                      <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-6 font-medium pr-4">
-                        Web development, cloud architecture, SSR deployment, and
-                        client project engineering.
-                      </p>
-
-                      {/* Tags Grid */}
-                      <div className="grid grid-cols-1 xl:grid-cols-2 gap-2.5 mb-6">
-                        <div className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-50/80 border border-slate-100 text-[11px] font-bold text-slate-700 w-full shadow-sm hover:shadow-md hover:border-indigo-100 transition-all">
-                          <Code2 className="w-3.5 h-3.5 text-indigo-600 shrink-0" />{" "}
-                          <span>Web Development</span>
-                        </div>
-                        <div className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-50/80 border border-slate-100 text-[11px] font-bold text-slate-700 w-full shadow-sm hover:shadow-md hover:border-sky-100 transition-all">
-                          <Cloud className="w-3.5 h-3.5 text-sky-600 shrink-0" />{" "}
-                          <span>Cloud Architecture</span>
-                        </div>
-                        <div className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-50/80 border border-slate-100 text-[11px] font-bold text-slate-700 w-full shadow-sm hover:shadow-md hover:border-violet-100 transition-all">
-                          <Layers className="w-3.5 h-3.5 text-violet-600 shrink-0" />{" "}
-                          <span>SSR Deployment</span>
-                        </div>
-                        <div className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-50/80 border border-slate-100 text-[11px] font-bold text-slate-700 w-full shadow-sm hover:shadow-md hover:border-blue-100 transition-all">
-                          <Database className="w-3.5 h-3.5 text-blue-600 shrink-0" />{" "}
-                          <span>Client Project Eng.</span>
-                        </div>
-                      </div>
-
-                      <div className="mt-auto pt-4 border-t border-slate-100/80 flex items-center justify-between">
-                        <span className="text-[11px] font-bold text-slate-500">
-                          Lead Developer
-                        </span>
-                        <a
-                          href="https://www.linkedin.com/in/yuvraj-singh-0001/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-[11px] font-black text-[#0A66C2] hover:text-[#084e96] transition-colors group/link"
-                        >
-                          <LinkedInIcon className="w-4 h-4" />
-                          <span>LinkedIn Profile</span>
-                          <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                {/* Connect on LinkedIn button directly below the photo */}
+                <div className="pt-4 flex justify-center w-full">
+                  <a
+                    href="https://www.linkedin.com/in/yuvraj-singh-0001/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-50 text-[#0A66C2] border border-blue-200 hover:bg-[#0A66C2] hover:text-white font-black text-xs sm:text-sm transition-all shadow-sm group/link"
+                  >
+                    <LinkedInIcon className="w-4 h-4" />
+                    <span>Connect on LinkedIn</span>
+                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                  </a>
                 </div>
               </AnimatedSection>
             </div>
 
-            {/* Card 2: Team Philosophy Card */}
-            <div className="lg:col-span-5 h-full">
-              <AnimatedSection delay={150} className="h-full">
-                <div className="p-1 sm:p-2 rounded-[2rem] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-50 h-full flex flex-col group">
-                  <div className="bg-[#FAFAFC] rounded-[1.8rem] p-6 lg:p-8 h-full flex flex-col justify-between border border-slate-100/50">
-                    <div>
-                      {/* Header: Badge & Circle */}
-                      <div className="flex items-start justify-between mb-8">
-                        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-100 text-indigo-700 text-[10px] font-black uppercase tracking-wider shadow-sm mt-1">
-                          <Award className="w-3.5 h-3.5 text-indigo-500" />{" "}
-                          DEDICATED 8-MEMBER TEAM
-                        </div>
+            {/* Right Column: Founder Details + Skills + Team Summary Box */}
+            <div className="lg:col-span-7 space-y-6">
+              <AnimatedSection direction="right" delay={150} className="space-y-6">
 
-                        <div className="w-[90px] h-[90px] shrink-0 rounded-full bg-white shadow-md border border-indigo-50/50 flex flex-col items-center justify-center text-indigo-700 transform group-hover:scale-105 transition-transform duration-300 p-1">
-                          <Users className="w-5 h-5 mb-0.5 text-indigo-600" />
-                          <span className="text-2xl font-black leading-none text-indigo-800">
-                            8+
-                          </span>
-                          <span className="text-[8px] font-black uppercase mt-1 tracking-tight text-center leading-[1.1] text-indigo-600 px-1">
-                            Team Members
-                          </span>
-                        </div>
-                      </div>
+                {/* Founder Header & Bio */}
+                <div>
+                  <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-black uppercase tracking-wider border border-blue-200/60 mb-2 shadow-2xs">
+                    Founder & Lead Full-Stack Developer
+                  </div>
+                  <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+                    Yuvraj Singh
+                  </h3>
+                  <div className="w-16 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-500 rounded-full mt-2.5 mb-3" />
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                    Passionate full-stack developer overseeing web software development, mobile application engineering, and creative digital media at SiteMint Studio—delivering high-performance digital solutions with practical pricing and 100% code ownership.
+                  </p>
+                </div>
 
-                      <div className="space-y-4 pr-2">
-                        <p className="text-[13px] text-slate-700 leading-relaxed font-semibold">
-                          Our team includes Project Managers, Full Stack
-                          Developers, UI Designers, Video Editors, and Social
-                          Media Strategists working seamlessly.
-                        </p>
-                        <p className="text-[13px] text-slate-500 leading-relaxed font-medium">
-                          We assign dedicated specialists based on your exact
-                          project scope—ensuring top quality and fast
-                          turnaround.
-                        </p>
-                      </div>
+                {/* 4 Skill Highlights Badges (2 per row even on mobile screens) */}
+                <div className="grid grid-cols-2 gap-2 sm:gap-2.5">
+                  <div className="flex items-center gap-1.5 sm:gap-2.5 p-2 sm:p-3 rounded-2xl bg-white border border-indigo-200/90 shadow-2xs hover:border-indigo-400 hover:shadow-xs transition-all">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
+                      <Code2 className="w-3.5 h-3.5" />
                     </div>
+                    <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">Web & Software Development</span>
+                  </div>
 
-                    <div className="mt-10">
-                      <Link
-                        href="/team"
-                        className="w-full py-3.5 px-6 rounded-[14px] bg-gradient-to-r from-[#7B3FF2] via-[#2563EB] to-[#0D9488] hover:from-[#6D28D9] hover:via-[#1D4ED8] hover:to-[#0F766E] text-white font-extrabold text-[13px] flex items-center justify-between shadow-lg shadow-indigo-500/25 transition-all duration-300 transform group-hover:-translate-y-1"
-                      >
-                        <div className="flex items-center gap-2">
-                          <Users className="w-4 h-4" />
-                          <span>Explore Our Complete 8-Member Team</span>
-                        </div>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
+                  <div className="flex items-center gap-1.5 sm:gap-2.5 p-2 sm:p-3 rounded-2xl bg-white border border-sky-200/90 shadow-2xs hover:border-sky-400 hover:shadow-xs transition-all">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
+                      <Cloud className="w-3.5 h-3.5" />
                     </div>
+                    <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">Cloud Architecture</span>
+                  </div>
+
+                  <div className="flex items-center gap-1.5 sm:gap-2.5 p-2 sm:p-3 rounded-2xl bg-white border border-violet-200/90 shadow-2xs hover:border-violet-400 hover:shadow-xs transition-all">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-xl bg-violet-50 text-violet-600 flex items-center justify-center shrink-0">
+                      <Layers className="w-3.5 h-3.5" />
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">SSR Deployment</span>
+                  </div>
+
+                  <div className="flex items-center gap-1.5 sm:gap-2.5 p-2 sm:p-3 rounded-2xl bg-white border border-blue-200/90 shadow-2xs hover:border-blue-400 hover:shadow-xs transition-all">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                      <Database className="w-3.5 h-3.5" />
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">Client Project Engineering</span>
                   </div>
                 </div>
+
+                {/* Team Summary Card (Permanent Violet Border in Normal State) */}
+                <div className="bg-white p-5 sm:p-6 rounded-3xl border border-violet-300/90 shadow-xs hover:shadow-lg hover:border-violet-500 transition-all duration-300 relative overflow-hidden group space-y-4">
+                  <div className="w-8 h-8 absolute top-0 right-0 border-t-2 border-r-2 border-violet-400/60 rounded-tr-3xl pointer-events-none" />
+
+                  <div className="flex flex-wrap items-center gap-2">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-violet-50 border border-violet-200 text-violet-800 text-[11px] font-black uppercase tracking-wider shadow-2xs">
+                      <Award className="w-3.5 h-3.5 text-violet-600" /> DEDICATED 8-MEMBER TEAM
+                    </div>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-900 text-[11px] font-black uppercase tracking-wider shadow-2xs">
+                      <Users className="w-3.5 h-3.5 text-indigo-600" /> 8+ TEAM MEMBERS
+                    </div>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-semibold">
+                    Our team includes Project Managers, Full Stack Developers, UI Designers, Video Editors, and Social Media Strategists working seamlessly. We assign dedicated specialists based on your exact project scope—ensuring top quality and fast turnaround.
+                  </p>
+
+                  <div className="pt-1">
+                    <Link
+                      href="/team"
+                      className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-600 hover:from-violet-500 hover:to-teal-500 text-white font-extrabold text-xs sm:text-sm inline-flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+                    >
+                      <Users className="w-4 h-4 text-violet-200" />
+                      <span>Explore Our Complete 8-Member Team</span>
+                      <ArrowRight className="w-4 h-4 text-violet-200" />
+                    </Link>
+                  </div>
+                </div>
+
               </AnimatedSection>
             </div>
+
           </div>
+
         </div>
       </section>
 

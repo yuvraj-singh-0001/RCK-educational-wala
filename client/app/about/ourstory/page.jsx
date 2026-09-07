@@ -309,7 +309,7 @@ export default function OurStoryPage() {
                   <div className="text-xs font-bold text-slate-700">
                     <span className="text-[#3B82F6] font-extrabold text-sm block sm:inline">Yuvraj Singh</span>
                     <span className="text-slate-500 block sm:inline sm:ml-1">
-                      — Founder & Lead Web Engineer at SiteMint Studio
+                      — Founder & Lead Full-Stack Developer at SiteMint Studio
                     </span>
                   </div>
                   <Link
