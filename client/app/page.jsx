@@ -4,21 +4,22 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import TechnologiesSection from '../components/TechnologiesSection';
 import FaqSection from '../components/FaqSection';
 import Link from 'next/link';
-import { 
-  MessageCircle, 
-  Phone, 
-  Sparkles, 
-  CheckCircle2, 
-  ArrowRight, 
-  Calculator, 
-  Eye, 
+import {
+  MessageCircle,
+  Phone,
+  Sparkles,
+  CheckCircle2,
+  ArrowRight,
+  Calculator,
+  Eye,
   Globe,
   Smartphone,
   Video,
   Share2,
   Layers,
   TrendingUp,
-  Zap
+  Zap,
+  Crown
 } from 'lucide-react';
 
 export const metadata = {
@@ -62,16 +63,19 @@ export default function HomePage() {
       category: 'WEB & SOFTWARE',
       title: 'Web & Software Development',
       badge: 'TOP CHOICE',
-      badgeColor: 'bg-violet-50 text-violet-700 border-violet-200',
+      badgeColor: 'bg-violet-100/80 text-violet-800 border-violet-200',
+      cardTheme: 'bg-gradient-to-b from-violet-50/40 via-white to-white border-violet-200/80 hover:border-violet-400 hover:shadow-xl hover:shadow-violet-500/10',
+      iconBg: 'bg-gradient-to-br from-violet-600 to-indigo-600 text-white shadow-md shadow-violet-500/25',
+      bulletBg: 'bg-violet-50/40 border-violet-100/80',
+      btnStyle: 'bg-violet-600 hover:bg-violet-700 text-white shadow-md shadow-violet-600/20',
       icon: Globe,
-      iconColor: 'text-violet-700 bg-violet-100',
-      desc: 'Custom high-speed websites, stores & cloud software tailored for your business.',
+      desc: 'Custom high-speed websites, e-commerce stores & cloud software tailored for your business.',
       bullets: [
         'Business Websites & Portfolios',
-        'E-Commerce & UPI Gateways',
+        'E-Commerce & UPI Payment Setup',
         'Education & Coaching Portals',
         'Restaurant QR & WhatsApp Orders',
-        'Custom CRM & Billing Dashboards',
+        'Custom CRM & Billing Software',
       ],
       link: '/services/website-development',
     },
@@ -80,9 +84,12 @@ export default function HomePage() {
       category: 'MOBILE ENGINEERING',
       title: 'Mobile App Development',
       badge: 'PLAY STORE',
-      badgeColor: 'bg-pink-50 text-pink-700 border-pink-200',
+      badgeColor: 'bg-pink-100/80 text-pink-800 border-pink-200',
+      cardTheme: 'bg-gradient-to-b from-pink-50/40 via-white to-white border-pink-200/80 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-500/10',
+      iconBg: 'bg-gradient-to-br from-pink-600 to-rose-600 text-white shadow-md shadow-pink-500/25',
+      bulletBg: 'bg-pink-50/40 border-pink-100/80',
+      btnStyle: 'bg-pink-600 hover:bg-pink-700 text-white shadow-md shadow-pink-600/20',
       icon: Smartphone,
-      iconColor: 'text-pink-700 bg-pink-100',
       desc: 'High-performance Android & iOS apps engineered for fast retention & orders.',
       bullets: [
         'Android (.APK) & Play Store Ready',
@@ -98,9 +105,12 @@ export default function HomePage() {
       category: 'CREATIVE MEDIA',
       title: 'Video Editing & Reels',
       badge: 'VIRAL RETENTION',
-      badgeColor: 'bg-rose-50 text-rose-700 border-rose-200',
+      badgeColor: 'bg-purple-100/80 text-purple-800 border-purple-200',
+      cardTheme: 'bg-gradient-to-b from-purple-50/40 via-white to-white border-purple-200/80 hover:border-purple-400 hover:shadow-xl hover:shadow-purple-500/10',
+      iconBg: 'bg-gradient-to-br from-purple-600 to-fuchsia-600 text-white shadow-md shadow-purple-500/25',
+      bulletBg: 'bg-purple-50/40 border-purple-100/80',
+      btnStyle: 'bg-purple-600 hover:bg-purple-700 text-white shadow-md shadow-purple-600/20',
       icon: Video,
-      iconColor: 'text-rose-700 bg-rose-100',
       desc: 'Viral Instagram Reels, YouTube videos & ads designed to convert viewers to buyers.',
       bullets: [
         'Instagram Reels & YouTube Shorts',
@@ -116,9 +126,12 @@ export default function HomePage() {
       category: 'BRAND MARKETING',
       title: 'Social Media Management',
       badge: '7+ PLATFORMS',
-      badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+      badgeColor: 'bg-emerald-100/80 text-emerald-800 border-emerald-200',
+      cardTheme: 'bg-gradient-to-b from-emerald-50/40 via-white to-white border-emerald-200/80 hover:border-emerald-400 hover:shadow-xl hover:shadow-emerald-500/10',
+      iconBg: 'bg-gradient-to-br from-emerald-600 to-teal-600 text-white shadow-md shadow-emerald-500/25',
+      bulletBg: 'bg-emerald-50/40 border-emerald-100/80',
+      btnStyle: 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-md shadow-emerald-600/20',
       icon: Share2,
-      iconColor: 'text-emerald-700 bg-emerald-100',
       desc: 'Daily post designs, engaging captions, DM inquiry management & targeted Meta ads.',
       bullets: [
         '7-8 Platforms Managed Daily',
@@ -137,77 +150,273 @@ export default function HomePage() {
       <Hero />
 
       {/* 2. What We Do */}
-      <section id="services" className="py-12 sm:py-16 md:py-20 bg-slate-100/80 border-t border-b border-slate-200/90 w-full overflow-hidden">
+      <section id="services" className="py-10 sm:py-14 bg-slate-50/70 border-t border-b border-slate-200 scroll-mt-16 text-slate-900 w-full overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-violet-800 text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4 shadow-2xs">
-              <Layers className="w-3.5 h-3.5 text-violet-600" /> Core Capabilities
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-xs font-extrabold uppercase tracking-wider mb-2.5 shadow-2xs">
+              <Sparkles className="w-3.5 h-3.5 text-violet-600" /> — CORE CAPABILITIES —
             </div>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-2 sm:mb-4">
-              What We <span className="gradient-text-purple">Do</span>
+            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 mb-2 sm:mb-3 font-sans">
+              What We <span className="gradient-text-hero">Do</span>
             </h2>
-            <p className="text-slate-600 text-xs sm:text-base">
-              End-to-end digital services engineered to build brand authority, drive leads, and grow your revenue.
+            <p className="text-slate-600 text-xs sm:text-base font-medium max-w-2xl mx-auto leading-relaxed">
+              End-to-end digital services engineered to build brand authority, capture leads, and grow revenue.
             </p>
+            <div className="w-14 h-1 bg-gradient-to-r from-violet-600 via-indigo-600 to-teal-500 rounded-full mx-auto mt-3" />
           </div>
 
-          {/* 4 Cards Responsive Grid with min-w-0 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
-            {coreServices.map((srv) => {
-              const Icon = srv.icon;
-              return (
-                <div
-                  key={srv.id}
-                  className="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:shadow-violet-500/10 hover:border-violet-300 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group min-w-0"
-                >
-                  <div>
-                    {/* Top Icon & Badge */}
-                    <div className="flex items-center justify-between gap-2 mb-4">
-                      <div className={`p-2.5 sm:p-3 rounded-2xl ${srv.iconColor} group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-2xs shrink-0`}>
-                        <Icon className="w-5 h-5" />
-                      </div>
-                      <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full border shrink-0 ${srv.badgeColor}`}>
-                        {srv.badge}
-                      </span>
-                    </div>
+          {/* 4 Cards Grid matching About Us layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
 
-                    {/* Category & Title */}
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">
-                      {srv.category}
-                    </span>
-                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-violet-900 transition-colors">
-                      {srv.title}
+            {/* Card 01: Web & Software Development */}
+            <div className="bg-white p-5 sm:p-6 rounded-3xl border border-blue-200/90 shadow-xs hover:shadow-lg hover:border-blue-400 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full">
+              <div className="w-8 h-8 absolute top-0 right-0 border-t-2 border-r-2 border-blue-400/50 rounded-tr-3xl pointer-events-none" />
+
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-md font-bold shrink-0">
+                    <Globe className="w-5 h-5" />
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-extrabold text-slate-400 uppercase tracking-wider">
+                    <span className="text-blue-600 font-mono text-sm">01</span>
+                    <span>——</span>
+                    <span>WEB & SOFTWARE DEVELOPMENT</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+                  <div className="sm:col-span-7 space-y-3">
+                    <h3 className="text-lg sm:text-xl font-black text-slate-900 leading-snug">
+                      Web & Software Development
                     </h3>
-
-                    {/* Short Description */}
-                    <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                      {srv.desc}
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                      Custom high-speed websites, stores & cloud software tailored for your business.
                     </p>
 
-                    {/* 5 Points List */}
-                    <div className="space-y-2 mb-6 bg-slate-50/90 p-3.5 rounded-2xl border border-slate-100">
-                      {srv.bullets.map((bullet, i) => (
-                        <div key={i} className="flex items-start gap-1.5 text-[11px] text-slate-700 font-medium">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 mt-0.5 shrink-0" />
+                    <div className="space-y-2 text-xs text-slate-700 font-bold pt-1">
+                      {[
+                        'Business Websites & Portfolios',
+                        'E-Commerce & UPI Gateways',
+                        'Education & Coaching Portals',
+                        'Restaurant QR & WhatsApp Orders',
+                        'Custom CRM & Billing Dashboards',
+                      ].map((bullet, idx) => (
+                        <div key={idx} className="flex items-center gap-1.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                           <span className="leading-tight">{bullet}</span>
                         </div>
                       ))}
                     </div>
+
+                    <div className="pt-3">
+                      <Link
+                        href="/services/website-development"
+                        className="px-5 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-extrabold flex items-center gap-2 shadow-md shadow-blue-500/20 transition-all duration-300 transform hover:scale-105 w-fit"
+                      >
+                        <span>Explore Details</span>
+                        <ArrowRight className="w-4 h-4 text-blue-100" />
+                      </Link>
+                    </div>
                   </div>
 
-                  {/* Card Footer Link */}
-                  <div className="pt-4 border-t border-slate-100">
-                    <Link
-                      href={srv.link}
-                      className="w-full inline-flex items-center justify-between py-2.5 px-3.5 rounded-xl bg-slate-50 hover:bg-violet-50 text-slate-800 hover:text-violet-800 text-xs font-bold transition-all border border-slate-200/80 hover:border-violet-300"
-                    >
-                      <span>Explore Details</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-1.5 group-hover:text-violet-700 transition-transform" />
-                    </Link>
+                  <div className="sm:col-span-5 flex items-center justify-center p-2 overflow-visible">
+                    <img
+                      src="/aboutimage/wedo-websitedevelomet.png"
+                      alt="Web & Software Development"
+                      className="w-full h-auto max-h-72 sm:max-h-80 lg:max-h-96 object-contain pointer-events-none select-none transform scale-125 sm:scale-130 lg:scale-135 drop-shadow-sm"
+                    />
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            </div>
+
+            {/* Card 02: Mobile App Development */}
+            <div className="bg-white p-5 sm:p-6 rounded-3xl border border-emerald-200/90 shadow-xs hover:shadow-lg hover:border-emerald-400 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full">
+              <div className="w-8 h-8 absolute top-0 right-0 border-t-2 border-r-2 border-emerald-400/50 rounded-tr-3xl pointer-events-none" />
+
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-2xl bg-emerald-500 text-white flex items-center justify-center shadow-md font-bold shrink-0">
+                    <Smartphone className="w-5 h-5" />
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-extrabold text-slate-400 uppercase tracking-wider">
+                    <span className="text-emerald-500 font-mono text-sm">02</span>
+                    <span>——</span>
+                    <span>MOBILE APP DEVELOPMENT</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+                  <div className="sm:col-span-7 space-y-3">
+                    <h3 className="text-lg sm:text-xl font-black text-slate-900 leading-snug">
+                      Mobile App Development
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                      High-performance Android & iOS apps engineered for fast retention & orders.
+                    </p>
+
+                    <div className="space-y-2 text-xs text-slate-700 font-bold pt-1">
+                      {[
+                        'Android (.APK) & Play Store Ready',
+                        'iOS & Cross-Platform Hybrid Apps',
+                        'E-Commerce & Food Ordering Apps',
+                        'Push Notifications & Cloud Backend',
+                        'Instant Phone Number OTP Login',
+                      ].map((bullet, idx) => (
+                        <div key={idx} className="flex items-center gap-1.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                          <span className="leading-tight">{bullet}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="pt-3">
+                      <Link
+                        href="/services/mobile-app-development"
+                        className="px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold flex items-center gap-2 shadow-md shadow-emerald-500/20 transition-all duration-300 transform hover:scale-105 w-fit"
+                      >
+                        <span>Explore Details</span>
+                        <ArrowRight className="w-4 h-4 text-emerald-100" />
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="sm:col-span-5 flex items-center justify-center p-2 overflow-visible">
+                    <img
+                      src="/aboutimage/wedo-appdeveloment.png"
+                      alt="Mobile App Development"
+                      className="w-full h-auto max-h-72 sm:max-h-80 lg:max-h-96 object-contain pointer-events-none select-none transform scale-125 sm:scale-130 lg:scale-135 drop-shadow-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 03: Video Editing & Reels */}
+            <div className="bg-white p-5 sm:p-6 rounded-3xl border border-violet-200/90 shadow-xs hover:shadow-lg hover:border-violet-400 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full">
+              <div className="w-8 h-8 absolute top-0 right-0 border-t-2 border-r-2 border-violet-400/50 rounded-tr-3xl pointer-events-none" />
+
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-2xl bg-violet-600 text-white flex items-center justify-center shadow-md font-bold shrink-0">
+                    <Video className="w-5 h-5" />
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-extrabold text-slate-400 uppercase tracking-wider">
+                    <span className="text-violet-600 font-mono text-sm">03</span>
+                    <span>——</span>
+                    <span>VIDEO EDITING & REELS</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+                  <div className="sm:col-span-7 space-y-3">
+                    <h3 className="text-lg sm:text-xl font-black text-slate-900 leading-snug">
+                      Video Editing & Reels
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                      Viral Instagram Reels, YouTube videos & ads designed to convert viewers to buyers.
+                    </p>
+
+                    <div className="space-y-2 text-xs text-slate-700 font-bold pt-1">
+                      {[
+                        'Instagram Reels & YouTube Shorts',
+                        'Commercial Business Video Ads',
+                        'YouTube Long-Form & Podcasts',
+                        'Dynamic Animated Subtitles',
+                        '4K Color Grading & Sound FX',
+                      ].map((bullet, idx) => (
+                        <div key={idx} className="flex items-center gap-1.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-violet-500 shrink-0" />
+                          <span className="leading-tight">{bullet}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="pt-3">
+                      <Link
+                        href="/services/video-editing"
+                        className="px-5 py-2.5 rounded-full bg-violet-600 hover:bg-violet-700 text-white text-xs font-extrabold flex items-center gap-2 shadow-md shadow-violet-500/20 transition-all duration-300 transform hover:scale-105 w-fit"
+                      >
+                        <span>Explore Details</span>
+                        <ArrowRight className="w-4 h-4 text-violet-100" />
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="sm:col-span-5 flex items-center justify-center p-2 overflow-visible">
+                    <img
+                      src="/aboutimage/wedo-video edtting.png"
+                      alt="Video Editing & Reels"
+                      className="w-full h-auto max-h-72 sm:max-h-80 lg:max-h-96 object-contain pointer-events-none select-none transform scale-125 sm:scale-130 lg:scale-135 drop-shadow-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 04: Social Media Management */}
+            <div className="bg-white p-5 sm:p-6 rounded-3xl border border-teal-200/90 shadow-xs hover:shadow-lg hover:border-teal-400 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-full">
+              <div className="w-8 h-8 absolute top-0 right-0 border-t-2 border-r-2 border-teal-400/50 rounded-tr-3xl pointer-events-none" />
+
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-2xl bg-teal-500 text-white flex items-center justify-center shadow-md font-bold shrink-0">
+                    <Share2 className="w-5 h-5" />
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-extrabold text-slate-400 uppercase tracking-wider">
+                    <span className="text-teal-500 font-mono text-sm">04</span>
+                    <span>——</span>
+                    <span>SOCIAL MEDIA MANAGEMENT</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+                  <div className="sm:col-span-7 space-y-3">
+                    <h3 className="text-lg sm:text-xl font-black text-slate-900 leading-snug">
+                      Social Media Management
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                      Daily post designs, engaging captions, DM inquiry management & targeted Meta ads.
+                    </p>
+
+                    <div className="space-y-2 text-xs text-slate-700 font-bold pt-1">
+                      {[
+                        '7-8 Platforms Managed Daily',
+                        'Custom Posts & Carousels',
+                        'SEO Captions & City Hashtags',
+                        'DM & Comment Inquiry Answering',
+                        'High-ROI Meta & Google Ads Setup',
+                      ].map((bullet, idx) => (
+                        <div key={idx} className="flex items-center gap-1.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-teal-500 shrink-0" />
+                          <span className="leading-tight">{bullet}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="pt-3">
+                      <Link
+                        href="/services/social-media-management"
+                        className="px-5 py-2.5 rounded-full bg-teal-600 hover:bg-teal-700 text-white text-xs font-extrabold flex items-center gap-2 shadow-md shadow-teal-500/20 transition-all duration-300 transform hover:scale-105 w-fit"
+                      >
+                        <span>Explore Details</span>
+                        <ArrowRight className="w-4 h-4 text-teal-100" />
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="sm:col-span-5 flex items-center justify-center p-2 overflow-visible">
+                    <img
+                      src="/aboutimage/wedo-socalmedia.png"
+                      alt="Social Media Management"
+                      className="w-full h-auto max-h-72 sm:max-h-80 lg:max-h-96 object-contain pointer-events-none select-none transform scale-125 sm:scale-130 lg:scale-135 drop-shadow-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
