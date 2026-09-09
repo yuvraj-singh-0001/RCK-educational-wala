@@ -422,7 +422,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. 100% Transparent Pricing */}
-      <PricingSection />
+      <PricingSection isHomePage={true} />
 
       {/* 4. Why Choose SiteMint */}
       <WhyChooseUs />

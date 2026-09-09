@@ -70,6 +70,10 @@ code {
   letter-spacing: -0.02em;
 }
 
+.font-handwriting {
+  font-family: 'Caveat', cursive, sans-serif;
+}
+
 /* Glassmorphism & High-Contrast Cards */
 .glass-card {
   background: #ffffff;
@@ -158,6 +162,17 @@ code {
   }
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-float {
   animation: float-slow 4s ease-in-out infinite;
 }
@@ -168,6 +183,40 @@ code {
 
 .animate-pulse-subtle {
   animation: pulse-subtle 2.5s ease-in-out infinite;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Button Shimmer / Sheen Effect */
