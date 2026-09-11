@@ -4,7 +4,7 @@ function PublicHeader({ menuOpen, onSectionJump, setMenuOpen }) {
   return (
     <header className="sticky top-0 z-40">
       <div className="top-bar">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-2 sm:px-6">
+        <div className="mx-auto flex w-full max-w-[1536px] items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-10 xl:px-14">
           <p className="text-xs font-semibold uppercase tracking-widest text-white/90">Admission Open 2026</p>
           <a className="top-contact" href="tel:+917307056527">
             Call Now: +91 7307056527
@@ -12,7 +12,7 @@ function PublicHeader({ menuOpen, onSectionJump, setMenuOpen }) {
         </div>
       </div>
       <div className="border-b border-white/60 bg-white/85 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+        <div className="mx-auto flex w-full max-w-[1536px] items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-10 xl:px-14">
           <button className="brand-title" onClick={() => onSectionJump('hero')}>
             RCK Educational Wala
           </button>

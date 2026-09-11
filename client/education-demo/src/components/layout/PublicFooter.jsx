@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 function PublicFooter({ onSectionJump }) {
   return (
     <footer className="site-footer border-t border-slate-200 bg-white/95">
-      <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6">
+      <div className="mx-auto w-full max-w-[1536px] px-4 py-10 sm:px-6 lg:px-10 xl:px-14">
         <div className="footer-grid">
           <div>
             <p className="footer-brand">RCK Educational Wala</p>

@@ -33,7 +33,7 @@ const screenshotCards = [
 function ResultsPage() {
   return (
     <section className="page-wrap">
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-[1536px] px-4 sm:px-6 lg:px-10 xl:px-14">
         <h1 className="page-title">Results & Success Stories</h1>
         <p className="page-subtitle">Real student outcomes and proof sections to build trust.</p>
 

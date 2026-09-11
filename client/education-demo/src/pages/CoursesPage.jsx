@@ -72,7 +72,7 @@ function CoursesPage() {
 
   return (
     <section className="page-wrap courses-page page-transition-enter">
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-[1536px] px-4 sm:px-6 lg:px-10 xl:px-14">
         <h1 className="page-title simple-reveal" style={{ animationDelay: '0ms' }}>Our Courses</h1>
         <p className="page-subtitle simple-reveal" style={{ animationDelay: '100ms' }}>Complete course listing with category-wise filters.</p>
 
@@ -89,7 +89,7 @@ function CoursesPage() {
           ))}
         </div>
 
-        <div className="course-grid mt-6 grid gap-5 md:grid-cols-2">
+        <div className="course-grid mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {filteredCourses.map((course, index) => (
             <article 
               className="course-card simple-reveal" 

@@ -8,7 +8,7 @@ const studentCourses = [
 function StudentCoursesPage() {
   return (
     <section className="page-wrap">
-      <div className="mx-auto w-full max-w-5xl page-panel">
+      <div className="mx-auto w-full max-w-[1536px] px-4 sm:px-6 lg:px-10 xl:px-14 page-panel">
         <h1 className="page-title">Student Courses</h1>
         <ul className="mt-5 grid gap-3 sm:grid-cols-2">
           {studentCourses.map((course) => (

@@ -64,14 +64,14 @@ const testimonials = [
 function HomePage() {
   return (
     <div className="page-transition-enter">
-      <section className="hero-section relative overflow-hidden bg-gradient-to-b from-emerald-50 to-white pb-8 pt-6 md:pb-12 md:pt-8">
-        <div className="hero-shell mx-auto grid w-full max-w-6xl gap-6 p-6 md:grid-cols-[1.08fr_0.92fr] md:p-10" data-reveal="up">
-          <div className="hero-copy" data-reveal="left">
+      <section className="hero-section relative overflow-hidden bg-gradient-to-b from-emerald-50 to-white pb-8 pt-6 md:pb-12 md:pt-8 px-4 sm:px-6 lg:px-10 xl:px-14">
+        <div className="hero-shell mx-auto grid w-full max-w-[1536px] gap-8 p-6 sm:p-8 md:grid-cols-[1.1fr_0.9fr] lg:p-12 xl:p-14" data-reveal="up">
+          <div className="hero-copy flex flex-col justify-center" data-reveal="left">
             <p className="eyebrow">RCK Educational Wala</p>
-            <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-7xl leading-none">
               Government Job Preparation, the Right Way
             </h1>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-700 sm:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg lg:text-xl">
               Learn under Ravi Kumar Chaudhari with exam-focused preparation, structured batches, and personal
               mentorship.
             </p>
@@ -86,17 +86,17 @@ function HomePage() {
             </div>
           </div>
 
-          <aside className="hero-image-panel" data-reveal="right" style={{ '--reveal-delay': '120ms' }}>
+          <aside className="hero-image-panel flex items-center justify-center min-h-[280px] lg:min-h-[380px]" data-reveal="right" style={{ '--reveal-delay': '120ms' }}>
             <img
               alt="Ravi Sir classroom guidance"
-              className="hero-image"
+              className="hero-image h-full w-full object-cover"
               src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80"
             />
           </aside>
         </div>
       </section>
 
-      <section className="section-anchor mx-auto mt-8 w-full max-w-6xl px-4 sm:px-6" data-reveal="up">
+      <section className="section-anchor mx-auto mt-8 w-full max-w-[1536px] px-4 sm:px-6 lg:px-10 xl:px-14" data-reveal="up">
         <div className="stats-grid">
           {stats.map((item, index) => (
             <article
@@ -113,22 +113,24 @@ function HomePage() {
       </section>
 
       <section className="section-anchor page-wrap" id="focus">
-        <div className="mx-auto w-full max-w-6xl" data-reveal="up">
+        <div className="mx-auto w-full max-w-[1536px] px-4 sm:px-6 lg:px-10 xl:px-14" data-reveal="up">
           <h2 className="page-title">Focus Areas</h2>
           <p className="page-subtitle">Structured preparation with six high-impact tracks.</p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {focusCards.map((item, index) => (
               <article
-                className="focus-card"
+                className="focus-card flex flex-col justify-between"
                 data-reveal={index % 2 === 0 ? 'left' : 'right'}
                 key={item.title}
                 style={{ '--reveal-delay': `${index * 65}ms` }}
               >
-                <span className="focus-icon" aria-hidden="true">
-                  {item.icon}
-                </span>
-                <h3 className="mt-3 text-lg font-semibold text-slate-900">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.text}</p>
+                <div>
+                  <span className="focus-icon" aria-hidden="true">
+                    {item.icon}
+                  </span>
+                  <h3 className="mt-3 text-lg font-semibold text-slate-900">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.text}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -136,10 +138,10 @@ function HomePage() {
       </section>
 
       <section className="section-anchor page-wrap" id="courses">
-        <div className="mx-auto w-full max-w-6xl" data-reveal="up">
+        <div className="mx-auto w-full max-w-[1536px] px-4 sm:px-6 lg:px-10 xl:px-14" data-reveal="up">
           <h2 className="page-title">Featured Courses</h2>
           <p className="page-subtitle">Top programs preview for quick selection.</p>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
             {featuredCourses.map((course, index) => (
               <article
                 className="course-card"
@@ -162,10 +164,10 @@ function HomePage() {
       </section>
 
       <section className="section-anchor page-wrap" id="testimonials">
-        <div className="mx-auto w-full max-w-6xl" data-reveal="up">
+        <div className="mx-auto w-full max-w-[1536px] px-4 sm:px-6 lg:px-10 xl:px-14" data-reveal="up">
           <h2 className="page-title">Testimonials</h2>
           <p className="page-subtitle">Student voices and verified result snapshots.</p>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
             {testimonials.map((item, index) => (
               <article
                 className="testimonial-card"
@@ -184,19 +186,21 @@ function HomePage() {
       </section>
 
       <section className="section-anchor page-wrap" id="contact">
-        <div className="mx-auto w-full max-w-6xl cta-banner" data-reveal="up">
-          <div>
-            <p className="cta-kicker">Ready To Start?</p>
-            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">Apply for Admission Today</h2>
-            <p className="mt-2 text-sm text-white/85 sm:text-base">Call now for counselling and seat enquiries.</p>
-          </div>
-          <div className="cta-actions">
-            <a className="btn-light" href="tel:+917307056527">
-              Call: 7307056527
-            </a>
-            <Link className="btn-outline-light" to="/admission">
-              Admission Form
-            </Link>
+        <div className="mx-auto w-full max-w-[1536px] px-4 sm:px-6 lg:px-10 xl:px-14" data-reveal="up">
+          <div className="cta-banner px-6 py-8 sm:px-10 sm:py-10 lg:px-14">
+            <div>
+              <p className="cta-kicker">Ready To Start?</p>
+              <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">Apply for Admission Today</h2>
+              <p className="mt-2 text-sm text-white/85 sm:text-base lg:text-lg">Call now for counselling and seat enquiries.</p>
+            </div>
+            <div className="cta-actions">
+              <a className="btn-light" href="tel:+917307056527">
+                Call: 7307056527
+              </a>
+              <Link className="btn-outline-light" to="/admission">
+                Admission Form
+              </Link>
+            </div>
           </div>
         </div>
       </section>
