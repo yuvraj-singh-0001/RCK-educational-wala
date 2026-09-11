@@ -1,7 +1,7 @@
 function ContactPage() {
   return (
     <section className="page-wrap">
-      <div className="mx-auto grid w-full max-w-6xl gap-6 md:grid-cols-2">
+      <div className="mx-auto grid w-full max-w-[1536px] px-4 sm:px-6 lg:px-10 xl:px-14 gap-6 md:grid-cols-2">
         <div className="page-panel">
           <h1 className="page-title">Contact</h1>
           <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">

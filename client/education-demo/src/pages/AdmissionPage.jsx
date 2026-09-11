@@ -16,7 +16,7 @@ const feeRows = [
 function AdmissionPage() {
   return (
     <section className="page-wrap">
-      <div className="mx-auto w-full max-w-6xl space-y-8">
+      <div className="mx-auto w-full max-w-[1536px] px-4 sm:px-6 lg:px-10 xl:px-14 space-y-8">
         <div>
           <h1 className="page-title">Admission Page</h1>
           <p className="page-subtitle">Follow these simple steps to join your batch.</p>

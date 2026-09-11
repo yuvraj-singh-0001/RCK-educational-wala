@@ -15,7 +15,7 @@ const timeline = [
 function AboutPage() {
   return (
     <section className="page-wrap">
-      <div className="mx-auto w-full max-w-6xl space-y-8">
+      <div className="mx-auto w-full max-w-[1536px] px-4 sm:px-6 lg:px-10 xl:px-14 space-y-8">
         <div className="grid gap-6 rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-lg md:grid-cols-[0.95fr_1.05fr] md:p-8">
           <img
             alt="Ravi Kumar Chaudhari"
