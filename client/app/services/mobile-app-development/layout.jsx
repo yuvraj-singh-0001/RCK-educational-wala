@@ -1,45 +1,46 @@
 export const metadata = {
-  title: 'Custom Mobile App Development in India (Android & iOS Starting ₹12,999) | SiteMint',
-  description: 'Turn your business into a mobile app. Native Android (.APK/.AAB) & iOS apps starting at ₹12,999. In-app Razorpay 0% UPI checkout, Firebase push notifications, phone OTP, and web admin portal with 100% full source code ownership.',
+  title: 'Custom Mobile App Development Company in India | Android & iOS App Services | SiteMint',
+  description: 'Top mobile app development company in India building custom Android (.APK/.AAB) & iOS apps starting at ₹12,999. Integrated with Razorpay 0% UPI gateway, Firebase push notifications, phone OTP authentication, and web admin portal with 100% source code ownership.',
   keywords: [
-    'mobile app development india',
+    'mobile app development company in india',
+    'custom mobile app development services',
     'android app development cost in india',
-    'custom mobile app development starting 12999',
-    'flutter app development agency india',
-    'react native app developer india',
+    'best ios app development company india',
+    'cross platform flutter app developer india',
+    'react native app development agency',
     'ecommerce mobile app developer india',
     'food delivery mobile app maker',
-    'coaching institute app developer',
-    'affordable mobile app development services',
-    'play store app publishing services india',
-    'hybrid app development india',
-    'low budget mobile application development',
-    'ios app development company india',
-    'razorpay upi mobile app developer'
+    'coaching institute lms app developer',
+    'affordable mobile app development services india',
+    'google play store app publishing services',
+    'low budget mobile app development for startups',
+    'razorpay upi integrated mobile app',
+    'mobile app development starting 12999',
+    'sitemint mobile app development studio'
   ],
   alternates: {
     canonical: 'https://sitemint.in/services/mobile-app-development',
   },
   openGraph: {
-    title: 'Custom Mobile App Development for Indian Businesses | SiteMint',
-    description: 'Starter Android ₹12,999 | Business Dual-OS ₹24,999. In-app Razorpay 0% UPI, Firebase Push Notifications, and 100% source code ownership.',
+    title: 'Custom Mobile App Development Services in India | SiteMint',
+    description: 'Build your custom Android & iOS mobile app starting at ₹12,999. Features 0% UPI checkout, instant push alerts, admin control panel, and 100% full source code transfer.',
     url: 'https://sitemint.in/services/mobile-app-development',
-    siteName: 'SiteMint',
+    siteName: 'SiteMint Studio',
     type: 'website',
     images: [
       {
-        url: 'https://sitemint.in/sitemint_logo1.png',
+        url: 'https://sitemint.in/apphero.png',
         width: 1200,
         height: 630,
-        alt: 'SiteMint Mobile App Development Studio',
+        alt: 'SiteMint Custom Mobile App Development Services',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mobile App Development Services India | SiteMint',
-    description: 'Custom Android & iOS apps starting at ₹12,999. Zero recurring platform rent, 100% source code ownership.',
-    images: ['https://sitemint.in/sitemint_logo1.png'],
+    title: 'Custom Mobile App Development Company India | SiteMint',
+    description: 'High-performance Android (.APK) & Apple iOS (.IPA) mobile apps starting at ₹12,999 with 100% source code ownership and zero monthly rentals.',
+    images: ['https://sitemint.in/apphero.png'],
   },
   robots: {
     index: true,
@@ -57,3 +58,4 @@ export const metadata = {
 export default function MobileAppDevelopmentLayout({ children }) {
   return children;
 }
+

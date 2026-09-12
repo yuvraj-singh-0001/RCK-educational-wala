@@ -110,7 +110,7 @@ export default function PricingPage() {
             'itemOffered': {
               '@type': 'Service',
               'name': 'Starter Business Website Package',
-              'description': '5 custom responsive pages, 1-click WhatsApp lead widget, click-to-call, contact form, admin panel & 60 days support.'
+              'description': '5 custom responsive pages, 1-click WhatsApp lead widget, click-to-call, contact form & 60 days support.'
             },
             'price': '3999',
             'priceCurrency': 'INR'

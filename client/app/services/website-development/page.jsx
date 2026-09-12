@@ -65,7 +65,6 @@ export default function WebsiteDevelopmentPage() {
         '1-Click WhatsApp Direct Chat & Floating Lead Capture Widget',
         'Contact Form with Instant Email Lead Notifications to Your Inbox',
         '350 Free Lead & Transactional Emails per Day via Gmail API (Zero Software Charges)',
-        'Basic Admin Content Management Panel for Text & Image Updates',
         'Google Search Console, XML Sitemap & Robots.txt Setup',
         'Basic On-Page SEO, Meta Titles & Meta Descriptions for Local Google Indexing',
         'Google Maps Location Embed & Click-to-Call Phone Button',

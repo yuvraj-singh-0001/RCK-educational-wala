@@ -69,7 +69,7 @@ export default function PricingSection({ hideHeader = false, isHomePage = false 
 
     if (category === 'web') {
       if (pIndex === 0) {
-        return `Namaste Sir! SiteMint me aapka swagat hai. Starter Website plan me 5 custom pages, WhatsApp chat widget, aur easy Admin Panel milta hai jisse aap text, images aur inquiries khud manage kar sakte hain. Isme daily 350 free email lead alerts included hain. Fast React stack, lifetime SSL, Google indexing aur 60 days maintenance FREE hai. Domain-hosting client direct pay karega. Aap apne hisab se custom plan bana sakte hain aur special feature add karne ke liye niche Project Cost Calculator button par click karein. Direct WhatsApp button se order book karein. Dhanyawad!`;
+        return `Namaste Sir! SiteMint me aapka swagat hai. Starter Website plan me 5 custom pages, WhatsApp chat widget, contact form with instant email alerts milta hai. Isme daily 350 free email lead alerts included hain. Fast React stack, lifetime SSL, Google indexing aur 60 days maintenance FREE hai. Domain-hosting client direct pay karega. Aap apne hisab se custom plan bana sakte hain aur special feature add karne ke liye niche Project Cost Calculator button par click karein. Direct WhatsApp button se order book karein. Dhanyawad!`;
       }
       if (pIndex === 1) {
         return `Namaste Sir! Business Website & Management plan me aapka swagat hai. Isme 10 dynamic pages, product catalog, Razorpay UPI gateway aur admin dashboard milta hai jisse content aur products manage hote hain. Daily 350 emails 1-click button se automatic send hote hain. Advanced SEO, GA4 aur 6 months maintenance FREE hai. Custom plan banane ya special feature add karne ke liye niche Project Cost Calculator button par click karein. WhatsApp par instant project discussion karein. Dhanyawad!`;
@@ -197,7 +197,6 @@ export default function PricingSection({ hideHeader = false, isHomePage = false 
         '1-Click WhatsApp Direct Chat & Floating Lead Capture Widget',
         'Instant Click-to-Call Phone & Email Action Buttons',
         'Contact Form with Automatic Email Notifications',
-        'Content Update Admin Panel (Manage Text, Banners & Inquiries)',
         'Basic On-Page SEO, Meta Titles & Meta Descriptions Setup',
         'Google Search Console & XML Sitemap Indexing Submission',
         'Google Maps Location Embed & Social Media Profiles Setup',
@@ -590,10 +589,10 @@ export default function PricingSection({ hideHeader = false, isHomePage = false 
     web: [
       {
         planName: 'Starter Website (₹3,999)',
-        deliverables: '5 Custom Pages (Home, About, Services, Gallery, Contact), 100% Mobile & Tablet Responsive Layout, 1-Click WhatsApp Chat Widget, Contact Form with Instant Email Alerts, Content Management Admin Panel.',
+        deliverables: '5 Custom Pages (Home, About, Services, Gallery, Contact), 100% Mobile & Tablet Responsive Layout, 1-Click WhatsApp Chat Widget, Contact Form with Instant Email Alerts.',
         timeline: '3 to 5 Working Days (Express Delivery)',
         serverTech: 'Node.js / React CSR Architecture, SSL HTTPS Security, Google Maps Embed & XML Sitemap Indexing.',
-        siteMintFree: 'SSL HTTPS Certificate (Lifetime Free), Admin Panel for Content Updates, Google Search Indexing Submission, 60 Days Maintenance, 100% Full Source Code Ownership.',
+        siteMintFree: 'SSL HTTPS Certificate (Lifetime Free), Google Search Indexing Submission, 60 Days Maintenance, 100% Full Source Code Ownership.',
         clientExpenses: 'Domain Name (.in/.com ~₹799/yr) & Cloud Hosting (~₹149/mo) bought directly by client from Hostinger/GoDaddy. SiteMint performs 100% free server deployment & SSL setup.'
       },
       {

@@ -2,59 +2,58 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import {
+  FaMobileAlt,
+  FaAndroid,
+  FaApple,
+  FaGooglePlay,
+  FaWhatsapp,
+  FaCalculator,
+  FaBell,
+  FaShieldAlt,
+  FaStar,
+  FaUsers,
+  FaCheckCircle,
+  FaCheck,
+  FaCreditCard,
+  FaChartBar,
+  FaCog,
+  FaArrowRight,
+  FaRocket,
+  FaSearch,
+  FaEnvelope,
+  FaChartLine,
+  FaBolt,
+  FaShoppingBag,
+  FaUtensils,
+  FaGraduationCap,
+  FaCalendarAlt,
+  FaBirthdayCake,
+  FaCoffee,
+  FaGift,
+  FaTruck,
+  FaWrench,
+  FaPhoneAlt,
+  FaComments,
+  FaLock,
+  FaKey,
+  FaStore,
+  FaInfoCircle,
+  FaQuestionCircle,
+  FaMapPin,
+  FaPlay,
+  FaWifi,
+  FaCoins,
+  FaUser
+} from 'react-icons/fa';
 import { 
-  Smartphone, 
-  CheckCircle2, 
-  XCircle, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  Sparkles, 
-  Zap, 
-  ShieldCheck, 
-  Clock, 
-  ArrowRight, 
-  Calculator, 
-  Layers, 
-  Server, 
-  CreditCard, 
-  HelpCircle, 
-  FileText, 
-  Info, 
-  Lock, 
-  Check, 
-  ChevronRight, 
-  TrendingUp, 
-  Cpu, 
-  Database, 
-  SlidersHorizontal,
-  Award,
-  BarChart3,
-  Gauge,
-  Code2,
   CheckCheck,
-  Bell,
-  Download,
-  Flame,
-  Radio,
-  WifiOff,
-  KeyRound,
-  Store,
-  GraduationCap,
-  ShoppingBag,
-  Truck,
   Activity,
-  Play,
-  Wifi,
-  Battery,
-  Search,
-  User,
-  Heart,
-  ShoppingCart,
-  Navigation,
-  MapPin,
-  Star
+  Layers,
+  Award,
+  Sparkles
 } from 'lucide-react';
+
 import RelatedServicesSection from '../../../components/RelatedServicesSection';
 import FaqSection from '../../../components/FaqSection';
 
@@ -79,11 +78,11 @@ export default function MobileAppDevelopmentPage() {
       maintenanceText: '30 Days Free Technical Support & Bug Fixes',
       whatsappMsg: 'Hi SiteMint! I want to order the Starter Dual-Platform App (₹12,999). Please share onboarding details.',
       keyPoints: [
-        '📱 Both Android (.AAB/.APK) and Apple iOS (.IPA) Builds & Code Included',
+        'Both Android (.AAB/.APK) and Apple iOS (.IPA) Builds & Code Included',
         'Up to 6 Custom Designed Core Screens with Gesture Navigation',
         'Firebase Cloud Push Notifications Engine for Broadcast Alerts',
         'Phone Number OTP Login & In-App WhatsApp Direct Lead Button',
-        '🔍 Basic App Indexing & Google Search Console Submission',
+        'Basic App Indexing & Google Search Console Submission',
         'Web-Based Admin Dashboard for Content & Banner Updates',
         '30 Days Free Post-Launch Technical Maintenance & Bug Fixes',
         '100% Full Source Code Ownership with Zero Monthly Software Lock-in',
@@ -108,12 +107,12 @@ export default function MobileAppDevelopmentPage() {
       maintenanceText: '60 Days Comprehensive Technical Maintenance & Updates',
       whatsappMsg: 'Hi SiteMint! I want to order the Business Pro App (₹24,999). Please share details.',
       keyPoints: [
-        '📱 Dual Platform Release: Both Android (.AAB) + Apple iOS (.IPA) Flutter Apps',
+        'Dual Platform Release: Both Android (.AAB) + Apple iOS (.IPA) Flutter Apps',
         'Up to 12 Custom Designed Dynamic Screens & 60fps Micro-Animations',
-        '📧 350 Free Lead & Transactional Alert Emails per Day via Gmail API (100% Free)',
+        '350 Free Lead & Transactional Alert Emails per Day via Gmail API (100% Free)',
         'Razorpay 0% UPI Payment Gateway (GPay, PhonePe, Paytm)',
         'Targeted Segmented Push Notifications (Promotions, Order Status)',
-        '📊 Google Analytics 4 (GA4) & App Search Indexing Setup (Track user activity)',
+        'Google Analytics 4 (GA4) & App Search Indexing Setup (Track user activity)',
         'Google Play Store & Apple App Store Live Publishing Assistance',
         '60 Days Free Complete Maintenance, Security Patches & Bug Fixes',
         '100% Source Code Ownership with Full API Documentation',
@@ -138,11 +137,11 @@ export default function MobileAppDevelopmentPage() {
       maintenanceText: '9 Months Dedicated Technical Maintenance & Bug Fixing Guarantee',
       whatsappMsg: 'Hi SiteMint! I want to order the Professional Custom App (₹39,999 - Play Store Fee Included).',
       keyPoints: [
-        '📱 Dual-Platform Release: Both Android (.AAB) + Apple iOS (.IPA) High-Performance Apps',
+        'Dual-Platform Release: Both Android (.AAB) + Apple iOS (.IPA) High-Performance Apps',
         '16 to 22 Custom Dynamic App Screens & Advanced Business Workflows',
-        '🚀 Google Play Store Publishing Account Fee ($25) INCLUDED FREE by SiteMint',
-        '📧 350 Free Lead & Transactional Alert Emails per Day via Gmail API',
-        '📈 Live Google Analytics 4 (GA4) Traffic & Active App Users Tracking Dashboard (Track live users, page views & traffic sources)',
+        'Google Play Store Publishing Account Fee ($25) INCLUDED FREE by SiteMint',
+        '350 Free Lead & Transactional Alert Emails per Day via Gmail API',
+        'Live Google Analytics 4 (GA4) Traffic & Active App Users Tracking Dashboard',
         'Centralized Master Web Admin Dashboard (Users, Orders, Revenue & CSV Export)',
         'Integrated Razorpay 0% UPI Gateway with In-App Invoices',
         '9 Months Free Comprehensive Technical Maintenance & Bug Fixing Guarantee',
@@ -166,7 +165,7 @@ export default function MobileAppDevelopmentPage() {
         'Live Order Status Tracking with SMS/Push Alerts',
         'Personalized Coupon Code & Promotional Discount Engine',
       ],
-      demoImg: '🛍️ Direct-to-Consumer Storefront with Sub-Second Product Search',
+      demoImg: 'Direct-to-Consumer Storefront with Sub-Second Product Search',
     },
     food: {
       title: 'Restaurant & Food Delivery App',
@@ -178,7 +177,7 @@ export default function MobileAppDevelopmentPage() {
         'Direct UPI Payments with Zero Aggregator Commissions',
         'Automated Repeat Order Re-Order Button in 1 Tap',
       ],
-      demoImg: '🍕 Interactive Food Menu with Custom Toppings & Instant Checkout',
+      demoImg: 'Interactive Food Menu with Custom Toppings & Instant Checkout',
     },
     education: {
       title: 'Coaching Institute & EdTech LMS App',
@@ -190,7 +189,7 @@ export default function MobileAppDevelopmentPage() {
         'Downloadable Offline PDF Study Material & Notes',
         'Parent Notice Board & Fee Payment Gateway',
       ],
-      demoImg: '🎓 Student Learning Dashboard with Video Player & Test Series',
+      demoImg: 'Student Learning Dashboard with Video Player & Test Series',
     },
     services: {
       title: 'On-Demand Service Booking App',
@@ -202,14 +201,14 @@ export default function MobileAppDevelopmentPage() {
         'Advance Booking Token Payment via UPI',
         'Customer Reviews & Verified Star Rating System',
       ],
-      demoImg: '📅 Real-Time Appointment Booking with Instant Confirmation',
+      demoImg: 'Real-Time Appointment Booking with Instant Confirmation',
     },
   };
 
   const capabilities = [
     {
       num: '01',
-      icon: Bell,
+      icon: FaBell,
       title: 'Automated Push Notifications',
       desc: 'Re-engage users with rich push alerts, festive discount offers, abandoned cart reminders, and live order status directly on mobile lock screens.',
       badge: '3.5x Engagement',
@@ -218,14 +217,14 @@ export default function MobileAppDevelopmentPage() {
       borderClass: 'border-2 border-pink-300 hover:border-pink-500 shadow-sm hover:shadow-pink-500/10',
       preview: {
         type: 'push',
-        title: 'Flash Sale Alert! ⚡',
+        title: 'Flash Sale Alert!',
         subtitle: 'Flat 30% OFF ending in 2 hours',
         time: 'Just now'
       }
     },
     {
       num: '02',
-      icon: CreditCard,
+      icon: FaCreditCard,
       title: 'Native 0% UPI & Razorpay Checkout',
       desc: 'Seamless in-app payments with Google Pay, PhonePe, Paytm, CRED, and cards without cumbersome redirects, maximizing checkout completion rates.',
       badge: 'Zero Platform Cut',
@@ -241,7 +240,7 @@ export default function MobileAppDevelopmentPage() {
     },
     {
       num: '03',
-      icon: WifiOff,
+      icon: FaWifi,
       title: 'Offline Mode & Local SQLite Cache',
       desc: 'Engineered with SQLite and Hive caching so users can view catalogs, downloaded notes, and previous orders even with spotty connectivity.',
       badge: 'Zero Lag Speed',
@@ -257,7 +256,7 @@ export default function MobileAppDevelopmentPage() {
     },
     {
       num: '04',
-      icon: KeyRound,
+      icon: FaKey,
       title: 'Phone Number OTP & Biometrics',
       desc: 'Frictionless 1-tap login with SMS/WhatsApp OTP, Google Sign-In, and Apple FaceID/TouchID for maximum user security and low drop-offs.',
       badge: 'Zero Passwords',
@@ -273,7 +272,7 @@ export default function MobileAppDevelopmentPage() {
     },
     {
       num: '05',
-      icon: Server,
+      icon: FaCog,
       title: 'Web Admin Dashboard Included',
       desc: 'Manage your entire mobile app ecosystem—add products, send push notifications, review orders, and view sales charts from any browser.',
       badge: 'Full Business Control',
@@ -289,7 +288,7 @@ export default function MobileAppDevelopmentPage() {
     },
     {
       num: '06',
-      icon: Play,
+      icon: FaPlay,
       title: 'Play Store & App Store Launch',
       desc: 'We handle the complete production build, signing keystores, app icons, privacy policy compliance, and submission technical requirements.',
       badge: '100% Submission Help',
@@ -416,406 +415,123 @@ export default function MobileAppDevelopmentPage() {
   };
 
   return (
-    <div className="w-full pt-8 pb-16 sm:pt-12 sm:pb-24 bg-white">
+    <section className="relative overflow-hidden w-full pt-8 pb-14 sm:pt-14 sm:pb-20 md:pt-16 md:pb-24 bg-white border-b border-slate-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16 sm:mb-20">
-          <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-50 border border-pink-200 text-pink-800 text-xs font-bold uppercase tracking-wider mb-4 shadow-2xs">
-              <Smartphone className="w-3.5 h-3.5 text-pink-600" />
+      {/* Background Animated Subtle Gradient Orbs */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none -z-10">
+        <div className="absolute -top-16 left-1/4 w-64 h-64 sm:w-80 sm:h-80 bg-violet-100/50 rounded-full blur-3xl animate-float" />
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 sm:w-80 sm:h-80 bg-teal-100/40 rounded-full blur-3xl animate-float-reverse" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main Split Hero Section (2 Columns on Laptop/Desktop, Centered Stack on Mobile) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center mb-10 sm:mb-14">
+          
+          {/* Left Text Column */}
+          <div className="lg:col-span-5 xl:col-span-5 text-center lg:text-left flex flex-col items-center lg:items-start">
+            {/* Animated Top Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-5 sm:mb-6 shadow-2xs hover:scale-105 transition-transform cursor-default">
+              <FaMobileAlt className="w-3.5 h-3.5 text-violet-600 animate-pulse" />
               <span>Native Android & iOS Engineering Studio</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-4 tracking-tight font-sans">
+            {/* Main Heading */}
+            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15] mb-4 sm:mb-6 font-sans">
               Custom <span className="gradient-text-hero">Mobile App Development</span> for Indian Businesses
             </h1>
 
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-normal">
+            {/* Subheading */}
+            <p className="text-sm sm:text-lg md:text-xl text-slate-600 max-w-2xl lg:max-w-none mb-8 sm:mb-10 font-normal leading-relaxed">
               Turn your business into an app in your customer’s pocket. We engineer ultra-smooth Android (.APK/AAB) and iOS mobile applications with instant OTP login, automated push notifications, and native 0% UPI payments.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 mb-8 text-xs font-semibold text-slate-700">
-              <span className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> PlayStore Ready
-              </span>
-              <span className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Push Notifications
-              </span>
-              <span className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Razorpay UPI Inside
-              </span>
-              <span className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Web Admin Panel
-              </span>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 lg:mb-0">
+            {/* Action CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-3.5 w-full sm:w-auto">
               <a
                 href={`https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20discuss%20a%20Mobile%20App%20project%20for%20my%20business.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp text-xs sm:text-sm !py-3.5 !px-6 shadow-sm text-center justify-center font-bold"
+                className="btn-whatsapp btn-shine text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-md shadow-green-600/20 w-full sm:w-auto justify-center group flex items-center gap-2"
               >
-                <MessageCircle className="w-4 h-4" />
+                <FaWhatsapp className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 <span>Discuss App Idea on WhatsApp</span>
+                <FaArrowRight className="w-3.5 h-3.5 ml-0.5" />
               </a>
 
               <Link
                 href="/calculator"
-                className="btn-secondary text-xs sm:text-sm !py-3.5 !px-6 flex items-center justify-center gap-2 font-bold"
+                className="btn-secondary btn-shine text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 flex items-center justify-center gap-2 w-full sm:w-auto font-bold group"
               >
-                <Calculator className="w-4 h-4 text-pink-600" />
+                <FaCalculator className="w-3.5 h-3.5 text-violet-600 group-hover:rotate-12 transition-transform" />
                 <span>Calculate App Cost</span>
+                <FaArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-1 group-hover:text-violet-600 transition-transform" />
               </Link>
-            </div>
-
-            {/* Mobile-Only Fast Overview Card (Shown on mobile instead of heavy phone mockup) */}
-            <div className="block lg:hidden mt-6 p-4 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-850 to-slate-900 text-white border-2 border-slate-800 shadow-xl">
-              <div className="flex items-center justify-between text-xs font-bold pb-2.5 border-b border-slate-800 mb-3">
-                <span className="text-pink-400">📱 Mobile App Packages</span>
-                <span className="text-emerald-400 font-mono">100% Code Ownership</span>
-              </div>
-              <div className="grid grid-cols-3 gap-2 text-center text-[11px]">
-                <div className="p-2 rounded-xl bg-slate-800 border border-slate-700/80">
-                  <div className="font-bold text-white">Starter</div>
-                  <div className="text-emerald-400 font-mono font-bold mt-0.5">₹12,999</div>
-                  <div className="text-[9px] text-slate-400">Android .APK</div>
-                </div>
-                <div className="p-2 rounded-xl bg-pink-950/60 border border-pink-500/40">
-                  <div className="font-bold text-pink-300">Business</div>
-                  <div className="text-pink-400 font-mono font-bold mt-0.5">₹24,999</div>
-                  <div className="text-[9px] text-slate-300">Android + iOS</div>
-                </div>
-                <div className="p-2 rounded-xl bg-slate-800 border border-slate-700/80">
-                  <div className="font-bold text-white">Enterprise</div>
-                  <div className="text-indigo-300 font-mono font-bold mt-0.5">Custom</div>
-                  <div className="text-[9px] text-slate-400">Live GPS / Multi</div>
-                </div>
-              </div>
             </div>
           </div>
 
-          {/* Ultra-Realistic Tall Smartphone Interactive Simulator (Desktop / Laptop Only) */}
-          <div className="hidden lg:flex lg:col-span-5 flex-col items-center">
-            {/* Interactive Package Switcher on Top of Phone */}
-            <div className="flex items-center gap-1.5 p-1 rounded-2xl bg-slate-100 border border-slate-200 mb-4 shadow-2xs">
-              <button
-                onClick={() => setSimulatedScreen('starter')}
-                className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all ${
-                  simulatedScreen === 'starter'
-                    ? 'bg-white text-slate-900 shadow-sm'
-                    : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                Starter (₹12k)
-              </button>
-              <button
-                onClick={() => setSimulatedScreen('business')}
-                className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all ${
-                  simulatedScreen === 'business'
-                    ? 'bg-pink-600 text-white shadow-xs'
-                    : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                Business (₹24k)
-              </button>
-              <button
-                onClick={() => setSimulatedScreen('custom')}
-                className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all ${
-                  simulatedScreen === 'custom'
-                    ? 'bg-indigo-600 text-white shadow-xs'
-                    : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                Enterprise (GPS)
-              </button>
+          {/* Right Image Showcase Column (Matching Homepage Hero) */}
+          <div className="lg:col-span-7 xl:col-span-7 relative justify-center items-center flex mt-6 lg:mt-0">
+            <div className="relative w-full lg:scale-105 xl:scale-110 transform origin-center">
+              {/* Soft Gradient Backdrop Glow */}
+              <div className="absolute -inset-6 bg-gradient-to-tr from-violet-300/40 via-sky-200/40 to-emerald-200/40 rounded-3xl blur-3xl -z-10" />
+              <img
+                src="/apphero.png"
+                alt="SiteMint Custom Mobile App Development Showcase"
+                className="w-full h-auto object-contain drop-shadow-2xl pointer-events-none select-none"
+              />
             </div>
+          </div>
 
-            {/* Smartphone Chassis Frame */}
-            <div className="w-[305px] sm:w-[325px] h-[590px] sm:h-[620px] rounded-[46px] p-3.5 bg-slate-950 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.45)] border-[7px] border-slate-900 relative flex flex-col justify-between overflow-hidden">
-              
-              {/* Top Speaker & Dynamic Island Pill */}
-              <div className="relative z-30 pt-1 flex items-center justify-between px-4 text-[10px] text-white font-medium">
-                <span>9:41</span>
-                {/* Dynamic Island Notch */}
-                <div className="w-24 h-4 bg-slate-900 rounded-full flex items-center justify-center gap-1.5 px-2 border border-slate-800">
-                  <div className="w-2 h-2 rounded-full bg-slate-950" />
-                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                </div>
-                <div className="flex items-center gap-1 text-[11px]">
-                  <Wifi className="w-3 h-3 text-white" />
-                  <span className="text-[9px] font-bold">5G</span>
-                  <Battery className="w-3.5 h-3.5 text-white" />
-                </div>
-              </div>
+        </div>
 
-              {/* Dynamic Inner Screen Content (Scrollable) */}
-              <div className="flex-1 bg-slate-900 rounded-[32px] mt-2 mb-2 p-3.5 text-white overflow-y-auto overflow-x-hidden border border-slate-800/80 scrollbar-none flex flex-col justify-between">
-                
-                {/* 1. STARTER ANDROID APP SIMULATOR (Rich Store UI) */}
-                {simulatedScreen === 'starter' && (
-                  <div className="space-y-2.5">
-                    {/* App Header */}
-                    <div className="flex items-center justify-between pb-1.5 border-b border-slate-800 text-[10px]">
-                      <div className="flex items-center gap-1.5">
-                        <div className="w-6 h-6 rounded-lg bg-pink-600 flex items-center justify-center font-black text-white text-[10px]">
-                          FM
-                        </div>
-                        <div>
-                          <div className="text-[9px] text-slate-400 leading-none">FreshMart Store</div>
-                          <div className="text-[10px] font-bold text-white flex items-center gap-1">
-                            <span>Sector 18, Noida</span>
-                            <span className="text-[8px] bg-emerald-500/20 text-emerald-400 px-1 py-0.2 rounded font-mono">Open</span>
-                          </div>
-                        </div>
-                      </div>
-                      <span className="text-[9px] bg-pink-500/20 text-pink-300 px-1.5 py-0.5 rounded font-bold">Android .APK</span>
-                    </div>
+        {/* 4 Feature Value Pills matching Homepage Hero */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5 max-w-5xl mx-auto mb-10 sm:mb-14 text-left">
+          <div className="p-3 sm:p-3.5 rounded-2xl bg-white/90 border border-emerald-200/90 bg-emerald-50/20 shadow-xs flex items-center gap-2.5 sm:gap-3 cursor-default min-w-0">
+            <div className="p-2 sm:p-2.5 rounded-xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-500/10 shrink-0">
+              <FaGooglePlay className="w-4 h-4 sm:w-4 sm:h-4" />
+            </div>
+            <div className="min-w-0">
+              <div className="text-[12px] sm:text-[13px] font-bold text-slate-900 leading-tight truncate">PlayStore Ready</div>
+              <div className="text-[10px] text-slate-500 truncate mt-0.5">Android & iOS Build</div>
+            </div>
+          </div>
 
-                    {/* Search Bar */}
-                    <div className="p-1.5 rounded-xl bg-slate-800/90 border border-slate-700/80 flex items-center justify-between text-[10px] text-slate-400">
-                      <div className="flex items-center gap-1.5">
-                        <Search className="w-3 h-3 text-pink-400" />
-                        <span>Search 500+ items...</span>
-                      </div>
-                      <span className="text-[9px] bg-slate-700 text-slate-300 px-1 rounded">Filter</span>
-                    </div>
+          <div className="p-3 sm:p-3.5 rounded-2xl bg-white/90 border border-violet-200/90 bg-violet-50/20 shadow-xs flex items-center gap-2.5 sm:gap-3 cursor-default min-w-0">
+            <div className="p-2 sm:p-2.5 rounded-xl bg-violet-50 text-violet-600 ring-1 ring-violet-500/10 shrink-0">
+              <FaBell className="w-4 h-4 sm:w-4 sm:h-4" />
+            </div>
+            <div className="min-w-0">
+              <div className="text-[12px] sm:text-[13px] font-bold text-slate-900 leading-tight truncate">Push Notifications</div>
+              <div className="text-[10px] text-slate-500 truncate mt-0.5">Firebase Automation</div>
+            </div>
+          </div>
 
-                    {/* Animated Promo Banner */}
-                    <div className="p-2.5 rounded-2xl bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 text-white shadow-sm">
-                      <div className="flex items-center justify-between text-[9px] font-bold mb-0.5">
-                        <span>🎉 FIRST ORDER OFFER</span>
-                        <span className="bg-white/20 px-1.5 py-0.2 rounded text-[8px]">FLAT 30% OFF</span>
-                      </div>
-                      <div className="text-[11px] font-extrabold leading-tight">Use Code: FIRST30 on Checkout</div>
-                    </div>
+          <div className="p-3 sm:p-3.5 rounded-2xl bg-white/90 border border-sky-200/90 bg-sky-50/20 shadow-xs flex items-center gap-2.5 sm:gap-3 cursor-default min-w-0">
+            <div className="p-2 sm:p-2.5 rounded-xl bg-sky-50 text-sky-600 ring-1 ring-sky-500/10 shrink-0">
+              <FaCreditCard className="w-4 h-4 sm:w-4 sm:h-4" />
+            </div>
+            <div className="min-w-0">
+              <div className="text-[12px] sm:text-[13px] font-bold text-slate-900 leading-tight truncate">Razorpay UPI Inside</div>
+              <div className="text-[10px] text-slate-500 truncate mt-0.5">0% Platform Cut</div>
+            </div>
+          </div>
 
-                    {/* Category Bubble Row */}
-                    <div className="grid grid-cols-4 gap-1 text-center text-[9px]">
-                      <div className="p-1.5 rounded-xl bg-slate-800 border border-slate-700/60">
-                        <div className="text-xs">🍰</div>
-                        <div className="text-slate-300 mt-0.5">Bakery</div>
-                      </div>
-                      <div className="p-1.5 rounded-xl bg-slate-800 border border-slate-700/60">
-                        <div className="text-xs">🍎</div>
-                        <div className="text-slate-300 mt-0.5">Fruits</div>
-                      </div>
-                      <div className="p-1.5 rounded-xl bg-slate-800 border border-slate-700/60">
-                        <div className="text-xs">☕</div>
-                        <div className="text-slate-300 mt-0.5">Snacks</div>
-                      </div>
-                      <div className="p-1.5 rounded-xl bg-slate-800 border border-slate-700/60">
-                        <div className="text-xs">⚡</div>
-                        <div className="text-slate-300 mt-0.5">Deals</div>
-                      </div>
-                    </div>
-
-                    {/* 2-Column Product Grid */}
-                    <div className="grid grid-cols-2 gap-1.5">
-                      <div className="p-2 rounded-xl bg-slate-800 border border-slate-700/80">
-                        <div className="flex justify-between items-start text-[10px] font-bold">
-                          <span className="text-white truncate">Choco Cake</span>
-                          <span className="text-emerald-400">₹499</span>
-                        </div>
-                        <div className="text-[8px] text-amber-400 mt-0.5">⭐ 4.9 (120)</div>
-                        <button className="w-full mt-1.5 py-1 rounded-lg bg-pink-600 text-center text-[9px] font-bold text-white shadow-xs">
-                          + Add to Cart
-                        </button>
-                      </div>
-
-                      <div className="p-2 rounded-xl bg-slate-800 border border-slate-700/80">
-                        <div className="flex justify-between items-start text-[10px] font-bold">
-                          <span className="text-white truncate">Cold Brew</span>
-                          <span className="text-emerald-400">₹149</span>
-                        </div>
-                        <div className="text-[8px] text-amber-400 mt-0.5">⭐ 4.8 (85)</div>
-                        <button className="w-full mt-1.5 py-1 rounded-lg bg-pink-600 text-center text-[9px] font-bold text-white shadow-xs">
-                          + Add to Cart
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* 1-Tap OTP Login Strip */}
-                    <div className="p-2 rounded-xl bg-slate-850 border border-pink-500/30 flex items-center justify-between text-[9px]">
-                      <div className="text-slate-300">
-                        <span className="font-bold text-pink-300">🔐 Instant Phone OTP Login</span>
-                        <div className="text-[8px] text-slate-400">Auto-fill in 1-tap</div>
-                      </div>
-                      <span className="text-[9px] font-bold text-pink-400 bg-pink-500/20 px-2 py-0.5 rounded">Login</span>
-                    </div>
-                  </div>
-                )}
-
-                {/* 2. BUSINESS DUAL-PLATFORM APP SIMULATOR (Rich Dual OS UI) */}
-                {simulatedScreen === 'business' && (
-                  <div className="space-y-2.5">
-                    {/* Push Notification Header Alert */}
-                    <div className="p-2 rounded-xl bg-gradient-to-r from-pink-950/90 to-purple-950/90 border border-pink-500/40 shadow-sm animate-pulse">
-                      <div className="flex items-center justify-between text-[9px] text-pink-300 font-bold mb-0.5">
-                        <span className="flex items-center gap-1"><Bell className="w-2.5 h-2.5 text-pink-400" /> Push Alert</span>
-                        <span className="text-[8px] text-slate-400">Just Now</span>
-                      </div>
-                      <div className="text-[10px] text-slate-100 font-medium leading-tight">
-                        "Your order #SITE-8921 is packed & out for delivery! 🛵"
-                      </div>
-                    </div>
-
-                    {/* Live Order Step Progress Tracker */}
-                    <div className="p-2.5 rounded-2xl bg-slate-800/90 border border-slate-700">
-                      <div className="flex items-center justify-between text-[10px] font-bold text-white mb-1.5">
-                        <span>Live Delivery Tracker</span>
-                        <span className="text-emerald-400 font-bold font-mono">ETA: 6 Mins</span>
-                      </div>
-                      <div className="flex items-center justify-between text-[8px] text-slate-400 mb-1">
-                        <span className="text-emerald-400 font-bold">✓ Placed</span>
-                        <span className="text-emerald-400 font-bold">✓ Packed</span>
-                        <span className="text-pink-400 font-bold">● In Transit</span>
-                        <span className="text-slate-500">○ Arrived</span>
-                      </div>
-                      <div className="w-full bg-slate-700 h-1.5 rounded-full overflow-hidden">
-                        <div className="bg-gradient-to-r from-emerald-500 via-pink-500 to-violet-500 h-1.5 w-3/4 rounded-full" />
-                      </div>
-                    </div>
-
-                    {/* In-App Razorpay UPI Bottom Sheet */}
-                    <div className="p-2.5 rounded-2xl bg-slate-850 border border-pink-500/40 shadow-md">
-                      <div className="flex items-center justify-between text-[11px] font-bold mb-1">
-                        <span className="text-white">Razorpay 0% UPI Checkout</span>
-                        <span className="text-emerald-400 font-mono">₹1,249</span>
-                      </div>
-                      <div className="flex items-center gap-1.5 text-[8px] text-slate-300 mb-2">
-                        <span className="px-1 py-0.5 rounded bg-slate-700">Google Pay</span>
-                        <span className="px-1 py-0.5 rounded bg-slate-700">PhonePe</span>
-                        <span className="px-1 py-0.5 rounded bg-slate-700">Paytm</span>
-                        <span className="px-1 py-0.5 rounded bg-slate-700">CRED</span>
-                      </div>
-                      <button className="w-full py-1.5 rounded-xl bg-pink-600 text-center text-[10px] font-bold text-white shadow-md flex items-center justify-center gap-1">
-                        <CreditCard className="w-3 h-3" />
-                        <span>Pay ₹1,249 with 1-Tap UPI</span>
-                      </button>
-                    </div>
-
-                    {/* Member Loyalty Strip */}
-                    <div className="p-2 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-between text-[9px]">
-                      <span className="text-amber-300 font-bold flex items-center gap-1">
-                        ⭐ Gold Member (450 Coins)
-                      </span>
-                      <span className="text-emerald-400 font-bold">✓ Active</span>
-                    </div>
-
-                    {/* Dual Platform Compatibility Badge */}
-                    <div className="flex items-center justify-between text-[9px] text-slate-400 px-1 pt-0.5">
-                      <span className="text-pink-300 font-bold">📱 Android .AAB</span>
-                      <span className="text-purple-300 font-bold">🍎 iOS .IPA Build</span>
-                    </div>
-                  </div>
-                )}
-
-                {/* 3. CUSTOM ENTERPRISE APP SIMULATOR (Rich Map & Analytics UI) */}
-                {simulatedScreen === 'custom' && (
-                  <div className="space-y-2.5">
-                    {/* Live GPS Driver Map Screen */}
-                    <div className="p-2.5 rounded-2xl bg-slate-800/90 border border-indigo-500/40 relative overflow-hidden">
-                      <div className="flex items-center justify-between text-[10px] font-bold text-white mb-1.5">
-                        <span className="flex items-center gap-1 text-indigo-300">
-                          <Navigation className="w-3 h-3 text-indigo-400" /> Live GPS Dispatch
-                        </span>
-                        <span className="text-[8px] bg-indigo-500/20 text-indigo-300 px-1.5 py-0.2 rounded-full font-mono">
-                          Speed: 34 km/h
-                        </span>
-                      </div>
-
-                      {/* Map Graphic View */}
-                      <div className="h-20 bg-slate-950 rounded-xl border border-slate-700/60 p-2 relative flex items-center justify-around overflow-hidden">
-                        {/* Map Grid Roads Background */}
-                        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:8px_8px]" />
-                        
-                        <div className="text-center relative z-10">
-                          <MapPin className="w-4 h-4 text-emerald-400 mx-auto" />
-                          <div className="text-[7px] text-slate-300 mt-0.5">Store #12</div>
-                        </div>
-
-                        {/* Animated Route Line */}
-                        <div className="flex-1 border-t-2 border-dashed border-indigo-400 mx-2 relative z-10" />
-
-                        <div className="text-center relative z-10">
-                          <Truck className="w-4 h-4 text-pink-400 mx-auto animate-bounce" />
-                          <div className="text-[7px] text-pink-300 font-bold mt-0.5">Rider Rahul</div>
-                        </div>
-
-                        <div className="flex-1 border-t-2 border-dashed border-slate-600 mx-2 relative z-10" />
-
-                        <div className="text-center relative z-10">
-                          <User className="w-4 h-4 text-violet-400 mx-auto" />
-                          <div className="text-[7px] text-slate-300 mt-0.5">Customer</div>
-                        </div>
-                      </div>
-
-                      {/* Rider Contact Buttons */}
-                      <div className="flex items-center justify-between mt-2 pt-1.5 border-t border-slate-700/80 text-[8px]">
-                        <span className="text-slate-300 font-medium">Honda Activa • DL-4S-8921</span>
-                        <div className="flex gap-1">
-                          <span className="px-1.5 py-0.5 rounded bg-emerald-600 text-white font-bold">Call 📞</span>
-                          <span className="px-1.5 py-0.5 rounded bg-indigo-600 text-white font-bold">Chat 💬</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Master Admin Revenue Card */}
-                    <div className="p-2.5 rounded-2xl bg-slate-850 border border-slate-700">
-                      <div className="flex items-center justify-between text-[10px] font-bold text-white mb-0.5">
-                        <span>Today's Multi-Vendor GMV</span>
-                        <span className="text-emerald-400 font-mono">₹68,450</span>
-                      </div>
-                      <div className="flex items-center justify-between text-[8px] text-slate-400">
-                        <span>214 Active App Orders</span>
-                        <span className="text-emerald-400 font-bold">+24% Today</span>
-                      </div>
-                    </div>
-
-                    {/* Multi-Role Access Selector */}
-                    <div className="grid grid-cols-3 gap-1 text-[8px] text-center font-bold">
-                      <div className="p-1 rounded-lg bg-indigo-600 text-white">Customer</div>
-                      <div className="p-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">Driver</div>
-                      <div className="p-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">Vendor</div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Bottom App Navigation Bar (Always Visible) */}
-                <div className="pt-2 border-t border-slate-800/90 flex items-center justify-around text-[9px] text-slate-400">
-                  <div className="text-center text-pink-400 font-bold">
-                    <Store className="w-3.5 h-3.5 mx-auto" />
-                    <span>Home</span>
-                  </div>
-                  <div className="text-center hover:text-white">
-                    <Search className="w-3.5 h-3.5 mx-auto" />
-                    <span>Search</span>
-                  </div>
-                  <div className="text-center hover:text-white">
-                    <ShoppingCart className="w-3.5 h-3.5 mx-auto" />
-                    <span>Orders</span>
-                  </div>
-                  <div className="text-center hover:text-white">
-                    <User className="w-3.5 h-3.5 mx-auto" />
-                    <span>Profile</span>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Bottom Home Indicator Gesture Bar */}
-              <div className="w-28 h-1 bg-slate-700 rounded-full mx-auto mb-0.5" />
+          <div className="p-3 sm:p-3.5 rounded-2xl bg-white/90 border border-teal-200/90 bg-teal-50/20 shadow-xs flex items-center gap-2.5 sm:gap-3 cursor-default min-w-0">
+            <div className="p-2 sm:p-2.5 rounded-xl bg-teal-50 text-teal-600 ring-1 ring-teal-500/10 shrink-0">
+              <FaCog className="w-4 h-4 sm:w-4 sm:h-4" />
+            </div>
+            <div className="min-w-0">
+              <div className="text-[12px] sm:text-[13px] font-bold text-slate-900 leading-tight truncate">Web Admin Panel</div>
+              <div className="text-[10px] text-slate-500 truncate mt-0.5">Manage Everything</div>
             </div>
           </div>
         </div>
 
-        {/* Tailored Mobile App Solutions by Industry (Interactive Tabs & 2-Column Showcase Card) */}
+        {/* Tailored Mobile App Solutions by Industry */}
         <div className="mb-20 sm:mb-24">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-50 border border-pink-200 text-pink-800 text-xs font-bold uppercase tracking-wider mb-3 shadow-2xs">
@@ -824,18 +540,19 @@ export default function MobileAppDevelopmentPage() {
             </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 leading-tight font-sans">
               Tailored Mobile App Solutions <br className="hidden sm:inline" />
-              <span className="gradient-text-hero">By Industry</span>
+              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">By Industry</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto mt-2">
               Select your business model to explore how our specialized app architectures drive repeat customer engagement and 0% commission ordering.
             </p>
           </div>
 
-          {/* Horizontal Interactive Tab Buttons (Centered Pill Row) */}
+          {/* Horizontal Interactive Tab Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-2.5 mb-8">
             {Object.keys(interactiveScreens).map((key) => {
               const item = interactiveScreens[key];
               const isSelected = activeScreenTab === key;
+              const TabIcon = key === 'ecommerce' ? FaShoppingBag : key === 'food' ? FaUtensils : key === 'education' ? FaGraduationCap : FaWrench;
               return (
                 <button
                   key={key}
@@ -846,17 +563,17 @@ export default function MobileAppDevelopmentPage() {
                       : 'bg-white text-slate-700 border border-slate-200/80 hover:border-pink-300 hover:bg-pink-50/40'
                   }`}
                 >
-                  <span>{item.category.includes('ECOMMERCE') ? '🛍️' : item.category.includes('FOOD') ? '🍰' : item.category.includes('EDUCATION') ? '🎓' : '🔧'}</span>
+                  <TabIcon className="w-4 h-4" />
                   <span>{item.title.split(' ')[0]} {item.title.split(' ')[1]}</span>
                 </button>
               );
             })}
           </div>
 
-          {/* Large Premium Showcase Card (2-Column Grid) */}
+          {/* Large Premium Showcase Card */}
           <div className="p-6 sm:p-10 rounded-3xl bg-white border-2 border-slate-200/90 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden">
             
-            {/* Left Column: Solution Details & Actions */}
+            {/* Left Column */}
             <div className="lg:col-span-6">
               <span className="inline-block px-3 py-1 rounded-full bg-pink-50 text-pink-800 border border-pink-200 text-xs font-bold uppercase tracking-wider mb-3">
                 {selectedScreen.category}
@@ -872,7 +589,7 @@ export default function MobileAppDevelopmentPage() {
               <div className="space-y-2.5 mb-8">
                 {selectedScreen.features.map((feat, fIdx) => (
                   <div key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <FaCheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span>{feat}</span>
                   </div>
                 ))}
@@ -883,23 +600,23 @@ export default function MobileAppDevelopmentPage() {
                   href={`https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20build%20a%20${encodeURIComponent(selectedScreen.title)}.%20Please%20share%20timeline%20and%20pricing.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-whatsapp text-xs !py-3 !px-6 inline-flex items-center gap-2 shadow-xs font-bold"
+                  className="bg-[#00A86B] hover:bg-[#008f5b] text-white text-xs font-bold py-3 px-6 rounded-2xl shadow-xs inline-flex items-center gap-2 transition-all"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <FaWhatsapp className="w-4 h-4" />
                   <span>Order {selectedScreen.title.split(' ')[0]} App</span>
                 </a>
 
                 <Link
                   href="/calculator"
-                  className="btn-secondary text-xs !py-3 !px-5 inline-flex items-center gap-1.5 font-bold"
+                  className="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 text-xs font-bold py-3 px-5 rounded-2xl inline-flex items-center gap-1.5 transition-all"
                 >
-                  <Calculator className="w-3.5 h-3.5 text-pink-600" />
+                  <FaCalculator className="w-3.5 h-3.5 text-pink-600" />
                   <span>Calculate Cost</span>
                 </Link>
               </div>
             </div>
 
-            {/* Right Column: Creative Visual Architecture Showcase Terminal */}
+            {/* Right Column: Interactive Showcase Terminal */}
             <div className="lg:col-span-6">
               <div className="p-6 sm:p-7 rounded-3xl bg-slate-950 text-white border border-slate-800 shadow-2xl relative overflow-hidden">
                 
@@ -920,12 +637,13 @@ export default function MobileAppDevelopmentPage() {
                   </span>
                 </div>
 
-                {/* TAB 1: E-COMMERCE SCREEN */}
                 {activeScreenTab === 'ecommerce' && (
                   <div className="space-y-3">
                     <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800">
                       <div className="flex justify-between items-center text-xs font-bold mb-1">
-                        <span className="text-white">🛍️ D2C Storefront Catalog & Checkout</span>
+                        <span className="text-white flex items-center gap-1.5">
+                          <FaShoppingBag className="text-pink-400" /> D2C Storefront Catalog & Checkout
+                        </span>
                         <span className="text-emerald-400 font-mono">1.2s Fast</span>
                       </div>
                       <p className="text-[11px] text-slate-400 leading-relaxed">
@@ -935,23 +653,28 @@ export default function MobileAppDevelopmentPage() {
 
                     <div className="grid grid-cols-2 gap-2.5 text-xs">
                       <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-pink-300 mb-0.5">💳 0% Aggregator Cut</div>
+                        <div className="font-bold text-pink-300 mb-0.5 flex items-center gap-1">
+                          <FaCreditCard /> 0% Aggregator Cut
+                        </div>
                         <div className="text-[10px] text-slate-400">Direct settlement into your merchant bank account.</div>
                       </div>
                       <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-purple-300 mb-0.5">🔔 Abandoned Cart Push</div>
+                        <div className="font-bold text-purple-300 mb-0.5 flex items-center gap-1">
+                          <FaBell /> Abandoned Cart Push
+                        </div>
                         <div className="text-[10px] text-slate-400">Automated lock-screen discount alerts for drop-offs.</div>
                       </div>
                     </div>
                   </div>
                 )}
 
-                {/* TAB 2: RESTAURANT & FOOD SCREEN */}
                 {activeScreenTab === 'food' && (
                   <div className="space-y-3">
                     <div className="p-3.5 rounded-2xl bg-slate-900 border border-amber-500/40">
                       <div className="flex justify-between items-center text-xs font-bold mb-1">
-                        <span className="text-white">🍰 Custom Cake & Online Bakery Engine</span>
+                        <span className="text-white flex items-center gap-1.5">
+                          <FaUtensils className="text-amber-400" /> Custom Cake & Online Bakery Engine
+                        </span>
                         <span className="text-emerald-400 font-mono">Save ₹25k+/Mo</span>
                       </div>
                       <p className="text-[11px] text-slate-400 leading-relaxed">
@@ -961,23 +684,28 @@ export default function MobileAppDevelopmentPage() {
 
                     <div className="grid grid-cols-2 gap-2.5 text-xs">
                       <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-amber-300 mb-0.5">📱 Direct Customer CRM</div>
+                        <div className="font-bold text-amber-300 mb-0.5 flex items-center gap-1">
+                          <FaUsers /> Direct Customer CRM
+                        </div>
                         <div className="text-[10px] text-slate-400">Build your own phone database for festival campaigns.</div>
                       </div>
                       <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-emerald-300 mb-0.5">🛵 Pincode Delivery Rate</div>
+                        <div className="font-bold text-emerald-300 mb-0.5 flex items-center gap-1">
+                          <FaTruck /> Pincode Delivery Rate
+                        </div>
                         <div className="text-[10px] text-slate-400">Dynamic delivery fee calculation by distance radius.</div>
                       </div>
                     </div>
                   </div>
                 )}
 
-                {/* TAB 3: COACHING & EDTECH SCREEN */}
                 {activeScreenTab === 'education' && (
                   <div className="space-y-3">
                     <div className="p-3.5 rounded-2xl bg-slate-900 border border-sky-500/40">
                       <div className="flex justify-between items-center text-xs font-bold mb-1">
-                        <span className="text-white">🎓 Anti-Piracy LMS & Mock Test System</span>
+                        <span className="text-white flex items-center gap-1.5">
+                          <FaGraduationCap className="text-sky-400" /> Anti-Piracy LMS & Mock Test System
+                        </span>
                         <span className="text-emerald-400 font-mono">DRM Encrypted</span>
                       </div>
                       <p className="text-[11px] text-slate-400 leading-relaxed">
@@ -987,56 +715,51 @@ export default function MobileAppDevelopmentPage() {
 
                     <div className="grid grid-cols-2 gap-2.5 text-xs">
                       <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-sky-300 mb-0.5">📊 Rank Leaderboards</div>
+                        <div className="font-bold text-sky-300 mb-0.5 flex items-center gap-1">
+                          <FaChartBar /> Rank Leaderboards
+                        </div>
                         <div className="text-[10px] text-slate-400">Instant percentiles and subject-wise score analytics.</div>
                       </div>
                       <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-indigo-300 mb-0.5">📥 Offline PDF Reader</div>
+                        <div className="font-bold text-indigo-300 mb-0.5 flex items-center gap-1">
+                          <FaLock /> Offline PDF Reader
+                        </div>
                         <div className="text-[10px] text-slate-400">Encrypted in-app notes viewer preventing forwarding.</div>
                       </div>
                     </div>
                   </div>
                 )}
 
-                {/* TAB 4: SERVICE BOOKING SCREEN */}
                 {activeScreenTab === 'services' && (
                   <div className="space-y-3">
-                    <div className="p-3.5 rounded-2xl bg-slate-900 border border-violet-500/40">
+                    <div className="p-3.5 rounded-2xl bg-slate-900 border border-emerald-500/40">
                       <div className="flex justify-between items-center text-xs font-bold mb-1">
-                        <span className="text-white">🔧 Real-Time Booking & Slot Dispatch</span>
-                        <span className="text-emerald-400 font-mono">Instant Confirm</span>
+                        <span className="text-white flex items-center gap-1.5">
+                          <FaCalendarAlt className="text-emerald-400" /> On-Demand Service Scheduling
+                        </span>
+                        <span className="text-emerald-400 font-mono">Instant Confirmation</span>
                       </div>
                       <p className="text-[11px] text-slate-400 leading-relaxed">
-                        Dynamic calendar slot booking with technician allocation, advance token payment collection, and customer review verification.
+                        Time-slot booking calendar with provider availability, advance UPI token payment, and in-app WhatsApp communication.
                       </p>
                     </div>
 
                     <div className="grid grid-cols-2 gap-2.5 text-xs">
                       <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-violet-300 mb-0.5">👨‍🔧 Technician Portal</div>
-                        <div className="text-[10px] text-slate-400">Dedicated partner interface to accept and close jobs.</div>
+                        <div className="font-bold text-emerald-300 mb-0.5 flex items-center gap-1">
+                          <FaCalendarAlt /> Time-Slot Booking
+                        </div>
+                        <div className="text-[10px] text-slate-400">Real-time scheduling with automatic provider dispatch.</div>
                       </div>
                       <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-pink-300 mb-0.5">💬 WhatsApp Alerts</div>
-                        <div className="text-[10px] text-slate-400">Automatic customer notifications for technician arrival.</div>
+                        <div className="font-bold text-amber-300 mb-0.5 flex items-center gap-1">
+                          <FaStar /> Star Ratings
+                        </div>
+                        <div className="text-[10px] text-slate-400">Verified customer feedback and review system.</div>
                       </div>
                     </div>
                   </div>
                 )}
-
-                {/* Bottom Status Callout */}
-                <div className="mt-5 pt-3.5 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
-                  <span>⚡ Available in <strong>Starter (₹12k)</strong> & <strong>Business (₹24k)</strong></span>
-                  <a
-                    href="https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20see%20a%20live%20demo%20of%20your%20app%20solutions."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-pink-400 hover:text-pink-300 font-bold flex items-center gap-1"
-                  >
-                    <span>Request Live Demo</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
-                </div>
 
               </div>
             </div>
@@ -1044,52 +767,38 @@ export default function MobileAppDevelopmentPage() {
           </div>
         </div>
 
-        {/* 6 Core Mobile Capabilities (Ultra-Modern Creative Grid) */}
+        {/* Core Capabilities Section */}
         <div className="mb-20 sm:mb-24">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-50 text-pink-700 border border-pink-200 text-xs font-bold uppercase tracking-wider mb-3 shadow-2xs">
-              <Zap className="w-3.5 h-3.5 text-pink-600" />
-              <span>Built-in Powerhouse Architecture</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-50 border border-pink-200 text-pink-800 text-xs font-bold uppercase tracking-wider mb-3 shadow-2xs">
+              <Sparkles className="w-3.5 h-3.5 text-pink-600" />
+              <span>Native Features</span>
             </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 leading-tight font-sans">
-              Everything Your Mobile App <br className="hidden sm:inline" />
-              <span className="gradient-text-hero">Needs to Scale & Convert</span>
+              Engineered For High Retention & <br className="hidden sm:inline" />
+              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Zero Platform Cut</span>
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto mt-2">
-              Every SiteMint app comes engineered out-of-the-box with production-grade native capabilities, zero external rent, and complete source code ownership.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-            {capabilities.map((cap, cIdx) => {
-              const Icon = cap.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {capabilities.map((cap) => {
+              const CapIcon = cap.icon;
               return (
                 <div
-                  key={cIdx}
-                  className={`p-6 sm:p-7 rounded-3xl bg-white ${cap.borderClass} hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden`}
+                  key={cap.num}
+                  className={`p-6 rounded-3xl bg-gradient-to-br ${cap.gradient} bg-white ${cap.borderClass} transition-all duration-300 flex flex-col justify-between group`}
                 >
-                  {/* Subtle Background Radial Gradient Glow */}
-                  <div className={`absolute -top-24 -right-24 w-48 h-48 rounded-full bg-gradient-to-br ${cap.gradient} blur-2xl group-hover:opacity-100 opacity-60 transition-opacity pointer-events-none`} />
-
                   <div>
-                    {/* Top Row: Number Pill + Icon + Impact Badge */}
-                    <div className="flex items-center justify-between gap-2 mb-5">
-                      <div className="flex items-center gap-2.5">
-                        <span className="w-6 h-6 rounded-full bg-slate-100 text-slate-700 text-[11px] font-mono font-bold flex items-center justify-center group-hover:bg-pink-600 group-hover:text-white transition-colors">
-                          {cap.num}
-                        </span>
-                        <div className="w-10 h-10 rounded-2xl bg-slate-50 border border-slate-200/80 text-slate-800 flex items-center justify-center group-hover:scale-110 group-hover:bg-pink-50 group-hover:border-pink-300 group-hover:text-pink-600 transition-all shadow-2xs">
-                          <Icon className="w-5 h-5" />
-                        </div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-pink-600 font-bold group-hover:scale-110 transition-transform">
+                        <CapIcon className="w-6 h-6" />
                       </div>
-
-                      <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full border shadow-2xs ${cap.badgeColor}`}>
+                      <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full border ${cap.badgeColor}`}>
                         {cap.badge}
                       </span>
                     </div>
 
-                    {/* Title & Description */}
-                    <h3 className="text-base sm:text-lg font-extrabold text-slate-900 mb-2 font-sans group-hover:text-pink-600 transition-colors leading-snug">
+                    <h3 className="text-lg font-extrabold text-slate-900 mb-2 font-sans">
                       {cap.title}
                     </h3>
                     <p className="text-xs text-slate-600 leading-relaxed mb-6">
@@ -1097,7 +806,6 @@ export default function MobileAppDevelopmentPage() {
                     </p>
                   </div>
 
-                  {/* Micro-UI Architecture Preview Pill */}
                   <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200/90 text-slate-700 text-xs flex items-center justify-between group-hover:bg-white group-hover:border-pink-300 transition-colors">
                     <div className="truncate pr-2">
                       <div className="font-bold text-[11px] text-slate-900 flex items-center gap-1.5 truncate">
@@ -1118,7 +826,7 @@ export default function MobileAppDevelopmentPage() {
           </div>
         </div>
 
-        {/* Interactive Transparent App Pricing Tier Showcase */}
+        {/* Pricing Tiers Section */}
         <div className="mb-16 sm:mb-20" id="pricing-tiers">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-50 text-pink-700 border border-pink-200 text-xs font-bold uppercase tracking-wider mb-2">
@@ -1132,7 +840,6 @@ export default function MobileAppDevelopmentPage() {
             </p>
           </div>
 
-          {/* Pricing Selector Tabs */}
           <div className="flex justify-center mb-8">
             <div className="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200">
               <button
@@ -1168,7 +875,6 @@ export default function MobileAppDevelopmentPage() {
             </div>
           </div>
 
-          {/* Detailed Selected Plan Card */}
           <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-br from-white via-slate-50/50 to-pink-50/30 border-2 border-pink-300 shadow-xl relative overflow-hidden">
             <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-6 border-b border-slate-200">
               <div>
@@ -1193,7 +899,6 @@ export default function MobileAppDevelopmentPage() {
               </div>
             </div>
 
-            {/* Deliverables Grid */}
             <div className="mb-8">
               <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-1.5">
                 <CheckCheck className="w-4 h-4 text-emerald-600" />
@@ -1203,17 +908,16 @@ export default function MobileAppDevelopmentPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {selectedPlan.keyPoints.map((point, pIdx) => (
                   <div key={pIdx} className="flex items-start gap-2 p-2.5 rounded-xl bg-white border border-slate-200 text-xs font-medium text-slate-800">
-                    <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                    <FaCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                     <span>{point}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Package Scope Details */}
             <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 text-amber-950 text-xs mb-8 space-y-1">
               <div className="font-bold flex items-center gap-1 text-amber-900">
-                <Info className="w-3.5 h-3.5" /> Transparency Notes:
+                <FaInfoCircle className="w-3.5 h-3.5" /> Transparency Notes:
               </div>
               {selectedPlan.exclusions.map((ex, exIdx) => (
                 <div key={exIdx} className="flex items-center gap-1.5 text-slate-700">
@@ -1223,10 +927,9 @@ export default function MobileAppDevelopmentPage() {
               ))}
             </div>
 
-            {/* Action Bar */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-200">
-              <div className="text-xs text-slate-500 text-center sm:text-left">
-                🛡️ Includes <strong>{selectedPlan.maintenanceText}</strong>
+              <div className="text-xs text-slate-500 text-center sm:text-left flex items-center gap-1.5">
+                <FaShieldAlt className="text-emerald-600" /> Includes <strong>{selectedPlan.maintenanceText}</strong>
               </div>
 
               <div className="flex items-center gap-3 w-full sm:w-auto">
@@ -1234,9 +937,9 @@ export default function MobileAppDevelopmentPage() {
                   href={`https://wa.me/918920683588?text=${encodeURIComponent(selectedPlan.whatsappMsg)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-whatsapp text-xs sm:text-sm !py-3 !px-7 w-full sm:w-auto text-center shadow-md"
+                  className="bg-[#00A86B] hover:bg-[#008f5b] text-white text-xs sm:text-sm font-bold py-3 px-7 rounded-2xl shadow-md flex items-center justify-center gap-2 transition-all w-full sm:w-auto text-center"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <FaWhatsapp className="w-4 h-4" />
                   <span>Order {selectedPlan.name} on WhatsApp</span>
                 </a>
               </div>
@@ -1244,10 +947,8 @@ export default function MobileAppDevelopmentPage() {
           </div>
         </div>
 
-        {/* 5-Stage Mobile App Engineering Process (Connected Pipeline with Smooth Flow) */}
+        {/* 5-Step Engineering Pipeline */}
         <div className="p-6 sm:p-10 rounded-3xl bg-slate-950 text-white mb-20 sm:mb-24 shadow-2xl border-2 border-slate-800 relative overflow-hidden">
-          
-          {/* Subtle Cyber Grid Background */}
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ec4899_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
 
           <div className="text-center max-w-3xl mx-auto mb-12 relative z-10">
@@ -1257,20 +958,16 @@ export default function MobileAppDevelopmentPage() {
             </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight font-sans">
               From Concept to Play Store <br className="hidden sm:inline" />
-              <span className="gradient-text-hero">In 5 Seamless Steps</span>
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">In 5 Seamless Steps</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto mt-2">
               Our structured engineering roadmap ensures rapid turnaround, zero communication gaps, and total code transparency at every milestone.
             </p>
           </div>
 
-          {/* Connected Horizontal Flow Pipeline */}
           <div className="relative z-10">
-            
-            {/* Desktop Continuous Glowing Flow Line (Connecting Step 1 to 5) */}
             <div className="hidden lg:block absolute top-[28px] left-[8%] right-[8%] h-1 bg-gradient-to-r from-pink-500 via-violet-500 via-blue-500 via-emerald-500 to-amber-500 rounded-full z-0 opacity-80" />
 
-            {/* Step Cards Grid with Horizontal Smooth Scroll Snap on Mobile */}
             <div className="flex lg:grid lg:grid-cols-5 gap-4.5 overflow-x-auto scrollbar-none pb-4 pt-1 snap-x snap-mandatory">
               
               {/* Step 1 */}
@@ -1435,15 +1132,13 @@ export default function MobileAppDevelopmentPage() {
 
             </div>
 
-            {/* Mobile Scroll Indicator */}
             <div className="flex lg:hidden items-center justify-center gap-1.5 text-[11px] text-slate-400 mt-3 font-medium">
               <span>← Swipe to explore all 5 steps →</span>
             </div>
-
           </div>
         </div>
 
-        {/* Comparison: Traditional Agency vs SiteMint App Studio */}
+        {/* Comparison Table */}
         <div className="mb-16 sm:mb-20">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <h2 className="text-xl sm:text-3xl font-extrabold text-slate-900 font-sans">
@@ -1498,30 +1193,31 @@ export default function MobileAppDevelopmentPage() {
             Explore Connected Technology Services:
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
-            <Link href="/services/website-development" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition">
-              🌐 Website Development (₹3,999)
+            <Link href="/services/website-development" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition flex items-center gap-2">
+              <FaMobileAlt className="text-pink-600" /> Website Development (₹3,999)
             </Link>
-            <Link href="/services/ecommerce-development" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition">
-              🛍️ E-Commerce Web & App Store
+            <Link href="/services/ecommerce-development" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition flex items-center gap-2">
+              <FaShoppingBag className="text-pink-600" /> E-Commerce Web & App Store
             </Link>
-            <Link href="/services/education-portal" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition">
-              🎓 Coaching & School LMS App
+            <Link href="/services/education-portal" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition flex items-center gap-2">
+              <FaGraduationCap className="text-pink-600" /> Coaching & School LMS App
             </Link>
-            <Link href="/calculator" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition">
-              🧮 Instant App Cost Calculator
+            <Link href="/calculator" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition flex items-center gap-2">
+              <FaCalculator className="text-pink-600" /> Instant App Cost Calculator
             </Link>
-            <Link href="/pricing" className="p-3 bg-white rounded-xl border border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition">
-              🏷️ Complete Pricing Catalog
+            <Link href="/pricing" className="p-3 bg-white rounded-xl border border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition flex items-center gap-2">
+              <FaCheckCircle className="text-pink-600" /> Complete Pricing Catalog
             </Link>
-            <Link href="/blog/custom-ecommerce-store-vs-shopify-for-indian-startups" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition">
-              📖 Custom Store vs Shopify ROI Guide
+            <Link href="/blog/custom-ecommerce-store-vs-shopify-for-indian-startups" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition flex items-center gap-2">
+              <FaRocket className="text-pink-600" /> Custom Store vs Shopify ROI Guide
             </Link>
           </div>
         </div>
+
       </div>
 
       <RelatedServicesSection currentService="mobile-app-development" />
       <FaqSection />
-    </div>
+    </section>
   );
 }
