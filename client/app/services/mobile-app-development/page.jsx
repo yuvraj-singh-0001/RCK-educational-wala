@@ -59,7 +59,7 @@ import FaqSection from '../../../components/FaqSection';
 
 export default function MobileAppDevelopmentPage() {
   const [activePlanTab, setActivePlanTab] = useState('business');
-  const [activeScreenTab, setActiveScreenTab] = useState('ecommerce');
+  const [activeScreenTab, setActiveScreenTab] = useState('food');
   const [simulatedScreen, setSimulatedScreen] = useState('business'); // 'starter' | 'business' | 'custom'
 
   const appPlans = {
@@ -165,19 +165,17 @@ export default function MobileAppDevelopmentPage() {
         'Live Order Status Tracking with SMS/Push Alerts',
         'Personalized Coupon Code & Promotional Discount Engine',
       ],
-      demoImg: 'Direct-to-Consumer Storefront with Sub-Second Product Search',
     },
     food: {
       title: 'Restaurant & Food Delivery App',
       subtitle: '0% commission direct customer ordering engine',
       category: 'FOOD & RESTAURANT TECH',
       features: [
-        'Visual Menu with Custom Cake/Pizza Modifiers',
-        'Live Kitchen Preparation & Delivery Partner Dispatch',
+        'Beautiful Menu with Custom Modifiers',
+        'Live Order Tracking & Delivery Partner Dispatch',
         'Direct UPI Payments with Zero Aggregator Commissions',
         'Automated Repeat Order Re-Order Button in 1 Tap',
       ],
-      demoImg: 'Interactive Food Menu with Custom Toppings & Instant Checkout',
     },
     education: {
       title: 'Coaching Institute & EdTech LMS App',
@@ -189,7 +187,6 @@ export default function MobileAppDevelopmentPage() {
         'Downloadable Offline PDF Study Material & Notes',
         'Parent Notice Board & Fee Payment Gateway',
       ],
-      demoImg: 'Student Learning Dashboard with Video Player & Test Series',
     },
     services: {
       title: 'On-Demand Service Booking App',
@@ -201,7 +198,6 @@ export default function MobileAppDevelopmentPage() {
         'Advance Booking Token Payment via UPI',
         'Customer Reviews & Verified Star Rating System',
       ],
-      demoImg: 'Real-Time Appointment Booking with Instant Confirmation',
     },
   };
 
@@ -440,35 +436,35 @@ export default function MobileAppDevelopmentPage() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15] mb-4 sm:mb-6 font-sans">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight mb-4 font-sans">
               Custom <span className="gradient-text-hero">Mobile App Development</span> for Indian Businesses
             </h1>
 
             {/* Subheading */}
-            <p className="text-sm sm:text-lg md:text-xl text-slate-600 max-w-2xl lg:max-w-none mb-8 sm:mb-10 font-normal leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 max-w-2xl lg:max-w-none mb-6 font-normal leading-relaxed">
               Turn your business into an app in your customer’s pocket. We engineer ultra-smooth Android (.APK/AAB) and iOS mobile applications with instant OTP login, automated push notifications, and native 0% UPI payments.
             </p>
 
             {/* Action CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-3.5 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-3 w-full sm:w-auto">
               <a
                 href={`https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20discuss%20a%20Mobile%20App%20project%20for%20my%20business.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp btn-shine text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 shadow-md shadow-green-600/20 w-full sm:w-auto justify-center group flex items-center gap-2"
+                className="btn-whatsapp btn-shine text-xs !py-2 sm:!py-2.5 !px-4 sm:!px-5 rounded-xl shadow-sm w-full sm:w-auto justify-center group flex items-center gap-2"
               >
-                <FaWhatsapp className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                <FaWhatsapp className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
                 <span>Discuss App Idea on WhatsApp</span>
-                <FaArrowRight className="w-3.5 h-3.5 ml-0.5" />
+                <FaArrowRight className="w-3 h-3 ml-0.5" />
               </a>
 
               <Link
                 href="/calculator"
-                className="btn-secondary btn-shine text-xs sm:text-sm !py-2.5 sm:!py-3 !px-5 sm:!px-6 flex items-center justify-center gap-2 w-full sm:w-auto font-bold group"
+                className="btn-secondary btn-shine text-xs !py-2 sm:!py-2.5 !px-4 sm:!px-5 rounded-xl flex items-center justify-center gap-2 w-full sm:w-auto font-bold group"
               >
                 <FaCalculator className="w-3.5 h-3.5 text-violet-600 group-hover:rotate-12 transition-transform" />
                 <span>Calculate App Cost</span>
-                <FaArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-1 group-hover:text-violet-600 transition-transform" />
+                <FaArrowRight className="w-3 h-3 text-slate-400 group-hover:translate-x-1 group-hover:text-violet-600 transition-transform" />
               </Link>
             </div>
           </div>
@@ -548,7 +544,19 @@ export default function MobileAppDevelopmentPage() {
           </div>
 
           {/* Horizontal Interactive Tab Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-2.5 mb-8">
+          <div className="relative flex flex-wrap items-center justify-center gap-2.5 mb-8">
+            {activeScreenTab === 'food' && (
+              <div className="hidden lg:flex absolute -top-10 right-4 xl:right-16 items-center gap-1.5 pointer-events-none select-none z-10">
+                <span className="text-indigo-600 font-semibold italic text-xs md:text-sm font-sans -rotate-6 tracking-wide drop-shadow-xs">
+                  Complete Restaurant Solution
+                </span>
+                <svg className="w-6 h-6 text-indigo-500 rotate-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 3v12" />
+                  <path d="m8 11 4 4 4-4" />
+                </svg>
+              </div>
+            )}
+
             {Object.keys(interactiveScreens).map((key) => {
               const item = interactiveScreens[key];
               const isSelected = activeScreenTab === key;
@@ -595,173 +603,154 @@ export default function MobileAppDevelopmentPage() {
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-row items-center gap-2 sm:gap-3 w-full sm:w-auto">
                 <a
                   href={`https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20build%20a%20${encodeURIComponent(selectedScreen.title)}.%20Please%20share%20timeline%20and%20pricing.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#00A86B] hover:bg-[#008f5b] text-white text-xs font-bold py-3 px-6 rounded-2xl shadow-xs inline-flex items-center gap-2 transition-all"
+                  className="bg-[#00A86B] hover:bg-[#008f5b] text-white text-[11px] sm:text-xs font-bold py-2.5 px-3 sm:px-5 rounded-xl shadow-xs flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 whitespace-nowrap transition-all"
                 >
-                  <FaWhatsapp className="w-4 h-4" />
+                  <FaWhatsapp className="w-3.5 h-3.5 shrink-0" />
                   <span>Order {selectedScreen.title.split(' ')[0]} App</span>
                 </a>
 
                 <Link
                   href="/calculator"
-                  className="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 text-xs font-bold py-3 px-5 rounded-2xl inline-flex items-center gap-1.5 transition-all"
+                  className="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 text-[11px] sm:text-xs font-bold py-2.5 px-3 sm:px-4 rounded-xl flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 whitespace-nowrap transition-all"
                 >
-                  <FaCalculator className="w-3.5 h-3.5 text-pink-600" />
+                  <FaCalculator className="w-3.5 h-3.5 text-pink-600 shrink-0" />
                   <span>Calculate Cost</span>
                 </Link>
               </div>
             </div>
 
-            {/* Right Column: Interactive Showcase Terminal */}
-            <div className="lg:col-span-6">
-              <div className="p-6 sm:p-7 rounded-3xl bg-slate-950 text-white border border-slate-800 shadow-2xl relative overflow-hidden">
-                
-                {/* Header Strip */}
-                <div className="flex items-center justify-between pb-3.5 border-b border-slate-800/80 mb-5 text-xs">
-                  <div className="flex items-center gap-2">
-                    <div className="flex gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+            {/* Right Column: Image for Food, Terminal for Others */}
+            <div className="lg:col-span-6 flex items-center justify-center">
+              {activeScreenTab === 'food' ? (
+                <div className="relative w-full flex items-center justify-center">
+                  {/* Soft Radial Backdrop Glow */}
+                  <div className="absolute -inset-6 bg-gradient-to-tr from-sky-200/50 via-purple-200/40 to-pink-200/50 rounded-full blur-3xl -z-10" />
+
+                  {/* Main Image appdevelomentrestro.png filling right column */}
+                  <img
+                    src="/appdevelomentrestro.png"
+                    alt="Restaurant & Food Delivery App"
+                    className="w-full h-auto max-h-[380px] lg:max-h-[430px] object-contain drop-shadow-2xl pointer-events-none select-none scale-105 sm:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              ) : (
+                <div className="p-6 sm:p-7 rounded-3xl bg-slate-950 text-white border border-slate-800 shadow-2xl relative overflow-hidden">
+                  {/* Header Strip */}
+                  <div className="flex items-center justify-between pb-3.5 border-b border-slate-800/80 mb-5 text-xs">
+                    <div className="flex items-center gap-2">
+                      <div className="flex gap-1.5">
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+                      </div>
+                      <span className="text-[11px] text-slate-400 font-mono font-medium ml-1">
+                        {selectedScreen.category.toLowerCase().replace(/\s+/g, '-')}-arch.v2
+                      </span>
                     </div>
-                    <span className="text-[11px] text-slate-400 font-mono font-medium ml-1">
-                      {selectedScreen.category.toLowerCase().replace(/\s+/g, '-')}-arch.v2
+                    <span className="px-2.5 py-0.5 rounded-full bg-pink-500/20 text-pink-300 text-[10px] font-bold">
+                      0% Commission Engine
                     </span>
                   </div>
-                  <span className="px-2.5 py-0.5 rounded-full bg-pink-500/20 text-pink-300 text-[10px] font-bold">
-                    0% Commission Engine
-                  </span>
+
+                  {activeScreenTab === 'ecommerce' && (
+                    <div className="space-y-3">
+                      <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800">
+                        <div className="flex justify-between items-center text-xs font-bold mb-1">
+                          <span className="text-white flex items-center gap-1.5">
+                            <FaShoppingBag className="text-pink-400" /> D2C Storefront Catalog & Checkout
+                          </span>
+                          <span className="text-emerald-400 font-mono">1.2s Fast</span>
+                        </div>
+                        <p className="text-[11px] text-slate-400 leading-relaxed">
+                          Pre-rendered product catalogs with sub-second search, size/color pickers, and 1-tap Razorpay UPI checkout.
+                        </p>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2.5 text-xs">
+                        <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                          <div className="font-bold text-pink-300 mb-0.5 flex items-center gap-1">
+                            <FaCreditCard /> 0% Aggregator Cut
+                          </div>
+                          <div className="text-[10px] text-slate-400">Direct settlement into your merchant bank account.</div>
+                        </div>
+                        <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                          <div className="font-bold text-purple-300 mb-0.5 flex items-center gap-1">
+                            <FaBell /> Abandoned Cart Push
+                          </div>
+                          <div className="text-[10px] text-slate-400">Automated lock-screen discount alerts for drop-offs.</div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {activeScreenTab === 'education' && (
+                    <div className="space-y-3">
+                      <div className="p-3.5 rounded-2xl bg-slate-900 border border-sky-500/40">
+                        <div className="flex justify-between items-center text-xs font-bold mb-1">
+                          <span className="text-white flex items-center gap-1.5">
+                            <FaGraduationCap className="text-sky-400" /> Anti-Piracy LMS & Mock Test System
+                          </span>
+                          <span className="text-emerald-400 font-mono">DRM Encrypted</span>
+                        </div>
+                        <p className="text-[11px] text-slate-400 leading-relaxed">
+                          Screen-recording protected video player for paid coaching batches, timed online MCQ mock tests, and instant topper rank leaderboards.
+                        </p>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2.5 text-xs">
+                        <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                          <div className="font-bold text-sky-300 mb-0.5 flex items-center gap-1">
+                            <FaChartBar /> Rank Leaderboards
+                          </div>
+                          <div className="text-[10px] text-slate-400">Instant percentiles and subject-wise score analytics.</div>
+                        </div>
+                        <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                          <div className="font-bold text-indigo-300 mb-0.5 flex items-center gap-1">
+                            <FaLock /> Offline PDF Reader
+                          </div>
+                          <div className="text-[10px] text-slate-400">Encrypted in-app notes viewer preventing forwarding.</div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {activeScreenTab === 'services' && (
+                    <div className="space-y-3">
+                      <div className="p-3.5 rounded-2xl bg-slate-900 border border-emerald-500/40">
+                        <div className="flex justify-between items-center text-xs font-bold mb-1">
+                          <span className="text-white flex items-center gap-1.5">
+                            <FaCalendarAlt className="text-emerald-400" /> On-Demand Service Scheduling
+                          </span>
+                          <span className="text-emerald-400 font-mono">Instant Confirmation</span>
+                        </div>
+                        <p className="text-[11px] text-slate-400 leading-relaxed">
+                          Time-slot booking calendar with provider availability, advance UPI token payment, and in-app WhatsApp communication.
+                        </p>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2.5 text-xs">
+                        <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                          <div className="font-bold text-emerald-300 mb-0.5 flex items-center gap-1">
+                            <FaCalendarAlt /> Time-Slot Booking
+                          </div>
+                          <div className="text-[10px] text-slate-400">Real-time scheduling with automatic provider dispatch.</div>
+                        </div>
+                        <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                          <div className="font-bold text-amber-300 mb-0.5 flex items-center gap-1">
+                            <FaStar /> Star Ratings
+                          </div>
+                          <div className="text-[10px] text-slate-400">Verified customer feedback and review system.</div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
-
-                {activeScreenTab === 'ecommerce' && (
-                  <div className="space-y-3">
-                    <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800">
-                      <div className="flex justify-between items-center text-xs font-bold mb-1">
-                        <span className="text-white flex items-center gap-1.5">
-                          <FaShoppingBag className="text-pink-400" /> D2C Storefront Catalog & Checkout
-                        </span>
-                        <span className="text-emerald-400 font-mono">1.2s Fast</span>
-                      </div>
-                      <p className="text-[11px] text-slate-400 leading-relaxed">
-                        Pre-rendered product catalogs with sub-second search, size/color pickers, and 1-tap Razorpay UPI checkout.
-                      </p>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-2.5 text-xs">
-                      <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-pink-300 mb-0.5 flex items-center gap-1">
-                          <FaCreditCard /> 0% Aggregator Cut
-                        </div>
-                        <div className="text-[10px] text-slate-400">Direct settlement into your merchant bank account.</div>
-                      </div>
-                      <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-purple-300 mb-0.5 flex items-center gap-1">
-                          <FaBell /> Abandoned Cart Push
-                        </div>
-                        <div className="text-[10px] text-slate-400">Automated lock-screen discount alerts for drop-offs.</div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {activeScreenTab === 'food' && (
-                  <div className="space-y-3">
-                    <div className="p-3.5 rounded-2xl bg-slate-900 border border-amber-500/40">
-                      <div className="flex justify-between items-center text-xs font-bold mb-1">
-                        <span className="text-white flex items-center gap-1.5">
-                          <FaUtensils className="text-amber-400" /> Custom Cake & Online Bakery Engine
-                        </span>
-                        <span className="text-emerald-400 font-mono">Save ₹25k+/Mo</span>
-                      </div>
-                      <p className="text-[11px] text-slate-400 leading-relaxed">
-                        Allows customers to customize weight (0.5kg/1kg), eggless preference, and write custom birthday messages on cakes with 1-click WhatsApp order dispatch.
-                      </p>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-2.5 text-xs">
-                      <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-amber-300 mb-0.5 flex items-center gap-1">
-                          <FaUsers /> Direct Customer CRM
-                        </div>
-                        <div className="text-[10px] text-slate-400">Build your own phone database for festival campaigns.</div>
-                      </div>
-                      <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-emerald-300 mb-0.5 flex items-center gap-1">
-                          <FaTruck /> Pincode Delivery Rate
-                        </div>
-                        <div className="text-[10px] text-slate-400">Dynamic delivery fee calculation by distance radius.</div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {activeScreenTab === 'education' && (
-                  <div className="space-y-3">
-                    <div className="p-3.5 rounded-2xl bg-slate-900 border border-sky-500/40">
-                      <div className="flex justify-between items-center text-xs font-bold mb-1">
-                        <span className="text-white flex items-center gap-1.5">
-                          <FaGraduationCap className="text-sky-400" /> Anti-Piracy LMS & Mock Test System
-                        </span>
-                        <span className="text-emerald-400 font-mono">DRM Encrypted</span>
-                      </div>
-                      <p className="text-[11px] text-slate-400 leading-relaxed">
-                        Screen-recording protected video player for paid coaching batches, timed online MCQ mock tests, and instant topper rank leaderboards.
-                      </p>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-2.5 text-xs">
-                      <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-sky-300 mb-0.5 flex items-center gap-1">
-                          <FaChartBar /> Rank Leaderboards
-                        </div>
-                        <div className="text-[10px] text-slate-400">Instant percentiles and subject-wise score analytics.</div>
-                      </div>
-                      <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-indigo-300 mb-0.5 flex items-center gap-1">
-                          <FaLock /> Offline PDF Reader
-                        </div>
-                        <div className="text-[10px] text-slate-400">Encrypted in-app notes viewer preventing forwarding.</div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {activeScreenTab === 'services' && (
-                  <div className="space-y-3">
-                    <div className="p-3.5 rounded-2xl bg-slate-900 border border-emerald-500/40">
-                      <div className="flex justify-between items-center text-xs font-bold mb-1">
-                        <span className="text-white flex items-center gap-1.5">
-                          <FaCalendarAlt className="text-emerald-400" /> On-Demand Service Scheduling
-                        </span>
-                        <span className="text-emerald-400 font-mono">Instant Confirmation</span>
-                      </div>
-                      <p className="text-[11px] text-slate-400 leading-relaxed">
-                        Time-slot booking calendar with provider availability, advance UPI token payment, and in-app WhatsApp communication.
-                      </p>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-2.5 text-xs">
-                      <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-emerald-300 mb-0.5 flex items-center gap-1">
-                          <FaCalendarAlt /> Time-Slot Booking
-                        </div>
-                        <div className="text-[10px] text-slate-400">Real-time scheduling with automatic provider dispatch.</div>
-                      </div>
-                      <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                        <div className="font-bold text-amber-300 mb-0.5 flex items-center gap-1">
-                          <FaStar /> Star Ratings
-                        </div>
-                        <div className="text-[10px] text-slate-400">Verified customer feedback and review system.</div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-              </div>
+              )}
             </div>
 
           </div>
