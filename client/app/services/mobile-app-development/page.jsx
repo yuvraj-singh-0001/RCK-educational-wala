@@ -2,51 +2,46 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import {
-  FaMobileAlt,
-  FaAndroid,
-  FaApple,
-  FaGooglePlay,
-  FaWhatsapp,
-  FaCalculator,
-  FaBell,
-  FaShieldAlt,
-  FaStar,
-  FaUsers,
-  FaCheckCircle,
-  FaCheck,
-  FaCreditCard,
-  FaChartBar,
-  FaCog,
-  FaArrowRight,
-  FaRocket,
-  FaSearch,
-  FaEnvelope,
-  FaChartLine,
-  FaBolt,
-  FaShoppingBag,
-  FaUtensils,
-  FaGraduationCap,
-  FaCalendarAlt,
-  FaBirthdayCake,
-  FaCoffee,
-  FaGift,
-  FaTruck,
-  FaWrench,
-  FaPhoneAlt,
-  FaComments,
-  FaLock,
-  FaKey,
-  FaStore,
-  FaInfoCircle,
-  FaQuestionCircle,
-  FaMapPin,
-  FaPlay,
-  FaWifi,
-  FaCoins,
-  FaUser
-} from 'react-icons/fa';
 import { 
+  Smartphone,
+  Play,
+  MessageCircle,
+  Calculator,
+  Bell,
+  ShieldCheck,
+  Star,
+  Users,
+  CheckCircle2,
+  Check,
+  CreditCard,
+  BarChart3,
+  Settings,
+  ArrowRight,
+  Rocket,
+  Search,
+  Mail,
+  TrendingUp,
+  Zap,
+  ShoppingBag,
+  Utensils,
+  GraduationCap,
+  Calendar,
+  Cake,
+  Coffee,
+  Gift,
+  Truck,
+  Wrench,
+  Phone,
+  MessageSquare,
+  Lock,
+  Key,
+  Store,
+  Info,
+  HelpCircle,
+  MapPin,
+  Wifi,
+  Coins,
+  User,
   CheckCheck,
   Activity,
   Layers,
@@ -204,7 +199,7 @@ export default function MobileAppDevelopmentPage() {
   const capabilities = [
     {
       num: '01',
-      icon: FaBell,
+      icon: Bell,
       title: 'Automated Push Notifications',
       desc: 'Re-engage users with rich push alerts, festive discount offers, abandoned cart reminders, and live order status directly on mobile lock screens.',
       badge: '3.5x Engagement',
@@ -220,7 +215,7 @@ export default function MobileAppDevelopmentPage() {
     },
     {
       num: '02',
-      icon: FaCreditCard,
+      icon: CreditCard,
       title: 'Native 0% UPI & Razorpay Checkout',
       desc: 'Seamless in-app payments with Google Pay, PhonePe, Paytm, CRED, and cards without cumbersome redirects, maximizing checkout completion rates.',
       badge: 'Zero Platform Cut',
@@ -236,7 +231,7 @@ export default function MobileAppDevelopmentPage() {
     },
     {
       num: '03',
-      icon: FaWifi,
+      icon: Wifi,
       title: 'Offline Mode & Local SQLite Cache',
       desc: 'Engineered with SQLite and Hive caching so users can view catalogs, downloaded notes, and previous orders even with spotty connectivity.',
       badge: 'Zero Lag Speed',
@@ -252,7 +247,7 @@ export default function MobileAppDevelopmentPage() {
     },
     {
       num: '04',
-      icon: FaKey,
+      icon: Key,
       title: 'Phone Number OTP & Biometrics',
       desc: 'Frictionless 1-tap login with SMS/WhatsApp OTP, Google Sign-In, and Apple FaceID/TouchID for maximum user security and low drop-offs.',
       badge: 'Zero Passwords',
@@ -268,7 +263,7 @@ export default function MobileAppDevelopmentPage() {
     },
     {
       num: '05',
-      icon: FaCog,
+      icon: Settings,
       title: 'Web Admin Dashboard Included',
       desc: 'Manage your entire mobile app ecosystem—add products, send push notifications, review orders, and view sales charts from any browser.',
       badge: 'Full Business Control',
@@ -284,7 +279,7 @@ export default function MobileAppDevelopmentPage() {
     },
     {
       num: '06',
-      icon: FaPlay,
+      icon: Play,
       title: 'Play Store & App Store Launch',
       desc: 'We handle the complete production build, signing keystores, app icons, privacy policy compliance, and submission technical requirements.',
       badge: '100% Submission Help',
@@ -431,7 +426,7 @@ export default function MobileAppDevelopmentPage() {
           <div className="lg:col-span-5 xl:col-span-5 text-center lg:text-left flex flex-col items-center lg:items-start">
             {/* Animated Top Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-violet-50/90 border border-violet-200/90 text-violet-800 text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-5 sm:mb-6 shadow-2xs hover:scale-105 transition-transform cursor-default">
-              <FaMobileAlt className="w-3.5 h-3.5 text-violet-600 animate-pulse" />
+              <Smartphone className="w-3.5 h-3.5 text-violet-600 animate-pulse" />
               <span>Native Android & iOS Engineering Studio</span>
             </div>
 
@@ -453,18 +448,18 @@ export default function MobileAppDevelopmentPage() {
                 rel="noopener noreferrer"
                 className="btn-whatsapp btn-shine text-xs !py-2 sm:!py-2.5 !px-4 sm:!px-5 rounded-xl shadow-sm w-full sm:w-auto justify-center group flex items-center gap-2"
               >
-                <FaWhatsapp className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+                <MessageCircle className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
                 <span>Discuss App Idea on WhatsApp</span>
-                <FaArrowRight className="w-3 h-3 ml-0.5" />
+                <ArrowRight className="w-3 h-3 ml-0.5" />
               </a>
 
               <Link
                 href="/calculator"
                 className="btn-secondary btn-shine text-xs !py-2 sm:!py-2.5 !px-4 sm:!px-5 rounded-xl flex items-center justify-center gap-2 w-full sm:w-auto font-bold group"
               >
-                <FaCalculator className="w-3.5 h-3.5 text-violet-600 group-hover:rotate-12 transition-transform" />
+                <Calculator className="w-3.5 h-3.5 text-violet-600 group-hover:rotate-12 transition-transform" />
                 <span>Calculate App Cost</span>
-                <FaArrowRight className="w-3 h-3 text-slate-400 group-hover:translate-x-1 group-hover:text-violet-600 transition-transform" />
+                <ArrowRight className="w-3 h-3 text-slate-400 group-hover:translate-x-1 group-hover:text-violet-600 transition-transform" />
               </Link>
             </div>
           </div>
@@ -488,7 +483,7 @@ export default function MobileAppDevelopmentPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5 max-w-5xl mx-auto mb-10 sm:mb-14 text-left">
           <div className="p-3 sm:p-3.5 rounded-2xl bg-white/90 border border-emerald-200/90 bg-emerald-50/20 shadow-xs flex items-center gap-2.5 sm:gap-3 cursor-default min-w-0">
             <div className="p-2 sm:p-2.5 rounded-xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-500/10 shrink-0">
-              <FaGooglePlay className="w-4 h-4 sm:w-4 sm:h-4" />
+              <Play className="w-4 h-4 sm:w-4 sm:h-4" />
             </div>
             <div className="min-w-0">
               <div className="text-[12px] sm:text-[13px] font-bold text-slate-900 leading-tight truncate">PlayStore Ready</div>
@@ -498,7 +493,7 @@ export default function MobileAppDevelopmentPage() {
 
           <div className="p-3 sm:p-3.5 rounded-2xl bg-white/90 border border-violet-200/90 bg-violet-50/20 shadow-xs flex items-center gap-2.5 sm:gap-3 cursor-default min-w-0">
             <div className="p-2 sm:p-2.5 rounded-xl bg-violet-50 text-violet-600 ring-1 ring-violet-500/10 shrink-0">
-              <FaBell className="w-4 h-4 sm:w-4 sm:h-4" />
+              <Bell className="w-4 h-4 sm:w-4 sm:h-4" />
             </div>
             <div className="min-w-0">
               <div className="text-[12px] sm:text-[13px] font-bold text-slate-900 leading-tight truncate">Push Notifications</div>
@@ -508,7 +503,7 @@ export default function MobileAppDevelopmentPage() {
 
           <div className="p-3 sm:p-3.5 rounded-2xl bg-white/90 border border-sky-200/90 bg-sky-50/20 shadow-xs flex items-center gap-2.5 sm:gap-3 cursor-default min-w-0">
             <div className="p-2 sm:p-2.5 rounded-xl bg-sky-50 text-sky-600 ring-1 ring-sky-500/10 shrink-0">
-              <FaCreditCard className="w-4 h-4 sm:w-4 sm:h-4" />
+              <CreditCard className="w-4 h-4 sm:w-4 sm:h-4" />
             </div>
             <div className="min-w-0">
               <div className="text-[12px] sm:text-[13px] font-bold text-slate-900 leading-tight truncate">Razorpay UPI Inside</div>
@@ -518,7 +513,7 @@ export default function MobileAppDevelopmentPage() {
 
           <div className="p-3 sm:p-3.5 rounded-2xl bg-white/90 border border-teal-200/90 bg-teal-50/20 shadow-xs flex items-center gap-2.5 sm:gap-3 cursor-default min-w-0">
             <div className="p-2 sm:p-2.5 rounded-xl bg-teal-50 text-teal-600 ring-1 ring-teal-500/10 shrink-0">
-              <FaCog className="w-4 h-4 sm:w-4 sm:h-4" />
+              <Settings className="w-4 h-4 sm:w-4 sm:h-4" />
             </div>
             <div className="min-w-0">
               <div className="text-[12px] sm:text-[13px] font-bold text-slate-900 leading-tight truncate">Web Admin Panel</div>
@@ -560,7 +555,7 @@ export default function MobileAppDevelopmentPage() {
             {Object.keys(interactiveScreens).map((key) => {
               const item = interactiveScreens[key];
               const isSelected = activeScreenTab === key;
-              const TabIcon = key === 'ecommerce' ? FaShoppingBag : key === 'food' ? FaUtensils : key === 'education' ? FaGraduationCap : FaWrench;
+              const TabIcon = key === 'ecommerce' ? ShoppingBag : key === 'food' ? Utensils : key === 'education' ? GraduationCap : Wrench;
               return (
                 <button
                   key={key}
@@ -597,7 +592,7 @@ export default function MobileAppDevelopmentPage() {
               <div className="space-y-2.5 mb-8">
                 {selectedScreen.features.map((feat, fIdx) => (
                   <div key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
-                    <FaCheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span>{feat}</span>
                   </div>
                 ))}
@@ -608,17 +603,17 @@ export default function MobileAppDevelopmentPage() {
                   href={`https://wa.me/918920683588?text=Hi%20SiteMint!%20I%20want%20to%20build%20a%20${encodeURIComponent(selectedScreen.title)}.%20Please%20share%20timeline%20and%20pricing.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#00A86B] hover:bg-[#008f5b] text-white text-[11px] sm:text-xs font-bold py-2.5 px-3 sm:px-5 rounded-xl shadow-xs flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 whitespace-nowrap transition-all"
+                  className="bg-[#00A86B] hover:bg-[#008f5b] text-white text-xs sm:text-sm font-bold py-2.5 px-3 sm:px-5 rounded-xl shadow-xs flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 whitespace-nowrap transition-all"
                 >
-                  <FaWhatsapp className="w-3.5 h-3.5 shrink-0" />
+                  <MessageCircle className="w-3.5 h-3.5 shrink-0" />
                   <span>Order {selectedScreen.title.split(' ')[0]} App</span>
                 </a>
 
                 <Link
                   href="/calculator"
-                  className="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 text-[11px] sm:text-xs font-bold py-2.5 px-3 sm:px-4 rounded-xl flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 whitespace-nowrap transition-all"
+                  className="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 text-xs sm:text-sm font-bold py-2.5 px-3 sm:px-4 rounded-xl flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 whitespace-nowrap transition-all"
                 >
-                  <FaCalculator className="w-3.5 h-3.5 text-pink-600 shrink-0" />
+                  <Calculator className="w-3.5 h-3.5 text-pink-600 shrink-0" />
                   <span>Calculate Cost</span>
                 </Link>
               </div>
@@ -662,7 +657,7 @@ export default function MobileAppDevelopmentPage() {
                       <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800">
                         <div className="flex justify-between items-center text-xs font-bold mb-1">
                           <span className="text-white flex items-center gap-1.5">
-                            <FaShoppingBag className="text-pink-400" /> D2C Storefront Catalog & Checkout
+                            <ShoppingBag className="text-pink-400" /> D2C Storefront Catalog & Checkout
                           </span>
                           <span className="text-emerald-400 font-mono">1.2s Fast</span>
                         </div>
@@ -674,13 +669,13 @@ export default function MobileAppDevelopmentPage() {
                       <div className="grid grid-cols-2 gap-2.5 text-xs">
                         <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
                           <div className="font-bold text-pink-300 mb-0.5 flex items-center gap-1">
-                            <FaCreditCard /> 0% Aggregator Cut
+                            <CreditCard /> 0% Aggregator Cut
                           </div>
                           <div className="text-[10px] text-slate-400">Direct settlement into your merchant bank account.</div>
                         </div>
                         <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
                           <div className="font-bold text-purple-300 mb-0.5 flex items-center gap-1">
-                            <FaBell /> Abandoned Cart Push
+                            <Bell /> Abandoned Cart Push
                           </div>
                           <div className="text-[10px] text-slate-400">Automated lock-screen discount alerts for drop-offs.</div>
                         </div>
@@ -693,7 +688,7 @@ export default function MobileAppDevelopmentPage() {
                       <div className="p-3.5 rounded-2xl bg-slate-900 border border-sky-500/40">
                         <div className="flex justify-between items-center text-xs font-bold mb-1">
                           <span className="text-white flex items-center gap-1.5">
-                            <FaGraduationCap className="text-sky-400" /> Anti-Piracy LMS & Mock Test System
+                            <GraduationCap className="text-sky-400" /> Anti-Piracy LMS & Mock Test System
                           </span>
                           <span className="text-emerald-400 font-mono">DRM Encrypted</span>
                         </div>
@@ -705,13 +700,13 @@ export default function MobileAppDevelopmentPage() {
                       <div className="grid grid-cols-2 gap-2.5 text-xs">
                         <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
                           <div className="font-bold text-sky-300 mb-0.5 flex items-center gap-1">
-                            <FaChartBar /> Rank Leaderboards
+                            <BarChart3 /> Rank Leaderboards
                           </div>
                           <div className="text-[10px] text-slate-400">Instant percentiles and subject-wise score analytics.</div>
                         </div>
                         <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
                           <div className="font-bold text-indigo-300 mb-0.5 flex items-center gap-1">
-                            <FaLock /> Offline PDF Reader
+                            <Lock /> Offline PDF Reader
                           </div>
                           <div className="text-[10px] text-slate-400">Encrypted in-app notes viewer preventing forwarding.</div>
                         </div>
@@ -724,7 +719,7 @@ export default function MobileAppDevelopmentPage() {
                       <div className="p-3.5 rounded-2xl bg-slate-900 border border-emerald-500/40">
                         <div className="flex justify-between items-center text-xs font-bold mb-1">
                           <span className="text-white flex items-center gap-1.5">
-                            <FaCalendarAlt className="text-emerald-400" /> On-Demand Service Scheduling
+                            <Calendar className="text-emerald-400" /> On-Demand Service Scheduling
                           </span>
                           <span className="text-emerald-400 font-mono">Instant Confirmation</span>
                         </div>
@@ -736,13 +731,13 @@ export default function MobileAppDevelopmentPage() {
                       <div className="grid grid-cols-2 gap-2.5 text-xs">
                         <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
                           <div className="font-bold text-emerald-300 mb-0.5 flex items-center gap-1">
-                            <FaCalendarAlt /> Time-Slot Booking
+                            <Calendar /> Time-Slot Booking
                           </div>
                           <div className="text-[10px] text-slate-400">Real-time scheduling with automatic provider dispatch.</div>
                         </div>
                         <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
                           <div className="font-bold text-amber-300 mb-0.5 flex items-center gap-1">
-                            <FaStar /> Star Ratings
+                            <Star /> Star Ratings
                           </div>
                           <div className="text-[10px] text-slate-400">Verified customer feedback and review system.</div>
                         </div>
@@ -771,7 +766,7 @@ export default function MobileAppDevelopmentPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {capabilities.map((cap) => {
-              const CapIcon = cap.icon;
+              const IconComponent = cap.icon;
               return (
                 <div
                   key={cap.num}
@@ -780,7 +775,7 @@ export default function MobileAppDevelopmentPage() {
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-pink-600 font-bold group-hover:scale-110 transition-transform">
-                        <CapIcon className="w-6 h-6" />
+                        <IconComponent className="w-6 h-6" />
                       </div>
                       <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full border ${cap.badgeColor}`}>
                         {cap.badge}
@@ -897,7 +892,7 @@ export default function MobileAppDevelopmentPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {selectedPlan.keyPoints.map((point, pIdx) => (
                   <div key={pIdx} className="flex items-start gap-2 p-2.5 rounded-xl bg-white border border-slate-200 text-xs font-medium text-slate-800">
-                    <FaCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                    <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                     <span>{point}</span>
                   </div>
                 ))}
@@ -906,7 +901,7 @@ export default function MobileAppDevelopmentPage() {
 
             <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 text-amber-950 text-xs mb-8 space-y-1">
               <div className="font-bold flex items-center gap-1 text-amber-900">
-                <FaInfoCircle className="w-3.5 h-3.5" /> Transparency Notes:
+                <Info className="w-3.5 h-3.5" /> Transparency Notes:
               </div>
               {selectedPlan.exclusions.map((ex, exIdx) => (
                 <div key={exIdx} className="flex items-center gap-1.5 text-slate-700">
@@ -918,7 +913,7 @@ export default function MobileAppDevelopmentPage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-200">
               <div className="text-xs text-slate-500 text-center sm:text-left flex items-center gap-1.5">
-                <FaShieldAlt className="text-emerald-600" /> Includes <strong>{selectedPlan.maintenanceText}</strong>
+                <ShieldCheck className="text-emerald-600" /> Includes <strong>{selectedPlan.maintenanceText}</strong>
               </div>
 
               <div className="flex items-center gap-3 w-full sm:w-auto">
@@ -928,7 +923,7 @@ export default function MobileAppDevelopmentPage() {
                   rel="noopener noreferrer"
                   className="bg-[#00A86B] hover:bg-[#008f5b] text-white text-xs sm:text-sm font-bold py-3 px-7 rounded-2xl shadow-md flex items-center justify-center gap-2 transition-all w-full sm:w-auto text-center"
                 >
-                  <FaWhatsapp className="w-4 h-4" />
+                  <MessageCircle className="w-4 h-4" />
                   <span>Order {selectedPlan.name} on WhatsApp</span>
                 </a>
               </div>
@@ -1183,22 +1178,22 @@ export default function MobileAppDevelopmentPage() {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
             <Link href="/services/website-development" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition flex items-center gap-2">
-              <FaMobileAlt className="text-pink-600" /> Website Development (₹3,999)
+              <Smartphone className="text-pink-600" /> Website Development (₹3,999)
             </Link>
             <Link href="/services/ecommerce-development" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition flex items-center gap-2">
-              <FaShoppingBag className="text-pink-600" /> E-Commerce Web & App Store
+              <ShoppingBag className="text-pink-600" /> E-Commerce Web & App Store
             </Link>
             <Link href="/services/education-portal" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition flex items-center gap-2">
-              <FaGraduationCap className="text-pink-600" /> Coaching & School LMS App
+              <GraduationCap className="text-pink-600" /> Coaching & School LMS App
             </Link>
             <Link href="/calculator" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition flex items-center gap-2">
-              <FaCalculator className="text-pink-600" /> Instant App Cost Calculator
+              <Calculator className="text-pink-600" /> Instant App Cost Calculator
             </Link>
             <Link href="/pricing" className="p-3 bg-white rounded-xl border border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition flex items-center gap-2">
-              <FaCheckCircle className="text-pink-600" /> Complete Pricing Catalog
+              <CheckCircle2 className="text-pink-600" /> Complete Pricing Catalog
             </Link>
             <Link href="/blog/custom-ecommerce-store-vs-shopify-for-indian-startups" className="p-3 bg-white rounded-xl border border-slate-200 hover:border-pink-300 font-semibold text-slate-800 hover:text-pink-700 transition flex items-center gap-2">
-              <FaRocket className="text-pink-600" /> Custom Store vs Shopify ROI Guide
+              <Rocket className="text-pink-600" /> Custom Store vs Shopify ROI Guide
             </Link>
           </div>
         </div>
