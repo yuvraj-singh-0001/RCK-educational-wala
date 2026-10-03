@@ -45,7 +45,7 @@ export default function TeamClientPage() {
     {
       id: 'harish',
       name: 'Harish',
-      role: 'Team Specialist',
+      role: 'Video Editor & Motion Graphic Designer',
       image: '/team/harishSitemint .png',
       initials: 'HA',
       linkedin: 'https://www.linkedin.com/company/sitemint002sep02/',
@@ -55,7 +55,7 @@ export default function TeamClientPage() {
     {
       id: 'sanoj',
       name: 'Sanoj',
-      role: 'Team Specialist',
+      role: 'Customer Support & Business Development Executive',
       image: '/team/SanojSitemint.png',
       initials: 'SA',
       linkedin: 'https://www.linkedin.com/company/sitemint002sep02/',
@@ -65,7 +65,7 @@ export default function TeamClientPage() {
     {
       id: 'suhail-raja',
       name: 'Suhail Raja',
-      role: 'Team Specialist',
+      role: 'Video Editor',
       image: '/team/sohil raja Sitemint.png',
       initials: 'SR',
       linkedin: 'https://www.linkedin.com/in/suhail-raja-38347441a/',
@@ -75,7 +75,7 @@ export default function TeamClientPage() {
     {
       id: 'aman-khan',
       name: 'Aman Khan',
-      role: 'Team Specialist',
+      role: 'Graphics Designer',
       image: '/team/aman khanSitemint.png',
       initials: 'AK',
       linkedin: 'https://www.linkedin.com/company/sitemint002sep02/',
@@ -83,21 +83,21 @@ export default function TeamClientPage() {
       imageClass: 'object-[center_18%] scale-110 origin-top',
     },
     {
-      id: 'team-member-7',
-      name: 'Team Member 7',
-      role: 'Team Specialist',
-      image: '/team/sneha_sharma.png',
-      initials: 'TM',
+      id: 'nitpreet',
+      name: 'Nitpreet',
+      role: 'SEO Specialist',
+      image: '/team/nitpreet.png',
+      initials: 'NP',
       linkedin: 'https://www.linkedin.com/company/sitemint002sep02/',
       roleColor: 'text-sky-600',
       imageClass: 'object-top scale-105',
     },
     {
-      id: 'team-member-8',
-      name: 'Team Member 8',
-      role: 'Team Specialist',
-      image: '/team/shivam_sharma.png',
-      initials: 'TM',
+      id: 'ishita-singh',
+      name: 'Ishita Singh',
+      role: 'Front End Developer',
+      image: '/team/ishita-singh.png',
+      initials: 'IS',
       linkedin: 'https://www.linkedin.com/company/sitemint002sep02/',
       roleColor: 'text-sky-600',
       imageClass: 'object-top scale-105',
@@ -349,9 +349,16 @@ export default function TeamClientPage() {
                 {/* Extra Large Circular Profile Avatar */}
                 <div className="absolute -top-20 sm:-top-20 lg:-top-22 left-1/2 -translate-x-1/2 w-40 h-40 sm:w-40 sm:h-40 lg:w-44 lg:h-44 rounded-full bg-slate-100 overflow-hidden shadow-[0_0_30px_rgba(56,189,248,0.45)] flex items-center justify-center border-none ring-2 ring-sky-300/80">
                   <img
+                    key={member.image}
                     src={member.image}
                     alt={`${member.name} - ${member.role} at SiteMint Studio`}
                     className={`w-full h-full object-cover transition-transform duration-300 ${member.imageClass || 'object-top scale-105'}`}
+                    onLoad={(e) => {
+                      e.currentTarget.style.display = 'block';
+                      if (e.currentTarget.nextSibling) {
+                        e.currentTarget.nextSibling.style.display = 'none';
+                      }
+                    }}
                     onError={(e) => {
                       // Fallback if image has not been placed in public/team yet
                       e.currentTarget.style.display = 'none';
